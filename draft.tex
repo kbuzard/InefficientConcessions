@@ -30,8 +30,10 @@
 \author{Kristy Buzard\\
 Syracuse University \\
 kbuzard@syr.edu\\
+\\
 Ben Horne\\ 
-University of California, San Diego}
+University of California, San Diego\\
+\\}
 %To Do : define what is ineffieicncy
 
 \begin{document}
@@ -50,7 +52,7 @@ This holds for concessions other than land. Russia is loathe to cede further aut
 
 In these and many other situations, a lack of trust is an impediment to peace, preventing parties from making necessary concessions. Mediation has long been understood as a mechanism for reducing mistrust, but in most of the published literature on international conflict mediation lacks a rigorous theoretical framework.
 
-This paper has three parts. First, it explores the role of costly concessions in a game theoretic framework, evoking a two-sided version of Spence signaling (1973). Second, after considering existing explanations for inefficient concessions, it proposes a new theoretical explanation for why inefficiency might occur in a conflict setting: inefficient concessions may be preferred if the most efficient concessions are seen as having additional, future costs.\footnote{The type of inefficient concessions addressed here are those whose value to the recipient are lower than the cost to the giver.} The Golan Heights, for example, will not be conceded if Israel foresees future security risks that outweigh the immediate benefits of peace. Finally, this paper uses a mechanism design framework to model a third party's role in bringing about more efficient concessions. Many scholars contend that mediators with enforcement capabilities can help to resolve conflict; this formal analysis provides an explanation for why enforcement is effective.
+This paper has three parts. First, it explores the role of costly concessions in a game theoretic framework, evoking a two-sided version of Spence signaling (1973). Second, after considering existing explanations for inefficient concessions, it proposes a new theoretical explanation for why inefficiency might occur in a conflict setting: inefficient concessions may be preferred if the most efficient concessions are seen as having additional, future costs.\footnote{The type of inefficient concessions addressed here are those whose value to the recipient are lower than the cost to the giver.} The Golan Heights, for example, will not be conceded if Israel foresees future security risks that outweigh the immediate benefits of peace. Finally, this paper uses a mechanism design framework to model a third party's role in bringing about more efficient concessions. Many scholars contend that mediators with enforcement capabilities can help to resolve conflict; this analysis provides an explanation for why enforcement is effective.
 
 
 \section{Literature review and model introduction} 
@@ -93,7 +95,7 @@ While these several explanations for inefficiency are interesting, we propose an
 This paper expands upon the existing literature by generalizing the analysis using mechanism design theory more extensively than has been done thus far. %The analysis for this paper is more extensive than any of the published papers mentioned and shows where mechanisms can and cannot improve upon the benchmark bilateral results. 
 The basic model is a costly signaling model, at its root similar to ideas in Spence (1973) and subsequent papers. See Connelly et al. (2011) for a review of the costly signaling literature. In essence, the model shows that if concessions can be later used against the party that gives, then giving inefficient concessions can be in their best interest. While our model is tailored to an international relations setting, the mathematical explanation for inefficient giving of concessions may be more broadly applicable.   
 
-\section{Formal model description} %A DIFFERENT MODEL BUT SAME RESULT AS FR 10; THIS SHOULD BUILD OUR CONFIDENCE IN MODELLING. EMPHASIZE SCENARION (EGYPT USRAEL ETC) THAT ARE BETTER TO MODEL WITH Our MODEL. IT CAN ALSO BE THOUGHT OF AS REDUCED FORM OF A BARGAINING MOEL, BUT IT DOES NOT NEED TO BE! NEED TO GIVE EXAMPLES WHERE Our MODEL IS BETTER THAN BARGAINING- EXAMPLES. WHEN TRUST IS AN ISSUE (PUT THIS IN THE TRUST SECTION)
+\section{Model} %A DIFFERENT MODEL BUT SAME RESULT AS FR 10; THIS SHOULD BUILD OUR CONFIDENCE IN MODELLING. EMPHASIZE SCENARION (EGYPT USRAEL ETC) THAT ARE BETTER TO MODEL WITH Our MODEL. IT CAN ALSO BE THOUGHT OF AS REDUCED FORM OF A BARGAINING MOEL, BUT IT DOES NOT NEED TO BE! NEED TO GIVE EXAMPLES WHERE Our MODEL IS BETTER THAN BARGAINING- EXAMPLES. WHEN TRUST IS AN ISSUE (PUT THIS IN THE TRUST SECTION)
 %Need to add risk aversion in MAIN TEXT
 
 Countries\footnote{Players will be referred to as countries, though it could also be appropriate to think of players as intra-state actors, as in a civil war. } are of two possible types, high and low. A high type discounts future period payoffs at rate $\delta_h$ and a low type discounts at $\delta_l$. $\delta_h >\delta_l$ and both $\delta_h ,\delta_l$ $\in [0,1].$ Before the start of the game, nature independently determines the types of country 1 and country 2. The type distinction, as explained later in the model, is relevant in that it encompasses the country's willingness to cooperate in solving the conflict with the other specific country. It should not be thought of as an inherent quality of a country, but rather an interactive parameter. Thus it is not necessary to think of a type as fixed; it can change as regimes and relations between countries change.\footnote{We can enrich the model to assign a probability (and even different probabilities) of a country's type shifting from high to low or low to high in a given period.}
@@ -108,8 +110,8 @@ Beginning in period 1, countries engage in an infinitely repeated Prisoner's Dil
 
 The choice of ``Trust'' or ``Fight'' will be referred to as the county's stage game action.
 
-%\captionof{table}{Stage Game Payoffs}
 \begin{center}
+\captionof{table}{Stage Game Payoffs}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
 	 Trust& T, T& -D, T+W \\ \hline
@@ -135,8 +137,6 @@ The threshold $\delta^*$ needed is \be
 Assume $\delta_h> \delta^*$ and $\delta_l < \delta^*$.   
 
 \section{Analysis of benchmark cases }
-%examples!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 When countries are faced with doubts about each other's motives, they have several options of how to proceed. There are three basic types of equilibria that this analysis will examine.\footnote{If the discount factor for the high type ($\delta_h$) exceeds the cutoff found in expression (1), there are many types of equilibria; consider for instance oscillating every other period between Peace and War with a grim trigger War threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed, so are not attractive.} A thorough analysis of the different types of equilibria, as well as all proofs for this section, can be found in the appendix. 
 \\
 \\
@@ -224,10 +224,9 @@ Allow $T,W$ and $D$ to be functions $T(\cdot),W(\cdot)$ and $D(\cdot)$. Payoffs 
 
 In period 0, after receiving his concession, a country makes the decision to allocate it between military and civil society. $\alpha_i$ is the portion of his received concession that country i chooses to dedicate to civil society; $(1- \alpha_i$) is the portion country i dedicates to military buildup. This decision is a simple optimization problem for each country. Parameters are common knowledge so the result of this decision is well known should the country's type be known. Concessions are immediately converted into civil society or military gifts and incorporated into payoff functions. 
  $C_h(\cdot)=C_l(\cdot)=1$ as earlier in the model description. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
-\newpage
-%\captionof{table}{Modified Stage Game Payoffs}
-\begin{center}
 
+\begin{center}
+\captionof{table}{Modified Stage Game Payoffs}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
 	 Trust& \small$T(s_2+\alpha_2g_1)$, & \small$-D(m_2+(1-\alpha_2)g_1),$ \\
@@ -259,13 +258,13 @@ Whether it is beneficial for high types to settle on the efficient concession or
 This finding of inefficiency is for profoundly different reasons than the literature related to Camerer (1988) or Prendergast and Stole (2001).\footnote{Since our initial setup is essentially identical to Camerer's, the desired inefficiency of  pre-play communication can also be found in our model. With a slight behavioral modification, the reasoning of Prendergast and Stole (2001) can also be had: if a country suffers regret after efficiently giving to a type different than their own, there is a premium for guessing correctly. In Prendergast and Stole the two types are equal except in labeling; in our model, high types and low types are used so there is an incentive for low types to try to pose as high types. Aside from this difference, essentially the same result is found: if countries suffer a ``mismatching'' cost due to giving to the wrong type, they will be hesitant to do so and may offer inefficient concessions.} Instead of being in reaction to a behavioral regret for mismatching or serving as a ay to discourage low types for entering the game altogether, here making concessions inefficient is a device to prevent low types from using those concessions against oneself in the future.
 
 \section{Mediation}
-All results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator which will be modeled as a mechanism.  Mediation has been studied to some degree in the formal literature and has most recently been modeled using mechanism design. Applying mechanism design to mediation has been used, to date, by Fey and Ramsay (2008, 2010 and 2011), Bester and Warneryd (2006) and Horner et. al. (2010). 
+All results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator which will be modeled as a mechanism. In the theoretical literature, mediation has most recently been modeled using mechanism design (Fey and Ramsay 2008, 2010 and 2011; Bester and Warneryd 2006; and Horner et. al. 2010). 
 
 Because many conflicts occur in an international arena with no clear enforceable rule of law (Waltz, 2002), much of the literature has focused on self-enforcing mechanisms. If however a credible third party does exist, then results beyond self enforcing agreements can be relevant.  A mediator with such enforcement ability is said to use manipulative mediation, specifically if she ``offered to verify compliance with the agreement''  or ``took responsibility for concessions''  (Bercovitch 1997). We will now introduce a mediator who does both. 
 
 The model setup is as before, but instead of parties being free to give whatever concession they want, the mediator solicits type reports and then enforces incentive compatible concessions. This mediator wil be modeled as a mechanism $M$.
 
-$M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concessions $g_1$ and $g_2$. Formally, $ M:(t_1,t_2)\rightarrow( g_1(\cdot), g_2(\cdot))$.  The countries are bound to send the mandated concessions. The benchmark case requires the countries to send the same concession to both types, since types are private information.  $M$ can differentiate based on recipient's type. Otherwise, the setup is identical to the benchmark case.  
+$M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concessions $g_1$ and $g_2$ so that $ M:(t_1,t_2)\rightarrow( g_1(\cdot), g_2(\cdot))$.  The countries are bound to send the mandated concessions. The benchmark case requires the countries to send the same concession to both types, since types are private information.  $M$ can differentiate based on recipient's type. Otherwise, the setup is identical to the benchmark case.  
 
 Welfare is again considered as the sum of the high type utilities. Qualitatively, similar results would hold if we also included low types in the analysis with weighting based on $p$. In the analysis, incentive compatibility and individual rationality constraints must be satisfied. The revelation principle is used to attain truthful self-identification (Myerson 1979). For mediation to be useful, $C_l(\cdot)$ needs to be pointwise greater than $C_h(\cdot)$, and we will assume this. This means that a low type is not identical to a high type, and indeed bears greater costs for peaceful actions. This can be thought of as a leader who must explain peace to his people. If the people want to make peace with the rival, posturing for peace is not costly for the leader. But if the people do not want to make peace with the rival, the leader loses credibility by outwardly touting peace. Therefore taking a peaceful action is more costly, and perhaps even impossible. This low type leader can bluff in the bilateral setting but not, as we will see, when a mediator is present. 
 \\
@@ -301,7 +300,7 @@ However, there must be a caveat about modeling concessions. The initial thought 
 
 In practice, in ``sons of the soil'' conflicts, concessions are indivisible (Walter 2002), therefore if inefficient concessions need to be given, no concessions will be in fact given as an inefficient concession is an impossibility. The full value is the only concession worth making because it is the only one that will be accepted. Inefficient concessions can have the same signaling value, but unless signaling is the only facet of a concession that is valued, this is not enough. Therefore when we think about concessions, we should think about their nature as being fixed. With this in mind, we can then accurately consider whether concessions are of sufficient size. These observations do not undermine the model.  Countries may prefer to give inefficient concessions; they do not necessarily prefer to receive them. 
 
-The effectiveness of mediation is debated in the literature; this paper shows that a third party mediator can remedy this inefficiency if she is trusted. One result of this formal exposition is to show the mechanisms through which a mediator can help. Since the mediator eliminates inefficient concessions, the observation that inefficient concession may not do the trick only further indicates the value of a mediator even more.
+The effectiveness of mediation is debated in the literature; this paper shows that a third party mediator can remedy this inefficiency if she is trusted. One contribution of this paper is to show the mechanisms through which a mediator can help. Since the mediator eliminates inefficient concessions, the observation that inefficient concession may not do the trick only further indicates the value of a mediator even more.
 %our model can also be used to achieve a similar matching result as Prendergast and Stole (2001) who show how if player values his own type, inefficiency can be preferred. 
 
 While this model uses manipulative mediation, which is indeed used in resolving conflicts, the usefulness of mediation relies on perfect trust of the mediator. Such an all-powerful mediator is a strong assumption, and while useful as a benchmark, it is unlikely to exist in most scenarios. It would be useful as a further exercise to examine the effectiveness of mediators with different strengths of enforcement capabilities. 
@@ -332,7 +331,7 @@ One high type equilibrium strategy is to pool with the low types and always play
  \\
 {\bf Theorem 1:} The strategy of not giving concessions in period 0, then playing Trust unless the other country defects to Fight is an equilibrium strategy for high types if $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}$.\\
  \emph{Proof}:
-Countries with the equilibrium strategy to play Trust in the first round reveal themselves as a high type as per Lemma 2. This will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from deviating against someone playing the pooling (always Fight) strategy. If both countries play Trust in a period, a Peace equilibrium takes place and both countries continue to play peace in every period with the grim trigger threat of the War equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods.  If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, a high type will be given incentives to play Trust in the first round rather than Fight. Formally, to play Trust, the following must be satisfied:%Make clearer language!!!!!!!
+Countries with the equilibrium strategy to play Trust in the first round reveal themselves as a high type as per Lemma 2. This will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from deviating against someone playing the pooling (always Fight) strategy. If both countries play Trust in a period, a Peace equilibrium takes place and both countries continue to play peace in every period with the grim trigger threat of the War equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods.  If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, a high type will be given incentives to play Trust in the first round rather than Fight. To play Trust, the following must be satisfied:%Make clearer language!!!!!!!
 %FUTURE WORK ON DELY OF PEACE- IF PEACE WILL E THERE, YOU MIGHT BE VERY RISK AVERSE TO GETTING SCREWED BY THE LOW TYPE SO KEEP PUTTING OFF THE RISKY FIRST TRUST ROUND
 \be
 p(\frac{T}{1- \delta_h}) +(1-p)({-D}+\frac{\delta_h(W-D)}{1- \delta_h} )\geq p (T + W + \frac{\de_h}{1-\de_h}(W-D)) +(1-p)\frac{W-D}{1- \delta_h}
