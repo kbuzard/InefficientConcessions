@@ -1,42 +1,48 @@
-%\documentclass[12pt, letterpaper]{article}
-%\usepackage{graphicx}
-%\usepackage{moreverb}
-%\usepackage{mdwlist}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage[hmargin=1in,vmargin=1in]{geometry}
+\documentclass[12pt, letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{moreverb}
+\usepackage{mdwlist}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage[hmargin=1in,vmargin=1in]{geometry}
 %\usepackage[left=0.9in,top=0.9in,right=0.9in,nohead]{geometry}
 
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bi}{\begin{itemize*}}
-%\newcommand{\ei}{\end{itemize*}}
-%\newcommand{\bgd}{\begin{gathered}}
-%\newcommand{\egd}{\end{gathered}}
-%\newcommand{\bgr}{\begin{gather}}
-%\newcommand{\edgr}{\end{gather}}
-%\newcommand{\mb}{\mathbf}
-%\newcommand{\ve}{\varepsilon}
-%\newcommand{\real}{\mathbb{R}}
-%\newcommand{\de}{\delta}
-%  \usepackage{setspace}
-%  \doublespacing
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bi}{\begin{itemize*}}
+\newcommand{\ei}{\end{itemize*}}
+\newcommand{\bgd}{\begin{gathered}}
+\newcommand{\egd}{\end{gathered}}
+\newcommand{\bgr}{\begin{gather}}
+\newcommand{\edgr}{\end{gather}}
+\newcommand{\mb}{\mathbf}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\de}{\delta}
+  \usepackage{setspace}
+  \doublespacing
 
-%\thispagestyle{empty}
+\thispagestyle{empty}
 
-%\begin{document}\title{Inefficient Concessions and Mediation} 
-%\author{ Ben Horne}
+\title{Inefficient Concessions and Mediation} 
+\author{Kristy Buzard\\
+Syracuse University \\
+kbuzard@syr.edu\\
+Ben Horne\\ 
+University of California, San Diego}
 %To Do : define what is ineffieicncy
-%\maketitle
+
+\begin{document}
+\maketitle
 
 
-%\section{Abstract}
-%We explore a model of bilateral conflict, examining the role of concessions as signals, in addition to being ends in themselves. In doing so, we open up a rationale for mediation: to remove the inefficiencies of signaling in the pre-play round of negotiations. Two parties are engaged in conflict, manifested as the stage game Nash equilibrium of a repeated Prisoner's Dilemma. Each party distrusts the other's willingness to pursue peace, and can indicate its own willingness through costly signaling, i.e. concessions. In resolving this trust issue and attempting to end the conflict, efficient concessions are generally preferred, but optimal signaling can include inefficiency if concessions can later be used against the giving party.  Under such scenarios, a third party mediator can sometimes reduce inefficiency and improve welfare, and we give an explanation for the mechanism that makes mediation effective.
-%Two parties are engaged in conflict, and each distrusts the other's willingness to pursue peace. Each can indicate its own interest in peace through costly signaling, or concessions. In certain environments, however, a lack of trust means that optimal concessions are not made, creating inefficiencies in the negotiation that can reduce the possibility of peace. Through a formal model, we explore ways in which a third party mediator can act as a guarantor that promised concessions will be delivered, thereby reducing inefficiencies and increasing the potential for peace. In this process, we open up a rationale for mediation: to remove the inefficiencies of signaling in a preliminary round of negotiations.
- %   Results show that in bilateral negotiation, parties may prefer to give inefficient concessions due to the other party’s potential power to hurt. Additionally, conditions are shown under which a party be willing to, or even prefer to, give the first concession rather than waiting or giving simultaneously.    ...gain insight into the usefulness of concessions in making peace between warring factions. 
-%\newpage
+\begin{abstract}
+When two parties are engaged in conflict and each distrusts the other's willingness to pursue peace, concessions can be used to indicate an interest in making peace. We demonstrate that a lack of trust can prevent optimal concessions from being made, creating inefficiencies in negotiation that can reduce the possibility of peace. We use a game-theoretic model to explore ways in which a third party mediator can act as a guarantor that promised concessions will be delivered, thereby reducing inefficiencies and increasing the potential for peace. In this process, we open up a rationale for mediation: to remove the inefficiencies of signaling in a preliminary round of negotiations. 
+\end{abstract}
 
-\section{Introduction and motivation} %LAKE For instance, the problem you begin with in the cases of Israel/Syria and West Bank are well understood as bargaining over assets that confer future power. But this is not understood as a problem of private information, as you treat it here, but as one of credible commitment. Its not clear how your types map onto the commitment problem. HOW: THAT TYPES COULD CHANGE OVER TIME?
+\section{Introduction} %LAKE For instance, the problem you begin with in the cases of Israel/Syria and West Bank are well understood as bargaining over assets that confer future power. But this is not understood as a problem of private information, as you treat it here, but as one of credible commitment. Its not clear how your types map onto the commitment problem. HOW: THAT TYPES COULD CHANGE OVER TIME?
 
 In negotiations with its neighbors, Israel is hesitant to give certain concessions. The Golan Heights, captured from Syria during the 1967 War, is a particular point of contention in Israeli-Syrian relations. While the Golan Heights does not have the West Bank's historic or religious importance, Israel values it for its highly strategic location. The Golan Heights could be a useful concession, but Israel senses that were she to give over the land, Syria may ultimately use the concession against them. This same hesitancy exists with the West Bank settlements. Many are located on hilltops that could offer strategic military outposts for forces hostile to Israel. When it occasionally abandons settlements, Israel generally dismantles all infrastructure, including water and electricity, and bulldozes the buildings. Although inefficient, this reduces the possibility of those settlements being used against Israeli interests. Without trust, the most efficient concessions cannot be made.
 
@@ -102,7 +108,7 @@ Beginning in period 1, countries engage in an infinitely repeated Prisoner's Dil
 
 The choice of ``Trust'' or ``Fight'' will be referred to as the county's stage game action.
 
-\captionof{table}{Stage Game Payoffs}
+%\captionof{table}{Stage Game Payoffs}
 \begin{center}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
@@ -219,7 +225,7 @@ Allow $T,W$ and $D$ to be functions $T(\cdot),W(\cdot)$ and $D(\cdot)$. Payoffs 
 In period 0, after receiving his concession, a country makes the decision to allocate it between military and civil society. $\alpha_i$ is the portion of his received concession that country i chooses to dedicate to civil society; $(1- \alpha_i$) is the portion country i dedicates to military buildup. This decision is a simple optimization problem for each country. Parameters are common knowledge so the result of this decision is well known should the country's type be known. Concessions are immediately converted into civil society or military gifts and incorporated into payoff functions. 
  $C_h(\cdot)=C_l(\cdot)=1$ as earlier in the model description. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
 \newpage
-\captionof{table}{Modified Stage Game Payoffs}
+%\captionof{table}{Modified Stage Game Payoffs}
 \begin{center}
 
 \begin{tabular}{|l|c|c|}
@@ -304,6 +310,7 @@ While it is an important theoretical result to show how a mediator can help conf
 
 This paper succeeds in showing a role for inefficient concessions, and shows how a mediator can remedy this situation. Opportunities for further research clearly include looking at the roles of different types of mediation. Because of the many humanitarian, security and diplomatic implications of this work, both deeper and broader analysis is required.
 %This said, if the paper is really about mediation, then the mediator needs more scrutiny. What are the mediator’s incentives? Why should he reveal truthfully what the parties tell him? It would seem simple enough to make the mediator part of the game, with an payment function that is a fraction of the surplus from eliminating the inefficiency. This leads to interesting implications. Given some cost to the mediator, they will be more likely to volunteer when e* is large, etc. But treating the mediator as a deus ex machina leaves the current model incomplete.
+
 
 \section{Appendix}
 
@@ -393,7 +400,7 @@ This is simplified to preferring the concessions separating equilibrium if and o
 
 \newpage
 \section{Bibliography} %can add search(kaplan), expoeriments (2) and workplace gift exchange papers (the "gift giving as a medium" explanation
-\ssp
+
 \begin{list}{}{\setlength{\leftmargin}{0.0in}\setlength{\rightmargin}{0.0in}\setlength{\itemindent}{0.0in}\setlength{\itemsep}{0.05in}}
 
 \item Allee, Todd L. and Paul K. Huth. (2006). ``Legitimizing Dispute Settlement: International Legal Rulings as Domestic Political Cover." \emph{American Political Science Review} 100:2, 219-34. 
@@ -491,4 +498,4 @@ This is simplified to preferring the concessions separating equilibrium if and o
 \end{list}
 
 
-%\end{document}
+\end{document}
