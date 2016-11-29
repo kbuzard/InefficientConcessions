@@ -1,0 +1,283 @@
+%\documentclass{beamer} 
+\documentclass[handout]{beamer} 
+\usetheme{Ilmenau}
+\usepackage{graphicx,verbatim,hyperref}
+\usepackage{textpos}
+
+\usecolortheme{beaver}
+\useinnertheme{default}
+\setbeamertemplate{itemize item}[triangle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[circle]
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{blocks}[upper=block head,rounded]
+\setbeamercolor{item}{fg=black}
+\usefonttheme{serif} %should allow ccfonts to take effect
+
+\usepackage{cite}
+\usepackage{times, verbatim,xcolor,bm}
+\usepackage{amsbsy,amssymb, amsmath, amsthm}
+\usepackage{booktabs}
+%David miller's fonts
+	\usepackage[T1]{fontenc}
+	\usepackage[boldsans]{ccfonts}
+	\usepackage[euler-hat-accent]{eulervm}
+
+\newcommand{\al}{\alpha}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\Bt}{B(\bm{\tau^a})}
+\newcommand{\bta}{\bm{\tau^a}}
+\newcommand{\btn}{\bm{\tau^{tw}}}
+\newcommand{\ga}{\gamma}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\ta}{\theta}
+\newcommand{\de}{\delta}
+\newcommand{\ov}{\overline}
+
+\newenvironment{changemargin}[2]{% 
+  \begin{list}{}{% 
+    \setlength{\topsep}{0pt}% 
+    \setlength{\leftmargin}{#1}% 
+    \setlength{\rightmargin}{#2}% 
+    \setlength{\listparindent}{\parindent}% 
+    \setlength{\itemindent}{\parindent}% 
+    \setlength{\parsep}{\parskip}% 
+  }% 
+  \item[]}{\end{list}} 
+
+\begin{document}
+\title[Unrecognized States: A Theory of Self-Determination and Foreign Influence\hspace{1.25in}\insertframenumber/\inserttotalframenumber]{Unrecognized States: A Theory of Self-Determination and Foreign Influence}
+\author[Kristy Buzard, Benjamin Graham and Ben Horne]{Kristy Buzard, Benjamin Graham and Ben Horne\\ kbuzard@syr.edu}
+\date{September 23, 2016}
+\maketitle
+%\insertpresentationendpage removed b/c of appendix
+
+
+
+\section{Overview}
+\subsection{Preview}
+\begin{frame}
+\frametitle{Unrecognized States}
+Unrecognized states (URS): control and govern territory, seek recognition
+\pause
+\begin{itemize}[<+->]
+  \item Six current URS more than 20 yrs old (+ Eastern Ukraine)
+	\item No explanation in the literature for how this can be a stable outcome
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{What we do}
+
+\pause
+We demonstrate unrecognized statehood can be a ``status quo'' outcome
+\pause
+\begin{itemize}[<+->]
+	\item (SPN) Equilibrium in a repeated game
+	\item Four players
+		\begin{itemize}[<+->]
+			\item Home government
+			\item Secessionist elite
+			\item Patron state
+			\item International community
+		\end{itemize}
+	\item State variable: Status Quo (SQ) payoffs for secessionists
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{The General Idea}
+
+\pause
+In each period: secessionists and gov't each choose (simultaneously) among $\left\{\text{Fight, Status Quo, Cede}\right\}$
+\pause
+		\begin{itemize}
+			\item We need Status Quo to be a stage game best response for both secessionists and gov't
+		\end{itemize} 
+
+\pause
+\vskip.2in
+We add some more realistic elements:
+\pause
+		\begin{enumerate}[<+->]
+			\item Unrecognized status reduces Status Quo payoffs of secessionists each period
+			\item Patron and int'l community can make investments in both actors' payoffs
+		\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}{Outline of Talk}
+\pause
+\begin{enumerate}[<+->]
+	\item Model
+	\item Status quo equilibrium
+	\item What we can say about sanctions
+\end{enumerate}
+\end{frame}
+
+
+
+\section{Model}
+\subsection{Economic and Political Structure}
+\begin{frame}{Timeline}
+\pause
+\begin{figure}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Timeline2.pdf}
+%\caption{Timeline}
+\end{figure}
+\end{frame}
+
+
+\subsection{The Players}
+
+\begin{frame}{Outside Actors}
+	\pause
+International community ($c$): desires reunification \\
+\pause
+Patron ($p$): desires recognized independence
+\pause
+\begin{itemize}	
+	\item Each has preferences that are aligned with one of the home state actors
+	\pause
+	\item Patron may most prefer SQ; our assumption stacks the deck against us
+\end{itemize}
+
+\pause
+\vskip.2in
+$p$'s per period payoffs: $U_{pt} = -\alpha X + \lambda Y - R_{pt}$ \\
+$c$'s per period payoffs: $U_{ct} = \beta X - \nu Y - R_{ct}$
+\begin{itemize}
+	\item $X=1$ if the secessionists rejoin the home state \\
+	\item $Y=1$ if the home state recognizes the secessionists 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Home State Actors}
+	\pause
+Central Government of Home State ($g$): desires reunification \\
+\pause
+Secessionists ($s$): desire recognized independence
+\pause
+\begin{itemize}	
+	\item Central issue of contention: recognized independence vs. reunification.
+\end{itemize}
+
+\pause
+\vskip.2in
+Assumptions:
+\begin{itemize}[<+->]
+	\item Issue of status is indivisible, highly valued by both sides
+	\item Insufficient credible side payments for easy settlement
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Stage Game between Home Gov't $\&$ Secessionists}
+\pause
+	\begin{center}
+\begin{tabular}{|  c| c | c | c |} 
+\hline
+  $g\downarrow$,     $ s\rightarrow$  & Fight & Status Quo &Cede \\ \hline
+	Fight & $\omega_{gt}, \omega_{st}$ &$\omega_{gt}, \omega_{st}$&$W_{gt}, L_{st}$ \\ \hline
+	Status Quo& $\omega_{gt}, \omega_{st}$& $Q_{gt}, Q_{st}$ &$W_{gt}, L_{st}$ \\ \hline
+	Cede&$L_{gt}, W_{st}$& $L_{gt}, W_{st}$ &$Q_{gt}, Q_{st}$ \\ \hline
+ %\multicolumn{4}{c} {Stage Game Payoffs}\\ 
+\end{tabular}
+\end{center}
+\vskip.05in
+where $\omega_{it} \equiv p_1 \left(W_{it}-\zeta_i\right) + \left(1-p_1\right)\left( L_{it}-\zeta_i\right)$
+\begin{itemize}
+	\item fixed cost of war $\zeta_i$
+	\item probabilities $p_1$ of victory, $1 - p_1$ of loss 
+		\begin{itemize}
+			\item can also handle non-decisive war
+		\end{itemize}
+\end{itemize}
+\vskip.05in
+and e.g. $Q_{st} \equiv Q_{s,t-1} -\mu + R_{pt} - R_{ct}$
+\end{frame}
+
+
+\section{Status Quo Equilibrium}
+\subsection{}
+
+
+\begin{frame}{Unrecognized Statehood as Stable Equilibrium}
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Proposition 1}
+  There exists an equilibrium in which the outcome is perpetual unrecognized statehood. The actions in this equilibrium are 
+	\begin{enumerate}
+		\item in the first period, the patron invests to create a buffer of $\frac{\beta}{1-\delta}$ between the secessionists' payoffs from ceding and the status quo;
+		\item the patron invests up to $\mu$ each period thereafter to maintain the buffer;
+		\item the int'l community invests nothing;
+		\item both inside players choose $Status$ $Quo$ each period.
+	\end{enumerate}
+	
+\end{beamerboxesrounded}
+\end{frame}
+
+\begin{frame}{Unrecognized Statehood as Stable Equilibrium (Con't)}
+\pause
+  The following are sufficient conditions for the equilibrium:
+	\begin{enumerate}[<+->]
+		\item \textit{For each inside actor, choosing status quo provides the highest expected payoff at the beginning of the game.}
+
+\item  \textit{The patron can afford to deter the int'l community from inducing reunification at the beginning of the game.}
+
+\item \textit{The patron can afford to pay to maintain the status quo.}
+
+\item \textit{Reunification is more important for the patron to avoid than for the int'l community to achieve.}
+
+\item  \textit{Recognition is more important for the int'l community to avoid than for the patron to achieve.}
+
+	\end{enumerate}
+\end{frame}
+
+\section{Sanctions}
+\begin{frame}{Sanctions (I)}
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Proposition 2}
+  Assume the conditions of \emph{Proposition 1} hold in the absence of sanctions and that sanctions affect only the secessionists' Status Quo payoffs. In order for sanctions to lead to ceding by the secessionists, the following are required:
+	\pause
+	\begin{enumerate}[<+->]
+\item The patron must be unable or find it not worthwhile to invest the additional amount now required to maintain the status quo.
+
+\item The patron must be unable or find it not worthwhile to invest to instigate fighting by the secessionists.
+
+\item The continuation value from Status Quo must fall below that from Cede before it falls below that from Fight.
+\end{enumerate}
+
+\end{beamerboxesrounded}
+
+\end{frame}
+
+\begin{frame}{Sanctions (II)}
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Proposition 3}
+  Assume the conditions of \emph{Proposition 1} hold in the absence of sanctions and that sanctions affect both the secessionists' status quo payoffs and its military capabilities. \\
+	\pause
+	\vskip.05in
+	The parameter space over which a war will be initiated by the home state is increasing in the magnitude of the sanctions' impact on the secessionists' military capabilities.
+\end{beamerboxesrounded}
+
+\end{frame}
+
+
+\section{Conclusion}
+\subsection{}
+\begin{frame}{Conclusion}
+\begin{itemize}[<+->]
+	\item We present a unified four-player framework for analyzing unrecognized statehood and its alternatives
+	\item We show unrecognized statehood can emerge in equilibrium even when it is a terrible outcome for all involved
+		\begin{itemize}
+			\item Unfortunately, it is not difficult to imagine Eastern Ukraine on our list of URS in 20 years
+		\end{itemize}
+	\item The model demonstrates why sanctions may be counterproductive and suggests that positive inducements may be more productive
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}
