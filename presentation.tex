@@ -112,9 +112,9 @@ We add some more realistic elements:
 \begin{frame}{Outline of Talk}
 \pause
 \begin{enumerate}[<+->]
-	\item Model
-	\item Status quo equilibrium
-	\item What we can say about sanctions
+	\item M
+	\item S
+	\item W
 \end{enumerate}
 \end{frame}
 
@@ -128,30 +128,6 @@ We add some more realistic elements:
 
 
 \subsection{The Players}
-
-\begin{frame}{Outside Actors}
-	\pause
-International community ($c$): desires reunification \\
-\pause
-Patron ($p$): desires recognized independence
-\pause
-\begin{itemize}	
-	\item Each has preferences that are aligned with one of the home state actors
-	\pause
-	\item Patron may most prefer SQ; our assumption stacks the deck against us
-\end{itemize}
-
-\pause
-\vskip.2in
-$p$'s per period payoffs: $U_{pt} = -\alpha X + \lambda Y - R_{pt}$ \\
-$c$'s per period payoffs: $U_{ct} = \beta X - \nu Y - R_{ct}$
-\begin{itemize}
-	\item $X=1$ if the secessionists rejoin the home state \\
-	\item $Y=1$ if the home state recognizes the secessionists 
-\end{itemize}
-\end{frame}
-
-
 
 \begin{frame}{Home State Actors}
 	\pause
@@ -175,87 +151,94 @@ Assumptions:
 
 \begin{frame}{Stage Game between Home Gov't $\&$ Secessionists}
 \pause
-	\begin{center}
-\begin{tabular}{|  c| c | c | c |} 
-\hline
-  $g\downarrow$,     $ s\rightarrow$  & Fight & Status Quo &Cede \\ \hline
-	Fight & $\omega_{gt}, \omega_{st}$ &$\omega_{gt}, \omega_{st}$&$W_{gt}, L_{st}$ \\ \hline
-	Status Quo& $\omega_{gt}, \omega_{st}$& $Q_{gt}, Q_{st}$ &$W_{gt}, L_{st}$ \\ \hline
-	Cede&$L_{gt}, W_{st}$& $L_{gt}, W_{st}$ &$Q_{gt}, Q_{st}$ \\ \hline
- %\multicolumn{4}{c} {Stage Game Payoffs}\\ 
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+  \hline      & Trust & Fight \\ \hline
+	 Trust& T, T& -D, T+W \\ \hline
+	Fight & T+W,-D& W-D, W-D \\ \hline
 \end{tabular}
 \end{center}
+
 \vskip.05in
-where $\omega_{it} \equiv p_1 \left(W_{it}-\zeta_i\right) + \left(1-p_1\right)\left( L_{it}-\zeta_i\right)$
+where 
 \begin{itemize}
-	\item fixed cost of war $\zeta_i$
-	\item probabilities $p_1$ of victory, $1 - p_1$ of loss 
-		\begin{itemize}
-			\item can also handle non-decisive war
-		\end{itemize}
+	\item $T\geq0$: Benefit from the other country playing Trust
+	\item $W\geq0$: Additional benefit from playing Fight
+	\item $D\geq0$: Damages due to the other country playing Fight
 \end{itemize}
 \vskip.05in
-and e.g. $Q_{st} \equiv Q_{s,t-1} -\mu + R_{pt} - R_{ct}$
-\end{frame}
-
-
-\section{Status Quo Equilibrium}
-\subsection{}
-
-
-\begin{frame}{Unrecognized Statehood as Stable Equilibrium}
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Proposition 1}
-  There exists an equilibrium in which the outcome is perpetual unrecognized statehood. The actions in this equilibrium are 
-	\begin{enumerate}
-		\item in the first period, the patron invests to create a buffer of $\frac{\beta}{1-\delta}$ between the secessionists' payoffs from ceding and the status quo;
-		\item the patron invests up to $\mu$ each period thereafter to maintain the buffer;
-		\item the int'l community invests nothing;
-		\item both inside players choose $Status$ $Quo$ each period.
-	\end{enumerate}
-	
-\end{beamerboxesrounded}
-\end{frame}
-
-\begin{frame}{Unrecognized Statehood as Stable Equilibrium (Con't)}
 \pause
-  The following are sufficient conditions for the equilibrium:
-	\begin{enumerate}[<+->]
-		\item \textit{For each inside actor, choosing status quo provides the highest expected payoff at the beginning of the game.}
-
-\item  \textit{The patron can afford to deter the int'l community from inducing reunification at the beginning of the game.}
-
-\item \textit{The patron can afford to pay to maintain the status quo.}
-
-\item \textit{Reunification is more important for the patron to avoid than for the int'l community to achieve.}
-
-\item  \textit{Recognition is more important for the int'l community to avoid than for the patron to achieve.}
-
-	\end{enumerate}
+Assume $T>W-D$
 \end{frame}
 
-\section{Sanctions}
-\begin{frame}{Sanctions (I)}
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Proposition 2}
-  Assume the conditions of \emph{Proposition 1} hold in the absence of sanctions and that sanctions affect only the secessionists' Status Quo payoffs. In order for sanctions to lead to ceding by the secessionists, the following are required:
+\begin{frame}
+\begin{itemize}[<+->]
+	\item Payoffs: sum the discounted stage game payoffs plus any concessions 
+		\begin{itemize}
+			\item e.g. player's $i$'s payoff if both parties play ``Trust'' in every period: $\sum_{t=1}^\infty \de_i^{t-1} T = \frac{T}{1-\de_i}$
+		\end{itemize}
+	\item Parameters are common knowledge with the exception of $\delta_i$, which is country i's private information
+	\item Social welfare measured as sum of high types' expected utilities
+\end{itemize}
+\end{frame}
+
+
+\section{Benchmark}
+\subsection{No Money Burning}
+
+
+\begin{frame}{Benchmark Model}
+\pause
+Assume two types: $\de_h$ and $\de_l$
+\begin{itemize}[<+->]
+	\item $\de_h > \de^* > \de_l$ where $\de^*$ is the cutoff for sustaining (Trust,Trust) eqm
+	\item value of any concession to recipient = cost to giver
+\end{itemize}
+
+\pause
+\vskip.2in
+Some equilibria of interest
+\begin{itemize}[<+->]
+	\item Pool on `Fight'
+	\item Separating without concessions
+	\item Separating through concessions
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Separating through concessions}
+\pause
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 2}
+  In the best concessions separating equilibrium, high types give the smallest concession necessary to separate. Low types do not give a concession.
+\end{beamerboxesrounded}
+	
 	\pause
-	\begin{enumerate}[<+->]
-\item The patron must be unable or find it not worthwhile to invest the additional amount now required to maintain the status quo.
+	\vskip.2in
+	\begin{itemize}
+		\item The smallest concession is $p(T+D)$
+		\item If $p$ is low, high types are better off in the `fight' pooling equilibrium
+	\end{itemize}
+\end{frame}
 
-\item The patron must be unable or find it not worthwhile to invest to instigate fighting by the secessionists.
+\section{Inefficient Concessions}
+\subsection{Add Money Burning}
+\begin{frame}{S}
+Assume cost of concession is $g$, the concession itself
+\begin{itemize}
+  \item Allow giver of concession to also choose $0 \leq e \leq 1$, where benefit of concession is $eg$
+\end{itemize}
 
-\item The continuation value from Status Quo must fall below that from Cede before it falls below that from Fight.
-\end{enumerate}
+
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{P}
+  With the 
 
 \end{beamerboxesrounded}
 
 \end{frame}
 
-\begin{frame}{Sanctions (II)}
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Proposition 3}
-  Assume the conditions of \emph{Proposition 1} hold in the absence of sanctions and that sanctions affect both the secessionists' status quo payoffs and its military capabilities. \\
-	\pause
-	\vskip.05in
-	The parameter space over which a war will be initiated by the home state is increasing in the magnitude of the sanctions' impact on the secessionists' military capabilities.
+\begin{frame}{S}
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{P}
+  A
 \end{beamerboxesrounded}
 
 \end{frame}
@@ -265,12 +248,7 @@ and e.g. $Q_{st} \equiv Q_{s,t-1} -\mu + R_{pt} - R_{ct}$
 \subsection{}
 \begin{frame}{Conclusion}
 \begin{itemize}[<+->]
-	\item We present a unified four-player framework for analyzing unrecognized statehood and its alternatives
-	\item We show unrecognized statehood can emerge in equilibrium even when it is a terrible outcome for all involved
-		\begin{itemize}
-			\item Unfortunately, it is not difficult to imagine Eastern Ukraine on our list of URS in 20 years
-		\end{itemize}
-	\item The model demonstrates why sanctions may be counterproductive and suggests that positive inducements may be more productive
+	\item We present 
 \end{itemize}
 
 \end{frame}
