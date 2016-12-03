@@ -1,5 +1,5 @@
-%\documentclass{beamer} 
-\documentclass[handout]{beamer} 
+\documentclass{beamer} 
+%\documentclass[handout]{beamer} 
 \usetheme{Ilmenau}
 \usepackage{graphicx,verbatim,hyperref}
 \usepackage{textpos}
@@ -123,8 +123,8 @@ Gift-Giving: Camerer (1988), Prendergast $\&$ Stole (2001)
 Conflict: Slantchev (2011), Arena (2013)
 \pause
 		\begin{itemize}[<+->]
-			\item Commitment to peace, not resolve to fight
 			\item Concessions are costly signals instead of bargaining chip
+			\item Commitment to peace, not resolve to fight
 			\item Costly signals are concessions instead of proof of resolve
 		\end{itemize} 
 
@@ -134,8 +134,6 @@ Mediation: Fey and Ramsay (2008, 2011), Horner et al. (2010)
 		\begin{itemize}
 			\item Information is about ability to commit, not resolve
 		\end{itemize} 
-
-
 \end{frame}
 
 
@@ -218,8 +216,13 @@ Some equilibria of interest
   In the best concessions separating equilibrium, high types give the smallest concession necessary to separate. Low types do not give a concession.
 \end{beamerboxesrounded}
 	
-	\pause
-	\vskip.2in
+\pause	
+\[
+  U_h=(p-1)g + \textstyle \frac{\de_h}{(1-\de_h)} \left[pT+(1-p)(W-D)\right]
+\]
+\pause
+\vskip-.1in
+
 	\begin{itemize}[<+->]
 		\item The smallest concession is $c_l^{-1}\left(p(T+D)\right)$
 		\item If $p$ is low, high types are better off in the `fight' pooling equilibrium
@@ -247,17 +250,18 @@ Allow giver of concession to also choose $0 \leq e \leq 1$, where benefit of con
 \begin{frame}[label=hurt]
 \frametitle{Concessions can hurt the giver}
 \pause
-Now assume a low type will use concessions against you, i.e. to increase their payoffs from fighting \hyperlink{Supplemental}{\beamerbutton{Modified Payoffs}}
+Now assume a low type will use concessions against you, i.e. to reduce your payoffs when partner fights \hyperlink{Supplemental}{\beamerbutton{Modified Payoffs}}
 \vskip.1in
 \pause
 \begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 4}
   There are parameters under which the optimal equilibrium features inefficient concessions.
 \end{beamerboxesrounded}
+\pause
 \[
-  U_h=(1-\de_h)(-g) + \de_h \left[pT(1+eg)+peg+(1-p)(W-D(1+eg))\right]
+  U_h=peg-g + \textstyle \frac{\de_h}{(1-\de_h)} \left[pT(1+eg)+(1-p)(W-D(1+eg))\right]
 \]
 \pause
-
+\vskip-.1in
 \begin{itemize}[<+->]
 	\item If $p$ is low, concessions likely to be used against you, so remove material value
 	\item Conjecture: Pooling on `Fight' optimal over larger set of parameters
@@ -273,7 +277,7 @@ Now assume a low type will use concessions against you, i.e. to increase their p
 \pause
 \begin{itemize}[<+->]
   \item Mechanism: if two high types, give concession and play `Trust'; Otherwise, no concession and `Fight'
-	\item Concession is necessary to get truthful revelation
+	\item Concession is necessary to get truthful revelation, but only to high type
 	\item Cost of concession must be greater than benefit for low type
 \end{itemize}
 \vskip.1in
