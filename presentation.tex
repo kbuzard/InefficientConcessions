@@ -57,12 +57,23 @@
 \section{Overview}
 \subsection{Preview}
 \begin{frame}
-\frametitle{Unrecognized States}
-Unrecognized states (URS): control and govern territory, seek recognition
+\frametitle{Inefficient Concessions and Mediation}
+
+In conflict scenarios, concessions are sometimes inefficient 
 \pause
 \begin{itemize}[<+->]
-  \item Six current URS more than 20 yrs old (+ Eastern Ukraine)
-	\item No explanation in the literature for how this can be a stable outcome
+  \item We show inefficient concessions may be preferable if efficient concessions have potential future cost
+	\item Cost: concessions used against you by negotiating partner who violates agreement
+	\item Can you trust that partner will make peace?
+\end{itemize}
+
+\pause
+\vskip.2in
+New explanation for mediation
+\pause
+\begin{itemize}[<+->]
+  \item Can remove uncertainty about ability of negotiating partner to commit to peace
+	\item Removes need for inefficient concessions
 \end{itemize}
 \end{frame}
 
@@ -70,86 +81,79 @@ Unrecognized states (URS): control and govern territory, seek recognition
 \begin{frame}{What we do}
 
 \pause
-We demonstrate unrecognized statehood can be a ``status quo'' outcome
+Start with simple, two-player repeated Prisoners' Dilemma
 \pause
 \begin{itemize}[<+->]
-	\item (SPN) Equilibrium in a repeated game
-	\item Four players
-		\begin{itemize}[<+->]
-			\item Home government
-			\item Secessionist elite
-			\item Patron state
-			\item International community
-		\end{itemize}
-	\item State variable: Status Quo (SQ) payoffs for secessionists
+	\item Asymmetric information about $\de_i$: can partner commit to peace?
 \end{itemize}
-
-\end{frame}
-
-
-
-\begin{frame}{The General Idea}
-
-\pause
-In each period: secessionists and gov't each choose (simultaneously) among $\left\{\text{Fight, Status Quo, Cede}\right\}$
-\pause
-		\begin{itemize}
-			\item We need Status Quo to be a stage game best response for both secessionists and gov't
-		\end{itemize} 
 
 \pause
 \vskip.2in
-We add some more realistic elements:
+Add time zero: let partners give concessions with both signaling and material value
 \pause
-		\begin{enumerate}[<+->]
-			\item Unrecognized status reduces Status Quo payoffs of secessionists each period
-			\item Patron and int'l community can make investments in both actors' payoffs
-		\end{enumerate}
+\begin{itemize}[<+->]
+	\item Let partners destroy some/all of the material value
+	\item Let material value provide help/harm to the giver
+\end{itemize}
+
+\pause
+\vskip.2in
+Mediator removes uncertainty about partner's $\de$
 
 \end{frame}
 
 
-\begin{frame}{Outline of Talk}
+
+\begin{frame}{Literature}
 \pause
-\begin{enumerate}[<+->]
-	\item M
-	\item S
-	\item W
-\end{enumerate}
+Signaling: Spence (1973), but signal has material value
+\pause
+		\begin{itemize}
+			\item cost/benefit tradeoff differs b/c of $\de_i$, $C_i(g)$
+		\end{itemize} 
+
+\pause
+Gift-Giving: Camerer (1988), Prendergast $\&$ Stole (2001)
+\pause
+		\begin{itemize}
+			\item Source of inefficiency differs: gifts can be used against giver
+		\end{itemize} 
+
+\pause
+Conflict: Slantchev (2011), Arena (2013)
+\pause
+		\begin{itemize}[<+->]
+			\item Commitment to peace, not resolve to fight
+			\item Concessions are costly signals instead of bargaining chip
+			\item Costly signals are concessions instead of proof of resolve
+		\end{itemize} 
+
+\pause
+Mediation: Fey and Ramsay (2008, 2011), Horner et al. (2010)
+\pause
+		\begin{itemize}
+			\item Information is about ability to commit, not resolve
+		\end{itemize} 
+
+
 \end{frame}
 
 
 
 \section{Model}
-\subsection{Economic and Political Structure}
+\subsection{}
 \begin{frame}{Timeline}
 \pause
+\begin{enumerate}[<+->]
+	\item[-1.] Nature independently determines types of Country 1 and Country 2: $\de_i \in \left\{\de_h,\de_l\right\}$
+	\item[0.] Countries simultaneously give costly concessions: $g_1, g_2 \in \mathbb{R}_+$
+	\item[1--$\infty$.] Countries engage in a simultaneous Prisoners' Dilemma interaction 
+\end{enumerate}
+
 \end{frame}
 
 
-\subsection{The Players}
-
-\begin{frame}{Home State Actors}
-	\pause
-Central Government of Home State ($g$): desires reunification \\
-\pause
-Secessionists ($s$): desire recognized independence
-\pause
-\begin{itemize}	
-	\item Central issue of contention: recognized independence vs. reunification.
-\end{itemize}
-
-\pause
-\vskip.2in
-Assumptions:
-\begin{itemize}[<+->]
-	\item Issue of status is indivisible, highly valued by both sides
-	\item Insufficient credible side payments for easy settlement
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Stage Game between Home Gov't $\&$ Secessionists}
+\begin{frame}{Stage Game}
 \pause
 
 \begin{center}
@@ -193,12 +197,14 @@ Assume $T>W-D$
 Assume two types: $\de_h$ and $\de_l$
 \begin{itemize}[<+->]
 	\item $\de_h > \de^* > \de_l$ where $\de^*$ is the cutoff for sustaining (Trust,Trust) eqm
-	\item value of any concession to recipient = cost to giver
+	\item $p$: probability of high type
+	\item Low type's cost to give concession $g$: $c_l(g)>c_h(g) =g$
 \end{itemize}
 
 \pause
 \vskip.2in
 Some equilibria of interest
+\pause
 \begin{itemize}[<+->]
 	\item Pool on `Fight'
 	\item Separating without concessions
@@ -214,44 +220,89 @@ Some equilibria of interest
 	
 	\pause
 	\vskip.2in
-	\begin{itemize}
-		\item The smallest concession is $p(T+D)$
+	\begin{itemize}[<+->]
+		\item The smallest concession is $c_l^{-1}\left(p(T+D)\right)$
 		\item If $p$ is low, high types are better off in the `fight' pooling equilibrium
 	\end{itemize}
 \end{frame}
 
 \section{Inefficient Concessions}
 \subsection{Add Money Burning}
-\begin{frame}{S}
-Assume cost of concession is $g$, the concession itself
-\begin{itemize}
-  \item Allow giver of concession to also choose $0 \leq e \leq 1$, where benefit of concession is $eg$
-\end{itemize}
+\begin{frame}{Burning money is unattractive}
+\pause
+Allow giver of concession to also choose $0 \leq e \leq 1$, where benefit of concession is $eg$
 
-
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{P}
-  With the 
-
+\vskip.1in
+\pause
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 3}
+  When concessions confer no material help or harm on the giver, it is optimal to give efficient gifts ($e=1$) in a separating eqm.
 \end{beamerboxesrounded}
-
-\end{frame}
-
-\begin{frame}{S}
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{P}
-  A
-\end{beamerboxesrounded}
-
-\end{frame}
-
-
-\section{Conclusion}
-\subsection{}
-\begin{frame}{Conclusion}
+\pause
 \begin{itemize}[<+->]
-	\item We present 
+	\item The benefit of the gift appears on both sides of the incentive constraint for both individuals, so cancels out
+	\item The benefit appears in the high type's expected utility
 \end{itemize}
+\end{frame}
+
+\begin{frame}[label=hurt]
+\frametitle{Concessions can hurt the giver}
+\pause
+Now assume a low type will use concessions against you, i.e. to increase their payoffs from fighting \hyperlink{Supplemental}{\beamerbutton{Modified Payoffs}}
+\vskip.1in
+\pause
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 4}
+  There are parameters under which the optimal equilibrium features inefficient concessions.
+\end{beamerboxesrounded}
+\[
+  U_h=(1-\de_h)(-g) + \de_h \left[pT(1+eg)+peg+(1-p)(W-D(1+eg))\right]
+\]
+\pause
+
+\begin{itemize}[<+->]
+	\item If $p$ is low, concessions likely to be used against you, so remove material value
+	\item Conjecture: Pooling on `Fight' optimal over larger set of parameters
+\end{itemize}
+\end{frame}
+
+
+\section{Mediation}
+\subsection{}
+\begin{frame}{Mediator as mechanism designer}
+\pause
+`Manipulative' mediator: parties report their types, must deliver the stipulated concessions
+\pause
+\begin{itemize}[<+->]
+  \item Mechanism: if two high types, give concession and play `Trust'; Otherwise, no concession and `Fight'
+	\item Concession is necessary to get truthful revelation
+	\item Cost of concession must be greater than benefit for low type
+\end{itemize}
+\vskip.1in
+\pause
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 5}
+  A mediator can eliminate inefficient concessions.
+\end{beamerboxesrounded}
 
 \end{frame}
 
+
+\appendix
+\section{Supplemental}
+\begin{frame}[label=Supplemental,noframenumbering]
+\begin{center}
+Modified Stage Game Payoffs
+\begin{tabular}{|l|c|c|}
+  \hline      & Trust & Fight \\ \hline
+	 Trust& \small$T(s_2+\alpha_2g_1)$, & \small$-D(m_2+(1-\alpha_2)g_1),$ \\
+  & \small$T(s_1+\alpha_1g_2)$ & \small$T(s_1+\alpha_1g_2)  $\\ 
+	&  & $+W(m_2+(1-\alpha_2)g_1) $\\ \hline
+	Fight & \small$T(s_2+\alpha_2g_1)$& \small$W(m_1+(1-\alpha_1)g_2)$ \\
+	      & \small$+W(m_1+(1-\alpha_1)g_2),$  & \small$-D(m_2+(1-\alpha_2)g_1),$ \\
+	 & \small$-D(m_1+(1-\alpha_1)g_2) $ & \small$W(m_2+(1-\alpha_2)g_1)$ \\
+	&  & \small$-D(m_1+(1-\alpha_1)g_2)$ \\ \hline
+\end{tabular}
+\end{center}
+
+Back to \hyperlink{hurt}{\beamerbutton{Concessions can hurt the giver}}.
+\end{frame}
 
 \end{document}
