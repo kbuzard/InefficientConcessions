@@ -82,5 +82,86 @@ What do we know?
 \vskip.5in
 Will need to start by assuming that $\de_h <$ threshold where separating with no concessions works.
 
-		
+\vskip1in
+Intermediate step for Theorem 4
+\begin{itemize}
+	\item Low type IC constraint to solve for equilibrium high type gift
+	\item Already having shown $g_l = 0$, can set $g_h = g$ for simplicity of notation
+	\item Also, since all the discount factors are for the low type, I'll let $\de_l = \de$
+	\item For the case where $e=1$:
+
+\end{itemize}
+IC constraint:
+\[
+  X_{FF}^l \geq p X_{FT}^l + (1-p) X_{FF}^l - g
+\]
+Expanded in basic terms (without efficiency issues)
+\[
+  \frac{W-D}{1-\de} \geq p \left[T + W + \frac{\de}{1-\de}\left(W-D\right)\right] + (1-p) \frac{W-D}{1-\de} - g
+\]
+Multiply through by $\left(1-\de \right)$
+\[
+  W-D \geq p\left(1-\de \right) \left[T + W\right] + p\de \left(W-D\right) + (1-p) \left[W-D\right] - \left(1-\de \right) g
+\]
+Now add complexity from Table 2
+\begin{multline*}
+  W(1+(1-\al_1)g_2)-D(1+(1-\al_2)g_1) \geq \\
+	p\left(1-\de \right) \left[T(1+\al_2 g_1) + W(1+(1-\al_1)g_2)\right] + p\de \left(W(1+(1-\al_1)g_2)-D(1+(1-\al_2)g_1)\right) \\ + (1-p) \left[W(1+(1-\al_1)g_2)-D(1+(1-\al_2)g_1)\right] - \left(1-\de \right) g
+\end{multline*}
+Substitute in $\al_1 = 0$ everywhere since this is the IC for a low-type of player 1:
+\begin{multline*}
+  W(1+g_2) - D(1+(1-\al_2)g_1) \geq \\
+	p\left(1-\de \right) \left[T(1+\al_2 g_1) + W(1+g_2) \right] + p\de \left(W(1+g_2) - D(1+(1-\al_2)g_1)\right) \\ + (1-p) \left[W(1+g_2) - D(1+(1-\al_2)g_1)\right] - \left(1-\de \right) g
+\end{multline*}
+Set $g_1 = 0$ on the LHS and $g_1 = g$ on the RHS:
+\begin{multline*}
+  W(1+g_2) - D \geq \\
+	p\left(1-\de \right) \left[T(1+\al_2 g) + W(1+g_2) \right] + p\de \left(W(1+g_2) - D(1+(1-\al_2)g)\right) \\ + (1-p) \left[W(1+g_2) - D(1+(1-\al_2)g)\right] - \left(1-\de \right) g
+\end{multline*}
+Set $g_2 = 0$ and $\al_2 = 0$ wherever there is a $(1-p)$ and $g_2 = g$ and $\al_2 = 1$ wherever there is a $p$:
+\begin{multline*}
+  pW(1+g) + (1-p)W - D \geq \\
+	p\left(1-\de \right) \left[T(1+g) + W(1+g) \right] + p\de \left(W(1+g) - D\right) \\ + (1-p) \left[W - D(1+g)\right] - \left(1-\de \right) g
+\end{multline*}
+Expand
+\begin{multline*}
+  pW + pWg + W - pW - D \geq \\
+	\left(p-p\de \right) \left[T+Tg + W+Wg \right] + p\de \left(W+Wg - D\right) \\ + (1-p) \left[W - D -Dg\right] - \left(1-\de \right) g
+\end{multline*}
+Cancel some like terms and move $\left(1-\de \right) g$ to LHS
+\begin{multline*}
+  \left(1-\de \right) g + pWg + W - D \geq \\
+	p\left[T+Tg + W+Wg \right] -p\de \left[T+Tg \right] - p\de D \\ + (1-p) \left[W - D -Dg\right] 
+\end{multline*}
+Do some more canceling and expanding
+\begin{multline*}
+  \left(1-\de \right) g + W - D \geq \\
+	p\left[T+Tg + W\right] -p\de T -p\de Tg - p\de D \\ + W - D -Dg -pW +pD +pDg
+\end{multline*}
+\[
+  \left(1-\de \right) g \geq 
+	pT+pTg + pW -p\de T -p\de Tg - p\de D  -Dg -pW +pD +pDg
+\]
+\[
+  \left(1-\de \right) g \geq pT+pTg -p\de T -p\de Tg - p\de D  -Dg +pD +pDg
+\]
+Now just rearrange to get all the $g$ terms on the left
+\[
+  \left(1-\de \right) g -pTg + p\de Tg + Dg - pDg\geq pT -p\de T - p\de D +pD
+\]
+\[
+  \left[\left(1-\de \right) -p(1-\de)T +(1-p)D\right]g \geq p(1-\de)(T + D)
+\]
+\[
+  g \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right) -p(1-\de)T +(1-p)D}
+\]
+In comparing to the minimum separating gift when $e=0$, which is
+\[
+  g \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right)}
+\]
+We can simplify to see that the minimum gift when $e=1$ is larger when
+\[
+  (1-\de)pT > (1-p)D
+\]
+
 \end{document}
