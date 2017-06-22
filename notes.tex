@@ -157,11 +157,70 @@ Now just rearrange to get all the $g$ terms on the left
 \]
 In comparing to the minimum separating gift when $e=0$, which is
 \[
-  g \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right)}
+  g^* \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right)}
 \]
 We can simplify to see that the minimum gift when $e=1$ is larger when
 \[
   (1-\de)pT > (1-p)D
 \]
 
+\vskip.5in
+Next we get the threshold for $\de_h$ that is necessary for a concessions separating eqm to exist:
+\begin{itemize}
+	\item Use the high-type IC constraint:
+		\[
+		  p X^h_{TT} + (1-p) X^h_{FF} - g_h \geq X^h_{FF}
+		\]
+	\item We'll need to expand for material effects but then solve for both $e=0$ and $e=1$
+	\item For $e=1$:
+		\[
+		  \frac{p}{1-\de_h}T(1+g) + \frac{1-p}{1-\de_h}(W - D(1+g)) - g_h \geq \frac{1}{1-\de_h}(W-D)
+		\]
+		\[
+		  pT + pTg + (1-p)(W - D - Dg) - g_h(1-\de_h) \geq W-D
+		\]
+		\[
+		  pT + pTg + W - D - Dg - pW + pD + pDg - g_h + g_h \de_h \geq W-D
+		\]
+		\[
+		  pT + pTg - Dg - pW + pD + pDg - g_h + g_h \de_h \geq 0
+		\]
+		\[
+		  pT + pTg - Dg - pW + pD + pDg - g_h + g_h \de_h \geq 0
+		\]
+\end{itemize}
+
+\newpage
+To-do list after Venice CesIfo 06/15/17:
+\begin{itemize}
+	\item Add discussion of intuitive criterion to text (if I end up needing it): out of eqm beliefs put zero weight on types that can never gain from deviating from a fixed eqm outcome
+	\item Pin down whether it matters for mediator outcome if $c_h = c$ or $c_h = c(g)$
+	\item Incorporate mediator result into text; re-organize text so it matches June presentation more closely
+	\item Note for mediator result:
+		\begin{itemize}
+			\item For two high types to cooperate in the mechanism, need large enough gift to screen out low types. They're still just reporting, so don't give a gift if not matched with another high type. PLUS when they're exchanging gifts, the gifts will actually be used for good:
+				\[
+				  T(1+g) \geq (1-\de)[T(1+g) + W] + \de (W-D)
+				\]
+				\[
+				  \de \geq \frac{W}{T + Tg + D}
+				\]
+				Note that this threshold is smaller than $\frac{W}{T + D}$, the one we get without concessions having material benefit / harm
+		\end{itemize}
+	\item Jim Fearon: maybe get rid of repeated game and just parameterize a one-shot game; he has a paper about concessions being used against you; he also gave me the reference for another one but I've forgotten it
+	\item Someone who \textit{can't} cooperate under either $e=0$ or $e=1$ CAN cooperate under mediator
+		\begin{itemize}
+			\item In the absence of mediation, being able to burn money can help, but you still lose something
+			\item I still have a question about the overall game: if $e=0$ provides higher welfare if it were enforceable but it's not, do we just go with $e=1$? This question goes away if I get rid of the repeated game.
+			\item Some parameters. For all of these, I take $W=8$, $D=5$, $T=10$
+				\begin{itemize}
+					\item $p=.4, \de_l = .45, \de_h = \de_{STC} = .53$. Choose $e=1$, but $\de_1 = .65$
+					\item $p=.3, \de_l = .45, \de_h = \de_{STC}  = .53$. Choose $e=1$, but $\de_1 > 1$; even worse at $p=.2$
+					\item $p=.4, \de_l = .5, \de_h = \de_{STC} = .53$. Choose $e=1$, $\de_1 \geq .4$ (works fine)
+					\item $p=.1, \de_l = .1, \de_h = \de_{STC} = .53$. Choose $e=0$, but $\de_0 \geq 6.7$
+					\item $p=.05, \de_l = .5, \de_h = .7$. Choose $e=0$, but $\de_0 = 7.6$
+					\item $p=.1, \de_l = .5, \de_h = .75$. Choose $e=0$, but $\de_0 = 6.7$ and $\de_1 \geq 3$
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
 \end{document}
