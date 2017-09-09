@@ -1,8 +1,8 @@
 T=10
 W=8
 D=5
-dl = .45
-p = .3
+dl = .1
+p = .2
 
 #Separating w/out concessions for dh such that:
 dh_swoc = W/((1-p)*W +p*(T+D))
@@ -18,8 +18,10 @@ g0 = p*(D+T)                                   #gift necessary to separate if e 
 uh_g1 = (1-dh)*(p-1)*g1 + dh*(p*T*(1+g1) + p*g1 +(1-p)*(W-D-D*g1))
 uh_g0 = (1-dh)*(p-1)*g0 + dh*(p*T + (1-p)*(W-D))
 
-dh1Th = W*(1-p)+1-p*T + p*(W-(T+D))/g1
-dh0Th = W*(1-p)+1-p*T + p*(W-(T+D))/g0
+dh1Th = D*(1-p)+1-p*T + p*(W-(T+D))/g1
+dh0Th = 1 + p*(W-(T+D))/g0
+
+uh_swoc = p*T/(1-dh) + (1-p)*(dh*(W-D)/(1-dh)-D)
 
 #What would happen for these parameters with the mediator? Only dh_stc matters, 
 #and this is guaranteed by assuption on dh
