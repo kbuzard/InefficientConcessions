@@ -24,6 +24,10 @@
   \usepackage{setspace}
   \doublespacing
 
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
 \usepackage[pdftex,
 bookmarks=true,
 bookmarksnumbered=false,
@@ -165,9 +169,11 @@ In any case, these long lasting stalemates are the types of conflict which are m
 {\bf \emph{Separating without concessions}\\}
 \vskip-.2in
 The other two equilibria are separating equilibria in which low types and high types have different strategies. In a \emph{no-concessions separating equilibrium}, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Fight. So long as there are two high types, as revealed by their period 1 play, both countries continue to play Trust in all following periods. Otherwise, both countries play Fight in all following periods. 
-\\
-\\
-{\bf Theorem 1:} The strategy of not giving concessions in period 0, then playing Trust unless the other country defects to Fight is an equilibrium strategy for high types if $\delta_h \geq \frac{W}{(1-p)W + p(T + D)}$.\\
+
+\begin{theorem}
+	The strategy of not giving concessions in period 0, then playing Trust unless the other country defects to Fight is an equilibrium strategy for high types if $\delta_h \geq \frac{W}{(1-p)W + p(T + D)}$.
+	\label{theorem:1}
+\end{theorem}
 \emph{Proof}: See appendix.
 \\
 \\
@@ -211,24 +217,8 @@ One example of such an equilibrium includes Israel and Egypt at the Camp David A
 
 %another example
 
-\section{Inefficiency and concessions} % Lake says combine this from the start and allow inefficiency
+\section{Material Value of Concession and Inefficiency} 
 \label{sec:IC}
-We now relax the assumption about the benefit of a concession being equal to its cost and instead allow countries to ``burn'' a portion of the concession they give. For example, an expensive display of pageantry to a dignitary might benefit the receiving country very little, if at all, but it still signals good intentions on behalf of the giving country. The option to give efficient concessions is still available along with new options to give a variety of less efficient concessions. 
-
-In the model, countries choose a scalar $e$ to multiply by their given concession $g$. $0 \leq e \leq 1$. As before, $C(g)= g$ but while the receiving country observes the full concession $g$, its benefit is now only $eg$.\footnote{In a more general model not relevant to results presented here, we could also think of $e$ as a function $E(\cdot)$. The argument is still $g$, but instead of a scalar, $E(\cdot)$ can transform $g$ into any concession, not only a numerical value. These gifts will be converted into utilities by cost and benefit functions, which then allow the possibility of a gift having efficiency greater than 1. The transformation function $E(\cdot)$ can be thought of as the type of gift, and has a cost to the sender and a direct benefit to the receiver in addition to its signaling value.} From here on in the analysis, we use $g_l=0$ and $g_h=g_h^*$ to denote the equilibrium concenssions as presented in the previous section and calculated in the appendix. \\
-\\
-{\bf Theorem 3:} It is optimal to give efficient gifts (where $e=1$) in a separating equilibrium. \\
-\emph{Proof:}
-The benefit of a gift appears on both sides of the IC for both types and thus cancels out in the low type IC $(peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h )$ and in the high type IC:  $(pX_{TT}^h+(1-p)X_{FF}^h - g_h +peg_h \geq X_{FF}^h +peg_h)$.\footnote{Elaboration and explanation of the IC constraints is in the proof of Theorem 2.} Therefore, receiving a gift where $e<1$  does not affect incentives to truth tell about the countries' types. However, the expected separation utilities under this game are now
-\be
-U_h= pX_{TT}+(1-p)X_{FF} - g_h+peg_h 
-\ee
-and
-\be
-U_l=X_{FF}+peg_h 
-\ee
- $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.}$\blacksquare$
-
 We now model concessions to potentially have real material help or harm to the giver. The interpretation is that the country which receives the concessions can use them to build up their military or to build up their civil society. The former hurts the giver of the concessions in war; the latter helps the giver in peace. The Golan heights is such an example: if Syria is an ally of Israel, the Golan Heights is a reasonable concession to make, but if Syria later turns out to betray a trust, surrender of the strategic land would be disastrous for Israel. %Another example is ADD more examples
 
 Allow $T,W$ and $D$ to be functions that depend on arguments $s_i$, the size of country i's civil society and $m_i$, the size of country i's military. $s_i$ and $m_i$ are exogenous.
@@ -237,13 +227,13 @@ In period 0, after receiving his concession, a country makes the decision to all
  $C_h(\cdot)=C_l(\cdot)=1$ as earlier in the model description. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
 
 \begin{center}
-\captionof{table}{Modified Stage Game Payoffs}
+\captionof{table}{Stage Game Payoffs when Concessions have Material Value}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
-	 Trust& \small$T(s_2+\alpha_2 e g_1)$, & \small$-D(m_2+(1-\alpha_2)e g_1),$ \\
-  & \small$T(s_1+\alpha_1 e g_2)$ & \small$T(s_1+\alpha_1 e g_2)  +W(m_2+(1-\alpha_2)e g_1) $\\ \hline
-	Fight & \small$T(s_2+\alpha_2 e g_1)+W(m_1+(1-\alpha_1) e g_2),$& \small$W(m_1+(1-\alpha_1)e g_2)-D(m_2+(1-\alpha_2)e g_1),$ \\
-	 & \small$-D(m_1+(1-\alpha_1) e g_2) $ & \small$W(m_2+(1-\alpha_2)e g_1)-D(m_1+(1-\alpha_1)e g_2)$ \\ \hline
+	 Trust& \small$T(s_2+\alpha_2 g_1)$, & \small$-D(m_2+(1-\alpha_2) g_1),$ \\
+  & \small$T(s_1+\alpha_1 g_2)$ & \small$T(s_1+\alpha_1 g_2)  +W(m_2+(1-\alpha_2) g_1) $\\ \hline
+	Fight & \small$T(s_2+\alpha_2 g_1)+W(m_1+(1-\alpha_1) g_2),$& \small$W(m_1+(1-\alpha_1) g_2)-D(m_2+(1-\alpha_2) g_1),$ \\
+	 & \small$-D(m_1+(1-\alpha_1) g_2) $ & \small$W(m_2+(1-\alpha_2) g_1)-D(m_1+(1-\alpha_1) g_2)$ \\ \hline
 \end{tabular}
 \end{center}
 \vskip.1in
@@ -259,6 +249,44 @@ U_h=pT(1+eg)+peg+(1-p)(W-D(1+eg))\footnote{Note the gift payment does not enter 
 
 
 Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession needs to be determined by comparing the utility under each. For low $p$, the term $(1-p)(W-D(1+eg))$ dominates, showing that clearly, as low an $e$ as possible is best, so $e=0$, that is, complete inefficiency is the best possible equilibrium efficiency level. It is thus rational under such parameters for inefficient gifts to be given as concessions. $\blacksquare$ 
+
+
+
+
+
+
+We now relax the assumption about the benefit of a concession being equal to its cost and instead allow countries to ``burn'' a portion of the concession they give. For example, an expensive display of pageantry to a dignitary might benefit the receiving country very little, if at all, but it still signals good intentions on behalf of the giving country. The option to give efficient concessions is still available along with new options to give a variety of less efficient concessions. 
+
+In the model, countries choose a scalar $e$ to multiply by their given concession $g$. $0 \leq e \leq 1$. As before, $C(g)= g$ but while the receiving country observes the full concession $g$, its benefit is now only $eg$.\footnote{In a more general model not relevant to results presented here, we could also think of $e$ as a function $E(\cdot)$. The argument is still $g$, but instead of a scalar, $E(\cdot)$ can transform $g$ into any concession, not only a numerical value. These gifts will be converted into utilities by cost and benefit functions, which then allow the possibility of a gift having efficiency greater than 1. The transformation function $E(\cdot)$ can be thought of as the type of gift, and has a cost to the sender and a direct benefit to the receiver in addition to its signaling value.} From here on in the analysis, we use $g_l=0$ and $g_h=g_h^*$ to denote the equilibrium concenssions as presented in the previous section and calculated in the appendix. \\
+\\
+
+
+\begin{center}
+\captionof{table}{Stage Game Payoffs when Concessions have Material Value}
+\begin{tabular}{|l|c|c|}
+  \hline      & Trust & Fight \\ \hline
+	 Trust& \small$T(s_2+\alpha_2 e g_1)$, & \small$-D(m_2+(1-\alpha_2)e g_1),$ \\
+  & \small$T(s_1+\alpha_1 e g_2)$ & \small$T(s_1+\alpha_1 e g_2)  +W(m_2+(1-\alpha_2)e g_1) $\\ \hline
+	Fight & \small$T(s_2+\alpha_2 e g_1)+W(m_1+(1-\alpha_1) e g_2),$& \small$W(m_1+(1-\alpha_1)e g_2)-D(m_2+(1-\alpha_2)e g_1),$ \\
+	 & \small$-D(m_1+(1-\alpha_1) e g_2) $ & \small$W(m_2+(1-\alpha_2)e g_1)-D(m_1+(1-\alpha_1)e g_2)$ \\ \hline
+\end{tabular}
+\end{center}
+
+
+
+{\bf Theorem 3:} It is optimal to give efficient gifts (where $e=1$) in a separating equilibrium. \\
+\emph{Proof:}
+The benefit of a gift appears on both sides of the IC for both types and thus cancels out in the low type IC $(peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h )$ and in the high type IC:  $(pX_{TT}^h+(1-p)X_{FF}^h - g_h +peg_h \geq X_{FF}^h +peg_h)$.\footnote{Elaboration and explanation of the IC constraints is in the proof of Theorem 2.} Therefore, receiving a gift where $e<1$  does not affect incentives to truth tell about the countries' types. However, the expected separation utilities under this game are now
+\be
+U_h= pX_{TT}+(1-p)X_{FF} - g_h+peg_h 
+\ee
+and
+\be
+U_l=X_{FF}+peg_h 
+\ee
+ $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.}$\blacksquare$
+
+
 %need to also write constraints for high type IC to be satisfied, or appeal to forward induction
 %? And, a mechanism improves upon inefficiency because it allows a high types to only give a gift to other high types, thus decreasing their costs and still giving the same equilibrium matches.  . Does this rely on varied costs of giving- i.e with same costs can a mechanism still improve? 
 %note damages due to alpha can be understood as political losses/ embarrassment of failure to make peace as much as they can be seen as military damages.
@@ -280,7 +308,6 @@ $M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concess
 
 Welfare is again considered as the sum of the high type utilities. Qualitatively, similar results would hold if we also included low types in the analysis with weighting based on $p$. In the analysis, incentive compatibility and individual rationality constraints must be satisfied. The revelation principle is used to attain truthful self-identification (Myerson 1979). 
 
-\\
 {\bf Theorem 5:} A mediator can be used to eliminate inefficient concessions. \\
 \emph{Proof:}  The low type IC ($pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h$) binds, so the equilibrium benchmark gift is $g^{*}=p(X_{FT}^l-X_{FF}^l)$ and high type utility is $U_h^*= pX_{TT}+(1-p)X_{FF} - (1-p)g^*$). Under $M$, the low type IC can bind without having high types give a concession to low types. The equilibrium separating gift $g^{*M}$ will be larger than $g^*$ in this case, specifically 
 \be
@@ -338,8 +365,7 @@ One high type equilibrium strategy is to pool with the low types and always play
  
  Let us examine the conditions for a separating equilibrium held in place by a grim trigger.\\
  \\
-{\bf Theorem 1:} The strategy of not giving concessions in period 0, then playing Trust unless the other country defects to Fight is an equilibrium strategy for high types if $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}$.\\
- \emph{Proof}:
+ \emph{Proof of Theorem \ref{theorem:1}}:\\
 Countries with the equilibrium strategy to play Trust in the first round reveal themselves as a high type as per Lemma 2. This will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from deviating against someone playing the pooling (always Fight) strategy. If both countries play Trust in a period, a Peace equilibrium takes place and both countries continue to play peace in every period with the grim trigger threat of the War equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods.  If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, a high type will be given incentives to play Trust in the first round rather than Fight. To play Trust, the following must be satisfied:%Make clearer language!!!!!!!
 %FUTURE WORK ON DELY OF PEACE- IF PEACE WILL E THERE, YOU MIGHT BE VERY RISK AVERSE TO GETTING SCREWED BY THE LOW TYPE SO KEEP PUTTING OFF THE RISKY FIRST TRUST ROUND
 \be
