@@ -21,6 +21,7 @@
 \newcommand{\ve}{\varepsilon}
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\de}{\delta}
+\newcommand{\al}{\alpha}
   \usepackage{setspace}
   \doublespacing
 
@@ -200,7 +201,6 @@ The analysis is conducted with standard Incentive Compatibility and Individual R
 
 Equilibrium payoffs beginning from round 1 are now easily described by noting only the collective first round behavior. Let $X_{ij}$ represent the sum of discounted payoffs for country i where subscripts represent first round strategies of that country. If both countries play T in round 1, the corresponding payoff to country i is represented as $ X_{TT}=\frac {T}{1- \delta_i}$. Likewise $X_{TF}=({-D}+\frac{\delta_i(W-D)}{1- \delta_i} )$, $ X_{FF}=\frac{W-D}{1- \delta_i}$, and  $X_{FT}=T+W +\frac{\delta_i(W-D)}{1- \delta_i}$. Note that because types have different discount rates, these quantities are different by type, and when ambiguous will be superscripted to indicate the type (e.g. $X_{FT}^h$ represents the high type). Note that because of the signaling value of the concessions given in period 0, starting from period 1 in the Trust/Fight game, both countries play the same strategy in a separating equilibrium (both play Trust if there were two high signals; otherwise both play Fight). $X_{FT}$ and $X_{TF}$ are still necessary for calculating the equilibrium concession $g_h$.%might make the first one TF for clarity
 \\
-\\
 \begin{lemma}
 	In a separating equilibrium, low types do not give a concession. Cheap talk does not allow for a concessions separating equilibrium.
 	\label{lemma:3}
@@ -244,6 +244,16 @@ In period 0, after receiving his concession, a country makes the decision to all
 \end{center}
 \vskip.1in
 \begin{theorem}
+	Assume the high types are not patient enough to separate without concessions. There are parameters under which the ability of the low-type country to use concessions to reduce the payoffs of its negotiating partner during a 'fight' stage (i.e. $\al_L < 1$) destroys the negotiating partners' ability to separate through concessions, i.e. to achieve peace.
+	\label{theorem:matval}
+\end{theorem}
+
+ \emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
+
+The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. In order to calculate it, we need to know the size of the minimum separating concession, which is again calculated from the low-type incentive constraint. The minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. The minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do. \hfill $\blacksquare$ 
+
+
+\begin{theorem}
 	Under some parameters, the optimal equilibrium uses inefficient concessions.
 	\label{theorem:4}
 \end{theorem}
@@ -257,7 +267,7 @@ U_h=pT(1+eg)+peg+(1-p)(W-D(1+eg))\footnote{Note the gift payment does not enter 
 \ee
 
 
-Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession needs to be determined by comparing the utility under each. For low $p$, the term $(1-p)(W-D(1+eg))$ dominates, showing that clearly, as low an $e$ as possible is best, so $e=0$, that is, complete inefficiency is the best possible equilibrium efficiency level. It is thus rational under such parameters for inefficient gifts to be given as concessions. $\blacksquare$ 
+Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession needs to be determined by comparing the utility under each. For low $p$, the term $(1-p)(W-D(1+eg))$ dominates, showing that clearly, as low an $e$ as possible is best, so $e=0$, that is, complete inefficiency is the best possible equilibrium efficiency level. It is thus rational under such parameters for inefficient gifts to be given as concessions. \hfill $\blacksquare$ 
 
 
 
@@ -296,7 +306,7 @@ and
 \be
 U_l=X_{FF}+peg_h 
 \ee
- $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.}$\blacksquare$
+ $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.} \hfill $\blacksquare$
 
 
 %need to also write constraints for high type IC to be satisfied, or appeal to forward induction
@@ -332,7 +342,7 @@ High type utility under $M$ is
 \be
 U_h^M= pX_{TT}+(1-p)X_{FF}
 \ee
-because high types exchange concessions of the same value. $U_h^M>U_h^*$. Note that no additional wealth is created by $M$, but less is transferred to low types, and welfare is defined as high-type utility.\footnote{Low types IR constraint still binds and $U_l=X_{FF}$}  $\blacksquare$ 
+because high types exchange concessions of the same value. $U_h^M>U_h^*$. Note that no additional wealth is created by $M$, but less is transferred to low types, and welfare is defined as high-type utility.\footnote{Low types IR constraint still binds and $U_l=X_{FF}$} \hfill $\blacksquare$ 
 
 The low type leader can bluff in the bilateral setting but not when a mediator is present. As per Theorem~\ref{theorem:4}, inefficiency is due to the high types giving an inefficient gift in order to separate while still being able to prevent low types from using concessions against the high types. But because the benefits of giving a concession differ between the types (low types get one period of cheater's payoff, while high types get future peace), the mediator is able to mandate concessions only between declared high types. This means there is no longer a need for inefficient concessions since concessions will never be used against the giver. Thus, a mediator is able to remove inefficiency in concession giving and bring willing parties to the table to give the gifts necessary to achieve peace. 
 
@@ -370,13 +380,13 @@ This paper succeeds in showing a role for inefficient concessions, and shows how
 	From period 1 on, playing fight in all periods regardless of beliefs constitutes an equilibrium strategy of the continuation game for both types.
 	\label{lemma:1}
 \end{lemma}
-\emph{Proof}: As $D\geq0$ and $W\geq0$ the dominant stage game action for all types is to play Fight. Thus the stage game equilibrium is (Fight, Fight) and in any repeated game, playing the stage game equilibrium in each period is an equilibrium of the entire game. $\blacksquare$\\
+\emph{Proof}: As $D\geq0$ and $W\geq0$ the dominant stage game action for all types is to play Fight. Thus the stage game equilibrium is (Fight, Fight) and in any repeated game, playing the stage game equilibrium in each period is an equilibrium of the entire game. \hfill $\blacksquare$\\
 \\
 \begin{lemma}
 	From period 1 on, playing fight in all periods is the only sequentially rational strategy for low types regardless of their beliefs of the other country's type and strategy.
 	\label{lemma:2}
 \end{lemma}
-\emph{Proof}: As $D\geq0$ and $W\geq0$ the dominant stage game action for all types is to play Fight. Playing Trust is only possible in equilibrium where there is punishment for playing Fight. The minimax payoff is $W-D$, and punishing a country by playing it every period is the worst possible punishment, hence it gives the greatest potential for a country to be given incentives to play Trust. Low types, with $\delta_l < \delta^*$ achieve a higher payoff deviation from being punished than they do from cooperation, so they cannot be given incentives to play anything except Fight.  $\blacksquare$\\
+\emph{Proof}: As $D\geq0$ and $W\geq0$ the dominant stage game action for all types is to play Fight. Playing Trust is only possible in equilibrium where there is punishment for playing Fight. The minimax payoff is $W-D$, and punishing a country by playing it every period is the worst possible punishment, hence it gives the greatest potential for a country to be given incentives to play Trust. Low types, with $\delta_l < \delta^*$ achieve a higher payoff deviation from being punished than they do from cooperation, so they cannot be given incentives to play anything except Fight. \hfill $\blacksquare$\\
 
 One high type equilibrium strategy is to pool with the low types and always play Fight. If both the low and high type of player $j$ choose the strategy that gives no concessions and always plays fight, Lemma~\ref{lemma:2} shows that the low-type of player $i$ best responds by always playing Fight. The high-type of player $i$ is made strictly better off by playing Fight in each period given player $j$'s behavior by Lemma~\ref{lemma:1}. Given that the stage-game equilibrium will be (Fight,Fight), there is no incentive to give a concession in period 0 because concessions are costly and signaling one's type can give no benefit in this equilibrium. Types pool by never giving concessions and always playing Fight. 
  %add intro about the 3 types of equilibria. 
@@ -397,7 +407,7 @@ This simplifies to the condition of high types choosing Trust in period 1 if and
 \be
 \delta_h \geq \frac{W}{(1-p)W + p(T+D)}
 \ee
-Since under some parameter sets this condition will hold, this type of separating equilibrium can exist. Let us refer to such an equilibrium as a  \emph{no-concessions separating equilibrium}, since the high types have sufficient incentive to separate under appropriate parameter values even without concessions being given in period 0. $\blacksquare$
+Since under some parameter sets this condition will hold, this type of separating equilibrium can exist. Let us refer to such an equilibrium as a  \emph{no-concessions separating equilibrium}, since the high types have sufficient incentive to separate under appropriate parameter values even without concessions being given in period 0. \hfill $\blacksquare$
 \\
 %This section could use some cleanup and streamlining
 \\
@@ -409,7 +419,7 @@ This type of equilibrium will be called a \emph{concessions separating equilibri
 \\
 \\
 \emph{Proof of Lemma~\ref{lemma:3}:}\\
-According to the revelation principle, we can assume that in a concessions separating equilibrium countries reveal their types truthfully, allowing period 1 actions where High types only play Trust with other high types, and play Fight with low types. Low types play Fight (Lemma~\ref{lemma:1}) and their payoff is $U_l=X_{FF}+ pg_h-g_l$. Though low types might be willing to give a non-zero gift in a separating equilibrium, it must distinguish them from the high types. Thus it cannot help them to achieve a higher payoff, and because their concession $g_l$ enters negatively in the payoff function, low types' optimal concession is 0. High types have the incentive to play Trust only in the Peace equilibrium, which can only be sustained by a pair of high types. Both types benefit from the other country playing Trust because of the payoff structure so all countries have incentive to signal that they are high types if concessions are costless (cheap talk). Thus costless announcements cannot lead to truthful revelation. If concessions lead to a separating equilibrium, they must be costly. $\blacksquare$
+According to the revelation principle, we can assume that in a concessions separating equilibrium countries reveal their types truthfully, allowing period 1 actions where High types only play Trust with other high types, and play Fight with low types. Low types play Fight (Lemma~\ref{lemma:1}) and their payoff is $U_l=X_{FF}+ pg_h-g_l$. Though low types might be willing to give a non-zero gift in a separating equilibrium, it must distinguish them from the high types. Thus it cannot help them to achieve a higher payoff, and because their concession $g_l$ enters negatively in the payoff function, low types' optimal concession is 0. High types have the incentive to play Trust only in the Peace equilibrium, which can only be sustained by a pair of high types. Both types benefit from the other country playing Trust because of the payoff structure so all countries have incentive to signal that they are high types if concessions are costless (cheap talk). Thus costless announcements cannot lead to truthful revelation. If concessions lead to a separating equilibrium, they must be costly. \hfill $\blacksquare$
 \\
 \\
 \emph{Proof of Theorem \ref{theorem:2}:}\\
@@ -439,8 +449,7 @@ In terms of fundamentals, the condition for a concessions separating equilibrium
 %p_1(\frac{T+D-W}{1-\delta_h}-p_2(T+D)\geq 0. point is the p's arent the same; i might have gotten them backwards. simplified this is:
 \delta_h \geq \frac{W}{T+D}
 \ee
-That is, there is no parameter restriction beyond our definition of what it means for a player to be a high type.
-$\blacksquare$\\
+That is, there is no parameter restriction beyond our definition of what it means for a player to be a high type. \hfill $\blacksquare$\\
 
 The no-concessions separating equilibrium also will exist if equation (8) holds. In the case that both exist, the high types will prefer the concessions separating equilibrium if and only if
 \be
