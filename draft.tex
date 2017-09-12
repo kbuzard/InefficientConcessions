@@ -125,7 +125,7 @@ Beginning in period 1, countries engage in an infinitely repeated Prisoner's Dil
 The choice of ``Trust'' or ``Fight'' will be referred to as the county's stage game action.
 
 \begin{center}
-\captionof{table}{Stage Game Payoffs}
+\captionof{table}{Stage game payoffs}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
 	 Trust& T, T& -D, T+W \\ \hline
@@ -225,6 +225,8 @@ One example of such an equilibrium includes Israel and Egypt at the Camp David A
 
 \section{Material Value of Concession and Inefficiency} 
 \label{sec:IC}
+
+\subsection{Concessions with Material Value}
 We now model concessions to potentially have real material help or harm to the giver. The interpretation is that the country which receives the concessions can use them to build up their military or to build up their civil society. The former hurts the giver of the concessions in war; the latter helps the giver in peace. The Golan heights is such an example: if Syria is an ally of Israel, the Golan Heights is a reasonable concession to make, but if Syria later turns out to betray a trust, surrender of the strategic land would be disastrous for Israel. %Another example is ADD more examples
 
 Allow $T,W$ and $D$ to be functions that depend on arguments $s_i$, the size of country i's civil society and $m_i$, the size of country i's military. $s_i$ and $m_i$ are exogenous.
@@ -233,7 +235,7 @@ In period 0, after receiving his concession, a country makes the decision to all
  $C_h(\cdot)=C_l(\cdot)=1$ as earlier in the model description. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
 
 \begin{center}
-\captionof{table}{Stage Game Payoffs when Concessions have Material Value}
+\captionof{table}{Stage game payoffs when concessions have material value}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
 	 Trust& \small$T(s_2+\alpha_2 g_1)$, & \small$-D(m_2+(1-\alpha_2) g_1),$ \\
@@ -244,13 +246,57 @@ In period 0, after receiving his concession, a country makes the decision to all
 \end{center}
 \vskip.1in
 \begin{theorem}
-	Assume the high types are not patient enough to separate without concessions. There are parameters under which the ability of the low-type country to use concessions to reduce the payoffs of its negotiating partner during a 'fight' stage (i.e. $\al_L < 1$) destroys the negotiating partners' ability to separate through concessions, i.e. to achieve peace.
+	Assume the high types are not patient enough to separate without concessions. There are parameters under which the low-type country's ability to use concessions to reduce the payoffs of its negotiating partner during a `fight' stage (i.e. $\al_L < 1$) destroys the negotiating partners' ability to separate through concessions, i.e. to achieve peace when there are two high types.
 	\label{theorem:matval}
 \end{theorem}
 
  \emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
 The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. In order to calculate it, we need to know the size of the minimum separating concession, which is again calculated from the low-type incentive constraint. The minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. The minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do. \hfill $\blacksquare$ 
+
+
+\subsection{Material Value of Concession can be Destroyed}
+We now relax the assumption about the benefit of a concession being equal to its cost and instead allow countries to ``burn'' a portion of the concession they give. For example, an expensive display of pageantry to a dignitary might benefit the receiving country very little, if at all, but it still signals good intentions on behalf of the giving country. The option to give efficient concessions is still available along with new options to give a variety of less efficient concessions. 
+
+In the model, countries choose a scalar $e$ to multiply by their given concession $g$. $0 \leq e \leq 1$. As before, $C(g)= g$ but while the receiving country observes the full concession $g$, its benefit is now only $eg$.\footnote{In a more general model not relevant to results presented here, we could also think of $e$ as a function $E(\cdot)$. The argument is still $g$, but instead of a scalar, $E(\cdot)$ can transform $g$ into any concession, not only a numerical value. These gifts will be converted into utilities by cost and benefit functions, which then allow the possibility of a gift having efficiency greater than 1. The transformation function $E(\cdot)$ can be thought of as the type of gift, and has a cost to the sender and a direct benefit to the receiver in addition to its signaling value.} From here on in the analysis, we use $g_l=0$ and $g_h=g_h^*$ to denote the equilibrium concenssions as presented in the previous section and calculated in the appendix. 
+
+
+\begin{center}
+\captionof{table}{Stage game payoffs when concessions have material value that can be destroyed}
+\begin{tabular}{|l|c|c|}
+  \hline      & Trust & Fight \\ \hline
+	 Trust& \small$T(s_2+\alpha_2 e g_1)$, & \small$-D(m_2+(1-\alpha_2)e g_1),$ \\
+  & \small$T(s_1+\alpha_1 e g_2)$ & \small$T(s_1+\alpha_1 e g_2)  +W(m_2+(1-\alpha_2)e g_1) $\\ \hline
+	Fight & \small$T(s_2+\alpha_2 e g_1)+W(m_1+(1-\alpha_1) e g_2),$& \small$W(m_1+(1-\alpha_1)e g_2)-D(m_2+(1-\alpha_2)e g_1),$ \\
+	 & \small$-D(m_1+(1-\alpha_1) e g_2) $ & \small$W(m_2+(1-\alpha_2)e g_1)-D(m_1+(1-\alpha_1)e g_2)$ \\ \hline
+\end{tabular}
+\end{center}
+
+Before turning to the question of how the possibility of destroying the value of concessions impacts the ability of the parties to separate, we first formally establish the welfare implications.
+
+\begin{lemma}
+	Assuming that a separating equilibrium exists when concessions have material value and are efficient (where $e=1$), it is optimal to give efficient gifts in a separating equilibrium.
+	\label{lemma:efficiency}
+\end{lemma}
+\emph{Proof:}
+The benefit of a gift appears on both sides of the IC for both types and thus cancels out in the low type IC $(peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h )$ and in the high type IC:  $(pX_{TT}^h+(1-p)X_{FF}^h - g_h +peg_h \geq X_{FF}^h +peg_h)$.\footnote{Elaboration and explanation of the IC constraints is in the proof of Theorem~\ref{theorem:2}.} Therefore, receiving a gift where $e<1$  does not affect incentives to truth tell about the countries' types. However, the expected separation utilities under this game are now
+\be
+U_h= pX_{TT}+(1-p)X_{FF} - g_h+peg_h 
+\ee
+and
+\be
+U_l=X_{FF}+peg_h 
+\ee
+ $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.} \hfill $\blacksquare$
+
+
+%need to also write constraints for high type IC to be satisfied, or appeal to forward induction
+%? And, a mechanism improves upon inefficiency because it allows a high types to only give a gift to other high types, thus decreasing their costs and still giving the same equilibrium matches.  . Does this rely on varied costs of giving- i.e with same costs can a mechanism still improve? 
+%note damages due to alpha can be understood as political losses/ embarrassment of failure to make peace as much as they can be seen as military damages.
+%{\bf Theorem 12:}\\  
+%When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
+% \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
+
 
 
 \begin{theorem}
@@ -272,49 +318,6 @@ Whether it is beneficial for high types to settle on the efficient concession or
 
 
 
-
-
-We now relax the assumption about the benefit of a concession being equal to its cost and instead allow countries to ``burn'' a portion of the concession they give. For example, an expensive display of pageantry to a dignitary might benefit the receiving country very little, if at all, but it still signals good intentions on behalf of the giving country. The option to give efficient concessions is still available along with new options to give a variety of less efficient concessions. 
-
-In the model, countries choose a scalar $e$ to multiply by their given concession $g$. $0 \leq e \leq 1$. As before, $C(g)= g$ but while the receiving country observes the full concession $g$, its benefit is now only $eg$.\footnote{In a more general model not relevant to results presented here, we could also think of $e$ as a function $E(\cdot)$. The argument is still $g$, but instead of a scalar, $E(\cdot)$ can transform $g$ into any concession, not only a numerical value. These gifts will be converted into utilities by cost and benefit functions, which then allow the possibility of a gift having efficiency greater than 1. The transformation function $E(\cdot)$ can be thought of as the type of gift, and has a cost to the sender and a direct benefit to the receiver in addition to its signaling value.} From here on in the analysis, we use $g_l=0$ and $g_h=g_h^*$ to denote the equilibrium concenssions as presented in the previous section and calculated in the appendix. \\
-\\
-
-
-\begin{center}
-\captionof{table}{Stage Game Payoffs when Concessions have Material Value}
-\begin{tabular}{|l|c|c|}
-  \hline      & Trust & Fight \\ \hline
-	 Trust& \small$T(s_2+\alpha_2 e g_1)$, & \small$-D(m_2+(1-\alpha_2)e g_1),$ \\
-  & \small$T(s_1+\alpha_1 e g_2)$ & \small$T(s_1+\alpha_1 e g_2)  +W(m_2+(1-\alpha_2)e g_1) $\\ \hline
-	Fight & \small$T(s_2+\alpha_2 e g_1)+W(m_1+(1-\alpha_1) e g_2),$& \small$W(m_1+(1-\alpha_1)e g_2)-D(m_2+(1-\alpha_2)e g_1),$ \\
-	 & \small$-D(m_1+(1-\alpha_1) e g_2) $ & \small$W(m_2+(1-\alpha_2)e g_1)-D(m_1+(1-\alpha_1)e g_2)$ \\ \hline
-\end{tabular}
-\end{center}
-
-
-
-\begin{theorem}
-	It is optimal to give efficient gifts (where $e=1$) in a separating equilibrium.
-	\label{theorem:3}
-\end{theorem}
-\emph{Proof:}
-The benefit of a gift appears on both sides of the IC for both types and thus cancels out in the low type IC $(peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h )$ and in the high type IC:  $(pX_{TT}^h+(1-p)X_{FF}^h - g_h +peg_h \geq X_{FF}^h +peg_h)$.\footnote{Elaboration and explanation of the IC constraints is in the proof of Theorem~\ref{theorem:2}.} Therefore, receiving a gift where $e<1$  does not affect incentives to truth tell about the countries' types. However, the expected separation utilities under this game are now
-\be
-U_h= pX_{TT}+(1-p)X_{FF} - g_h+peg_h 
-\ee
-and
-\be
-U_l=X_{FF}+peg_h 
-\ee
- $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.} \hfill $\blacksquare$
-
-
-%need to also write constraints for high type IC to be satisfied, or appeal to forward induction
-%? And, a mechanism improves upon inefficiency because it allows a high types to only give a gift to other high types, thus decreasing their costs and still giving the same equilibrium matches.  . Does this rely on varied costs of giving- i.e with same costs can a mechanism still improve? 
-%note damages due to alpha can be understood as political losses/ embarrassment of failure to make peace as much as they can be seen as military damages.
-%{\bf Theorem 12:}\\  
-%When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
-% \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
 
 This finding of inefficiency is for profoundly different reasons than the literature related to Camerer (1988) or Prendergast and Stole (2001).\footnote{Since our initial setup is essentially identical to Camerer's, the desired inefficiency of  pre-play communication can also be found in our model. With a slight behavioral modification, the reasoning of Prendergast and Stole (2001) can also be had: if a country suffers regret after efficiently giving to a type different than their own, there is a premium for guessing correctly. In Prendergast and Stole the two types are equal except in labeling; in our model, high types and low types are used so there is an incentive for low types to try to pose as high types. Aside from this difference, essentially the same result is found: if countries suffer a ``mismatching'' cost due to giving to the wrong type, they will be hesitant to do so and may offer inefficient concessions.} Instead of being in reaction to a behavioral regret for mismatching or serving as a way to discourage low types for entering the game altogether, here making concessions inefficient is a device to prevent low types from using those concessions against oneself in the future.
 
