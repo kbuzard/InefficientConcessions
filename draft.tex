@@ -150,7 +150,7 @@ The threshold $\delta^*$ needed is \be
  \ee
 Assume $\delta_h> \delta^*$ and $\delta_l < \delta^*$.   
 
-\section{Analysis of benchmark cases}
+\section{Analysis of Benchmark Cases}
 \label{sec:bench}
 When countries are faced with doubts about each other's motives, they have several options of how to proceed. There are three basic types of equilibria that this analysis will examine.\footnote{If the discount factor for the high type ($\delta_h$) exceeds the cutoff found in expression (1), there are many types of equilibria; consider for instance oscillating every other period between Peace and War with a grim trigger War threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed, so are not attractive.} A thorough analysis of the different types of equilibria, as well as all proofs for this section, can be found in the appendix. 
 \\
@@ -252,7 +252,7 @@ In period 0, after receiving his concession, a country makes the decision to all
 
  \emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
-The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. In order to calculate it, we need to know the size of the minimum separating concession, which is again calculated from the low-type incentive constraint. The minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. The minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do. \hfill $\blacksquare$ 
+The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. In order to calculate it, we need to know the size of the minimum separating concession, which is again calculated from the low-type incentive constraint. The minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$.\footnote{See proof of Theorem~\ref{theorem:4} below for details.} The minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do. \hfill $\blacksquare$ 
 
 
 \subsection{Material Value of Concession can be Destroyed}
@@ -288,7 +288,6 @@ U_l=X_{FF}+peg_h
 \ee
  $\frac{dU}{de}>0$ for both countries so it is never optimal have $e<1$.\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.} \hfill $\blacksquare$
 
-
 %need to also write constraints for high type IC to be satisfied, or appeal to forward induction
 %? And, a mechanism improves upon inefficiency because it allows a high types to only give a gift to other high types, thus decreasing their costs and still giving the same equilibrium matches.  . Does this rely on varied costs of giving- i.e with same costs can a mechanism still improve? 
 %note damages due to alpha can be understood as political losses/ embarrassment of failure to make peace as much as they can be seen as military damages.
@@ -296,27 +295,14 @@ U_l=X_{FF}+peg_h
 %When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
 % \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
 
-
-
 \begin{theorem}
-		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameter under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
+		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameters under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
 	\label{theorem:4}
 \end{theorem}
- \emph{Proof}:   Because it is relatively complicated to calculate equilibrium concessions in the general case, a slight simplification of the general model will be made for proof of inefficient concessions. Restrict functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. Also assume that $s_1=s_2=m_1=m_2=1.$ Because of linearity, equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. Note that none of these simplifications is essential for the results to hold but we make them for ease of calculation and demonstration of the results. 
-The low type's IC constraint binds so with $e=1$, $g^*$ can be calculated to be $g^*= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$.
-Under an equilibrium with purely inefficient concessions $(e=0)$, the minimum separating concession would be $g'=p(T+D)$.
 
-Assuming gifts must be non-negative, $g^*$ will always be greater than $g'$. This is not enough to show that inefficient concessions are sometimes optimal. To show this, consider high type equilibrium utility and assume that the high types are perfectly patient (that is, $\de_h=1$):  
-\be
-U_h=pT(1+eg)+peg+(1-p)(W-D(1+eg))\footnote{Note the gift payment does not enter here: the current period is weighted $1-\de$, which is 0, while the future is weighted $\de=1$.}
-\ee
+\emph{Proof}: See appendix.
 
-
-Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession needs to be determined by comparing the utility under each. For low $p$, the term $(1-p)(W-D(1+eg))$ dominates, showing that clearly, as low an $e$ as possible is best, so $e=0$, that is, complete inefficiency is the best possible equilibrium efficiency level. It is thus rational under such parameters for inefficient gifts to be given as concessions. \hfill $\blacksquare$ 
-
-
-
-
+Inefficient concessions are optimal under low $p$ (there's a good chance of facing a low type who will use the concession against you) as well as when $\de_l$ is low ($g^*$ is decreasing in the patience of the low type, as a larger concession is required to deter an impatient low-type from being untruthful). 
 
 This finding of inefficiency is for profoundly different reasons than the literature related to Camerer (1988) or Prendergast and Stole (2001).\footnote{Since our initial setup is essentially identical to Camerer's, the desired inefficiency of  pre-play communication can also be found in our model. With a slight behavioral modification, the reasoning of Prendergast and Stole (2001) can also be had: if a country suffers regret after efficiently giving to a type different than their own, there is a premium for guessing correctly. In Prendergast and Stole the two types are equal except in labeling; in our model, high types and low types are used so there is an incentive for low types to try to pose as high types. Aside from this difference, essentially the same result is found: if countries suffer a ``mismatching'' cost due to giving to the wrong type, they will be hesitant to do so and may offer inefficient concessions.} Instead of being in reaction to a behavioral regret for mismatching or serving as a way to discourage low types for entering the game altogether, here making concessions inefficient is a device to prevent low types from using those concessions against oneself in the future.
 
@@ -340,7 +326,7 @@ Welfare is again considered as the sum of the high type utilities. Qualitatively
 	\end{enumerate}
 	\label{theorem:5}
 \end{theorem}
-\emph{Proof:}  The low type IC ($pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h$) binds, so the equilibrium benchmark gift is $g^{*}=p(X_{FT}^l-X_{FF}^l)$ and high type utility is $U_h^*= pX_{TT}+(1-p)X_{FF} - (1-p)g^*$). Under $M$, the low type IC can bind without having high types give a concession to low types. The equilibrium separating gift $g^{*M}$ will be larger than $g^*$ in this case, specifically 
+\emph{Proof:}  The low type IC ($peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h$) binds, so the equilibrium benchmark gift is $g^{*}=p(X_{FT}^l-X_{FF}^l)$ and high type utility is $U_h^*= pX_{TT}+(1-p)X_{FF} - (1-p)g^*$). Under $M$, the low type IC can bind without having high types give a concession to low types. The equilibrium separating gift $g^{*M}$ will be larger than $g^*$ in this case, specifically 
 \be
 g^{*M}= \frac{p(X_{FT}^l-X_{FF}^l)}{1-p}
 \ee
@@ -470,6 +456,15 @@ i.e.,
  W\geq p(W + T+D)\geq 0
 \ee
 %note this can be simplified by using primals of X's, DO THIS!!!!!!!!!!!!!!!!
+
+
+\emph{Proof of Theorem \ref{theorem:4}:}\\
+Because it is relatively complicated to calculate equilibrium concessions in the general case, a slight simplification of the general model will be made for proof of inefficient concessions. Restrict functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. Also assume that $s_1=s_2=m_1=m_2=1.$ Because of linearity, equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. Note that none of these simplifications is essential for the results to hold but we make them for ease of calculation and demonstration of the results. The low type's IC constraint binds so with $e=1$, $g^*$ can be calculated to be $g^*= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$. The high type's utility when $e=1$ is $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - g^*$.
+
+When $e=0$---that is, the future material value of the concessions is destroyed---we are back in the case of Section~\ref{sec:bench} and the minimum separating concession is $g'=p(T+D)$. The threshold for high types to cooperate is again $\frac{W}{T+D}$. High type utility when $e=0$ is $\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - g'$.
+
+Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession needs to be determined by comparing the utility under each, and either can be larger. Inefficient concessions are made optimal when $p$ is low (there's a good chance of facing a low type who will use the concession against you) as well as when $\de_l$ is low ($g^*$ is decreasing in the patience of the low type, as a larger concession is required to deter an impatient low-type from being untruthful). \hfill $\blacksquare$ 
+
 
 \newpage
 \section{Bibliography} %can add search(kaplan), expoeriments (2) and workplace gift exchange papers (the "gift giving as a medium" explanation
