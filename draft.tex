@@ -260,7 +260,6 @@ We now relax the assumption about the benefit of a concession being equal to its
 
 In the model, countries choose a scalar $e$ to multiply by their given concession $g$. $0 \leq e \leq 1$. As before, $C(g)= g$ but while the receiving country observes the full concession $g$, its benefit is now only $eg$.\footnote{In a more general model not relevant to results presented here, we could also think of $e$ as a function $E(\cdot)$. The argument is still $g$, but instead of a scalar, $E(\cdot)$ can transform $g$ into any concession, not only a numerical value. These gifts will be converted into utilities by cost and benefit functions, which then allow the possibility of a gift having efficiency greater than 1. The transformation function $E(\cdot)$ can be thought of as the type of gift, and has a cost to the sender and a direct benefit to the receiver in addition to its signaling value.} From here on in the analysis, we use $g_l=0$ and $g_h=g_h^*$ to denote the equilibrium concenssions as presented in the previous section and calculated in the appendix. 
 
-
 \begin{center}
 \captionof{table}{Stage game payoffs when concessions have material value that can be destroyed}
 \begin{tabular}{|l|c|c|}
@@ -275,7 +274,7 @@ In the model, countries choose a scalar $e$ to multiply by their given concessio
 Before turning to the question of how the possibility of destroying the value of concessions impacts the ability of the parties to separate, we first formally establish the welfare implications.
 
 \begin{lemma}
-	Assuming that a separating equilibrium exists when concessions have material value and are efficient (where $e=1$), it is optimal to give efficient gifts in a separating equilibrium.
+	Assuming that a separating equilibrium exists when concessions have material value and are efficient (where $e=1$), it is optimal to give efficient concessions in a separating equilibrium.
 	\label{lemma:efficiency}
 \end{lemma}
 \emph{Proof:}
@@ -300,11 +299,11 @@ U_l=X_{FF}+peg_h
 
 
 \begin{theorem}
-	Under some parameters, the optimal equilibrium uses inefficient concessions.
+		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameter under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
 	\label{theorem:4}
 \end{theorem}
  \emph{Proof}:   Because it is relatively complicated to calculate equilibrium concessions in the general case, a slight simplification of the general model will be made for proof of inefficient concessions. Restrict functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. Also assume that $s_1=s_2=m_1=m_2=1.$ Because of linearity, equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. Note that none of these simplifications is essential for the results to hold but we make them for ease of calculation and demonstration of the results. 
-The low type's IC constraint binds so with $e=1$, $g^*$ can be calculated to be $g^*= \frac{p(T+D)}{1-pT}$.
+The low type's IC constraint binds so with $e=1$, $g^*$ can be calculated to be $g^*= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$.
 Under an equilibrium with purely inefficient concessions $(e=0)$, the minimum separating concession would be $g'=p(T+D)$.
 
 Assuming gifts must be non-negative, $g^*$ will always be greater than $g'$. This is not enough to show that inefficient concessions are sometimes optimal. To show this, consider high type equilibrium utility and assume that the high types are perfectly patient (that is, $\de_h=1$):  
@@ -334,7 +333,11 @@ $M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concess
 Welfare is again considered as the sum of the high type utilities. Qualitatively, similar results would hold if we also included low types in the analysis with weighting based on $p$. In the analysis, incentive compatibility and individual rationality constraints must be satisfied. The revelation principle is used to attain truthful self-identification (Myerson 1979). 
 
 \begin{theorem}
-	A mediator can be used to eliminate inefficient concessions.
+	Assume that concessions have future material value.
+	\begin{enumerate}
+		\item[(a)] If future material value cannot be destroyed, a mediator can be used to expanded the parameter space over which peace can be achieved.
+		\item[(b)] If future material value can be destroyed, a mediator can be used to eliminate inefficient concessions and improve welfare.
+	\end{enumerate}
 	\label{theorem:5}
 \end{theorem}
 \emph{Proof:}  The low type IC ($pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h$) binds, so the equilibrium benchmark gift is $g^{*}=p(X_{FT}^l-X_{FF}^l)$ and high type utility is $U_h^*= pX_{TT}+(1-p)X_{FF} - (1-p)g^*$). Under $M$, the low type IC can bind without having high types give a concession to low types. The equilibrium separating gift $g^{*M}$ will be larger than $g^*$ in this case, specifically 
