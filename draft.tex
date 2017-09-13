@@ -256,6 +256,7 @@ The patience threshold to separate through concessions is much higher under thes
 
 
 \subsection{Material Value of Concession can be Destroyed}
+\label{sec:matval}
 We now relax the assumption about the benefit of a concession being equal to its cost and instead allow countries to ``burn'' a portion of the concession they give. For example, an expensive display of pageantry to a dignitary might benefit the receiving country very little, if at all, but it still signals good intentions on behalf of the giving country. The option to give efficient concessions is still available along with new options to give a variety of less efficient concessions. 
 
 In the model, countries choose a scalar $e$ to multiply by their given concession $g$. $0 \leq e \leq 1$. As before, $C(g)= g$ but while the receiving country observes the full concession $g$, its benefit is now only $eg$.\footnote{In a more general model not relevant to results presented here, we could also think of $e$ as a function $E(\cdot)$. The argument is still $g$, but instead of a scalar, $E(\cdot)$ can transform $g$ into any concession, not only a numerical value. These gifts will be converted into utilities by cost and benefit functions, which then allow the possibility of a gift having efficiency greater than 1. The transformation function $E(\cdot)$ can be thought of as the type of gift, and has a cost to the sender and a direct benefit to the receiver in addition to its signaling value.} From here on in the analysis, we use $g_l=0$ and $g_h=g_h^*$ to denote the equilibrium concenssions as presented in the previous section and calculated in the appendix. 
@@ -314,33 +315,35 @@ Because many conflicts occur in an international arena with no clear enforceable
 
 The model setup is as before, but instead of parties being free to give whatever concession they want, the mediator solicits type reports and then enforces incentive compatible concessions. This mediator wil be modeled as a mechanism $M$.
 
-$M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concessions $g_1$ and $g_2$ so that $ M:(t_1,t_2)\rightarrow( g_1(\cdot), g_2(\cdot))$.  The countries are bound to send the mandated concessions. The benchmark case analyzed in Sections~\ref{sec:bench} and \ref{sec:IC} requires the countries to send the same concession to both types, since types are private information.  $M$ can differentiate based on recipient's type. Otherwise, the setup is identical to the benchmark case.  
+$M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concessions $g_1$ and $g_2$ so that $ M:(t_1,t_2)\rightarrow( g_1(\cdot), g_2(\cdot))$.  The countries are bound to send the mandated concessions. In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent to both types since types are private information. $M$ can differentiate based on recipient's type. Otherwise, the setup is the same as in Section~\ref{sec:matval} where concessions have future material value.  
 
-Welfare is again considered as the sum of the high type utilities. Qualitatively, similar results would hold if we also included low types in the analysis with weighting based on $p$. In the analysis, incentive compatibility and individual rationality constraints must be satisfied. The revelation principle is used to attain truthful self-identification (Myerson 1979). 
+The welfare target is again the sum of the high type utilities. Qualitatively, similar results would hold if we also included low types in the analysis with weighting based on $p$. In the analysis, incentive compatibility and individual rationality constraints must be satisfied. The revelation principle is used to attain truthful self-identification (Myerson 1979). 
 
 \begin{theorem}
 	Assume that concessions have future material value.
 	\begin{enumerate}
-		\item[(a)] If future material value cannot be destroyed, a mediator can be used to expanded the parameter space over which peace can be achieved.
-		\item[(b)] If future material value can be destroyed, a mediator can be used to eliminate inefficient concessions and improve welfare.
+		\item[(a)] If future material value can be destroyed, a mediator can be used to eliminate inefficient concessions and improve welfare.
+		\item[(b)] If future material value cannot be destroyed, a mediator can be used to expand the parameter space over which peace can be achieved.
 	\end{enumerate}
 	\label{theorem:5}
 \end{theorem}
-\emph{Proof:}  The low type IC ($peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h$) binds, so the equilibrium benchmark gift is $g^{*}=p(X_{FT}^l-X_{FF}^l)$ and high type utility is $U_h^*= pX_{TT}+(1-p)X_{FF} - (1-p)g^*$). Under $M$, the low type IC can bind without having high types give a concession to low types. The equilibrium separating gift $g^{*M}$ will be larger than $g^*$ in this case, specifically 
-\be
-g^{*M}= \frac{p(X_{FT}^l-X_{FF}^l)}{1-p}
-\ee
+\emph{Proof:} (a) Under $M$, the low type IC can bind without having high types give a concession to low types. There is no need then to give inefficient concessions: high types will invest in civil society and improve the giver's welfare and low types will never receive the concession. %The equilibrium separating concession $g^{*M}$ will be larger than $g^*$ in this case because the low type who reports truthfully receives a concession with zero probability: 
+%\be
+%g^{*M}= \frac{p(X_{FT}^l-X_{FF}^l)}{1-p}
+%\ee
 High type utility under $M$ is 
 \be
-U_h^M= pX_{TT}+(1-p)X_{FF}
+U_h^M= pX_{TT}+(1-p)X_{FF} = p \left( \frac{T(1+g^{*M})}{1-\de_h} \right) + (1-p) \left(\frac{W-D}{1-\de_h} \right)
 \ee
-because high types exchange concessions of the same value. $U_h^M>U_h^*$. Note that no additional wealth is created by $M$, but less is transferred to low types, and welfare is defined as high-type utility.\footnote{Low types IR constraint still binds and $U_l=X_{FF}$} \hfill $\blacksquare$ 
+because high types exchange concessions of the same value. Welfare, defined as high-type utility, is improved because no transfer is made to the low types and no future damage is caused in the case of such a transfer.\footnote{Low types IR constraint still binds and $U_l=X_{FF}$.}
+
+(b) The contraction of the parameter space over which peace could be achieved in Theorem~\ref{theorem:matval} derives from the low types' ability to use concessions to reduce the payoffs of its negotiating partner during a `fight' stage. By ensuring that only high types exchange gifts, the mediator removes this expected cost, thus allowing a wider range of high types to separate through concessions. The threshold for high types to prefer the separating-through-mediation equilibrium to the pooling on no concessions equilibrium, $\de_h^*$, differs from $\de^1_h$ of Theorem~\ref{theorem:matval} in that it does not have the term $D(1-p)$ (thus is smaller) and the separating concession $g^* = \frac{g^*}{1-p}$. Since the concession is in the denominator, this also reduces the value of $\de_h^*$. \hfill $\blacksquare$ 
 
 The low type leader can bluff in the bilateral setting but not when a mediator is present. As per Theorem~\ref{theorem:4}, inefficiency is due to the high types giving an inefficient gift in order to separate while still being able to prevent low types from using concessions against the high types. But because the benefits of giving a concession differ between the types (low types get one period of cheater's payoff, while high types get future peace), the mediator is able to mandate concessions only between declared high types. This means there is no longer a need for inefficient concessions since concessions will never be used against the giver. Thus, a mediator is able to remove inefficiency in concession giving and bring willing parties to the table to give the gifts necessary to achieve peace. 
 
-The improvements by the mediator here do not rely on the mediator's private information as in the models of Kydd (2003), Rauchhaus (2006) and Smith and Stam (2003). Therefore the mediator's preferences need not be a huge factor in her participation. So long as the costs are small enough to be worth her participation the mediator can effectively enter and assist in solving the conflict.
+The improvements by the mediator here do not rely on the mediator's private information as in the models of Kydd (2003), Rauchhaus (2006) and Smith and Stam (2003). Therefore the mediator's preferences need not be an important factor in her participation. So long as the costs are small enough to be worth her participation the mediator can effectively enter and assist in solving the conflict.
 
-The value of truth telling by the mediator has been brought up in the literature. Kydd (2003) studies bias in mediation and how a mediator can credibly communicate information to the parties. Conversely Horner et al. (2010) rely on the mediator to ``hoard'' information in order to be able to improve on unmediated interaction. In our model, a successful mediator relies on the parties trusting her. However, here the mediator had no incentive to lie: lying can only potentially hurt the high types, the only type who the mediator can possibly help.
+The value of truth telling by the mediator has been examined in the literature. Kydd (2003) studies bias in mediation and how a mediator can credibly communicate information to the parties. Conversely Horner et al. (2010) rely on the mediator to ``hoard'' information in order to be able to improve on unmediated interaction. In our model, a successful mediator relies on the parties trusting her. However, here the mediator had no incentive to lie: lying can only potentially hurt the high types, the only type who the mediator can possibly help.
 
 
 \section{Conclusion}
@@ -455,9 +458,7 @@ i.e.,
 \be
  W\geq p(W + T+D)\geq 0
 \ee
-%note this can be simplified by using primals of X's, DO THIS!!!!!!!!!!!!!!!!
-
-
+\\
 \emph{Proof of Theorem \ref{theorem:4}:}\\
 Because it is relatively complicated to calculate equilibrium concessions in the general case, a slight simplification of the general model will be made for proof of inefficient concessions. Restrict functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. Also assume that $s_1=s_2=m_1=m_2=1.$ Because of linearity, equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. Note that none of these simplifications is essential for the results to hold but we make them for ease of calculation and demonstration of the results. The low type's IC constraint binds so with $e=1$, $g^*$ can be calculated to be $g^*= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$. The high type's utility when $e=1$ is $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - g^*$.
 
