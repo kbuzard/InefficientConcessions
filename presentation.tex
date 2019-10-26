@@ -1,5 +1,5 @@
-%\documentclass{beamer} 
-\documentclass[handout]{beamer} 
+\documentclass{beamer} 
+%\documentclass[handout]{beamer} 
 \usetheme{Ilmenau}
 \usepackage{graphicx,verbatim,hyperref}
 \usepackage{textpos}
@@ -48,7 +48,7 @@
 \begin{document}
 \title[Inefficient Concessions and Mediation\hspace{2.95in}\insertframenumber/\inserttotalframenumber]{Inefficient Concessions and Mediation}
 \author[Kristy Buzard and Ben Horne]{Kristy Buzard and Ben Horne\\ kbuzard@syr.edu}
-\date{June 15, 2017}
+\date{October 25, 2019}
 \maketitle
 %\insertpresentationendpage removed b/c of appendix
 
@@ -84,7 +84,7 @@ New explanation for mediation
 Start with simple, two-player repeated Prisoners' Dilemma
 \pause
 \begin{itemize}[<+->]
-	\item Asymmetric information about $\de_i$: can partner commit to peace?
+	\item Asymmetric information about partner's discount factor $\de_i$: can partner commit to peace?
 \end{itemize}
 
 \pause
@@ -106,10 +106,10 @@ Mediator removes uncertainty about partner's $\de$
 
 \begin{frame}{Literature}
 \pause
-Signaling: Spence (1973), but signal has material value
+Signaling: Spence (1973), but signal has potential future cost
 \pause
 		\begin{itemize}
-			\item cost/benefit tradeoff differs b/c of $\de_i$, $C_i(g)$
+			\item cost/benefit tradeoff b/c of $\de_i$, $C_i(g)$
 		\end{itemize} 
 
 \pause
@@ -187,7 +187,7 @@ Assume $T>W-D$
 
 
 \section{Benchmark}
-\subsection{No Money Burning}
+\subsection{No Money Burning, No Impact on Giver}
 
 
 \begin{frame}{Benchmark Model}
@@ -204,11 +204,26 @@ Assume two types: $\de_h$ and $\de_l$
 Some equilibria of interest
 \pause
 \begin{itemize}[<+->]
-	\item Separating without concessions
-	\item Separating through concessions
 	\item Pool on `Fight'
+	\item Separating through concessions
+	\item Separating without concessions
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Pooling Equilibrium}
+\pause
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Lemma 4}
+  From period 1 on, playing fight in all periods is the only sequentially rational strategy for low types regardless of their beliefs of the other country's type and strategy.
+\end{beamerboxesrounded}
+	
+\pause
+\vskip.1in
+
+	\begin{itemize}[<+->]
+		\item This equilibrium can always be chosen by both types
+	\end{itemize}
+\end{frame}
+
 
 \begin{frame}{Separating through concessions}
 \pause
@@ -217,19 +232,71 @@ Some equilibria of interest
 \end{beamerboxesrounded}
 	
 \pause	
+\vskip.1in
+If $p$ is low enough, high types are better off in the `fight' pooling equilibrium
+\pause
 \[
-  U_h=pg - c_h(g) + \textstyle \frac{\de_h}{(1-\de_h)} \left[pT+(1-p)(W-D)\right]
+  U_h(CSE)=pg - g + \textstyle \frac{1}{(1-\de_h)} \left[pT+(1-p)(W-D)\right]
 \]
 \pause
-\vskip-.1in
+\[
+  U_h(POOL)=\textstyle \frac{1}{(1-\de_h)} \left(W-D\right)
+\]
 
-	\begin{itemize}[<+->]
-		\item The smallest concession is $p(T+D)$
-		\item If $p$ is low, high types are better off in the `fight' pooling equilibrium
-	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Smallest Separating Concession}
+The smallest concession, $p(T+D)$, comes from the low type's incentive constraint
+\pause
+\[
+  pg +X_{FF}^l \geq -g + pg + pX_{FT}^l+(1-p)X_{FF}^l 
+\]
+\pause
+\[
+  pg +\frac{W-D}{1-\de_l} \geq -g + pg + p\left[T+W + \frac{\de \left(W-D\right)}{1-\de_l} \right]+(1-p)\frac{W-D}{1-\de_l}
+\]
+\pause
+\[
+  g \geq p\left[T+W + \frac{\de \left(W-D\right)}{1-\de_l} \right]-p\frac{\left(W-D\right)}{1-\de_l}
+\]
+\pause
+\[
+  g \geq pT+pW -pW -pD + p\frac{\left(W-D\right)}{1-\de_l} -p\frac{\left(W-D\right)}{1-\de_l}
+\]
 \end{frame}
 
 \section{Inefficient Concessions}
+\subsection{Add Impact of Concessions on Giver (Still no money burning)}
+\begin{frame}[label = hurt]{Timeline}
+\pause
+\begin{enumerate}[<+->]
+	\item[-1.] Nature independently determines types of Country 1 and Country 2: $\de_i \in \left\{\de_h,\de_l\right\}$
+	\item[0.] Concessions
+		\begin{enumerate}
+			\item[0a.] Countries decide what proportion of a received concession to invest in civil society (vs. military capabilities): $\alpha_i \in [0,1]$ \hskip.2in \hyperlink{Supplemental}{\beamerbutton{Modified Payoffs}}
+			\item[0b.] \textcolor{red!75!green!50!blue!25!gray}{Countries simultaneously give costly concessions and decide on the efficiency of the concessions: $(g_i, e_i) \in \mathbb{R}_+ \times [0,1]$} 
+		\end{enumerate}	
+	\item[1--$\infty$.] Countries engage in a simultaneous Prisoners' Dilemma interaction 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Peace not possible in some scenarios}
+\pause
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 3}
+  When concessions impact the giver's future welfare, peace becomes unachievable for some parameters under which it is achievable when concessions do not impact the giver's future welfare.
+\end{beamerboxesrounded}
+
+\pause
+\vskip.1in
+\begin{itemize}[<+->]
+	\item Effect comes in part through change in minimum separating concession
+	\item High-type utility may increase or decrease from the benchmark case
+\end{itemize}
+\end{frame}
+
+
 \subsection{Add Money Burning}
 \begin{frame}{Timeline}
 \pause
@@ -237,21 +304,21 @@ Some equilibria of interest
 	\item[-1.] Nature independently determines types of Country 1 and Country 2: $\de_i \in \left\{\de_h,\de_l\right\}$
 	\item[0.] Concessions
 		\begin{enumerate}
-			\item[0a.] Countries simultaneously give costly concessions and decide on the efficiency of the concessions: $(g_i, e_i) \in \mathbb{R}_+ \times [0,1]$ 
-			\item[0b.] \textcolor{red!75!green!50!blue!25!gray}{Countries decide what proportion of a received concession to invest in civil society (vs. military capabilities): $\alpha_i \in [0,1]$}
+			\item[0a.] Countries decide what proportion of a received concession to invest in civil society (vs. military capabilities): $\alpha_i \in [0,1]$
+			\item[0b.] \textcolor{blue}{Countries simultaneously give costly concessions and decide on the efficiency of the concessions: $(g_i, e_i) \in \mathbb{R}_+ \times [0,1]$}
 		\end{enumerate}	
 	\item[1--$\infty$.] Countries engage in a simultaneous Prisoners' Dilemma interaction 
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{Burning money is unattractive}
+\begin{frame}{Burning money is (obviously) unattractive...}
 \pause
-Now benefit of concession is $eg$
+Now benefit of concession is $eg$ 
 
 \vskip.1in
 \pause
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 3}
-  When concessions confer no material help or harm on the giver, it is optimal to give efficient gifts ($e=1$) in a separating eqm.
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Lemma 2}
+  If a concessions separating equilibrium exists under no money burning, it is optimal to give efficient gifts ($e=1$) in a concessions separating equilibrium with money burning.
 \end{beamerboxesrounded}
 \pause
 \begin{itemize}[<+->]
@@ -261,50 +328,23 @@ Now benefit of concession is $eg$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Timeline}
-\pause
-\begin{enumerate}[<+->]
-	\item[-1.] Nature independently determines types of Country 1 and Country 2: $\de_i \in \left\{\de_h,\de_l\right\}$
-	\item[0.] Concessions
-		\begin{enumerate}
-			\item[0a.] Countries simultaneously give costly concessions and decide on the efficiency of the concessions: $(g_i, e_i) \in \mathbb{R}_+ \times [0,1]$ 
-			\item[0b.] \textcolor{blue}{Countries decide what proportion of a received concession to invest in civil society (vs. military capabilities): $\alpha_i \in [0,1]$}
-		\end{enumerate}	
-	\item[1--$\infty$.] Countries engage in a simultaneous Prisoners' Dilemma interaction 
-\end{enumerate}
-\end{frame}
 
-\begin{frame}[label=hurt]
-\frametitle{Concessions can hurt the giver}
+\begin{frame}
+\frametitle{...but in some cases countries will burn money}
 \pause
 \begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 4}
-  When the low type country can use concessions to reduce the payoffs of its negotiating partner during a `fight' stage (i.e. $\alpha_L < 1$), there are parameters under which the separating-through-concessions equilibrium features inefficient concessions.
+  When concessions affect the future welfare of the giver \textit{and} their value can be destroyed, there are parameters under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
 \end{beamerboxesrounded}
-\hyperlink{Supplemental}{\beamerbutton{Modified Payoffs}}
+\vskip-.1in
 \pause
 \[
-  U_h=peg - c_h(g) + \textstyle \frac{\de_h}{1-\de_h} \left[pT(1+eg)+(1-p)(W-D(1+eg))\right]
+  U_h=peg - c_h(g) + \textstyle \frac{1}{1-\de_h} \left[pT(1+eg)+(1-p)(W-D(1+eg))\right]
 \]
 \pause
 \vskip-.1in
 \begin{itemize}[<+->]
-	\item If $p$ is low, concessions likely to be used against you, so remove material value
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Peace not possible in some scenarios}
-\pause
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 5}
-  When $\alpha_L < 1$ is allowed, peace becomes unachievable for some parameters under which it is achievable when concessions do not have material value.
-\end{beamerboxesrounded}
-
-\pause
-\vskip.1in
-\begin{itemize}[<+->]
-	\item If peace is achievable, concessions may be either efficient or inefficient
-	\item High-type utility may increase or decrease from no-material-value case
+	\item If $p$ is low, concessions likely to be used against you
+	\item If $\de_l$ is low, concession has to be large to deter low type from from mimicking high type
 \end{itemize}
 \end{frame}
 
@@ -322,8 +362,8 @@ Now benefit of concession is $eg$
 \end{itemize}
 \vskip.1in
 \pause
-\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 6}
-  A mediator restores peace where $\alpha_i < 1$ destroys it, eliminates inefficient concessions, and reduces the threshold $\de_h$ for high types.
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Theorem 5}
+  A mediator restores peace where concessions' future welfare impact destroys it and eliminates inefficient concessions elsewhere.
 \end{beamerboxesrounded}
 
 \end{frame}
@@ -346,7 +386,7 @@ Modified Stage Game Payoffs
 \end{tabular}
 \end{center}
 
-Back to \hyperlink{hurt}{\beamerbutton{Concessions can hurt the giver}}.
+Back to \hyperlink{hurt}{\beamerbutton{Burning money unattractive}}.
 \end{frame}
 
 \end{document}
