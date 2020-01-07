@@ -216,14 +216,61 @@ Next we get the threshold for $\de_h$ that is necessary for a concessions separa
 		\[
 		  pT + pTg - Dg - pW + pD + pDg - g_h + g_h \de_h \geq 0
 		\]
-	\item For $e=0$, you're back in the original case with no material value, i.e. enforceable for same $\de_h$ has no material value case
+		Note that all the $g$'s should be $g_h$'s in the five lines above:
+		\[
+		  g_h \de_h \geq - pT - pT g_h + D g_h + pW - pD - pD g_h + g_h
+		\]
+		\[
+		  \de_h \geq \frac{p(W - D - T)}{g_h} + (1-p)D + 1 - pT 
+		\]
+	\item For $e=0$, you're back in the original case with no material value, i.e. enforceable for same $\de_h$ as no material value case
+		\[
+		  \frac{p}{1-\de_h}T + \frac{1-p}{1-\de_h}(W - D) - g_0 \geq \frac{1}{1-\de_h}(W-D)
+		\]
+		\[
+		  pT + (1-p)(W - D) - (1-\de_h)g_0 \geq (W-D)
+		\]
+		\[
+		  pT -p(W - D) + \de_h g_0 \geq g_0
+		\]
+		\[
+		  \de_h g_0 \geq g_0 + p(W - D - T) 
+		\]
+		\[
+		  \de_h \geq 1 + \frac{p(W - D - T)}{g_0}
+		\]
+		Optimal separating gift in this setting is $g_0 = p(D+T)$. Substituting this in, we have:
+		\[
+		  \de_h \geq 1 + \frac{p(W - D - T)}{p(D+T)} = 1 + \frac{pW - p(D - T)}{p(D+T)} = 1+\frac{pW}{p(D+T)}-1 = \frac{W}{D+T}
+		\]
+		
 		\begin{itemize}
-			\item But check: when $e=0$, also wipe out immediate monetary value?
+			\item But check: when $e=0$, also wipe out immediate monetary value? YES, in terms of benefit, but NOT cost, which is the only part that doesn't cancel out of IC constraints (same for high type and low type; benefit is on both sides; cost is on only one side)
 				\begin{itemize}
 					\item Not from utility standpoint, but from IC standpoint because direct benefit of gift cancels out
 				\end{itemize}
 		\end{itemize}
 	\item But high type utility goes down
+		\begin{itemize}
+			\item Interestingly, if $e=0$, if high types would have separated without material value, they will here with material value that is destroyed (they don't do better in pooling). We see this by calculating the high type utility for the case where $e=0$, which is
+				\[
+				  \frac{1}{1-\de_h}\left[pT + (1-p)(W-D) \right] - g_0
+				\]
+				Substituting in the value of the $g_0$ (the optimal separating gift with $e=0$) and the threshold value to separate when $e=0$, we have
+				\[
+				  \frac{T+D}{T+D-W}\left[pT + (1-p)(W-D) \right] - p(T+D)
+				\]
+				\[
+				  \frac{T+D}{T+D-W}\left[p(T +D -W) + (W-D) \right] - p(T+D)
+				\]
+				\[
+				  p(T+D) + \frac{T+D}{T+D-W}\left[W-D \right] - p(T+D)
+				\]
+				\[
+				  \frac{T+D}{T+D-W}\left[W-D \right]
+				\]
+				This is exactly the payoff to the pooling equilibrium when $\de = \frac{W}{T+D}$. So $U_{g_0} = U_{pooling}$ at the cutoff for separating, and $U_{g_0}$ is larger for any discount factor higher than the cutoff. The value of the change of peace for ever is outweighed by having to pay for the gift even though the value of the gift will never be received.
+		\end{itemize}
 \end{itemize}
 
 \newpage
