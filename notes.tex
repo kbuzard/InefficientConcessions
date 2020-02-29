@@ -256,7 +256,7 @@ Next we get the threshold for $\de_h$ that is necessary for a concessions separa
 				\[
 				  \frac{1}{1-\de_h}\left[pT + (1-p)(W-D) \right] - g_0
 				\]
-				Substituting in the value of the $g_0$ (the optimal separating gift with $e=0$) and the threshold value to separate when $e=0$, we have
+				Substituting in the value of the $g_0$ (the optimal separating gift with $e=0$, which I have as $p(T+D)$ but I should check again to make sure it's correct for this situation) and the threshold value to separate when $e=0$ (i.e. $\de = \frac{W}{T+D}$), we have
 				\[
 				  \frac{T+D}{T+D-W}\left[pT + (1-p)(W-D) \right] - p(T+D)
 				\]
@@ -269,8 +269,40 @@ Next we get the threshold for $\de_h$ that is necessary for a concessions separa
 				\[
 				  \frac{T+D}{T+D-W}\left[W-D \right]
 				\]
-				This is exactly the payoff to the pooling equilibrium when $\de = \frac{W}{T+D}$. So $U_{g_0} = U_{pooling}$ at the cutoff for separating, and $U_{g_0}$ is larger for any discount factor higher than the cutoff. The value of the change of peace for ever is outweighed by having to pay for the gift even though the value of the gift will never be received.
+				This is exactly the payoff to the pooling equilibrium (that is, both types pool on fight with no gift giving) when $\de = \frac{W}{T+D}$, since $U_{pooling} = \frac{W-D}{1-\de}$.
+				
+				So $U_{g_0} = U_{pooling}$ at the cutoff for separating, and $U_{g_0}$ is larger for any discount factor higher than the cutoff. 
+					\begin{itemize}
+						\item This can be seen, for instance, by decomposing $U_{pooling}$ along the same lines as $U_{g_0}$ above into components for the cooperation vs. punishment and cost of the gift (even though that's not what's going on in pooling). The whole thing increases, including the cost of the gift portion for the pooling when $\de$ increases. But the cost of the gift does not scale up in $U_{g_0}$.
+					\end{itemize}
 		\end{itemize}
+		We can also do this more generally. Take
+			\[
+			  U_{g_0} = \frac{1}{1-\de}\left(W-D\right)
+			\]
+			\[
+				U_{pooling} = \frac{1}{1-\de_h}\left[pT + (1-p)(W-D) \right] - p(T+D) 
+			\]
+			\[
+			  = pT + pD +\frac{\de}{1-\de}\left(pT + pD\right) + \frac{1}{1-\de} \left( W -D -pW\right) - pT -pD
+			\]
+			\[
+			  = \frac{\de}{1-\de}\left(pT + pD\right) + \frac{1}{1-\de} \left( W -pW -D\right)
+			\]
+		Now compare the two, $U_{g_0} \lessgtr U_{pooling}$:
+				\[
+				  \frac{\de}{1-\de}\left(pT + pD\right) + \frac{1}{1-\de} \left( W -pW -D\right) \lessgtr \frac{1}{1-\de}\left(W-D\right)
+				\]
+				\[
+				  \frac{\de}{1-\de}\left(pT + pD\right) - \frac{1}{1-\de} \left( pW \right) \lessgtr 0
+				\]
+				\[
+				  \de\left(pT + pD\right) \lessgtr pW 
+				\]
+				\[
+				  \de \lessgtr \frac{pW}{pT + pD} = \frac{W}{T+D}
+				\]
+			So that the utility from $U_{g_0}$ is greater exactly when the discount factor is above the threshold for concessions separating equilibrium to be possible without material value.
 \end{itemize}
 
 \newpage
