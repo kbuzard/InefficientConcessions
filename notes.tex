@@ -305,6 +305,46 @@ Next we get the threshold for $\de_h$ that is necessary for a concessions separa
 			So that the utility from $U_{g_0}$ is greater exactly when the discount factor is above the threshold for concessions separating equilibrium to be possible without material value.
 \end{itemize}
 
+\vskip.2in
+How does utility compare under $e=1$ and $e=0$? Compare the two, $U_{g_1} \lessgtr U_{g_0}$:
+				\[
+				  \frac{p}{1-\de_h}T(1+g) + \frac{1-p}{1-\de_h}(W - D(1+g)) - g_h \lessgtr \frac{1}{1-\de_h}\left[pT + (1-p)(W-D) \right] - g_0
+				\]
+				\[
+				  pT(1+g_1) + \left(1-p\right)(W - D(1+g_1)) - \left(1-\de_h\right)g_1 \lessgtr pT + (1-p)(W-D) - \left(1-\de_h\right)g_0
+				\]
+				\[
+				  pTg_1 + \left(1-p\right)(W - D -Dg_1) - \left(1-\de_h\right)g_1 \lessgtr (1-p)(W-D) - \left(1-\de_h\right)g_0
+				\]
+				\[
+				  pTg_1 - \left(1-p\right)Dg_1 - \left(1-\de_h\right)g_1 \lessgtr - \left(1-\de_h\right)g_0
+				\]
+				\[
+				  pTg_1 - \left(1-p\right)Dg_1  \lessgtr \left(1-\de_h\right)g_1 - \left(1-\de_h\right)g_0
+				\]
+				\begin{equation}
+				  pT - \left(1-p\right)D  \lessgtr \frac{\left(1-\de_h\right)\left(g_1 - g_0 \right)}{g_1}
+					\label{eq:util}
+				\end{equation}
+
+We know (from above) that the minimum gift when $e=1$ is larger than the minimum gift when $e=0$ when
+\[
+  (1-\de)pT > (1-p)D
+\]
+
+\vskip.2in
+Let's case this out.
+\begin{enumerate}
+	\item Assume $g_0 = g_1$; then $(1-\de)pT = (1-p)D$. The right hand side of \ref{eq:util} is 0 and the left hand side is
+		\[
+			pT - (1-\de)pT = pT - pT + \de pT = \de pT 
+		\]
+		And utility under $e=1$ is higher.
+	\item When $g_0 > g_1$; then $(1-\de)pT < (1-p)D$. The right hand side of \ref{eq:util} is negative and the left hand side is larger (more positive) than in case 1, so utility under $e=1$ is also higher in this case.
+	\item When $g_1 > g_0$; then $(1-\de)pT > (1-p)D$. The right hand side of \ref{eq:util} becomes positive and the left hand side becomes smaller (less positive, and possibly negative) than in case 1, so utility under $e=1$ is higher when $g_1$ is only a little larger than $g_0$, but eventually as $g_1$ gets much larger than $g_0$, utility under $e=0$ becomes larger than utility under $e=1$.
+\end{enumerate}
+
+
 \newpage
 To-do list after Venice CesIfo 06/15/17:
 \begin{itemize}
