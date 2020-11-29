@@ -56,8 +56,34 @@ bookmarksopen=true]{hyperref}
 \end{center}
 
 \vskip.3in
-\un{June 6, 2017}\\
-Want to develop result showing that mediator increases potential for peace
+
+\section{Make mediator work}
+\un{November 29, 2020}\\
+In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.\\
+
+IC constraints for Mediation
+\begin{itemize}
+	\item low type IC:
+		$$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
+			\begin{itemize}
+				\item If a low type reveals truthfully: you get $X_{FF}$ and no gift with probability $p$; you get the same with probability $(1-p)$ (you need both countries to be high types in order to do anything)
+				\item If a low type lies: get $X_{FT}$ and give gift ($g_h$) and receive gift ($eg_h$) with probability $p$; $X_{FF}$ again with probability $(1-p)$
+					\begin{itemize}
+						\item High type gives gift with efficiency $e=1$, so gift giving and receiving cancels out
+					\end{itemize}
+				\item Relative to Section 4.2, there is no $peg_h$ on the RHS: no benefit of getting the gift from the high type
+					\begin{itemize}
+						\item NEXT STEP: CHECK THESE CLAIMS ABOUT THE RELATIONSHIP TO SECTION 4.2
+					\end{itemize}
+			\end{itemize}
+	\item high type IC:
+		$$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
+\end{itemize}
+
+\vskip.5in
+\section{Develop result: mediator increases potential for peace}
+\un{June 6, 2017}
+
 \begin{itemize}
 	\item i.e. want to show mediator makes (Trust, Trust) an equilibrium over a larger parameter space than without mediator
 \end{itemize}
@@ -346,7 +372,7 @@ Let's case this out.
 
 
 \newpage
-To-do list after Venice CesIfo 06/15/17:
+\section{To-do list after Venice CesIfo 06/15/17}
 \begin{itemize}
 	\item Jim Fearon: maybe get rid of repeated game and just parameterize a one-shot game (doens't work because concessions required for separation are too large; require future to recoup cost)
 		\begin{itemize}
@@ -368,7 +394,7 @@ Notes from CPEG, Oct. 25, 2019 presentation:
 \end{itemize}
 
 \newpage
-Review 1 from EJPE (Email from Toke Aidt, August 19, 2018): \\
+\section{Review 1 from EJPE (Email from Toke Aidt, August 19, 2018)}
 
 While clearly these are interesting issues, I have difficulties reading this paper. Everything is presented in a very unclear manner. Game-theoretical concepts are invoked, but typically not correctly. For instance, an equilibrium is a strategy profile (one strategy for each type of each player). Hence it does not make sense to say, as the authors do in Theorem 1 on page 10, that something is an equilibrium strategy for one type without also specifying what others do. As another example, on page 18, the authors say that “The revelation principle is used to attain truthful self-identification.” But in reality, the revelation principle is just an argument for why it is without loss of generality to restrict attention to direct mechanisms. The truthfulness of messages is guaranteed by requiring the mechanism to be incentive compatible, something the authors do not address. \\
 
