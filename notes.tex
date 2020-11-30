@@ -58,27 +58,79 @@ bookmarksopen=true]{hyperref}
 \vskip.3in
 
 \section{Make mediator work}
-\un{November 29, 2020}\\
-In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.\\
+\un{November 29-30, 2020}: In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.\\
 
-IC constraints for Mediation
+\subsection{IC constraints for Mediation}
 \begin{itemize}
-	\item low type IC:
+	\item High type IC:
+		$$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
+			\begin{itemize}
+				\item Relative to Section 4.2, $-g_h$ there becomes $-pg_h$ here (again, only give gift if matched with high type). Also $+peg_h$ in Section 4.2 disappears on RHS.
+			\end{itemize}
+	\item Low type IC:
 		$$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
 			\begin{itemize}
 				\item If a low type reveals truthfully: you get $X_{FF}$ and no gift with probability $p$; you get the same with probability $(1-p)$ (you need both countries to be high types in order to do anything)
 				\item If a low type lies: get $X_{FT}$ and give gift ($g_h$) and receive gift ($eg_h$) with probability $p$; $X_{FF}$ again with probability $(1-p)$
-					\begin{itemize}
-						\item High type gives gift with efficiency $e=1$, so gift giving and receiving cancels out
-					\end{itemize}
-				\item Relative to Section 4.2, there is no $peg_h$ on the RHS: no benefit of getting the gift from the high type
-					\begin{itemize}
-						\item NEXT STEP: CHECK THESE CLAIMS ABOUT THE RELATIONSHIP TO SECTION 4.2
-					\end{itemize}
+				\item Relative to Section 4.2, there is no $peg_h$ on the LHS (in Section 4.2, it cancels out with the $peg_h$ on the RHS): no benefit of getting the gift from the high type. Also, $-g_h$ on the RHS becomes $-pg_h$ since you only send the gift if matched with a high type
 			\end{itemize}
-	\item high type IC:
-		$$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
 \end{itemize}
+
+\subsection{Why does low type IC not hold when $e=1$?}
+$$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
+\begin{itemize}
+	\item With our restrictions (mostly the linear assumption, IIRC), High type gives gift with efficiency $e=1$, so gift giving and receiving cancels out. This leaves
+		$$X_{FF}^l \geq pX_{FT}^l + X_{FF}^l - pX_{FF}^l$$
+		which simplifies to 
+		$$X_{FF}^l \geq X_{FT}^l.$$
+		Expanding, we have
+		\[
+			\frac{W\left( \right)-D\left( \right)}{1-\de^l} \geq T\left( \right) + W\left( \right) + \frac{\de^l}{1-\de^l}\left(W\left( \right) -D\left( \right) \right)
+		\]
+		Now we have to fill in all the complicated bits in parentheses from Table 3 in Section 4.2
+		\begin{multline*}
+			W\left(m_1 + \left(1-\al_1\right)eg_2\right)-D\left(m_2 + \left(1-\al_2\right)eg_1\right) \geq \\
+			\left(1-\de^l\right) \left[T\left(s_2 + \al_2eg_1\right) + W\left(m_1 + \left(1-\al_1\right)eg_2\right) \right] \\
+			+ \de^l \left(W\left(m_1 + \left(1-\al_1\right)eg_2\right)-D\left(m_2 + \left(1-\al_2\right)eg_1\right)\right)
+		\end{multline*}
+
+		We've already assumed $e=1$ here as given in Lemma 2 for a concessions separating equilibrium 
+			\begin{itemize}
+				\item \textbf{Mediator could instruct them to give $e<1$ gifts without having to disturb the rest of the theory (I think). This I'll come back to.}
+				\item We \textit{should} assume $s_1,s_2,m_1,m_2$ to all be 1 to be consistent with the theory though. If we implement all that AND $e=1$, we get
+					\begin{multline*}
+							W\left(1 + \left(1-\al_1\right)g_2\right)-D\left(1 + \left(1-\al_2\right)g_1\right) \geq \left(1-\de^l\right) \left[T\left(1 + \al_2g_1\right) + W\left(1 + \left(1-\al_1\right)g_2\right) \right] \\
+							+ \de^l \left(W\left(1 + \left(1-\al_1\right)g_2\right)-D\left(1 + \left(1-\al_2\right)g_1\right)\right)
+					\end{multline*}
+				\item We also know that there are no gifts exchanged for $X^l_{FF}$, so $g_1 = g_2 = 0$ on the LHS. On the RHS, gifts ARE exchanged because player 2 is a high type and the low type of player 1 lied. So we can set $g_1 = g_2 = g_M$
+					\begin{multline*}
+							W - D \geq \left(1-\de^l\right) \left[ T\left(1 + \al_2g_M\right) + W\left(1 + \left(1-\al_1\right)g_M\right) \right] \\
+							+ \de^l \left(W\left(1 + \left(1-\al_1\right)g_M\right)-D\left(1 + \left(1-\al_2\right)g_M\right)\right)
+					\end{multline*}
+				\item Now for the $\al$'s. The low type of player 1 sets $\al_1 = 0$ (this is the amount that goes to civil society). Player 2 is a high type here, so sets $\al_2 = 1$.
+					\[
+							W - D \geq \left(1-\de^l\right) \left[ T\left(1 + g_M\right) + W\left(1 + g_M\right) \right] + \de^l \left(W\left(1 + g_M\right)-D\right)
+					\]
+				\item Distributing, we have 
+					\[
+							W - D \geq T + Tg_M + W + Wg_M - \de^l T - \de^l Tg_M - \de^l W - \de^l Wg_M + \de^l W + \de^l Wg_M - \de^l D
+					\]
+				\item Canceling terms:
+					\[
+							- D \geq T + Tg_M + Wg_M - \de^l T - \de^l Tg_M - \de^l D
+					\]
+				\item Rearranging:
+					\[
+							0 \geq \left(1 - \de^l \right) T + \left(1 - \de^l \right) Tg_M + Wg_M + \left(1 - \de^l \right) D
+					\]
+					Assuming $g_M > 0$, this inequality can never hold since each of $T,W,D\geq0$ and $0 \leq \left(1 - \de^l \right) \leq 1$	
+					\begin{itemize}
+						\item What would it mean to have negative gifts?
+					\end{itemize}
+					
+			\end{itemize}
+\end{itemize}
+
 
 \vskip.5in
 \section{Develop result: mediator increases potential for peace}
