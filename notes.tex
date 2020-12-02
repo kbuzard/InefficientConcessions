@@ -31,7 +31,7 @@ bookmarksopen=true]{hyperref}
 
 
 \DeclareMathOperator*{\argmax}{arg\,max}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \hbadness=10000
 
 \newtheorem{proposition}{Proposition}
@@ -247,15 +247,115 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 			\[
 				pg_M\left(1 - e\right) \geq T\left(1 + eg_M\right) + Weg_M -\de^l T\left(1 + eg_M\right) + \left(1 - \de^l\right) D
 			\]
-			\[
+			\begin{equation}
 				pg_M\left(1 - e\right) \geq \left(1 - \de^l\right) T\left(1 + eg_M\right) + Weg_M + \left(1 - \de^l\right) D
-			\]
+				\label{eq:examine}
+			\end{equation}
 	\end{itemize}
 
-\textbf{NOW, it's time to explore this equation and see if it's even possible to pick a gift high enough and an $e$ low enough to satisfy the low type's incentive constraint}
-\begin{itemize}
-	\item Digitize handwritten notes pages 1-3
-\end{itemize}
+\textbf{NOW, it's time to explore this equation and see if it's even possible to pick a gift high enough and an $e$ low enough to satisfy the low type's incentive constraint}. Continuing on from Equation~\ref{eq:examine} and simplifying so that $g_M = g$ and $\de^l = \de$,
+\[
+	pg\left(1 - e\right) \geq \left(T - \de T \right) \left(1 + eg\right) + Weg + \left(1 - \de \right) D
+\]
+	\begin{itemize}
+		\item Distributing AGAIN
+			\[
+				pg	\left(1 - e\right) \geq T + Teg - \de T - \de T eg + Weg + \left(1 - \de \right) D
+			\]
+			\[
+				pg	\left(1 - e\right) \geq \left(1 - \de \right) T + \left(1 - \de \right) D + Teg - \de T eg + Weg
+			\]
+			\begin{equation}
+				pg - pge \geq \left(1 - \de \right) \left( T + D \right) + eg \left( T - \de T + W \right)
+				\label{eq:split}
+			\end{equation}
+		\item From here we can solve either for the constraint in terms of $g$ or in terms of $e$
+			\begin{itemize}
+				\item First solve for $g$ starting from Expression~\ref{eq:split}:
+					$$pg - pge \geq \left(1 - \de \right) \left( T + D \right) + eg \left( T - \de T + W \right)$$
+					$$pg - pge - eg \left( T - \de T + W \right)\geq \left(1 - \de \right) \left( T + D \right)$$
+					\begin{equation}
+						g \left(p - e \left( p + T - \de T + W \right) \right) \geq \left(1 - \de \right) \left( T + D \right)
+						\label{eq:g1}
+					\end{equation}
+					\begin{equation}
+						g \geq \frac{\left(1 - \de \right) \left( T + D \right)}{p - e \left( p + T - \de T + W \right)}
+						\label{eq:g2}
+					\end{equation}
+						\begin{itemize}
+							\item THIS ASSUMES {\color{red} $p - e \left( p + T - \de T + W \right)$ IS POSITIVE}
+								\begin{itemize}
+									\item Note that if we set $e=0$, this is a very simple constraint on $g$
+										\begin{equation}
+											g \geq \frac{\left(1 - \de \right) \left( T + D \right)}{p}
+											\label{eq:g3}
+										\end{equation}
+								\end{itemize}
+							\item $T+D$, $1 - \de $ non-negative by assumption $\Rightarrow$ RHS of Expression~\ref{eq:g1} non-negative
+								\begin{itemize}
+									\item If $\left(p - pe - e \left( T - \de T + W \right) \right)$ is negative, the only way the IC constraint in Expression~\ref{eq:g1} can hold is if $g<0$. AGAIN WITH THE NEGATIVE GIFTS.
+								\end{itemize}
+							\item To compare to the optimal gift size in the other sections:
+								\begin{itemize}
+									\item In Section 3 (Concessions Separating Equilibrium): $p\left(T+D\right)$
+									\item Material value with $e=0$ same as in Section 3: $p\left(T+D\right)$
+									\item Material value with $e=1$:
+										\begin{equation}
+											g \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right) -p(1-\de)T +(1-p)D}
+											\label{eq:g4}
+										\end{equation}
+									\item Under the assumption that payoffs are multiplied by something linear like $1 + \al_2 g_1$, there's no reason to choose any intermediate value of $e$. The mediator, of course, can specify an intermediate value.
+									\item We can simplify to see that the minimum gift when $e=1$ is larger when
+										\[
+											(1-\de)pT > (1-p)D
+										\]
+								\end{itemize}
+						\end{itemize}
+					
+				\item Now solve for $e$ starting from Expression~\ref{eq:split}:
+					$$pg - \left(1 - \de \right) \left( T + D \right) \geq pge + eg \left( T - \de T + W \right)$$
+					\begin{equation}
+						pg - \left(1 - \de \right) \left( T + D \right) \geq eg \left( p + T - \de T + W \right)
+						\label{eq:g5}
+					\end{equation}
+						\begin{itemize}
+							\item {\color{red} $g \left( p + T - \de T + W \right)$ is non-negative as long as $g$ is positive}: $p, 1-\de, T$ and $W$ are all assumed non-negative and $T+D > W$ so that $T$ is strictly positive. It can only possibly be zero if $p=0$ and $\de = 1$.
+								\begin{itemize}
+									\item For the IC constraint to hold then (with non-negative gifts), we must at least have {\color{red} $pg - \left(1 - \de \right) \left( T + D \right)$ non-negative, which requires $g$ to be set according to Expression~\ref{eq:g3}}. This only works if $e$ is set to zero; otherwise we need to look back at Expression~\ref{eq:g2}. This is just a weak condition that, if violated, means the IC constraint does not hold.
+								\end{itemize}
+							\item If {\color{red} $g \left( p + T - \de T + W \right)$ is positive}, we can divide through to get
+								$$\frac{pg - \left(1 - \de \right) \left( T + D \right)}{g \left( p + T - \de T + W \right)} \geq e$$
+						\end{itemize}
+					\item To get a sense of the magnitudes, I will plug $g = p \left(T+D\right)$ from the $e=0$ CSE case (just because it's easier to work with than the optimal gift when $e=1$ into Expression~\ref{eq:g5}. First I divide through by $g$ {\color{blue}(this is okay if $g$ is assumed to be positive)}
+						\begin{equation}
+							p - \frac{\left(1 - \de \right) \left( T + D \right)}{g} \geq e \left( p + T - \de T + W \right)
+							\label{eq:g6}
+						\end{equation}
+						$$p - \frac{\left(1 - \de \right) \left( T + D \right)}{p \left(T+D\right)} \geq e \left( p + T - \de T + W \right)$$
+						$$p - \frac{1 - \de}{p } \geq e \left( p + T - \de T + W \right)$$
+							\begin{itemize}
+								\item For the LHS to be positive, we need $p^2 \geq 1 - \de$, e.g. if $p = 0.5$, we need $\de \geq .75$
+								\item Parameterization that is in the paper now:
+									\begin{itemize}
+										\item Let $T = 10$, $W=8$ and $D = 5$
+										\item Threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem 2, separation through concessions is possible.
+										\item Minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$
+										\item Minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value.
+									\end{itemize}
+							\end{itemize}
+						
+			\end{itemize}
+		\item \color{ForestGreen} No notes to digitize right now
+			\begin{itemize}
+				\item Calculate maximum $e$ from Expression~\ref{eq:g6} using parameterization from paper
+					\begin{itemize}
+						\item Do it under simple $g$ and the more complicated $g$ from Expression~\ref{eq:g4}
+						\item Compare to calculations in example from text
+						\item Try another parameterization with $p$ larger so it works
+					\end{itemize}
+				\item Check parameter restrictions for existence of equilibria in Section 4.2
+			\end{itemize}
+	\end{itemize}
 
 \vskip.2in
 Notes:
@@ -405,7 +505,7 @@ Now just rearrange to get all the $g$ terms on the left
 \]
 In comparing to the minimum separating gift when $e=0$, which is
 \[
-  g^* \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right)}
+  g^* \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right)} = p(T + D)
 \]
 We can simplify to see that the minimum gift when $e=1$ is larger when
 \[
