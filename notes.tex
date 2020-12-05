@@ -338,22 +338,52 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 								\item Parameterization that is in the paper now:
 									\begin{itemize}
 										\item Let $T = 10$, $W=8$ and $D = 5$
-										\item Threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem 2, separation through concessions is possible.
+										\item Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. 
+										\item Threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. By Theorem 2, separation through concessions is possible.
 										\item Minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$
 										\item Minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value.
+										\item Minimum $e$ from Expression~\ref{eq:g6}:
+											\[
+											  0.2 - \frac{\left(1 - 0.3 \right) \left( 10 + 5 \right)}{g} \geq e \left( 0.2 + 10 - 0.3\cdot 10 + 8 \right)
+											\]
+											\[
+											  0.2 - \frac{0.7 \left( 15 \right)}{g} \geq e \left( 11.2 \right)
+											\]
+											\[
+											  \frac{0.2}{11.2} - \frac{0.7 \left( 15 \right)}{11.2g} \geq e 
+											\]
+											\[
+											  0.01786 - \frac{9.375}{g} \geq e 
+											\]
+										To keep $e \geq 0$, we need $g \geq 525$ (this is REALLY big compared to $W$ for instance). It's also huge compared to the optimal gifts when $e=0$ of 3 and when $e=1$ of $0.\overline{63}$.
+									\end{itemize}
+								\item Now let's try the same parameterization with $p=0.9$.
+									\begin{itemize}
+										\item Minimum $e$ from Expression~\ref{eq:g6}:
+											\[
+											  0.9 - \frac{\left(1 - 0.3 \right) \left( 10 + 5 \right)}{g} \geq e \left( 0.9 + 10 - 0.3\cdot 10 + 8 \right)
+											\]
+											\[
+											  0.9 - \frac{0.7 \left( 15 \right)}{g} \geq e \left( 11.9 \right)
+											\]
+											\[
+											  \frac{0.9}{11.9} - \frac{0.7 \left( 15 \right)}{11.9g} \geq e 
+											\]
+											\[
+											  0.07563 - \frac{8.8235}{g} \geq e 
+											\]
+										To keep $e \geq 0$, we need $g \geq 116.66$. This is still nearly an order of magnitude larger than $W$, and both the optimal gifts when $e=0$ of 13.5 and when $e=1$ of $\frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = \frac{0.9(0.7)(15)}{0.7 \cdot (1-0.9)+(.1)5} = \frac{0.63\cdot15}{0.7 \cdot 0.1+.5} = 16.58$.
 									\end{itemize}
 							\end{itemize}
 						
 			\end{itemize}
 		\item \color{ForestGreen} No notes to digitize right now
 			\begin{itemize}
-				\item Calculate maximum $e$ from Expression~\ref{eq:g6} using parameterization from paper
-					\begin{itemize}
-						\item Do it under simple $g$ and the more complicated $g$ from Expression~\ref{eq:g4}
-						\item Compare to calculations in example from text
-						\item Try another parameterization with $p$ larger so it works
-					\end{itemize}
 				\item Check parameter restrictions for existence of equilibria in Section 4.2
+				\item Obviously we can come up with other parameterizations in which this may look a little more reasonable
+					\begin{itemize}
+						\item But I think the first step is to calculate the high-type utility under the different scenarios and the different gifts and see what happens (since you get the indirect benefit of the gift--or do you since $e$ is too small?)
+					\end{itemize}
 			\end{itemize}
 	\end{itemize}
 
