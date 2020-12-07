@@ -253,6 +253,8 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 			\end{equation}
 	\end{itemize}
 
+\subsubsection{Is it possible to pick e and g to satisfy low-type IC?}
+
 \textbf{NOW, it's time to explore this equation and see if it's even possible to pick a gift high enough and an $e$ low enough to satisfy the low type's incentive constraint}. Continuing on from Equation~\ref{eq:examine} and simplifying so that $g_M = g$ and $\de^l = \de$,
 \[
 	pg\left(1 - e\right) \geq \left(T - \de T \right) \left(1 + eg\right) + Weg + \left(1 - \de \right) D
@@ -270,8 +272,10 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 				\label{eq:split}
 			\end{equation}
 		\item From here we can solve either for the constraint in terms of $g$ or in terms of $e$
-			\begin{itemize}
-				\item First solve for $g$ starting from Expression~\ref{eq:split}:
+	\end{itemize}		
+			
+\subsubsection{Solve for g}			
+			First solve for $g$ starting from Expression~\ref{eq:split}:
 					$$pg - pge \geq \left(1 - \de \right) \left( T + D \right) + eg \left( T - \de T + W \right)$$
 					$$pg - pge - eg \left( T - \de T + W \right)\geq \left(1 - \de \right) \left( T + D \right)$$
 					\begin{equation}
@@ -311,9 +315,10 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 										\]
 								\end{itemize}
 						\end{itemize}
-					
-				\item Now solve for $e$ starting from Expression~\ref{eq:split}:
-					$$pg - \left(1 - \de \right) \left( T + D \right) \geq pge + eg \left( T - \de T + W \right)$$
+				
+\subsubsection{Solve for e}
+				Now solve for $e$ starting from Expression~\ref{eq:split}:
+					$$pg - \left(1 - \de \right) \left( T + D \right) \geq peg + eg \left( T - \de T + W \right)$$
 					\begin{equation}
 						pg - \left(1 - \de \right) \left( T + D \right) \geq eg \left( p + T - \de T + W \right)
 						\label{eq:g5}
@@ -326,7 +331,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 							\item If {\color{red} $g \left( p + T - \de T + W \right)$ is positive}, we can divide through to get
 								$$\frac{pg - \left(1 - \de \right) \left( T + D \right)}{g \left( p + T - \de T + W \right)} \geq e$$
 						\end{itemize}
-					\item To get a sense of the magnitudes, I will plug $g = p \left(T+D\right)$ from the $e=0$ CSE case (just because it's easier to work with than the optimal gift when $e=1$ into Expression~\ref{eq:g5}. First I divide through by $g$ {\color{blue}(this is okay if $g$ is assumed to be positive)}
+				To get a sense of the magnitudes, I will plug $g = p \left(T+D\right)$ from the $e=0$ CSE case (just because it's easier to work with than the optimal gift when $e=1$ into Expression~\ref{eq:g5}. First I divide through by $g$ {\color{blue}(this is okay if $g$ is assumed to be positive)}
 						\begin{equation}
 							p - \frac{\left(1 - \de \right) \left( T + D \right)}{g} \geq e \left( p + T - \de T + W \right)
 							\label{eq:g6}
@@ -335,7 +340,10 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 						$$p - \frac{1 - \de}{p } \geq e \left( p + T - \de T + W \right)$$
 							\begin{itemize}
 								\item For the LHS to be positive, we need $p^2 \geq 1 - \de$, e.g. if $p = 0.5$, we need $\de \geq .75$
-								\item Parameterization that is in the paper now:
+							\end{itemize}
+								
+\subsubsection{Check with some parameterizations}								
+								Parameterization that is in the paper now:
 									\begin{itemize}
 										\item Let $T = 10$, $W=8$ and $D = 5$
 										\item Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. 
@@ -357,7 +365,9 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 											\]
 										To keep $e \geq 0$, we need $g \geq 525$ (this is REALLY big compared to $W$ for instance). It's also huge compared to the optimal gifts when $e=0$ of 3 and when $e=1$ of $0.\overline{63}$.
 									\end{itemize}
-								\item Now let's try the same parameterization with $p=0.9$.
+								
+							\vskip.2in	
+							Now let's try the same parameterization with $p=0.9$.
 									\begin{itemize}
 										\item Minimum $e$ from Expression~\ref{eq:g6}:
 											\[
@@ -374,21 +384,41 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 											\]
 										To keep $e \geq 0$, we need $g \geq 116.66$. This is still nearly an order of magnitude larger than $W$, and both the optimal gifts when $e=0$ of 13.5 and when $e=1$ of $\frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = \frac{0.9(0.7)(15)}{0.7 \cdot (1-0.9)+(.1)5} = \frac{0.63\cdot15}{0.7 \cdot 0.1+.5} = 16.58$.
 									\end{itemize}
-							\end{itemize}
+							
 						
-			\end{itemize}
-		\item \color{ForestGreen} No notes to digitize right now
+						\vskip.3in
+						Utility comparisons (always for high type)
+							\begin{itemize}
+								\item When $e=1$: $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
+								\item When $e=0$: $\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$
+								\item When $0<e<1$ under a mediator: $\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - g_M$
+									\begin{itemize}
+										\item Figure out optimal $g_M$
+										\item Expression~\ref{eq:g2} creates a menu of $(e,g)$ pairs that satisfy the constraint:
+											\[
+												g_M \geq \frac{\left(1 - \de \right) \left( T + D \right)}{p - e \left( p + T - \de T + W \right)}
+											\]
+										\item We're assuming $p - e \left( p + T - \de T + W \right) > 0$ (assuming gifts must be non-negative)
+										\item Also $pg - \left(1 - \de \right) \left( T + D \right) \geq 0$ ($e$ version; this is WEAKER than the condition on $e$)
+									\end{itemize}
+							\end{itemize}
+			
+\subsubsection{To do and Notes}		
+	\color{ForestGreen} No notes to digitize right now
 			\begin{itemize}
 				\item Check parameter restrictions for existence of equilibria in Section 4.2
+					\begin{itemize}
+						\item Go back to 4 or 4.1; didn't find them in 4.2
+					\end{itemize}
 				\item Obviously we can come up with other parameterizations in which this may look a little more reasonable
 					\begin{itemize}
 						\item But I think the first step is to calculate the high-type utility under the different scenarios and the different gifts and see what happens (since you get the indirect benefit of the gift--or do you since $e$ is too small?)
-					\end{itemize}
+					\end{itemize}					
 			\end{itemize}
-	\end{itemize}
+	
 
 \vskip.2in
-Notes:
+\color{Black}Notes:
 \begin{itemize}
 	\item I think Mediator could instruct them to give $e<1$ gifts without having to disturb the rest of the theory. 
 		\begin{itemize}
