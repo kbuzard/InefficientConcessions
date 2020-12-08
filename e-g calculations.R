@@ -17,7 +17,7 @@ dh = .6
 # But welfare under mediator is never even positive (for non-negative gift)
 
 #Let's forget about where e=1 is possible; then mediator isn't as important
-#I think this works, but need to check it b/c "We" is weird!
+#This makes welfare highest under mediator
 T = 7
 W = 8
 D = 5
