@@ -313,6 +313,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 										\[
 											(1-\de)pT > (1-p)D
 										\]
+										\color{red} BIG NEW NOTE: This condition only true if denominator above is positive
 								\end{itemize}
 						\end{itemize}
 				
@@ -385,42 +386,56 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 										To keep $e \geq 0$, we need $g \geq 116.66$. This is still nearly an order of magnitude larger than $W$, and both the optimal gifts when $e=0$ of 13.5 and when $e=1$ of $\frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = \frac{0.9(0.7)(15)}{0.7 \cdot (1-0.9)+(.1)5} = \frac{0.63\cdot15}{0.7 \cdot 0.1+.5} = 16.58$.
 									\end{itemize}
 							
+\vskip.3in
+``Parameterization 2'': goal was to make welfare higher under mediator
+\begin{itemize}
+	\item \color{orange} T = 7, W = 8, D = 5, p = .9, $\de_l = .3$, $\de_h = .6$
+	\item Minimum $e$ from Expression~\ref{eq:g6}
+	  $$0.9 - \frac{\left(1 - 0.3 \right) \left( 7 + 5 \right)}{g} \geq e \left( 0.9 + 7 - 0.3 \cdot 7 + 8 \right)$$
+		$$0.9 - \frac{8.4}{g} \geq e \left(18 \right)$$
+		$$0.05 - \frac{0.466}{g} \geq e $$
+	\item The highest welfare comes from $e=.06$, which implies $g = 116.67$ (see e-g calculations.R)
+		
+	
+\end{itemize}
 						
 						\vskip.3in
 						Utility comparisons (always for high type)
 							\begin{itemize}
 								\item When $e=1$: $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
 									\begin{itemize}
-										\item \color{red} For the parameterization in the paper, welfare is 7.18; gift is 0.63
+										\item \color{red} Parameterization in the paper: welfare is 7.18; gift is 0.63
+										\item \color{orange} Parameterization 2: $g1$ is negative, creates negative upper bound for $d_h$. Separating with concessions equilibrium can't be sustained.
 									\end{itemize}
 								\item When $e=0$: $\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$
 									\begin{itemize}
-										\item \color{red} For the parameterization in the paper, welfare is 8; gift is 3
+										\item \color{red} Parameterization in the paper: welfare is 8; gift is 3
+										\item \color{orange} Parameterization 2: welfare is 5.7; gift is 10.8
 									\end{itemize}
 								\item When $0<e<1$ under a mediator: $\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - g_M$
 									\begin{itemize}
-										\item Figure out optimal $g_M$
-										\item Expression~\ref{eq:g2} creates a menu of $(e,g)$ pairs that satisfy the constraint:
+										\item Optimal $g_M$: Expression~\ref{eq:g2} creates a menu of $(e,g)$ pairs that satisfy the constraint:
 											\[
 												g_M \geq \frac{\left(1 - \de \right) \left( T + D \right)}{p - e \left( p + T - \de T + W \right)}
 											\]
 										\item We're assuming $p - e \left( p + T - \de T + W \right) > 0$ (assuming gifts must be non-negative)
 										\item Also $pg - \left(1 - \de \right) \left( T + D \right) \geq 0$ ($e$ version; this is WEAKER than the condition on $e$)
-										\item \color{red} For the parameterization in the paper, welfare is negative for $e=0$ and $e=0.01$, the only values of $e$ that lead to non-negative gifts; gifts range from 52.5 to 218.75
+										\item \color{red} For the parameterization in the paper, welfare is negative for $e=0$ and $e=0.01$, the only values of $e$ that lead to non-negative gifts; gifts range from 52.5 to 218.75	
+										\item \color{orange} Parameterization 2: welfare is 10.083 at optimal gift-efficiency $e=0.06$, $g = 116.67$, $eg = 7$
 									\end{itemize}
 							\end{itemize}
 			
 \subsubsection{To do and Notes}		
-	\color{ForestGreen} No notes to digitize right now
+	\color{ForestGreen} 
 			\begin{itemize}
-				\item Check parameter restrictions for existence of equilibria in Section 4.2
-					\begin{itemize}
-						\item Go back to 4 or 4.1; didn't find them in 4.2
-					\end{itemize}
 				\item Obviously we can come up with other parameterizations in which this may look a little more reasonable
 					\begin{itemize}
 						\item But I think the first step is to calculate the high-type utility under the different scenarios and the different gifts and see what happens (since you get the indirect benefit of the gift--or do you since $e$ is too small?)
-					\end{itemize}					
+					\end{itemize}
+				\item When g1 turns negative, is that exactly when $e=1$ can't be sustained? If we can get positive $g1$, not sure we'd need the mediator? It's not about $g1$, but the $\de_h^1$ condition.
+					\begin{itemize}
+						\item When g1 is negative, the constraint on $\de_h^1$ (see proof of Thm 3) becomes an upper bound. If it's negative, it means that no $\de_h$ exists to make separating possible.
+					\end{itemize}
 			\end{itemize}
 	
 
