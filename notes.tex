@@ -429,20 +429,50 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 									\end{itemize}
 							\end{itemize}
 
+\subsubsection{Welfare under Mediator vs. e=0}
+\label{sec:WM0}
+Here I'll try to derive a general result for when the welfare under a mediator would be higher than under $e=0$ separating with concessions equilibrium. \\
 
+When $0<e<1$ under a mediator, the optimal $g_M$ is the one that chooses the highest welfare from a menu of $(e,g)$ pairs:
+$$\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}$$
+
+When $e=0$, welfare is $$\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+
+We compare them to find when the welfare under the mediator is larger:
+	\begin{multline*}
+		\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq \\
+		\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+	\end{multline*}							
+Eliminating common terms:
+	\begin{equation*}
+		\frac{1}{1-d_h}\left\{pTeg_M \right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq - p(T+D)
+	\end{equation*}	
+Rearranging:
+	\begin{equation*}
+		\frac{pTeg_M}{1-d_h} \geq \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} - p(T+D)
+	\end{equation*}	
+Here we can clearly see the increase in welfare from the impact of the effective gift on the left has to be greater than the increase in the size of the gift.
+	\begin{itemize}
+		\item \color{blue} I'm not sure anything reasonable can come from this
+	\end{itemize}
+			
+			
+			
 \subsubsection{To do and Notes}		
 	\color{ForestGreen} 
 			\begin{itemize}
-				\item Obviously we can come up with other parameterizations in which this may look a little more reasonable
+					\item NEXT STEP: check condition for sustainable $e=1$ but prefer mediator with $e < 1$ (I've found parameterizations where $e=1$ is preferred so far, but I derived an expression in my notes for when mediator is better $$g^M(pTe - 1) \geq g^1(pT + pD - D - 1)$$
+						\begin{itemize}
+							\item I'll probably need to type these notes up
+						\end{itemize}
+					\item Can I derive an analytical expression for when the mediator enhances welfare? See Section~\ref{sec:WM0}
+						\begin{itemize}
+							\item This is likely (surely?) to be when efficient gifts can't be sustained as a CSE.
+							\item If you can sustain $e=1$ with no mediator, would you ever want a mediator?
+						\end{itemize}
+				\item When $g^1$ turns negative, is that exactly when $e=1$ can't be sustained? If we can get positive $g^1$, not sure we'd need the mediator? It's not about $g^1$, but the $\de_h^1$ condition.
 					\begin{itemize}
-						\item Can I derive an analytical expression for when the mediator enhances welfare?
-							\begin{itemize}
-								\item This is likely (surely?) to be when efficient gifts can't be sustained as a CSE
-							\end{itemize}
-					\end{itemize}
-				\item When g1 turns negative, is that exactly when $e=1$ can't be sustained? If we can get positive $g1$, not sure we'd need the mediator? It's not about $g1$, but the $\de_h^1$ condition.
-					\begin{itemize}
-						\item When g1 is negative, the constraint on $\de_h^1$ (see proof of Thm 3) becomes an upper bound. If it's negative, it means that no $\de_h$ exists to make separating possible.
+						\item When $g^1$ is negative, the constraint on $\de_h^1$ (see proof of Thm 3) becomes an upper bound. If it's negative, it means that no $\de_h$ exists to make separating possible.
 						\item I need a formal result to see clearly what is going on here
 					\end{itemize}
 			\end{itemize}
