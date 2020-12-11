@@ -40,10 +40,37 @@ W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
 W1 = 1/(1-dh)*(p*T*(1+g1) + (1-p)*(W-D*(1+g1))) - g1
 
+We_max = We[min(which(g<=0)) - 1,1]
+g_max = g[min(which(g<=0)) - 1,1]
+ge_max = eg[min(which(g<=0)) - 1,1]
+
 #If g1 is negative, this is an UPPER BOUND
 d_h1 = D*(1-p)+1-p*T + (p*(W-(T+D)))/g1  #Minimum delta_h for separation
 
+#Explore parameters that make mediator better
+## Reducing dl from 0.3 to 0.4 makes the mediator even more attractive
+T = 7
+W = 8
+D = 5
+p = .9
+dl = .4
+dh = .6
 
+e = seq(0, 1, 0.01)
+g = data.frame((1-dl)*(T+D)/(p - e*(p + T - dl*T +W)))
+condition = data.frame((p - e*(p + T - dl*T +W)))
+eg = e*g #effective gift
 
+# Welfare calculations 
+# 0 < e < 1 with mediator
+We = 1/(1-dh)*(p*T*(1+e*g) + (1-p)*(W-D)) - g
+# e=0
+g0 = p*(T+D)
+W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
+# e=1
+g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
+W1 = 1/(1-dh)*(p*T*(1+g1) + (1-p)*(W-D*(1+g1))) - g1
 
-
+We_max = We[min(which(g<=0)) - 1,1]
+g_max = g[min(which(g<=0)) - 1,1]
+ge_max = eg[min(which(g<=0)) - 1,1]
