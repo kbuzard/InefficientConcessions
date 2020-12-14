@@ -43,6 +43,12 @@ dl = .2
 dh = .9
 
 ## To do: Find parameters that make e=1 possible, test against mediator
+T = 6
+W = 8
+D = 5
+p = .4
+dl = .5
+dh = .8
 
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
@@ -57,9 +63,12 @@ W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
 # 0 < e < 1 with mediator
 e = seq(0, 1, 0.01)
 g = data.frame((1-dl)*(T+D)/(p - e*(p + T - dl*T +W)))
-condition = data.frame((p - e*(p + T - dl*T +W)))
-eg = e*g #effective gift
+#condition = data.frame((p - e*(p + T - dl*T +W)))
+#eg = e*g #effective gift
 We = 1/(1-dh)*(p*T*(1+e*g) + (1-p)*(W-D)) - g
-We_max = We[min(which(g<=0)) - 1,1]
-g_max = g[min(which(g<=0)) - 1,1]
-ge_max = eg[min(which(g<=0)) - 1,1]
+We_max = max(We[which(g>=0),1])
+g_max = g[which.max(We[which(g>=0),1]),1]
+#eg_max = eg[which.max(We[which(g>=0),1]),1]
+
+# condition for mediator to be better than e = 1
+WM1 = g_max*(p*T*e[min(which(g<=0)) - 1] - 1) - g1*(p*T + p*D - D - 1)

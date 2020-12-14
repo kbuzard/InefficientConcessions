@@ -387,7 +387,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 									\end{itemize}
 							
 \vskip.3in
-``Parameterization 2'': goal was to make welfare higher under mediator
+``Parameterization 2'': goal was to make welfare higher under mediator; $We > W0$ and $e=1$ is not incentive compatible
 \begin{itemize}
 	\item \color{orange} T = 7, W = 8, D = 5, p = .9, $\de_l = .3$, $\de_h = .6$
 	\item Minimum $e$ from Expression~\ref{eq:g6}
@@ -395,9 +395,28 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 		$$0.9 - \frac{8.4}{g} \geq e \left(18 \right)$$
 		$$0.05 - \frac{0.466}{g} \geq e $$
 	\item The highest welfare comes from $e=.06$, which implies $g = 116.67$ (see e-g calculations.R)
-		
-	
 \end{itemize}
+		
+\vskip.3in
+Here $W1 > W0$ and $g1 > g0$. Welfare under mediator is never positive. 
+\begin{itemize}
+	\item T = 7, W = 8, D = 5, p = .5, dl = .25, dh = .6
+\end{itemize}
+
+\vskip.3in
+Here, $W0 > W1 > We$ (mediator). Mediator optimally chooses e=0 anyway
+\begin{itemize}
+	\item T = 7, W = 8, D = 5, p = .3, dl = .4, dh = .9
+\end{itemize}
+
+\vskip.3in
+Here, $W0 > W1 > We$ (mediator). Mediator optimally chooses $e=0.03$
+\begin{itemize}
+	\item T = 6, W = 8, D = 5, p = .5, dl = .2, dh = .9
+\end{itemize}
+
+
+	
 						
 						\vskip.3in
 						Welfare comparisons (always for high type)
@@ -405,7 +424,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 								\item When $e=1$: $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
 									\begin{itemize}
 										\item \color{red} Parameterization in the paper: welfare is 7.18; gift is 0.63
-										\item \color{orange} Parameterization 2: $g1$ is negative, creates negative upper bound for $d_h$. Separating with concessions equilibrium can't be sustained.
+										\item \color{orange} Parameterization 2: $g^1$ is negative, creates negative upper bound for $d_h$. Separating with concessions equilibrium can't be sustained.
 									\end{itemize}
 								\item When $e=0$: $\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$
 									\begin{itemize}
