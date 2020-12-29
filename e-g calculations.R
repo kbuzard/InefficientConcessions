@@ -17,7 +17,7 @@ dh = .6
 ## Note: reducing dl from 0.3 to 0.4 makes the mediator even more attractive
 
 
-#Here W1 > W0 and g1 > g0. Welfare under mediator is never positive. 
+#P3: W1 > W0 and g1 > g0. Welfare under mediator is never positive. 
 T = 7
 W = 8
 D = 5
@@ -26,7 +26,7 @@ dl = .25
 dh = .6
 
 
-## Here, W0 > W1 > We (mediator). Mediator optimally chooses e=0 anyway
+## P4: W0 > W1 > We (mediator). Mediator optimally chooses e=0 anyway
 T = 7
 W = 8
 D = 5
@@ -34,7 +34,7 @@ p = .3
 dl = .4
 dh = .9
 
-## Here, W0 > W1 > We (mediator). Mediator optimally chooses e=0.03
+## P5: Here, W1 > W0 > We (mediator). Mediator optimally chooses e=0.03
 T = 6
 W = 8
 D = 5
@@ -71,4 +71,5 @@ g_max = g[which.max(We[which(g>=0),1]),1]
 #eg_max = eg[which.max(We[which(g>=0),1]),1]
 
 # condition for mediator to be better than e = 1
-WM1 = g_max*(p*T*e[min(which(g<=0)) - 1] - 1) - g1*(p*T + p*D - D - 1)
+WM1 = 1/(1-dh)*g_max*p*T*e[min(which(g<=0))] - g_max - 1/(1-dh)*g1*(p*T + p*D - D) - g1
+test = We_max - W1

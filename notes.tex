@@ -397,22 +397,22 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 	\item The highest welfare comes from $e=.06$, which implies $g = 116.67$ (see e-g calculations.R)
 \end{itemize}
 		
-\vskip.3in
-Here $W1 > W0$ and $g1 > g0$. Welfare under mediator is never positive. 
+\vskip.2in
+Parameterization 3: $W1 > W0$ and $g1 > g0$. Welfare under mediator is never positive. 
 \begin{itemize}
-	\item T = 7, W = 8, D = 5, p = .5, dl = .25, dh = .6
+	\item $T = 7, \ W = 8, \ D = 5, \ p = .5, \ \de_l = .25, \ \de_h = .6$
 \end{itemize}
 
-\vskip.3in
-Here, $W0 > W1 > We$ (mediator). Mediator optimally chooses e=0 anyway
+\vskip.2in
+Parameterization 4: $W0 > W1 > We$ (mediator). Mediator optimally chooses e=0 anyway
 \begin{itemize}
-	\item T = 7, W = 8, D = 5, p = .3, dl = .4, dh = .9
+	\item $T = 7, \ W = 8, \ D = 5, \ p = .3, \ \de_l = .4, \ \de_h = .9$
 \end{itemize}
 
-\vskip.3in
-Here, $W0 > W1 > We$ (mediator). Mediator optimally chooses $e=0.03$
+\vskip.2in
+Parameterization 5: $W1 > W0 > We$ (mediator). Mediator optimally chooses $e=0.03$
 \begin{itemize}
-	\item T = 6, W = 8, D = 5, p = .5, dl = .2, dh = .9
+	\item $T = 6, \ W = 8, \ D = 5, \ p = .5, \ \de_l = .2, \ \de_h = .9$
 \end{itemize}
 
 
@@ -421,17 +421,17 @@ Here, $W0 > W1 > We$ (mediator). Mediator optimally chooses $e=0.03$
 						\vskip.3in
 						Welfare comparisons (always for high type)
 							\begin{itemize}
-								\item When $e=1$: $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
+								\item When $e=1$: $\frac{1}{1-\de_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
 									\begin{itemize}
 										\item \color{red} Parameterization in the paper: welfare is 7.18; gift is 0.63
-										\item \color{orange} Parameterization 2: $g^1$ is negative, creates negative upper bound for $d_h$. Separating with concessions equilibrium can't be sustained.
+										\item \color{orange} Parameterization 2: $g^1$ is negative, creates negative upper bound for $\de_h$. Separating with concessions equilibrium can't be sustained.
 									\end{itemize}
-								\item When $e=0$: $\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$
+								\item When $e=0$: $\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$
 									\begin{itemize}
 										\item \color{red} Parameterization in the paper: welfare is 8; gift is 3
 										\item \color{orange} Parameterization 2: welfare is 5.7; gift is 10.8
 									\end{itemize}
-								\item When $0<e<1$ under a mediator: $\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - g_M$
+								\item When $0<e<1$ under a mediator: $\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - g_M$
 									\begin{itemize}
 										\item Optimal $g_M$: Expression~\ref{eq:g2} creates a menu of $(e,g)$ pairs that satisfy the constraint:
 											\[
@@ -453,36 +453,64 @@ Here, $W0 > W1 > We$ (mediator). Mediator optimally chooses $e=0.03$
 Here I'll try to derive a general result for when the welfare under a mediator would be higher than under $e=0$ separating with concessions equilibrium. \\
 
 When $0<e<1$ under a mediator, the optimal $g_M$ is the one that chooses the highest welfare from a menu of $(e,g)$ pairs:
-$$\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}$$
+$$\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}$$
 
-When $e=0$, welfare is $$\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+When $e=0$, welfare is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
 
 We compare them to find when the welfare under the mediator is larger:
 	\begin{multline*}
-		\frac{1}{1-d_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq \\
-		\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+		\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq \\
+		\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
 	\end{multline*}							
 Eliminating common terms:
 	\begin{equation*}
-		\frac{1}{1-d_h}\left\{pTeg_M \right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq - p(T+D)
+		\frac{1}{1-\de_h}\left\{pTeg_M \right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq - p(T+D)
 	\end{equation*}	
 Rearranging:
 	\begin{equation*}
-		\frac{pTeg_M}{1-d_h} \geq \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} - p(T+D)
+		\frac{pTeg_M}{1-\de_h} \geq \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} - p(T+D)
 	\end{equation*}	
 Here we can clearly see the increase in welfare from the impact of the effective gift on the left has to be greater than the increase in the size of the gift.
 	\begin{itemize}
 		\item \color{blue} I'm not sure anything reasonable can come from this
 	\end{itemize}
 			
-			
+\subsubsection{Welfare under Mediator vs. e=1}
+\label{sec:WM1}
+Here I'll try to derive a general result for when the welfare under a mediator would be higher than under $e=1$ separating with concessions equilibrium. \\
+
+When $0<e<1$ under a mediator, the optimal $g_M$ is the one that chooses the highest welfare from a menu of $(e,g)$ pairs:
+$$\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}$$
+
+When $e=1$, welfare is $\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$ \\
+
+We compare them to find when the welfare under the mediator is larger:
+	\begin{multline*}
+		\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq \\
+		\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - \frac{p(1-d_l)(T+D)}{(1-d_l)(1-pT)+(1-p)D}
+	\end{multline*}						
+		
+Eliminating common terms:
+	\begin{multline*}
+		\frac{1}{1-\de_h}\left\{pTeg_M \right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq \\
+		\frac{1}{1-\de_h}\left\{pTg^1 + (1-p)(- Dg^1))\right\} - \frac{p(1-d_l)(T+D)}{(1-d_l)(1-pT)+(1-p)D}
+	\end{multline*}			
+Rearranging:
+	\begin{equation*}
+		\frac{1}{1-\de_h}\left\{pTeg_M \right\} - g_M \geq \frac{1}{1-\de_h}\left\{pTg^1 + (1-p)(- Dg^1))\right\} - g^1
+	\end{equation*}		
+		
+\color{blue} I think it's possible that this condition can never be satisfied (i.e. if e=1 is IC, you'd never want to call in the mediator). But I haven't tried to prove it yet
+
+
 			
 \subsubsection{To do and Notes}		
 	\color{ForestGreen} 
 			\begin{itemize}
-					\item NEXT STEP: check condition for sustainable $e=1$ but prefer mediator with $e < 1$ (I've found parameterizations where $e=1$ is preferred so far, but I derived an expression in my notes for when mediator is better $$g^M(pTe - 1) \geq g^1(pT + pD - D - 1)$$
+					\item NEXT STEP: check condition for sustainable $e=1$ but prefer mediator with $e < 1$ 
 						\begin{itemize}
-							\item I'll probably need to type these notes up
+							\item I've found parameterizations where $e=1$ is preferred (P5)
+							\item Try to find a parameterization that shows the reverse (counterexample to my hypothesis that if $e=1$ is sustainable, you never invoke mediator) or see if I can prove that it never happens
 						\end{itemize}
 					\item Can I derive an analytical expression for when the mediator enhances welfare? See Section~\ref{sec:WM0}
 						\begin{itemize}
