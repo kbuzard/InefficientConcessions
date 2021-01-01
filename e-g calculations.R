@@ -42,13 +42,21 @@ p = .5
 dl = .2
 dh = .9
 
-## To do: Find parameters that make e=1 possible, test against mediator
-T = 6
-W = 8
-D = 5
-p = .4
+## Parameters that make e=1 possible, but mediator still better
+T = .5
+W = 1
+D = 1
+p = .5
 dl = .5
-dh = .8
+dh = 61/64
+
+## Parameters that make mediator better than e=0 (have to check about e1)
+T = 1
+W = 1
+D = 1
+p = .5
+dl = .5
+dh = 15/16
 
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
