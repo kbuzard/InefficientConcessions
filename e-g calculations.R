@@ -42,6 +42,14 @@ p = .5
 dl = .2
 dh = .9
 
+## P6: make mediator better than e=0: We > W1 > W0. All gifts are positive
+T = 1
+W = 1
+D = 1
+p = .5
+dl = .5
+dh = 15/16
+
 ## Parameters that make e=1 possible, but mediator still better
 T = .5
 W = 1
@@ -50,19 +58,12 @@ p = .5
 dl = .5
 dh = 61/64
 
-## Parameters that make mediator better than e=0 (have to check about e1)
-T = 1
-W = 1
-D = 1
-p = .5
-dl = .5
-dh = 15/16
-
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
 W1 = 1/(1-dh)*(p*T*(1+g1) + (1-p)*(W-D*(1+g1))) - g1
 # e = 1 incentive compatible? Minimum dh for separation is
 dh_min = D*(1-p) + 1 - p*T + (p*(W - T -D))/g1 #If g1<0, this is UPPER BOUND
+rm(dh_min) #get rid of this after checking that it is lower than dh
 
 # e=0
 g0 = p*(T+D)
@@ -72,11 +73,11 @@ W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
 e = seq(0, 1, 0.01)
 g = data.frame((1-dl)*(T+D)/(p - e*(p + T - dl*T +W)))
 #condition = data.frame((p - e*(p + T - dl*T +W)))
-#eg = e*g #effective gift
+eg = e*g #effective gift
 We = 1/(1-dh)*(p*T*(1+e*g) + (1-p)*(W-D)) - g
 We_max = max(We[which(g[is.finite(g$X.1...dl.....T...D...p...e....p...T...dl...T...W..),1]>=0),1])
 g_max = g[which.max(We[which(g>=0),1]),1]
-#eg_max = eg[which.max(We[which(g>=0),1]),1]
+eg_max = eg[which.max(We[which(g>=0),1]),1]
 
 # condition for mediator to be better than e = 1
 WM1 = 1/(1-dh)*g_max*p*T*e[min(which(g<=0))] - g_max - 1/(1-dh)*g1*(p*T + p*D - D) - g1

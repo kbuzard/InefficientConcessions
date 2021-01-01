@@ -415,7 +415,11 @@ Parameterization 5: $W1 > W0 > We$ (mediator). Mediator optimally chooses $e=0.0
 	\item $T = 6, \ W = 8, \ D = 5, \ p = .5, \ \de_l = .2, \ \de_h = .9$
 \end{itemize}
 
-
+\vskip.2in
+Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses $e=0.24$. Optimal gift is 50, effective gift is 12, vs. $g1 = .667$ and $g0 = 1$
+\begin{itemize}
+	\item $T = 1, \ W = 1, \ D = 1, \ p = .5, \ \de_l = .5, \ \de_h = 15/16=0.9375$
+\end{itemize}
 	
 						
 						\vskip.3in
@@ -468,12 +472,18 @@ Eliminating common terms:
 	\end{equation*}	
 Rearranging:
 	\begin{equation*}
+		\frac{1}{1-\de_h}\left\{pTe - 1 \right\} \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq - p(T+D)
+	\end{equation*}	
+
+Rearranging:
+\begin{equation*}
 		\frac{pTeg_M}{1-\de_h} \geq \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} - p(T+D)
 	\end{equation*}	
-Here we can clearly see the increase in welfare from the impact of the effective gift on the left has to be greater than the increase in the size of the gift.
-	\begin{itemize}
-		\item \color{blue} I'm not sure anything reasonable can come from this
-	\end{itemize}
+This is what I implement in Mathematica Notebook ``We greater than W0.nb''
+\begin{itemize}
+	\item So far, I've been able to find an instance that satisfies this equation: e = 11/64, $\de_h = 15/16$, $\de_l = 0.5$, $p = 0.5$, T = 1, W = 1, D = 1
+	\item This is ``Parameterization 6'' above and in R file ``e-g calculations.R''
+\end{itemize}
 			
 \subsubsection{Welfare under Mediator vs. e=1}
 \label{sec:WM1}
