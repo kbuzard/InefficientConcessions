@@ -510,8 +510,13 @@ Rearranging:
 		\frac{1}{1-\de_h}\left\{pTeg_M \right\} - g_M \geq \frac{1}{1-\de_h}\left\{pTg^1 + (1-p)(- Dg^1))\right\} - g^1
 	\end{equation*}		
 		
-\color{blue} I think it's possible that this condition can never be satisfied (i.e. if e=1 is IC, you'd never want to call in the mediator). But I haven't tried to prove it yet
-
+I've used Mathematica to find a parameterization under which this is true.
+\begin{itemize}
+	\item I implemented the constraint in Mathematica to make sure the gift under $e=1$ is positive, BUT I did not implement the constraint on $\de_h$ that makes it IC (although I have a check in ``e-g calculations.R''. Here is the constraint on $\de_h$:
+		\[
+		  \de_h \geq D + 1 - p(T+D) + \frac{p(W-(T+D))}{g^1}
+		\]
+\end{itemize}
 
 			
 \subsubsection{To do and Notes}		
