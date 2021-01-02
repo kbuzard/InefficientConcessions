@@ -257,7 +257,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 
 \textbf{NOW, it's time to explore this equation and see if it's even possible to pick a gift high enough and an $e$ low enough to satisfy the low type's incentive constraint}. Continuing on from Equation~\ref{eq:examine} and simplifying so that $g_M = g$ and $\de^l = \de$,
 \[
-	pg\left(1 - e\right) \geq \left(T - \de T \right) \left(1 + eg\right) + Weg + \left(1 - \de \right) D
+	pg_M\left(1 - e\right) \geq \left(T - \de_l T \right) \left(1 + eg_M\right) + Weg_M + \left(1 - \de_l \right) D
 \]
 	\begin{itemize}
 		\item Distributing AGAIN
@@ -283,7 +283,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 						\label{eq:g1}
 					\end{equation}
 					\begin{equation}
-						g \geq \frac{\left(1 - \de \right) \left( T + D \right)}{p - e \left( p + T - \de T + W \right)}
+						g_M \geq \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}
 						\label{eq:g2}
 					\end{equation}
 						\begin{itemize}
@@ -305,7 +305,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 									\item Material value with $e=0$ same as in Section 3: $p\left(T+D\right)$
 									\item Material value with $e=1$:
 										\begin{equation}
-											g \geq \frac{p(1-\de)(T + D)}{\left(1-\de \right) -p(1-\de)T +(1-p)D}
+											g^1 \geq \frac{p(1-\de_l)(T + D)}{\left(1-\de_l \right) -p(1-\de_l)T +(1-p)D}
 											\label{eq:g4}
 										\end{equation}
 									\item Under the assumption that payoffs are multiplied by something linear like $1 + \al_2 g_1$, there's no reason to choose any intermediate value of $e$. The mediator, of course, can specify an intermediate value.
@@ -509,7 +509,28 @@ Rearranging:
 	\begin{equation*}
 		\frac{1}{1-\de_h}\left\{pTeg_M \right\} - g_M \geq \frac{1}{1-\de_h}\left\{pTg^1 + (1-p)(- Dg^1))\right\} - g^1
 	\end{equation*}		
-		
+Rearranging again:
+	\begin{equation*}
+		pTeg_M - \left(1-\de_h\right)g_M \geq pTg^1 + (1-p)(- Dg^1)) - \left(1-\de_h\right)g^1
+	\end{equation*}	
+	\begin{equation*}
+		g_M\left[pTe - \left(1-\de_h\right)\right] \geq pTg^1 -Dg^1 + pDg^1 - \left(1-\de_h\right)g^1
+	\end{equation*}
+	\begin{equation*}
+		g_M\left[pTe - \left(1-\de_h\right)\right] \geq g^1\left[pT - D + pD - \left(1-\de_h\right)\right]
+	\end{equation*}	
+Substituting in the minimum gifts from Expression~\ref{eq:g2} and \ref{eq:g4}:				
+	\begin{equation*}
+		\frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \left[pTe - \left(1-\de_h\right)\right] \geq \frac{p(1-\de_l)(T + D)}{\left(1-\de_l \right)(1-pT) +(1-p)D} \left[pT - D + pD - \left(1-\de_h\right)\right]
+	\end{equation*}	
+Simplifying again because of common term in the numerators:
+	\begin{equation*}
+		\frac{1}{p - e \left( p + T - \de_l T + W \right)} \left[pTe - \left(1-\de_h\right)\right] \geq \frac{p}{\left(1-\de_l \right)(1-pT) +(1-p)D} \left[pT - D + pD - \left(1-\de_h\right)\right]
+	\end{equation*}	
+		\begin{equation*}
+		\left[\left(1-\de_l \right)(1-pT) +(1-p)D\right] \left[pTe - \left(1-\de_h\right)\right] \geq \left[p - e \left( p + T - \de_l T + W \right)\right]p \left[pT - D + pD - \left(1-\de_h\right)\right]
+	\end{equation*}	
+	
 I've used Mathematica to find a parameterization under which this is true.
 \begin{itemize}
 	\item I implemented the constraint in Mathematica to make sure the gift under $e=1$ is positive, BUT I did not implement the constraint on $\de_h$ that makes it IC (although I have a check in ``e-g calculations.R''. Here is the constraint on $\de_h$:
