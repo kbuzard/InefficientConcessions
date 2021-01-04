@@ -1,0 +1,17 @@
+Note that I save this file from C:\Users\krist\Documents\Wolfram Mathematica\We greater than W0.nb as .txt in C:\Users\krist\Github\InefficientConcessions to put it under version control
+Full version of the welfare inequality that says welfare under the mediator is better than welfare under an e=0 concessions separating equilibrium (with material value, of course)
+Max gift under e<1 is often infinite in R; I avoid it with code in R. Here, I add p-f (p+T-l T+W)>0 to avoid it
+FindInstance[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(1-p)*(W-D))/(1-h)>=(p*T+(1-p)*(W-D))/(1-h)-p (T+D )&& p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D},NonNegativeReals]
+Out[20]= {{f->11/64,h->15/16,l->1/2,p->1/2,T->1,W->1,D->1}}
+This just checks the simpler version of the inequality where I eliminated like terms from both sides by hand
+FindInstance[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))>=-p (T+D )&& p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D},NonNegativeReals]
+Out[25]= {{f->11/64,h->15/16,l->1/2,p->1/2,T->1,W->1,D->1}}
+Verify that restriction on denominator of g_M holds
+In[16]:= p-f (p+T-l T+W)/. {{f->11/64,h->15/16,l->1/2,p->1/2,T->1,W->1,D->1}}
+Out[16]= {5/32}
+Now try using FullSimplify--not as a wrapper for Reduce--but on its own
+In[36]:= FullSimplify[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))>=-p (T+D ), p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&0<=f<=1&&W>0&&D+T>W]
+Out[36]= p+((-1+l) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=h p
+Notice that D is eliminated in the FullSimplify expression. So all restrictions involving D have to be removed (including T>W-D). I also needed to add the non-negativity constraint on gM back in.
+In[37]:= Reduce[p>=((-1+l) (-1+h+f p T))/((-1+h) ((-1+f) p+f (T-l T+W)))&& p>f (p+T-l T+W)&& 0<p<1&&0<l<h<1&&0<=f<=1&&T>0&&W>0,{f,h,l,p,T,W}]
+Out[37]= (f==0&&0<h<1&&0<l<h&&Sqrt[1-l]<=p<1&&T>0&&W>0)||(0<f<1&&((1-Sqrt[1-f]<h<f&&(-f+h)/(-1+h)<l<h&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(h==f&&0<l<h&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(f<h<1&&((0<l<=f&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(f<l<h&&((Sqrt[(-1+h+l-h l)/(-1+f)]<p<Sqrt[(-1+l)/(-1+f)]&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(Sqrt[(-1+l)/(-1+f)]<=p<1&&((0<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))))))))
