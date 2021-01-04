@@ -76,8 +76,9 @@ g = data.frame((1-dl)*(T+D)/(p - e*(p + T - dl*T +W)))
 eg = e*g #effective gift
 We = 1/(1-dh)*(p*T*(1+e*g) + (1-p)*(W-D)) - g
 We_max = max(We[which(g[is.finite(g$X.1...dl.....T...D...p...e....p...T...dl...T...W..),1]>=0),1])
-g_max = g[which.max(We[which(g>=0),1]),1]
-eg_max = eg[which.max(We[which(g>=0),1]),1]
+e_max = which.max(We[which(g>=0),1])
+g_max = g[e_max,1]
+eg_max = eg[e_max,1]
 
 # condition for mediator to be better than e = 1
 WM1 = 1/(1-dh)*g_max*p*T*e[min(which(g<=0))] - g_max - 1/(1-dh)*g1*(p*T + p*D - D) - g1
