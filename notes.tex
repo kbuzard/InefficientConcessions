@@ -57,6 +57,40 @@ bookmarksopen=true]{hyperref}
 
 \vskip.3in
 
+\section{Alternative Examples}
+
+\subsection{Destroying weapons}
+I'm not sure this is perfect, since it's a bit of a stretch to say they could be used for civil society (police?)
+\begin{itemize}
+	\item FARC in 2017 (Colombia): https://colombiareports.com/final-un-figures-destruction-farcs-arsenal/,
+		\begin{itemize}
+			\item https://www.crisisgroup.org/latin-america-caribbean/andes/colombia/statement-transitional-justice-agreement-between-colombian-government-and-farc
+		\end{itemize}
+	\item Philippines / Bangsamoro region: https://www.crisisgroup.org/asia/south-east-asia/philippines/301-philippines-militancy-and-new-bangsamoro
+	\item Northern Ireland: Oct 7 2007 deadline to start weapons decommissioning (https://www.crisisgroup.org/crisiswatch/october-2007)
+	\item Yemen, https://www.crisisgroup.org/crisiswatch/print?page=1&location%255B%255D=28&date_range=custom&from_month=01&from_year=2020&to_month=04&to_year=2020&t=CrisisWatch+Database+Filter
+		\begin{itemize}
+			\item  As part of “Phase 2” agreement, govt and STC exchanged 53 prisoners 12 Jan. Rival Yemeni groups 24 Jan completed transfer of heavy weapons in Aden to Saudi-controlled base in city within fifteen-day timeframe. After early redeployments from Aden, process again stalled late Jan, with local appointments still not made. 
+		\end{itemize}
+	\item Timor L'este, July 2007, https://www.crisisgroup.org/crisiswatch/july-2006
+		\begin{itemize}
+			\item Situation showed signs of improvement as former Foreign and Defence Minister Ramos-Horta sworn in as new PM 10 July, prompting more rebels to surrender weapons. New cabinet sworn in 14 July with PM retaining defence portfolio. TL asked UN Security Council for 800 international police for 2 to 5 years. UN Special Envoy told UNSC substantial long-term military and police presence required. Peacekeepers arrested 20 for illegal possession of weapons, including rebel leader Reinado. UN commission of inquiry set October deadline for its investigations into April-May violence. Former PM Alkatiri questioned over allegations he paid rebels to attack opponents. International police force gradually replacing military patrols in Dili as first Australian troops withdrew. Violent attacks by teenage gangs increased, including attack on UNICEF worker
+		\end{itemize}
+	\item Turkey and the PKK, Nov 6, 2014
+\end{itemize}
+
+Other conflicts to investigate
+\begin{itemize}	
+	\item Liberia
+	\item What happened to make peace in Sudan?
+	\item Taliban in Afghanistan? February 29, 2020
+		\begin{itemize}
+			\item No help from International Crisis Group
+		\end{itemize}
+	\item Iran deal with the U.S.: JCPOA
+	\item North and South Korea
+\end{itemize}
+
 \section{Make mediator work}
 November 29, 2020: In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.
 \begin{itemize}
@@ -268,7 +302,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 				pg	\left(1 - e\right) \geq \left(1 - \de \right) T + \left(1 - \de \right) D + Teg - \de T eg + Weg
 			\]
 			\begin{equation}
-				pg - pge \geq \left(1 - \de \right) \left( T + D \right) + eg \left( T - \de T + W \right)
+				pg_M - pg_Me \geq \left(1 - \de_l \right) \left( T + D \right) + eg_M \left( T - \de_l T + W \right)
 				\label{eq:split}
 			\end{equation}
 		\item From here we can solve either for the constraint in terms of $g$ or in terms of $e$
@@ -551,7 +585,11 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 					$W0 > W1 > WM$ & P1 (paper) & P4 \\
 					$W0 > WM > W1$ &    &
 				\end{tabular}
-				
+				P5 result is wrong: $WM \Rightarrow \infty$.
+					\begin{itemize}
+						\item It's going to be very hard to find WM as intermediate. It has to be a case where it asymptotes to $-\infty$ and choosing $e=0$ is optimal anyway.
+						\item It would be nice to show that it's possible to want to pick $e=0$ under mediator 
+					\end{itemize}
 							
 \subsubsection{To do and Notes}		
 	\color{ForestGreen} 
