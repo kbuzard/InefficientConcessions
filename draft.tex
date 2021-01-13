@@ -226,18 +226,20 @@ One example of such an equilibrium includes Israel and Egypt at the Camp David A
 \subsection{Concessions with Material Value}
 We now model concessions to have real future material value that can either help or harm the giver. The interpretation is that the country which receives the concessions can use them to build up their military or to build up their civil society. Using concessions to build military strength hurts the giver of the concessions in war; using the concessions to strengthen civil socity helps the giver in peace. The Golan heights is such an example: if Syria is an ally of Israel, the Golan Heights is a reasonable concession to make, but if Syria later turns out to betray a trust, surrender of the strategic land would be disastrous for Israel. %Another example is ADD more examples
 
-We incorporate future material value into the model by allowing $T,W$ and $D$ to be functions that depend on arguments $s_i$, the size of country $i$'s civil society and $m_i$, the size of country $i$'s military. $s_i$ and $m_i$ are assumed to be exogenous.
+We add two elements to the benchmark model in Section 2 in order to incorporate future material value. The first is an additional decision for the negotiating parties. In Period 0, after receiving a concession each country makes a decision about how to allocate the value of the concession between military and civil society. $\alpha_i$ is the portion of the received concession that country $i$ chooses to dedicate to civil society; $(1- \alpha_i$) is the portion country $i$ dedicates to military buildup. This decision is a simple optimization problem for each country. Parameters are common knowledge so the result of this decision is well known should the country's type be known. Concessions are immediately converted into civil society or military gifts and incorporated into payoff functions. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
 
-In period 0, after receiving its concession, a country makes the decision to allocate the value of the concession between military and civil society. $\alpha_i$ is the portion of the received concession that country $i$ chooses to dedicate to civil society; $(1- \alpha_i$) is the portion country $i$ dedicates to military buildup. This decision is a simple optimization problem for each country. Parameters are common knowledge so the result of this decision is well known should the country's type be known. Concessions are immediately converted into civil society or military gifts and incorporated into payoff functions. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
+The second new element is a change to the payoffs. We add a term to each of $T$, $W$, and $D$ that represents the additional benefit or harm flowing from the future material value of the concession. When both countries play trust, they each receive the base benefit $T$ as well as an additional benefit of the concession they \textit{gave} that is scaled by the proportion that was invested in civil socity as well as the base benefit of $T$.
+
+If both countries play Fight, Country 1 (symmetric for Country 2) receives an additional benefit term $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. However, it also incurs extra damages $D(1-\alpha_2) g_1$ that are proportional to the size of the give it \textit{gave} and how much of that was invested in the miliary by Country 2. The (Fight,Trust) and (Trust,Fight) payoffs are modified in the same way.
 
 \begin{center}
 \captionof{table}{Stage game payoffs when concessions have material value}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
-	 Trust& \small$T(s_2+\alpha_2 g_1)$, & \small$-D(m_2+(1-\alpha_2) g_1),$ \\
-  & \small$T(s_1+\alpha_1 g_2)$ & \small$T(s_1+\alpha_1 g_2)  +W(m_2+(1-\alpha_2) g_1) $\\ \hline
-	Fight & \small$T(s_2+\alpha_2 g_1)+W(m_1+(1-\alpha_1) g_2),$& \small$W(m_1+(1-\alpha_1) g_2)-D(m_2+(1-\alpha_2) g_1),$ \\
-	 & \small$-D(m_1+(1-\alpha_1) g_2) $ & \small$W(m_2+(1-\alpha_2) g_1)-D(m_1+(1-\alpha_1) g_2)$ \\ \hline
+	 Trust& \small$T+T\alpha_2 g_1$, & \small$-[D+D(1-\alpha_2) g_1],$ \\
+  & \small$T+T\alpha_1 g_2$ & \small$[T+T\alpha_1 g_2] + [W+W(1-\alpha_2) g_1] $\\ \hline
+	Fight & \small$[T+T\alpha_2 g_1]+[W+W(1-\alpha_1) g_2],$& \small$[W+W(1-\alpha_1) g_2]-[D+D(1-\alpha_2) g_1],$ \\
+	 & \small$-[D+D(1-\alpha_1) g_2] $ & \small$[W+W(1-\alpha_2) g_1]-[D+D(1-\alpha_1) g_2]$ \\ \hline
 \end{tabular}
 \end{center}
 \vskip.1in
@@ -261,10 +263,10 @@ We implement this by allowing countries to choose a scalar $e$ to multiply by th
 \captionof{table}{Stage game payoffs when concessions have material value that can be destroyed}
 \begin{tabular}{|l|c|c|}
   \hline      & Trust & Fight \\ \hline
-	 Trust& \small$T(s_2+\alpha_2 e g_1)$, & \small$-D(m_2+(1-\alpha_2)e g_1),$ \\
-  & \small$T(s_1+\alpha_1 e g_2)$ & \small$T(s_1+\alpha_1 e g_2)  +W(m_2+(1-\alpha_2)e g_1) $\\ \hline
-	Fight & \small$T(s_2+\alpha_2 e g_1)+W(m_1+(1-\alpha_1) e g_2),$& \small$W(m_1+(1-\alpha_1)e g_2)-D(m_2+(1-\alpha_2)e g_1),$ \\
-	 & \small$-D(m_1+(1-\alpha_1) e g_2) $ & \small$W(m_2+(1-\alpha_2)e g_1)-D(m_1+(1-\alpha_1)e g_2)$ \\ \hline
+	 Trust& \small$T+T\alpha_2 e g_1$, & \small$-[D+D(1-\alpha_2) eg_1],$ \\
+  & \small$T+T\alpha_1 eg_2$ & \small$[T+T\alpha_1 eg_2] + [W+W(1-\alpha_2) eg_1] $\\ \hline
+	Fight & \small$[T+T\alpha_2 eg_1]+[W+W(1-\alpha_1) eg_2],$& \small$[W+W(1-\alpha_1) eg_2]-[D+D(1-\alpha_2) eg_1],$ \\
+	 & \small$-[D+D(1-\alpha_1) eg_2] $ & \small$[W+W(1-\alpha_2) eg_1]-[D+D(1-\alpha_1) eg_2]$ \\ \hline
 \end{tabular}
 \end{center}
 
@@ -292,7 +294,7 @@ U_l=X_{FF}+peg_h
 %When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
 % \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
 
-Before turning to our main result for the case where the material value of concessions can be destroyed, we make a slight simplification of the general model here. This is not essential for the results to hold; we make these simplifciations for ease of calculation and demonstration of the results. First, we restrict the functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. This linear functional form implies that equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. To further simplify calculations, we also assume that $s_1=s_2=m_1=m_2=1.$ 
+Before turning to our main result for the case where the material value of concessions can be destroyed, we make a slight simplification of the general model here. This is not essential for the results to hold; we make these simplifciations for ease of calculation and demonstration of the results. First, we restrict the functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. This linear functional form implies that equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. 
 
 \begin{theorem}
 		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameters under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
@@ -465,7 +467,7 @@ i.e.,
 \ee
 \\
 \emph{Proof of Theorem \ref{theorem:4}:}\\
-Given the functional form restrictions that $T(\cdot),W(\cdot)$ and $D(\cdot)$ are each a scalar multiplied by its arguments and $s_1=s_2=m_1=m_2=1$, high types choose $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choose $\alpha=0$. Because the low type's IC constraint binds, with $e=1$ the optimal concession can be calculated to be $g^1= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$. The high type's utility when $e=1$ is then $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - g^1$.
+High types choose $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choose $\alpha=0$. Because the low type's IC constraint binds, with $e=1$ the optimal concession can be calculated to be $g^1= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$. The high type's utility when $e=1$ is then $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - g^1$.
 
 When $e=0$---that is, the future material value of the concessions is destroyed---we are essentially back in the case of Section~\ref{sec:bench} and the minimum separating concession is $g^0=p(T+D)$. The threshold for high types to cooperate is again $\frac{W}{T+D}$. High type utility when $e=0$ is $\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - g^0$.
 
