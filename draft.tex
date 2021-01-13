@@ -13,10 +13,6 @@
 \newcommand{\ee}{\end{equation}}
 \newcommand{\bi}{\begin{itemize*}}
 \newcommand{\ei}{\end{itemize*}}
-\newcommand{\bgd}{\begin{gathered}}
-\newcommand{\egd}{\end{gathered}}
-\newcommand{\bgr}{\begin{gather}}
-\newcommand{\edgr}{\end{gather}}
 \newcommand{\mb}{\mathbf}
 \newcommand{\ve}{\varepsilon}
 \newcommand{\real}{\mathbb{R}}
@@ -47,7 +43,6 @@ Ben Horne\\
 University of California, San Diego\\
 \\}
 \date{\today}
-%To Do : define what is ineffieicncy
 
 \begin{document}
 \maketitle
@@ -230,7 +225,7 @@ We add two elements to the benchmark model in Section 2 in order to incorporate 
 
 The second new element is a change to the payoffs. We add a term to each of $T$, $W$, and $D$ that represents the additional benefit or harm flowing from the future material value of the concession. When both countries play trust, they each receive the base benefit $T$ as well as an additional benefit of the concession they \textit{gave} that is scaled by the proportion that was invested in civil socity as well as the base benefit of $T$.
 
-If both countries play Fight, Country 1 (symmetric for Country 2) receives an additional benefit term $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. However, it also incurs extra damages $D(1-\alpha_2) g_1$ that are proportional to the size of the give it \textit{gave} and how much of that was invested in the miliary by Country 2. The (Fight,Trust) and (Trust,Fight) payoffs are modified in the same way.
+If both countries play Fight, Country 1 (symmetric for Country 2) receives an additional benefit term $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. However, it also incurs extra damages $D(1-\alpha_2) g_1$ that are proportional to the size of the concession it \textit{gave} and how much of that concession was invested in the miliary by Country 2. The (Fight,Trust) and (Trust,Fight) payoffs are modified analogously.
 
 \begin{center}
 \captionof{table}{Stage game payoffs when concessions have material value}
@@ -308,13 +303,20 @@ This finding of inefficiency is for profoundly different reasons than the litera
 
 \section{Mediation}
 \label{sec:med}
-All results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator which will be modeled as a mechanism. 
+All results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator. 
 
 Because many conflicts occur in an international arena with no clear enforceable rule of law (Waltz, 2002), much of the literature has focused on self-enforcing mechanisms. If however a credible third party does exist, then results beyond self enforcing agreements can be relevant.  A mediator with such enforcement ability is said to use manipulative mediation, specifically if she ``offered to verify compliance with the agreement''  or ``took responsibility for concessions''  (Bercovitch 1997). We will now introduce a mediator who does the latter.\footnote{Here the parties' actions in the stage game as well as their choices of whether to spend concessions on the civil versus the military sector are assumed to derive from their type, so there is no need for the mediator to enforce these decisions once the type is revealed. Thus, we do not assume that the mediator can do either because it is not necessary.} 
 
-The model setup is as before, but instead of parties being free to give whatever concession they want, the mediator solicits type reports and then enforces incentive compatible concessions. The Revelation Principle tells us that it is without loss of generality to restrict attention to direct mechanisms, that is, mechanisms in which countries simply declare their types (Myerson 1979). This mediator will be modeled as a mechanism $M$.
+The model setup is as before, but instead of parties being free to choose their concession levels, the mediator solicits type reports and then enforces incentive compatible concessions. The Revelation Principle tells us that it is without loss of generality to restrict attention to direct mechanisms, that is, mechanisms in which countries simply declare their types (Myerson 1979). This mediator will be modeled as a mechanism $M$.
 
-$M$ inputs the reports of types $t_1$ and $t_2$ and outputs the required concessions $g_1$ and $g_2$ so that $ M:(t_1,t_2)\rightarrow( g_1(\cdot), g_2(\cdot))$.  The countries are bound to send the mandated concessions. In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent to both types since types are private information. $M$ can differentiate based on recipient's type. Otherwise, the setup is the same as in Section~\ref{sec:matval} where concessions have future material value: both individual rationality and incentive compatibility constraints must be satisfied, leading to truthful self-identification. 
+After learning their type, each country chooses to participate in the mechanism or not; that is, whether to send a message that declares its type to be High or Low. By the revelation principle, it is again without loss of generality to consider equilibria in which both countries participate and send truthful reports. Therefore we have a mechanism $M$ that inputs the reports $t_i \in \left\{High,Low\right\}$ for $i \in \left\{1,2\right\}$ and outputs the required concessions $g_i$ and efficiency levels $e_i$ so that $ M:(t_1,t_2)\rightarrow( e_1, g_1; e_2,g_2)$.  The countries are bound to send the mandated concessions.
+
+In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent to both types since types are private information. Importantly, here the mechanism $M$ can differentiate based on recipient's type. Otherwise, the setup is the same as in Section~\ref{sec:matval} where concessions have future material value.
+
+[both individual rationality and incentive compatibility constraints must be satisfied, leading to truthful self-identification. ]
+
+[Further, it can be shown that restricting attention to symmetric recommendations is without loss of generality, because the optimal arbitration programme is linear.]
+
 
 low type IC
 $$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
