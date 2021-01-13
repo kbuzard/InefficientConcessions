@@ -373,16 +373,16 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 							\item If {\color{red} $g \left( p + T - \de T + W \right)$ is positive}, we can divide through to get
 								$$\frac{pg - \left(1 - \de \right) \left( T + D \right)}{g \left( p + T - \de T + W \right)} \geq e$$
 						\end{itemize}
-				To get a sense of the magnitudes, I will plug $g = p \left(T+D\right)$ from the $e=0$ CSE case (just because it's easier to work with than the optimal gift when $e=1$ into Expression~\ref{eq:g5}. First I divide through by $g$ {\color{blue}(this is okay if $g$ is assumed to be positive)}
-						\begin{equation}
-							p - \frac{\left(1 - \de \right) \left( T + D \right)}{g} \geq e \left( p + T - \de T + W \right)
-							\label{eq:g6}
-						\end{equation}
-						$$p - \frac{\left(1 - \de \right) \left( T + D \right)}{p \left(T+D\right)} \geq e \left( p + T - \de T + W \right)$$
-						$$p - \frac{1 - \de}{p } \geq e \left( p + T - \de T + W \right)$$
-							\begin{itemize}
-								\item For the LHS to be positive, we need $p^2 \geq 1 - \de$, e.g. if $p = 0.5$, we need $\de \geq .75$
-							\end{itemize}
+						
+I did a lot of work in Mathematica to try to find out when the welfare under the mediator is better than the welfare under either the $e=0$ or $e=1$ concessions separating equilibria (CSE) [see Sections~\ref{sec:WM0} and \ref{sec:WM1}]
+\begin{itemize}
+	\item In the midst of this, I realized that, at the optimal $e$ (probably the largest one that satisfies the equation immediately above), both the gift and welfare $\rightarrow \infty$
+		\begin{itemize}
+			\item So we don't get a finite size of the gift or welfare value at the optimum
+			\item In practice, there will be some upper bound on the size of the gift (even, say, total national wealth)
+		\end{itemize}
+\end{itemize}
+
 								
 \subsubsection{Welfare under Mediator vs. e=0}
 \label{sec:WM0}
@@ -479,7 +479,7 @@ I've used Mathematica to find a parameterization under which this is true.
 										\item Threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. By Theorem 2, separation through concessions is possible.
 										\item Minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$
 										\item Minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value.
-										\item Minimum $e$ from Expression~\ref{eq:g6}:
+										\item Maximum $e$ from Expression~\ref{eq:g5}:
 											\[
 											  0.2 - \frac{\left(1 - 0.3 \right) \left( 10 + 5 \right)}{g} \geq e \left( 0.2 + 10 - 0.3\cdot 10 + 8 \right)
 											\]
@@ -498,7 +498,7 @@ I've used Mathematica to find a parameterization under which this is true.
 							\vskip.2in	
 							Now let's try the same parameterization with $p=0.9$.
 									\begin{itemize}
-										\item Minimum $e$ from Expression~\ref{eq:g6}:
+										\item Maximum $e$ from Expression~\ref{eq:g5}:
 											\[
 											  0.9 - \frac{\left(1 - 0.3 \right) \left( 10 + 5 \right)}{g} \geq e \left( 0.9 + 10 - 0.3\cdot 10 + 8 \right)
 											\]
@@ -518,7 +518,7 @@ I've used Mathematica to find a parameterization under which this is true.
 ``Parameterization 2'': goal was to make welfare higher under mediator; $We > W0$ and $e=1$ is not incentive compatible
 \begin{itemize}
 	\item \color{orange} T = 7, W = 8, D = 5, p = .9, $\de_l = .3$, $\de_h = .6$
-	\item Minimum $e$ from Expression~\ref{eq:g6}
+	\item Maximum $e$ from Expression~\ref{eq:g5}
 	  $$0.9 - \frac{\left(1 - 0.3 \right) \left( 7 + 5 \right)}{g} \geq e \left( 0.9 + 7 - 0.3 \cdot 7 + 8 \right)$$
 		$$0.9 - \frac{8.4}{g} \geq e \left(18 \right)$$
 		$$0.05 - \frac{0.466}{g} \geq e $$
@@ -605,6 +605,10 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 						\begin{itemize}
 							\item This is likely (surely?) to be when efficient gifts can't be sustained as a CSE.
 							\item If you can sustain $e=1$ with no mediator, would you ever want a mediator?
+							\item \textbf{Find the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote}
+								\begin{itemize}
+									\item Is it possible to have the $e$ asymptote be negative (in which case mediator can't ever work)
+								\end{itemize}
 						\end{itemize}
 				\item When $g^1$ turns negative, is that exactly when $e=1$ can't be sustained? If we can get positive $g^1$, not sure we'd need the mediator? It's not about $g^1$, but the $\de_h^1$ condition.
 					\begin{itemize}
