@@ -13,20 +13,20 @@ W = 8
 D = 5
 p = .9
 dl = .3
-dh = .6
+dh = .7
 ## Note: reducing dl from 0.3 to 0.4 makes the mediator even more attractive
 
 
-#P3: W1 > W0 and g1 > g0. Welfare under mediator is never positive. 
+#P3: W1 > W0 and g1 > g0. Welfare under mediator is never positive (asymptotes to -infty) 
 T = 7
 W = 8
 D = 5
 p = .5
 dl = .25
-dh = .6
+dh = .7
 
 
-## P4: W0 > W1 > We (mediator). Mediator optimally chooses e=0 anyway
+## P4: W0 > W1 > We (mediator). Mediator optimally chooses e=0 anyway (asymptotes to -infty)
 T = 7
 W = 8
 D = 5
@@ -50,13 +50,16 @@ p = .5
 dl = .5
 dh = 15/16
 
-## Parameters that make e=1 possible, but mediator still better
+## P7: Parameters that make e=1 possible, but mediator still better
 T = .5
 W = 1
 D = 1
 p = .5
 dl = .5
 dh = 61/64
+
+# cutoff for definition of high type
+di = W/(T+D)
 
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
@@ -68,6 +71,8 @@ rm(dh_min) #get rid of this after checking that it is lower than dh
 # e=0
 g0 = p*(T+D)
 W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
+dh_min0 = 1 - p*T + (p*(W - T -D))/g0 #If g1<0, this is UPPER BOUND
+rm(dh_min0)
 
 # 0 < e < 1 with mediator
 e = seq(0, 1, 0.01)
