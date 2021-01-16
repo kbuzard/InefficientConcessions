@@ -60,6 +60,11 @@ dh = 61/64
 
 # cutoff for definition of high type
 di = W/(T+D)
+# WM asymptotes to +infty when the following is positive (sufficient condition)
+suff = e*p*T - 1 + dh
+# problem is that we need the asymptote for e (I think)
+e_s = p/(p + T - T*dl +W)
+suff = e_s*p*T - 1 + dh
 
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
