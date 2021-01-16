@@ -15,3 +15,23 @@ Out[36]= p+((-1+l) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=h p
 Notice that D is eliminated in the FullSimplify expression. So all restrictions involving D have to be removed (including T>W-D). I also needed to add the non-negativity constraint on gM back in.
 In[37]:= Reduce[p>=((-1+l) (-1+h+f p T))/((-1+h) ((-1+f) p+f (T-l T+W)))&& p>f (p+T-l T+W)&& 0<p<1&&0<l<h<1&&0<=f<=1&&T>0&&W>0,{f,h,l,p,T,W}]
 Out[37]= (f==0&&0<h<1&&0<l<h&&Sqrt[1-l]<=p<1&&T>0&&W>0)||(0<f<1&&((1-Sqrt[1-f]<h<f&&(-f+h)/(-1+h)<l<h&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(h==f&&0<l<h&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(f<h<1&&((0<l<=f&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(f<l<h&&((Sqrt[(-1+h+l-h l)/(-1+f)]<p<Sqrt[(-1+l)/(-1+f)]&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(Sqrt[(-1+l)/(-1+f)]<=p<1&&((0<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))))))))
+Can I get conditions that make WM > 0? How about at f=0?
+In[1]:= FindInstance[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(1-p)*(W-D))/(1-h)>=0&& p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D},NonNegativeReals]
+Out[1]= {{f->0,h->3/4,l->1/2,p->1/2,T->1,W->1,D->1}}
+In[3]:= FullSimplify[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(1-p)*(W-D))/(1-h)>=0, p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&0<=f<=1&&W>0&&D+T>W]
+Out[3]= D p+p T+W+((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=D+p W
+In[5]:= Reduce[D p+p T+W+((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=D+p W&& p>f (p+T-l T+W)&& 0<p<1&&0<l<h<1&&0<=f<=1&&T>0&&W>0&&D+T>W,{f,h,l,p,T,W,D}]
+Out[5]= $Aborted
+How about at f=0?
+In[11]:= Reduce[D p+p T+W+((-1+l) (D+T) (-1+h))/((-1) p)>=D+p W&&  0<p<1&&0<l<h<1&&T>0&&D>0&&W>0&&D+T>W,{D,h,l,p,T,W}]
+Out[11]= D>0&&0<h<1&&0<l<h&&((1-h-l+h l<p<=Sqrt[1-h-l+h l]&&T>(-D+D h+D l-D h l)/(1-h-l+h l-p)&&(-D+D h+D l-D h l-D p+D p^2-T+h T+l T-h l T+p^2 T)/(-p+p^2)<=W<D+T)||(Sqrt[1-h-l+h l]<p<1&&(((-D+D h+D l-D h l)/(1-h-l+h l-p)<T<(-D+D h+D l-D h l-D p+D p^2)/(1-h-l+h l-p^2)&&(-D+D h+D l-D h l-D p+D p^2-T+h T+l T-h l T+p^2 T)/(-p+p^2)<=W<D+T)||(T==(-D+D h+D l-D h l-D p+D p^2)/(1-h-l+h l-p^2)&&(-D+D h+D l-D h l-D p+D p^2-T+h T+l T-h l T+p^2 T)/(-p+p^2)<W<D+T)||(T>(-D+D h+D l-D h l-D p+D p^2)/(1-h-l+h l-p^2)&&0<W<D+T))))
+This solves, but is overly complicated
+When does WM increase in "f" to the left of the asymptote (i.e. p>f (p+T-l T+W))
+In[12]:= D[D p+p T+W+((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W))-D-p W,f]
+Out[12]= -(((-1+l) (D+T) (-1+h+f p T) (p+T-l T+W))/((-1+f) p+f (T-l T+W))^2)+((-1+l) p T (D+T))/((-1+f) p+f (T-l T+W))
+In[13]:= D[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(1-p)*(W-D))/(1-h),f]
+Out[13]= -(((1-l) (D+T) (-1+(f p T)/(1-h)) (-p-T+l T-W))/(p-f (p+T-l T+W))^2)+((1-l) p T (D+T))/((1-h) (p-f (p+T-l T+W)))
+If -1+(f p T)/(1-h)>0, it's increasing for sure
+(f p T)/(1-h)>1
+f p T>1 - h
+What this means (and it's a sufficient condition; it's not necessary because of the second additive term) is that the welfare impact of the future value impact (fpT), summed over the whole future  ((f p T)/(1-h)g^M) has to be greater than the cost of giving the gift (g^M). 

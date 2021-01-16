@@ -380,6 +380,9 @@ I did a lot of work in Mathematica to try to find out when the welfare under the
 		\begin{itemize}
 			\item So we don't get a finite size of the gift or welfare value at the optimum
 			\item In practice, there will be some upper bound on the size of the gift (even, say, total national wealth)
+				\begin{itemize}
+					\item Interestingly, $g*e$ (the effective gift) appears to be a line for a given set of parameters $W,T,D,\de_h,\de_l,p$
+				\end{itemize}
 		\end{itemize}
 \end{itemize}
 
@@ -607,23 +610,54 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 							\item If you can sustain $e=1$ with no mediator, would you ever want a mediator?
 							\item \textbf{Find the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote}
 								\begin{itemize}
-									\item Is it possible to have the $e$ asymptote be negative (in which case mediator can't ever work)
+									\item Is it possible to have the $e$ asymptote be negative (in which case mediator can't ever work)?
+										\begin{itemize}
+											\item No, it's not possible. Asymptote is at $e=\frac{p}{p + T(1-\de_l) +W}$. Everything is positive, and numerator strictly smaller than denominator, so $0 < e < 1$
+											\item I still don't have intuition for the asymptote. Need to look back at IC constraint to get it.
+										\end{itemize}
 								\end{itemize}
 						\end{itemize}
-				\item When $g^1$ turns negative, is that exactly when $e=1$ can't be sustained? If we can get positive $g^1$, not sure we'd need the mediator? It's not about $g^1$, but the $\de_h^1$ condition.
-					\begin{itemize}
-						\item When $g^1$ is negative, the constraint on $\de_h^1$ (see proof of Thm 3) becomes an upper bound. If it's negative, it means that no $\de_h$ exists to make separating possible.
-						\item I need a formal result to see clearly what is going on here
-					\end{itemize}
+					\item Ideally would want to combine $WM > W0$ and $WM > W1$ to get WM = max$\left\{WM, W1,W0\right\}$
+						\begin{itemize}
+							\item I basically CAN do this with asymptote conditions...or at least try
+						\end{itemize}
+					\item Maybe I can just do comparative statics on the condition? \url{http://people.duke.edu/~dgraham/scripts/MathematicaLaTeX-to-LaTeX/ComparativeStatics-none.pdf}
+					\item Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember that $g^0 = p(T+D)$
+						\[
+						  \frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g_0 \geq \frac{1}{1-\de_h} (W-D)
+						\]
+						\[
+						  pT + (1-p)(W-D) - (1-\de_h)(1-p) g^0 \geq W-D
+						\]
+						\[
+						  \de_h (1-p) g^0 \geq W-D - pT - (1-p)(W-D) +g^0(1-p)
+						\]
+						\[
+						  \de_h (1-p) g^0 \geq p(W-D-T) +g^0(1-p)
+						\]
+						\[
+						  \de_h \geq \frac{p(W-D-T)}{g^0(1-p)} + 1 = \frac{p(W-D-T)}{p(T+D)(1-p)} + 1 
+						\]
+						\[
+							\de_h \geq \frac{W}{(T+D)(1-p)} + \frac{(-D-T)}{(T+D)(1-p)} + 1 = \frac{W}{(T+D)(1-p)} - \frac{1}{1-p} + 1
+						\]
+						\[
+							\de_h \geq \frac{W}{(T+D)(1-p)} - \frac{p}{1-p}
+						\]
+						I have a page of math that shows that this is strictly smaller than $d^h$. This means that the set of types who can make and sustain peace under the CSE with no material value / CSE with material value and $e=0$ is larger than the set of types who can make and sustain peace under the repeated game.
+							\begin{itemize}
+								\item This is nice, but I'm not sure it helps with the narrative of the story.
+							\end{itemize}
 			\end{itemize}
 	
 
 \vskip.2in
 \color{Black}Notes:
 \begin{itemize}
-	\item I think Mediator could instruct them to give $e<1$ gifts without having to disturb the rest of the theory. 
+	\item I'm ignoring the following question for the JCR submission: When $g^1$ turns negative, is that exactly when $e=1$ can't be sustained? It's not about $g^1$, but the $\de_h^1$ condition.
 		\begin{itemize}
-			\item \textbf{If I go with $e<1$, I need to come back to verify this.}
+			\item When $g^1$ is negative, the constraint on $\de_h^1$ (see proof of Thm 3) becomes an upper bound. If it's negative, it means that no $\de_h$ exists to make separating possible.
+			\item I need a formal result to see clearly what is going on here
 		\end{itemize}
 \end{itemize}
 			
