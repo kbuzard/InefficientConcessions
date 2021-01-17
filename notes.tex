@@ -606,22 +606,23 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 			\begin{itemize}
 					\item Can I derive an analytical expression for when the mediator enhances welfare? See Section~\ref{sec:WM0}
 						\begin{itemize}
-							\item This is likely (surely?) to be when efficient gifts can't be sustained as a CSE.
-							\item If you can sustain $e=1$ with no mediator, would you ever want a mediator?
+							\item If you can sustain $e=1$ with no mediator, would you ever want a mediator? YES
 							\item \textbf{Find the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote}
 								\begin{itemize}
 									\item Is it possible to have the $e$ asymptote be negative (in which case mediator can't ever work)?
 										\begin{itemize}
 											\item No, it's not possible. Asymptote is at $e=\frac{p}{p + T(1-\de_l) +W}$. Everything is positive, and numerator strictly smaller than denominator, so $0 < e < 1$
-											\item I still don't have intuition for the asymptote. Need to look back at IC constraint to get it.
+										\end{itemize}
+									\item Both examining the IC constraint directly and taking a derivative in Mathematica program `We greater than W0.txt' give the following condition for when welfare under the mediator increases as $e$ increases; this is the case when the mediator is better than CSE $e=0$ or CSE $e=1$:
+										\[
+											\frac{e p T}{1 - \de_h} > 1
+										\]
+										\begin{itemize}
+											\item This is a sufficient condition, not necessary. It only looks at the direct impact of the gift; there is another positive term that this ignores
+											\item The welfare impact of the future value $(epT)$, summed over the whole future $\left(\frac{e p T}{1-h}g^M\right)$ has to be greater than the cost of giving the gift ($g^M$). 
 										\end{itemize}
 								\end{itemize}
 						\end{itemize}
-					\item Ideally would want to combine $WM > W0$ and $WM > W1$ to get WM = max$\left\{WM, W1,W0\right\}$
-						\begin{itemize}
-							\item I basically CAN do this with asymptote conditions...or at least try
-						\end{itemize}
-					\item Maybe I can just do comparative statics on the condition? \url{http://people.duke.edu/~dgraham/scripts/MathematicaLaTeX-to-LaTeX/ComparativeStatics-none.pdf}
 					\item Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember that $g^0 = p(T+D)$
 						\[
 						  \frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g_0 \geq \frac{1}{1-\de_h} (W-D)
