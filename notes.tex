@@ -98,6 +98,50 @@ I investigated these for different types of inefficiencies but did not find anyt
 	\item Iran deal with the U.S.: JCPOA
 \end{itemize}
 
+\section{No material value CSE vs. repeated game}
+Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember that $g^0 = p(T+D)$
+						\[
+						  \frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g_0 \geq \frac{1}{1-\de_h} (W-D)
+						\]
+						\[
+						  pT + (1-p)(W-D) - (1-\de_h)(1-p) g^0 \geq W-D
+						\]
+						\[
+						  \de_h (1-p) g^0 \geq W-D - pT - (1-p)(W-D) +g^0(1-p)
+						\]
+						\[
+						  \de_h (1-p) g^0 \geq p(W-D-T) +g^0(1-p)
+						\]
+						\[
+						  \de_h \geq \frac{p(W-D-T)}{g^0(1-p)} + 1 = \frac{p(W-D-T)}{p(T+D)(1-p)} + 1 
+						\]
+						\[
+							\de_h \geq \frac{W}{(T+D)(1-p)} + \frac{(-D-T)}{(T+D)(1-p)} + 1 = \frac{W}{(T+D)(1-p)} - \frac{1}{1-p} + 1
+						\]
+						\[
+							\de_h \geq \frac{W}{(T+D)(1-p)} - \frac{p}{1-p}
+						\]
+							\begin{itemize}
+								\item For P6 this is zero, for P1 and P2 it's negative, and it's positive for the rest
+							\end{itemize}
+						The following shows that this is strictly smaller than $\de^h$. \textbf{This means that the set of types who can make and sustain peace under the CSE with no material value / CSE with material value and $e=0$ is larger than the set of types who can make and sustain peace under the repeated game.}
+							\begin{itemize}
+								\item $T+D>W$
+								\item $-(T+D)<-W$
+								\item $-p(T+D)<-pW$
+								\item $W-p(T+D)<W-pW$
+								\item $\frac{W-p(T+D)}{T+D}<\frac{W-pW}{T+D} = \frac{(1-p)W}{T+D}$
+								\item $\frac{W-p(T+D)}{(1-p)(T+D)} = \frac{W}{(1-p)(T+D)} - \frac{p(T+D)}{(1-p)(T+D)} = \frac{W}{(1-p)(T+D)} - \frac{p}{1-p}< \frac{W}{T+D}$. Q.E.D.
+								\item This is nice, but I'm not sure it helps with the narrative of the story.
+									\begin{itemize}
+										\item \textbf{Do I want to re-cast the $\de_h$ definitions, changing them throughout the story?}
+											\begin{itemize}
+												\item e.g. With the defn of high type as a country who can sustain the grim trigger equilibrium, high type is always patient enough to sustain $e=0$ CSE / no material value CSE
+												\item Should I compare grim trigger welfare to see which is higher?
+											\end{itemize}
+									\end{itemize}
+							\end{itemize}
+
 \section{Make mediator work}
 November 29, 2020: In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.
 \begin{itemize}
@@ -472,6 +516,20 @@ I've used Mathematica to find a parameterization under which this is true.
 		\[
 		  \de_h \geq D + 1 - p(T+D) + \frac{p(W-(T+D))}{g^1}
 		\]
+It turns out that there aren't really separate conditions. If the welfare under the mediator asymptotes to positive infinity to the left of the asymptote (i.e. where the gift is positive), then the mediator is better than any CSE.
+					\item I've given up on deriving an analytical expression for when the mediator enhances welfare (see Mathematica programs for more detail)
+					\item Characterizing exactly the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote seems hard. But I have developed an intuitive sufficient condition
+								\begin{itemize}
+									\item First, note that it is not possible to have the $e$ asymptote be negative (in which case mediator can't ever work). The asymptote is at $e=\frac{p}{p + T(1-\de_l) +W}$. Everything is positive, and numerator strictly smaller than denominator, so $0 < e < 1$
+									\item Both examining the IC constraint directly and taking a derivative in Mathematica program `We greater than W0.txt' give the following condition for when welfare under the mediator increases as $e$ increases; this is the case when the mediator is better than CSE $e=0$ or CSE $e=1$:
+										\[
+											\frac{e p T}{1 - \de_h} > 1
+										\]
+										\begin{itemize}
+											\item This is a sufficient condition, not necessary. It only looks at the direct impact of the gift; there is another positive term that this ignores
+											\item The welfare impact of the future value $(epT)$, summed over the whole future $\left(\frac{e p T}{1-h}g^M\right)$ has to be greater than the cost of giving the gift ($g^M$). 
+										\end{itemize}
+								\end{itemize}
 \end{itemize}
 
 \subsubsection{Check with some parameterizations}								
@@ -604,59 +662,26 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 \subsubsection{To do and Notes}		
 	\color{ForestGreen} 
 			\begin{itemize}
-					\item Can I derive an analytical expression for when the mediator enhances welfare? See Section~\ref{sec:WM0}
+					\item Can I do new mediator theorem in the same form as the one that's currently in the paper?
+					\item Need to say clearly that $e=1$ doesn't work in a lot of situations
+					\item Mediator with $e=0$ can be better than CSE with $e=0$. Need to say why this is
 						\begin{itemize}
-							\item If you can sustain $e=1$ with no mediator, would you ever want a mediator? YES
-							\item \textbf{Find the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote}
-								\begin{itemize}
-									\item Is it possible to have the $e$ asymptote be negative (in which case mediator can't ever work)?
-										\begin{itemize}
-											\item No, it's not possible. Asymptote is at $e=\frac{p}{p + T(1-\de_l) +W}$. Everything is positive, and numerator strictly smaller than denominator, so $0 < e < 1$
-										\end{itemize}
-									\item Both examining the IC constraint directly and taking a derivative in Mathematica program `We greater than W0.txt' give the following condition for when welfare under the mediator increases as $e$ increases; this is the case when the mediator is better than CSE $e=0$ or CSE $e=1$:
-										\[
-											\frac{e p T}{1 - \de_h} > 1
-										\]
-										\begin{itemize}
-											\item This is a sufficient condition, not necessary. It only looks at the direct impact of the gift; there is another positive term that this ignores
-											\item The welfare impact of the future value $(epT)$, summed over the whole future $\left(\frac{e p T}{1-h}g^M\right)$ has to be greater than the cost of giving the gift ($g^M$). 
-										\end{itemize}
-								\end{itemize}
+							\item If you can sustain $e=1$ with no mediator, mediator can still be better
 						\end{itemize}
-					\item Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember that $g^0 = p(T+D)$
-						\[
-						  \frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g_0 \geq \frac{1}{1-\de_h} (W-D)
-						\]
-						\[
-						  pT + (1-p)(W-D) - (1-\de_h)(1-p) g^0 \geq W-D
-						\]
-						\[
-						  \de_h (1-p) g^0 \geq W-D - pT - (1-p)(W-D) +g^0(1-p)
-						\]
-						\[
-						  \de_h (1-p) g^0 \geq p(W-D-T) +g^0(1-p)
-						\]
-						\[
-						  \de_h \geq \frac{p(W-D-T)}{g^0(1-p)} + 1 = \frac{p(W-D-T)}{p(T+D)(1-p)} + 1 
-						\]
-						\[
-							\de_h \geq \frac{W}{(T+D)(1-p)} + \frac{(-D-T)}{(T+D)(1-p)} + 1 = \frac{W}{(T+D)(1-p)} - \frac{1}{1-p} + 1
-						\]
-						\[
-							\de_h \geq \frac{W}{(T+D)(1-p)} - \frac{p}{1-p}
-						\]
+					\item Sufficient condition for where welfare goes to positive $\infty$ to the left of the $e$ asymptote
+						\begin{itemize}
+							\item Characterizing exactly the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote seems hard. But I have developed an intuitive sufficient condition. See end of Section~\ref{sec:WM1}
+						\end{itemize}
+					\item Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable is strictly smaller than $\de^h$. \textbf{This means that the set of types who can make and sustain peace under the CSE with no material value / CSE with material value and $e=0$ is larger than the set of types who can make and sustain peace under the repeated game.}
 							\begin{itemize}
-								\item For P6 this is zero, for P1 and P2 it's negative, and it's positive for the rest
-							\end{itemize}
-						The following shows that this is strictly smaller than $\de^h$. This means that the set of types who can make and sustain peace under the CSE with no material value / CSE with material value and $e=0$ is larger than the set of types who can make and sustain peace under the repeated game.
-							\begin{itemize}
-								\item $T+D>W$
-								\item $-(T+D)<-W$
-								\item $-p(T+D)<-pW$
-								\item $W-p(T+D)<W-pW$
-								\item $\frac{W-p(T+D)}{T+D}<\frac{W-pW}{T+D} = \frac{(1-p)W}{T+D}$
-								\item $\frac{W-p(T+D)}{(1-p)(T+D)} = \frac{W}{(1-p)(T+D)} - \frac{p(T+D)}{(1-p)(T+D)} = \frac{W}{(1-p)(T+D)} - \frac{p}{1-p}< \frac{W}{T+D}$. Q.E.D.
 								\item This is nice, but I'm not sure it helps with the narrative of the story.
+									\begin{itemize}
+										\item \textbf{Do I want to re-cast the $\de_h$ definitions, changing them throughout the story?}
+											\begin{itemize}
+												\item e.g. With the defn of high type as a country who can sustain the grim trigger equilibrium, high type is always patient enough to sustain $e=0$ CSE / no material value CSE
+												\item Should I compare grim trigger welfare to see which is higher?
+											\end{itemize}
+									\end{itemize}
 							\end{itemize}
 			\end{itemize}
 	
