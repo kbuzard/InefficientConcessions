@@ -76,7 +76,7 @@ rm(dh_min) #get rid of this after checking that it is lower than dh
 # e=0
 g0 = p*(T+D)
 W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
-dh_min0 = 1 - p*T + (p*(W - T -D))/g0 #If g1<0, this is UPPER BOUND
+dh_min0 = W/((1-p)*(T+D)) - p/(1-p)
 rm(dh_min0)
 
 # 0 < e < 1 with mediator
