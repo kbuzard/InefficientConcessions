@@ -107,7 +107,7 @@ These empirical results have until recently lacked strong theoretical foundation
 \section{Model} %A DIFFERENT MODEL BUT SAME RESULT AS FR 10; THIS SHOULD BUILD OUR CONFIDENCE IN MODELLING. EMPHASIZE SCENARION (EGYPT USRAEL ETC) THAT ARE BETTER TO MODEL WITH Our MODEL. IT CAN ALSO BE THOUGHT OF AS REDUCED FORM OF A BARGAINING MOEL, BUT IT DOES NOT NEED TO BE! NEED TO GIVE EXAMPLES WHERE Our MODEL IS BETTER THAN BARGAINING- EXAMPLES. WHEN TRUST IS AN ISSUE (PUT THIS IN THE TRUST SECTION)
 %Need to add risk aversion in MAIN TEXT
 
-Countries\footnote{Players will be referred to as countries, though it could also be appropriate to think of players as intra-state actors, as in a civil war. } are of two possible types, high and low. A high type discounts future period payoffs at rate $\delta_h$ and a low type discounts at $\delta_l$ where $\delta_h >\delta_l$ and $\delta_h ,\delta_l$ $\in [0,1].$ Before the start of the game, nature independently determines the types of country 1 and country 2. The type distinction, as explained in detail later, is relevant in that it encompasses the country's willingness to cooperate in solving the conflict. It is not necessary to think of a type as fixed; it can change as regimes and relations between countries change.\footnote{We can enrich the model to assign a probability (and even different probabilities) of a country's type shifting from high to low or low to high in a given period.}
+Countries\footnote{Players will be referred to as countries, though it could also be appropriate to think of players as intra-state actors, as in a civil war. } are of two possible types, high and low. A high type discounts future period payoffs at rate $\delta_h$ and a low type discounts at $\delta_l$ where $\delta_h >\delta_l$ and $\delta_h ,\delta_l$ $\in [0,1].$ Before the start of the game, nature independently determines the types of country 1 and country 2. The type distinction, as explained in detail later, encompasses the country's willingness to cooperate in solving the conflict; that is, throughout the analysis we will define a low type as a player whose only sequentially rational strategy is to remain in conflict in all periods. It is not necessary to think of a type as fixed; it can change as regimes and relations between countries change.\footnote{We can enrich the model to assign a probability (and even different probabilities) of a country's type shifting from high to low or low to high in a given period.}
 
  The probability of nature selecting the high type for a given country is $p$. The probability of nature selecting the low type is $1-p$.\footnote{Note that parameters are symmetric across countries, as is consistent with the literature. Qualititative results do not depend on this being the case, and equilibria and equilibrium concessions can easily be calculated with asymmetric parameters between players.}  Countries are aware of their own type, but not the type of the other country.  Similar scenarios have been modeled as credible commitment problems in the bargaining literature. Our model can be thought of as a reduced form bargaining model, but it can also be considered somewhat differently -- when trust is the issue to be solved, there are several solutions to conflict. Concessions are one way in which countries can signal their commitment.  By modeling the conflict in such a way we can also gain insight as to how a third party can ameliorate trust issues inherent to the conflict. %might want to cite fearon and bargaining lit here
 %might want to eventually add the stochastic type switch- or at least talk about how that changes analysis
@@ -130,26 +130,20 @@ The countries' stage game actions will be referred to as ``Trust'' and ``Fight''
 
 Here $T\geq0$ represents the benefit from the other country playing Trust. $D\geq0$ represents the damages incurred when the other country plays Fight, while $W\geq0$ is the additional benefit a country receives when it plays Fight itself. We assume $T>W-D$ in line with the assumption that the countries play a Prisoner's Dilemma in the stage game. 
 
+We will refer to the stage-game Nash Equilibrium of (Fight, Fight) as ``War.'' We will refer to (Trust,Trust) as ``Peace.'' The assumption $T>W-D$ ensures that the joint payoffs from ``Peace'' are the highest among all the stage-game action profiles. 
+
 Payoffs for a country are the sum the stage game payoffs, discounted by $\delta_i$. For example, if both parties play ``Trust'' in every period, the payoff for a player $i$ is $\sum_{t=1}^\infty \de_i^{t-1} T = \frac{T}{1-\de_i}.$ Parameters are common knowledge with the exception of $\delta_i$, which is country $i$'s private information. %Countries' utility is calculated as ex interim utility (Holmstrom and Myerson 1983),  i.e. when countries know their own type but not that of the other country. Depending on parameters, multiple equilibria are often possible. 
 We will take the measure of social welfare, and thus the determinant of the optimal equilibrium, to be the sum of participating high types' expected utilities.
 
-The assumption $T>W-D$ ensures that the joint payoffs from (Trust, Trust)---which we will refer to as ``Peace''---are the highest among all the stage-game action profiles. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained with no concessions and a grim trigger punishment threat; that is, both countries play ``Trust'' as long as the other plays ``Trust'' and play ``Fight'' if there is ever a deviation from ``Trust.'' We will refer to the stage-game Nash Equilibrium of (Fight, Fight) as ``War.''
-
-For a Peace equilibrium to exist, $\delta_i$ must be high enough for each country so that sustaining Peace is more attractive than deviating. 
-The threshold needed is \be
- \delta^{gt} = \frac{W}{T+D}
- \ee
-where the superscript $gt$ stand for `grim trigger.' Here, as in each further iteration of the model, we define a high type as a country who prefers to play the ``Peace'' equilibrium, i.e. $\delta_h^{gt} \geq \delta^{gt}$. Any country with $\delta_l^{gt} < \delta^{gt}$ is a low type. This means that two high types---and only two high types---can sustain the Peace outcome in a simple repeated game.
-
 \section{Analysis of Benchmark Cases}
 \label{sec:bench}
-When countries are faced with uncertainty about each other's motives, they can proceed in several different ways, including giving concessions in order to signal their willingness and ability to make peace. There are three basic types of equilibria that this analysis will examine.\footnote{If the discount factor is high enough, there are many types of equilibria. Consider for instance oscillating every other period between Peace and War with a grim trigger War threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed and thus 	are not attractive.} The Appendix provides a thorough analysis of the various equilibria as well as all proofs for this section. 
+When countries are faced with uncertainty about each other's motives, they can proceed in several different ways, including giving concessions in order to signal their willingness and ability to make peace. We will examine three types of equilibria.\footnote{If the discount factor is high enough, there are many types of equilibria. Consider for instance oscillating every other period between (Trust,Trust) and (Fight,Fight) with a grim trigger War threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed and thus 	are not attractive.} The Appendix provides a thorough analysis of the various equilibria as well as most proofs for this section. 
 \\
 \\
 {\bf \emph{Pooling equilibrium}\\}
 \vskip-.2in
 In the \emph{pooling equilibrium}, both countries do not give concessions in period 0, then always play Fight in every period beginning with period 1. 
-Countries continue to doubt, doing nothing to bridge the credibility gap, and thus not cooperating. This \emph{pooling equilibrium} is likely to happen when countries are in long-set patterns of distrust. Active fighting is not necessary; remaining outside of a state of peace is all that is required.  See Lemma~\ref{lemma:1} and Lemma~\ref{lemma:2} in the Appendix for a formal characterization of this type of equilibrium. 
+Countries continue to doubt, doing nothing to bridge the credibility gap, and thus not cooperating. This \emph{pooling equilibrium} is likely to happen when countries are in long-set patterns of distrust. Active fighting is not necessary; remaining outside of a state of peace is all that is required.  See the Appendix for a formal characterization of this type of equilibrium. 
 
 Cyprus' civil war is a good example of the pooling equilibrium where neither side is taking actions to move things forward. While both sides posture that they want peace, and while there has been some lessening of tensions, very few concrete actions have been taken that move the sides toward settlement. This conflict is a stalemate. 
 
@@ -160,21 +154,32 @@ Without a third party, there is little hope of overcoming mistrust. These long l
 \\
 {\bf \emph{No-Concessions Separating Equilibrium}\\}
 \vskip-.2in
-The other two equilibria on which we focus are separating equilibria in which low types and high types have different strategies. In a \emph{no-concessions separating equilibrium}, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Fight. So long as there are two high types, as revealed by their period 1 play, both countries continue to play Trust in all following periods. Otherwise, both countries play Fight in all following periods. 
+The other two equilibria on which we focus are separating equilibria in which low types and high types have different strategies. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained with no concessions and a grim trigger punishment threat. We call this a \emph{no-concessions separating equilibrium}. In this equilibrium, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Fight. So long as there are two high types, as revealed by their period 1 play, both countries continue to play Trust in all following periods. Otherwise, both countries play Fight in all following periods. 
+
+%In this equilibrium, no concessions are given by either type in period 0. In all periods starting at period 1, both countries play ``Trust'' as long as the other plays ``Trust'' and play ``Fight'' if there is ever a deviation from ``Trust.'' 
+
+%For a Peace equilibrium to exist, $\delta_i$ must be high enough for each country so that sustaining Peace is more attractive than deviating. 
+%The threshold needed is \be
+ %\delta^{gt} = \frac{W}{T+D}
+ %\ee
+%where the superscript $gt$ stand for `grim trigger.'
+
 
 \begin{theorem}
-	Assume $\delta_h \geq \frac{W}{(1-p)W + p(T + D)}=\de^{nc}$. A subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give no concessions in period 0 and play Trust unless the other country defects to Fight.
+	Assume $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}=\de^{nc}$. A subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give no concessions in period 0 and play Trust unless the other country defects to Fight.
 	\label{theorem:1}
 \end{theorem}
 \emph{Proof}: See Appendix.
 \\
+Here, as in each further iteration of the model, we define a high type as a country who prefers to play the ``Peace'' equilibrium, i.e. $\delta_h \geq \delta^{nc}$. Any country with $\delta_l < \delta^{nc}$ is a low type. This means that two high types---and only two high types---can sustain the Peace outcome in a simple repeated game.
+
 In this equilibrium, two mutually distrustful countries behave as if they trust anyway, taking a risk. This generally will happen when the result of trusting and then being betrayed is not catastrophic, or the odds of such a scenario are small. This is representative of a case where countries have suspicions about each other, but proceed anyway. 
 
-\begin{corollary}
-	The threshold patience level for a country to play Trust in a no-concessions separating equilibrium, $\de_h^{nc}$, is higher than for the grim-trigger repeated game equilibrium. 
-	\label{corollary:1}
-\end{corollary}
-\emph{Proof}: See Appendix.
+%\begin{corollary}
+%	The threshold patience level for a country to play Trust in a no-concessions separating equilibrium, $\de_h^{nc}$, is higher than for the grim-trigger repeated game equilibrium. 
+%	\label{corollary:1}
+%\end{corollary}
+%\emph{Proof}: See Appendix.
 
 
 Examples of a \emph{no-concessions separating equilibrium} are most likely to be those where countries have traditionally had good relations but something has recently come in the way. Certain relationships between the USA and countries that its wikileaks alienated -- such as Italy -- would be an example. Italy essentially laughed off the criticisms and reassured the USA of its commitment to their relationship. Warsaw Pact countries generally allowed the USSR similar leeway; it was better to have occasionally imperfect cooperation than conflict. Some events can disrupt trust without completely derailing cooperation. 
@@ -392,14 +397,16 @@ This paper shows that inefficient concessions may be used to achieve peace when 
 	\label{lemma:1}
 \end{lemma}
 \emph{Proof}: As $D\geq0$ and $W\geq0$ the dominant stage game action for all types is to play Fight. Thus the stage game equilibrium is (Fight, Fight) and in any repeated game, playing the stage game equilibrium in each period is an equilibrium of the entire game. \hfill $\blacksquare$\\
-\\
+
+\begin{comment}
 \begin{lemma}
 	From period 1 on, playing fight in all periods is the only sequentially rational strategy for low types regardless of their beliefs of the other country's type and strategy.
 	\label{lemma:2}
 \end{lemma}
 \emph{Proof}: Because $W\geq0$, the dominant stage game action for all types is to play Fight. Playing Trust is only possible in equilibrium where there is punishment for playing Fight. The minimax payoff is $W-D$, and punishing a country by playing it every period is the worst possible punishment, hence it gives the greatest potential for a country to be given incentives to play Trust. Low types, with $\delta_l < \delta^{gt}$ achieve a higher payoff from being punished than they do from cooperation, so they cannot be given incentives to play anything except Fight. \hfill $\blacksquare$\\
+\end{comment}
 
-One high type equilibrium strategy is to pool with the low types and always play Fight. If both the low and high type of player $j$ choose the strategy that gives no concessions and always plays fight, Lemma~\ref{lemma:2} shows that the low-type of player $i$ best responds by always playing Fight. The high-type of player $i$ is made strictly better off by playing Fight in each period given player $j$'s behavior by Lemma~\ref{lemma:1}. Given that the stage-game equilibrium will be (Fight,Fight), there is no incentive to give a concession in period 0 because concessions are costly and signaling one's type can give no benefit in this equilibrium. Types pool by never giving concessions and always playing Fight. 
+That is, one high type equilibrium strategy is to pool with the low types---who always play ``Fight'' by definition---and always play Fight. If both the low and high type of player $j$ choose the strategy that gives no concessions and always plays fight, then either type of player $i$ is made strictly better off by playing Fight in each period given player $j$'s behavior. Given that the stage-game equilibrium will be (Fight,Fight), there is no incentive to give a concession in period 0 because concessions are costly and signaling one's type can give no benefit in this equilibrium. Types pool by never giving concessions and always playing Fight. 
  %add intro about the 3 types of equilibria. 
  \\
  \\
@@ -410,7 +417,7 @@ One high type equilibrium strategy is to pool with the low types and always play
  \noindent{\emph{Proof of Theorem \ref{theorem:1}}:\\
 Playing Trust in the first period and thereafter as long as Trust has always been played will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from playing Fight in the first period and then every period thereafter by the one-shot deviation principle. If both countries play Trust in a period, a Peace equilibrium takes place and both countries continue to play peace in every period with the grim trigger threat of the War equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods. A country plays Trust if and only if the following condition is satisfied:
 \be
-  p\left(\frac{T}{1- \delta_h}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_h} \right)\geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)\frac{W-D}{1- \delta_h}
+  p\left(\frac{T}{1- \delta_i}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_i} \right)\geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)\frac{W-D}{1- \delta_h}
 \ee
 Simplifying, we have
 \be
@@ -430,13 +437,11 @@ Simplifying, we have
 \ee
 
 If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, a country with $\de_h \geq \frac{W}{(1-p)W + p(T+D)} = \de_h^{nc}$ has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de_h^{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$\\
-
-\noindent{\emph{Proof of Corollary \ref{corollary:1}}:\\
-High-type welfare under the no-concessions separating equilibrium is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D) \right\} = \frac{1}{1-\de_h}\left\{pT + (1-p)\left[W-D + \de_h(W-D)\right]\right\}$$
-High-type welfare under the grim trigger repeated game equilibrium is $\frac{1}{1-\de_h}\left\{pT + (1-p)\left[-D + \de_h(W-D) \right]\right\}$
-When $e=0$, welfare is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+%\noindent{\emph{Proof of Corollary \ref{corollary:1}}:\\
+%High-type welfare under the no-concessions separating equilibrium is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D) \right\} = \frac{1}{1-\de_h}\left\{pT + (1-p)\left[W-D + \de_h(W-D)\right]\right\}$$
+%High-type welfare under the grim trigger repeated game equilibrium is $\frac{1}{1-\de_h}\left\{pT + (1-p)\left[-D + \de_h(W-D) \right]\right\}$
+%When $e=0$, welfare is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
 %This type of separating equilibrium can exist for some sets of parameters. Since the high types have sufficient incentive to separate under appropriate parameter values even without concessions being given in period 0, we refer to such an equilibrium as a \emph{no-concessions separating equilibrium}. This is why the threshold patience level for this type of equilibrium is labeled $\de_h^{nc}$.
-\\
 \\
 {\bf \emph{Concessions Separating Equilibrium}}
 
