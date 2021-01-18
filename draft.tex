@@ -133,7 +133,7 @@ Here $T\geq0$ represents the benefit from the other country playing Trust. $D\ge
 Payoffs for a country are the sum the stage game payoffs, discounted by $\delta_i$. For example, if both parties play ``Trust'' in every period, the payoff for a player $i$ is $\sum_{t=1}^\infty \de_i^{t-1} T = \frac{T}{1-\de_i}.$ Parameters are common knowledge with the exception of $\delta_i$, which is country $i$'s private information. %Countries' utility is calculated as ex interim utility (Holmstrom and Myerson 1983),  i.e. when countries know their own type but not that of the other country. Depending on parameters, multiple equilibria are often possible. 
 We will take the measure of social welfare, and thus the determinant of the optimal equilibrium, to be the sum of participating high types' expected utilities.
 
-The assumption $T>W-D$ ensures that the joint payoffs from (Trust, Trust)---which we will refer to as ``Peace''---are the highest among all the stage-game action profiles. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained no concessions and a grim trigger punishment threat; that is, both countries play ``Trust'' as long as the other plays ``Trust'' and play ``Fight'' if there is ever a deviation from ``Trust.'' We will refer to the stage-game Nash Equilibrium of (Fight, Fight) as ``War.''
+The assumption $T>W-D$ ensures that the joint payoffs from (Trust, Trust)---which we will refer to as ``Peace''---are the highest among all the stage-game action profiles. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained with no concessions and a grim trigger punishment threat; that is, both countries play ``Trust'' as long as the other plays ``Trust'' and play ``Fight'' if there is ever a deviation from ``Trust.'' We will refer to the stage-game Nash Equilibrium of (Fight, Fight) as ``War.''
 
 For a Peace equilibrium to exist, $\delta_i$ must be high enough for each country so that sustaining Peace is more attractive than deviating. 
 The threshold needed is \be
@@ -168,7 +168,14 @@ The other two equilibria on which we focus are separating equilibria in which lo
 \end{theorem}
 \emph{Proof}: See Appendix.
 \\
-In this equilibrium, two mutually distrustful countries go ahead and behave as if they trust anyway, taking a risk. This generally will happen when the result of trusting and then being betrayed is not catastrophic, or the odds of such a scenario are small. This is representative of a case where countries have suspicions about each other, but proceed anyway. 
+In this equilibrium, two mutually distrustful countries behave as if they trust anyway, taking a risk. This generally will happen when the result of trusting and then being betrayed is not catastrophic, or the odds of such a scenario are small. This is representative of a case where countries have suspicions about each other, but proceed anyway. 
+
+\begin{corollary}
+	The threshold patience level for a country to play Trust in a no-concessions separating equilibrium, $\de_h^{nc}$, is higher than for the grim-trigger repeated game equilibrium. 
+	\label{corollary:1}
+\end{corollary}
+\emph{Proof}: See Appendix.
+
 
 Examples of a \emph{no-concessions separating equilibrium} are most likely to be those where countries have traditionally had good relations but something has recently come in the way. Certain relationships between the USA and countries that its wikileaks alienated -- such as Italy -- would be an example. Italy essentially laughed off the criticisms and reassured the USA of its commitment to their relationship. Warsaw Pact countries generally allowed the USSR similar leeway; it was better to have occasionally imperfect cooperation than conflict. Some events can disrupt trust without completely derailing cooperation. 
 
@@ -424,9 +431,12 @@ Simplifying, we have
 
 If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, a country with $\de_h \geq \frac{W}{(1-p)W + p(T+D)} = \de_h^{nc}$ has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de_h^{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$\\
 
-This type of separating equilibrium can exist for some sets of parameters. Since the high types have sufficient incentive to separate under appropriate parameter values even without concessions being given in period 0, we refer to such an equilibrium as a \emph{no-concessions separating equilibrium}. This is why the threshold patience level for this type of equilibrium is labeled $\de_h^{nc}$.
+\noindent{\emph{Proof of Corollary \ref{corollary:1}}:\\
+High-type welfare under the no-concessions separating equilibrium is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D) \right\} = \frac{1}{1-\de_h}\left\{pT + (1-p)\left[W-D + \de_h(W-D)\right]\right\}$$
+High-type welfare under the grim trigger repeated game equilibrium is $\frac{1}{1-\de_h}\left\{pT + (1-p)\left[-D + \de_h(W-D) \right]\right\}$
+When $e=0$, welfare is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+%This type of separating equilibrium can exist for some sets of parameters. Since the high types have sufficient incentive to separate under appropriate parameter values even without concessions being given in period 0, we refer to such an equilibrium as a \emph{no-concessions separating equilibrium}. This is why the threshold patience level for this type of equilibrium is labeled $\de_h^{nc}$.
 \\
-%This section could use some cleanup and streamlining
 \\
 {\bf \emph{Concessions Separating Equilibrium}}
 
