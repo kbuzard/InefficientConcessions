@@ -128,20 +128,29 @@ The countries' stage game actions will be referred to as ``Trust'' and ``Fight''
 \end{tabular}
 \end{center}
 
-Here $T\geq0$ represents the benefit from the other country playing Trust. $D\geq0$ represents the damages incurred when the other country plays Fight, while $W\geq0$ is the additional benefit a country receives when it plays Fight itself. We assume $T>W-D$ in line with the assumption that the countries play a Prisoner's Dilemma in the stage game. 
+Here $T>0$ represents the benefit from the other country playing Trust. $D>0$ represents the damages incurred when the other country plays Fight, while $W>0$ is the additional benefit a country receives when it plays Fight itself. We assume $T>W-D$ in line with the assumption that the countries play a Prisoner's Dilemma in the stage game. 
 
 We will refer to the stage-game Nash Equilibrium of (Fight, Fight) as ``War.'' We will refer to (Trust,Trust) as ``Peace.'' The assumption $T>W-D$ ensures that the joint payoffs from ``Peace'' are the highest among all the stage-game action profiles. 
 
-Payoffs for a country are the sum the stage game payoffs, discounted by $\delta_i$. For example, if both parties play ``Trust'' in every period, the payoff for a player $i$ is $\sum_{t=1}^\infty \de_i^{t-1} T = \frac{T}{1-\de_i}.$ Parameters are common knowledge with the exception of $\delta_i$, which is country $i$'s private information. %Countries' utility is calculated as ex interim utility (Holmstrom and Myerson 1983),  i.e. when countries know their own type but not that of the other country. Depending on parameters, multiple equilibria are often possible. 
+Payoffs for a country are the sum the stage game payoffs, discounted by $\delta_i$. For example, if both parties play ``Trust'' in every period, the payoff for a player $i$ is $\sum_{t=1}^\infty \de_i^{t-1} T = \frac{T}{1-\de_i}.$
+
+We will use grim trigger punishments throughout: that is, (Fight, Fight) will be played forever if Fight is played by any party in any round. Because we use grim trigger punishments, there are only 4 interesting paths of play after concessions are given:
+1) Both countries play Trust always, 
+2) Both play Fight always, 
+3) Country 1 plays Fight in round 1 while country 2 plays Trust, which is followed by both countries playing Fight from round 2 onwards and 
+4) Country 2 plays Fight in round 1 while country 1 plays Trust, which is followed by both countries playing Fight from round 2 onwards.
+
+Equilibrium payoffs beginning from round 1 are now easily described by noting only the collective first round behavior. Let $X_{ij}$ represent the sum of discounted payoffs for country $i$ where subscripts represent first round strategies of that country. If both countries play T in round 1, the corresponding payoff to country $i$ is represented as $ X_{TT}=\frac {T}{1- \delta_i}$. Likewise $X_{TF}=({-D}+\frac{\delta_i(W-D)}{1- \delta_i} )$, $ X_{FF}=\frac{W-D}{1- \delta_i}$, and  $X_{FT}=T+W +\frac{\delta_i(W-D)}{1- \delta_i}$. Note that because types have different discount rates, the payoffs differ by type, and when ambiguous will be superscripted to indicate the type (e.g. $X_{FT}^h$ represents payoffs for the high type of country 1 when country 1 fights and country 2 trusts in the first period). 
+
+
+Parameters are common knowledge with the exception of $\delta_i$, which is country $i$'s private information. %Countries' utility is calculated as ex interim utility (Holmstrom and Myerson 1983),  i.e. when countries know their own type but not that of the other country. Depending on parameters, multiple equilibria are often possible. 
 We will take the measure of social welfare, and thus the determinant of the optimal equilibrium, to be the sum of participating high types' expected utilities.
 
 \section{Analysis of Benchmark Cases}
 \label{sec:bench}
 When countries are faced with uncertainty about each other's motives, they can proceed in several different ways, including giving concessions in order to signal their willingness and ability to make peace. We will examine three types of equilibria.\footnote{If the discount factor is high enough, there are many types of equilibria. Consider for instance oscillating every other period between (Trust,Trust) and (Fight,Fight) with a grim trigger War threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed and thus 	are not attractive.} The Appendix provides a thorough analysis of the various equilibria as well as most proofs for this section. 
-\\
-\\
-{\bf \emph{Pooling equilibrium}\\}
-\vskip-.2in
+
+\subsection{Pooling equilibrium}
 In the \emph{pooling equilibrium}, both countries do not give concessions in period 0, then always play Fight in every period beginning with period 1. 
 Countries continue to doubt, doing nothing to bridge the credibility gap, and thus not cooperating. This \emph{pooling equilibrium} is likely to happen when countries are in long-set patterns of distrust. Active fighting is not necessary; remaining outside of a state of peace is all that is required.  See the Appendix for a formal characterization of this type of equilibrium. 
 
@@ -150,10 +159,9 @@ Cyprus' civil war is a good example of the pooling equilibrium where neither sid
 Sri Lanka is another example. While the government has finally won the war of secession, it still refuses to address grievances of the minorities and leaves the conflict still unresolved. Other prominent examples of this pooling equilibrium include Israel and its neighbors, North and South Korea, Greece and Turkey, and a multitude of other long-lasting conflicts. The mistrust of the other party is perhaps justified; indeed if one party did take the first step and give a concession first, they may be taken advantage of. 
 
 Without a third party, there is little hope of overcoming mistrust. These long lasting stalemates are the types of conflict which are most appropriate for mediator involvement. A mediator will be added to the model later to illustrate exactly how mediation can help achieve peace in this context. In some sense, these are the cases that are most interesting because the international community might play a positive role. 
-\\
-\\
-{\bf \emph{No-Concessions Separating Equilibrium}\\}
-\vskip-.2in
+
+\subsection{No-Concessions Separating Equilibrium}
+\label{sec:ncse}
 The other two equilibria on which we focus are separating equilibria in which low types and high types have different strategies. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained with no concessions and a grim trigger punishment threat. We call this a \emph{no-concessions separating equilibrium}. In this equilibrium, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Fight. So long as there are two high types, as revealed by their period 1 play, both countries continue to play Trust in all following periods. Otherwise, both countries play Fight in all following periods. 
 
 %In this equilibrium, no concessions are given by either type in period 0. In all periods starting at period 1, both countries play ``Trust'' as long as the other plays ``Trust'' and play ``Fight'' if there is ever a deviation from ``Trust.'' 
@@ -166,6 +174,7 @@ The other two equilibria on which we focus are separating equilibria in which lo
 
 
 \begin{theorem}
+\emph{No Concessions Separating Equilibrium}\\
 	Assume $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}=\de^{nc}$. A subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give no concessions in period 0 and play Trust unless the other country defects to Fight.
 	\label{theorem:1}
 \end{theorem}
@@ -175,55 +184,51 @@ Here, as in each further iteration of the model, we define a high type as a coun
 
 In this equilibrium, two mutually distrustful countries behave as if they trust anyway, taking a risk. This generally will happen when the result of trusting and then being betrayed is not catastrophic, or the odds of such a scenario are small. This is representative of a case where countries have suspicions about each other, but proceed anyway. 
 
-%\begin{corollary}
-%	The threshold patience level for a country to play Trust in a no-concessions separating equilibrium, $\de_h^{nc}$, is higher than for the grim-trigger repeated game equilibrium. 
-%	\label{corollary:1}
-%\end{corollary}
-%\emph{Proof}: See Appendix.
-
-
 Examples of a \emph{no-concessions separating equilibrium} are most likely to be those where countries have traditionally had good relations but something has recently come in the way. Certain relationships between the USA and countries that its wikileaks alienated -- such as Italy -- would be an example. Italy essentially laughed off the criticisms and reassured the USA of its commitment to their relationship. Warsaw Pact countries generally allowed the USSR similar leeway; it was better to have occasionally imperfect cooperation than conflict. Some events can disrupt trust without completely derailing cooperation. 
 
-Of course, it is possible that one country can take advantage of the other in a \emph{no-concessions separating equilibrium}.  It can be argued that indeed that did happen in the Warsaw Pact cases; the Eastern Bloc countries were first exploited before the fall of the iron curtain; eventually this led to a steely relationship between many of those countries and Russia that exists to this day in Poland, Lithuania and other countries. 
-\\
-\\
+Of course, it is possible that one country can take advantage of the other in a \emph{no-concessions separating equilibrium}.  It can be argued that indeed that did happen in the Warsaw Pact cases; the Eastern Bloc countries were first exploited before the fall of the iron curtain; eventually this led to a steely relationship between many of those countries and Russia that exists to this day in Poland, Lithuania and other countries.
 
 %Though it will not be modeled here, a stochastic component -- when countries occasionally unilaterally defect -- can explain why powerful countries like the USSR more often ``get away'' with cheating: the payoffs to the relationship are not symmetric. Losing the USA or USSR as an ally is much more devastating for a satellite country than vise versa, therefore big countries can have their alliances and take advantage of them too.
-{\bf \emph{Concessions Separating Equilibrium}\\}
-\vskip-.2in
-The third option is for distrustful countries to use concessions as a way of building trust. In the model this is the \emph{concessions separating equilibrium}. This equilibrium is costly, but can be worth the investment if the other country also cooperates. It is also not as risky as cooperating without concessions, as in the previous equilibrium. The concessions are given before more substantive actions, thus concessions are a costly signal that the other country is serious about cooperating. Most agreements come with concessions, and in many cases, though not all, they are used as signals. The goal is to use this option to avoid continual distrust; we will show in Section 5 that a mediator is one way of enabling this solution. 
+\subsection{Concessions Separating Equilibrium}
+The other separating equilibrium of interest involves distrustful countries to using concessions as a way of building trust. We call this the \emph{concessions separating equilibrium}. In this equilibrium, the cost of giving a concession can be worth the investment if the other country also cooperates. It is also not as risky as the \emph{no-concession separating equilibrium}. The concessions are given before more substantive actions, thus concessions are a costly signal that the other country is serious about cooperating. Most agreements come with concessions, and in many cases, though not all, they are used as signals. The goal is to use this option to avoid continual distrust. That is, high types make use of concessions to identify themselves as trustworthy partners in hopes of establishing Peace.
 
-In the \emph{concessions separating equilibrium}, low types do not give concessions while high types give a concession of a certain size in period 0. If both countries receive concessions, they know the other is a high type and both play Trust in subsequent periods. Otherwise, if both players do not receive concessions, there is at least one low type so both countries play Fight in subsequent periods.
+In the \emph{concessions separating equilibrium}, low types do not give concessions while high types give a concession in period 0. If both countries receive concessions, they know the other is a high type and both play Trust in subsequent periods. Otherwise, if even one player does not receive a concession, there is at least one low type so both countries play Fight in subsequent periods. Because of the signaling value of the concessions given in period 0, starting from period 1 in the Trust/Fight game, both countries play the same strategy in a separating equilibrium, that is both play Trust if there were two high signals and otherwise both play Fight.
 
-The analysis is conducted with standard incentive compatibility constraints. Consider the commonly employed grim trigger punishment path of the ``Fight, Fight'' equilibrium being played forever if Fight is played by any party in any round. This paper will focus on separating equilibria in which high types make use of concessions to identify themselves in hopes of establishing Peace. Because we look at grim trigger punishments, there are essentially only 4 equilibrium combinations of strategies after concessions are given:
-1) Both countries play Trust always, 
-2) Both play Fight always, 
-3) Country 1 plays Fight in round 1 while country 2 plays Trust, which is followed by both countries playing Fight from round 2 onwards and 
-4) Country 2 plays Fight in round 1 while country 1 plays Trust, which is followed by both countries playing Fight from round 2 onwards.
-
-Equilibrium payoffs beginning from round 1 are now easily described by noting only the collective first round behavior. Let $X_{ij}$ represent the sum of discounted payoffs for country $i$ where subscripts represent first round strategies of that country. If both countries play T in round 1, the corresponding payoff to country $i$ is represented as $ X_{TT}=\frac {T}{1- \delta_i}$. Likewise $X_{TF}=({-D}+\frac{\delta_i(W-D)}{1- \delta_i} )$, $ X_{FF}=\frac{W-D}{1- \delta_i}$, and  $X_{FT}=T+W +\frac{\delta_i(W-D)}{1- \delta_i}$. Note that because types have different discount rates, these quantities are different by type, and when ambiguous will be superscripted to indicate the type (e.g. $X_{FT}^h$ represents the high type). Note that because of the signaling value of the concessions given in period 0, starting from period 1 in the Trust/Fight game, both countries play the same strategy in a separating equilibrium (both play Trust if there were two high signals; otherwise both play Fight). $X_{FT}$ and $X_{TF}$ are still necessary for calculating the equilibrium concession $g_h$.%might make the first one TF for clarity
+Details of the analysis, which uses standard incentive compatibility constraints, are in the Appendix. We begin by characterizing the concession (or \emph{gift}) giving behavior of the low type. We then present the patience threshold and gift giving behavior of the high type.
 
 \begin{lemma}
 	In a separating equilibrium, low types do not give a concession. Cheap talk does not allow for a concessions separating equilibrium.
 	\label{lemma:3}
 \end{lemma}
-\emph{Proof:} See Appendix.\\
+\emph{Proof:} See Appendix.
 
 \begin{theorem}
-	In the best concessions separating equilibrium, high types give the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
+\emph{Concessions Separating Equilibrium (CSE)}
+	\begin{enumerate}
+		\item[(a)] Assume $\delta_h \geq \frac{W}{T+D} = \de^{c}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
+		\item[(b)] In the best concessions separating equilibrium, high types give a concession of $p(T + D)$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
+\end{enumerate}
 	\label{theorem:2}
 \end{theorem}
 \emph{Proof:} See Appendix.
 
-This smallest concession is denoted $g_h^*$ and is calculated in equation (9) in the Appendix to be $p(T+D).$
-
 This `best' concessions separating equilibrium, where `best' is from the standpoint of high-type welfare, is justified by appeal to the Intuitive Criterion equilibrium refinement, in which out of equilibrium beliefs put zero weight on types that can never gain from deviating.
 
-In general, a high probability of a high type will make this no-concessions separating equilibrium very attractive. Under low $p$, high types are better off choosing the pooling equilibrium.
+ Interestingly, the patience threshold for this equilibrium to exist, $\de^c = \frac{W}{T+D}$, is the same as the threshold for the complete information repeated game in which deviating from ``Trust'' is discouraged through grim trigger punishments. Using concessions to separate the types therefore can be seen as making up for the imperfect information in this setting.
 
-Concessions separating equilibria are a way for countries to solve their disputes. By giving costly concessions, they signal their intentions in a way that a partner unwilling to make peace would not be willing to signal.  A mediator can sometimes make this a possibility, as will be shown in Section~\ref{sec:med}, but this equilibrium is also achievable bilaterally in some cases. 
+We complete our analysis of the \emph{concessions separating equilibrium} by comparing it to the \emph{no concessions separating equilibrium} in Section~\ref{sec:ncse}.
 
-One example of such an equilibrium includes Israel and Egypt at the Camp David Accords. Both parties gave concessions (Israel a material land concession and Egypt diplomatic recognition of Israel) that signaled their willingness to end the stalemate that had characterized the previous five years. Of course this result depended on Carter's use of mediation techniques, including use of manipulative mediation -- a concept we will explore in Section~\ref{sec:med} below. 
+\begin{corollary}
+	The \emph{no-concessions separating equilibrium} requires countries to be more patient than the \emph{concessions separating equilibrium}. If both equilibria exist, the \emph{no-concessions separating equilibrium} is preferred when the probability of encountering a high type is sufficiently large.
+	\label{corollary:1}
+\end{corollary}
+\emph{Proof}: See Appendix.
+
+A large probability of a high type makes the \emph{no-concessions separating equilibrium} very attractive because the risk of ending up in the cheater's corner of the Prisoner's Dilemma is low and no concessions have to be made. Conversely, for smaller values of $p$, high types are better off paying the gift to avoid the possibility of being taken advantage of by a low type.
+
+Concessions separating equilibria are a way for countries to solve their disputes when the \emph{no concessions separating equilibrium} is unavailable or unattractive. By giving costly concessions, they signal their intentions in a way that a partner unwilling to make peace would not be willing to signal. 
+
+One example of such an equilibrium is Israel and Egypt at the Camp David Accords. Both parties gave concessions (Israel a material land concession and Egypt diplomatic recognition of Israel) that signaled their willingness to end the stalemate that had characterized the previous five years. Of course this result depended on Carter's use of mediation techniques, including use of manipulative mediation -- a concept we will explore in Section~\ref{sec:med} below. 
 
 %another example
 
@@ -416,27 +421,28 @@ That is, one high type equilibrium strategy is to pool with the low types---who 
  
  \noindent{\emph{Proof of Theorem \ref{theorem:1}}:\\
 Playing Trust in the first period and thereafter as long as Trust has always been played will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from playing Fight in the first period and then every period thereafter by the one-shot deviation principle. If both countries play Trust in a period, a Peace equilibrium takes place and both countries continue to play peace in every period with the grim trigger threat of the War equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods. A country plays Trust if and only if the following condition is satisfied:
-\be
+\begin{equation*}
   p\left(\frac{T}{1- \delta_i}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_i} \right)\geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)\frac{W-D}{1- \delta_h}
-\ee
+\end{equation*}
 Simplifying, we have
-\be
-  p\left(\frac{T}{1- \delta_h}\right) \geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)W
-\ee
-\be
+%\be
+%  p\left(\frac{T}{1- \delta_h}\right) \geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)W
+%\ee
+\begin{equation*}
   pT \geq p \left((1-\de_h)(T + W) + \de_h (W-D)\right) + (1-\de_h)(1-p)W
-\ee
-\be
+\end{equation*}
+\begin{equation*}
   pT \geq pT -p\de_hT +pW -p\de_h W + p \de_h W -p \de_h D  + W -\de_h W -pW + p\de_hW
-\ee
-\be
+\end{equation*}
+\begin{equation*}
   p\de_hT +p \de_h D + \de_h W - p\de_hW  \geq W 
-\ee
+\end{equation*}
 \be
-\delta_h \geq \frac{W}{(1-p)W + p(T+D)}
+	\delta_h \geq \frac{W}{(1-p)W + p(T+D)}
+	\label{eq:ncse}
 \ee
 
-If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, a country with $\de_h \geq \frac{W}{(1-p)W + p(T+D)} = \de_h^{nc}$ has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de_h^{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$\\
+If the potential advantages of Peace are large enough to outweigh the risks of encountering a low type in expected utility terms, that is $\de_h \geq \frac{W}{(1-p)W + p(T+D)} = \de_h^{nc}$, a county has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de_h^{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$\\
 %\noindent{\emph{Proof of Corollary \ref{corollary:1}}:\\
 %High-type welfare under the no-concessions separating equilibrium is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D) \right\} = \frac{1}{1-\de_h}\left\{pT + (1-p)\left[W-D + \de_h(W-D)\right]\right\}$$
 %High-type welfare under the grim trigger repeated game equilibrium is $\frac{1}{1-\de_h}\left\{pT + (1-p)\left[-D + \de_h(W-D) \right]\right\}$
@@ -445,34 +451,43 @@ If the potential advantages of Peace are large enough to outweigh the risks of e
 \\
 {\bf \emph{Concessions Separating Equilibrium}}
 
-If the condition in equation (8) is not met, in the absence of period 0 concessions\footnote{Countries need to deliver concessions in period 0, not just promise them. A concession that is promised but not delivered will count as cheap talk.} two high types would play Fight in every period because both would not have the incentive to play Trust. If instead high types are provided sufficient incentive to give a concession that reveals their type in period 0, the high types could safely play Trust in period 1. Two high types would avoid the trap of War that would occur under pooling. 
+If the condition in Expression~\ref{eq:ncse} is not met, a separating equilibrium cannot be achieved with no concessionsin period 0.\footnote{Countries need to deliver concessions in period 0, not just promise them. A concession that is promised but not delivered will count as cheap talk.} If instead high-type negotiating parties have sufficient incentive to give a concession that reveals their type in period 0, the high types could safely play Trust in period 1, allowing two high types to avoid the trap of War that would occur under pooling. 
 
-This type of equilibrium will be called a \emph{concessions separating equilibrium}. We refer to the optimal equilibrium separating gifts as $g_h$ from the high type and $g_l$ from the low type. These equilibrium gifts will mean that when period 1 is reached, countries know which type the other country is and choose to play accordingly.  The concessions phase acts as a coordination device to match countries' actions.  To play different actions from each other is an off equilibrium contingency. These off equilibrium payoffs are nonetheless necessary for calculating the minimum separating concession. 
+Below are the details of the \emph{concessions separating equilibrium} analysis. We refer to the equilibrium separating gifts as $g_h$ from the high type and $g_l$ from the low type. These equilibrium gifts will mean that when period 1 is reached, countries know which type the other country is and choose to play accordingly. The concessions phase acts as a coordination device to match countries' actions. To play different actions from each other is an off-equilibrium contingency. These off-equilibrium payoffs are nonetheless necessary for calculating the minimum separating concession. 
 \\
 \\
 \emph{Proof of Lemma~\ref{lemma:3}:}\\
-According to the revelation principle, we can assume that in a concessions separating equilibrium countries reveal their types truthfully, allowing period 1 actions where High types only play Trust with other high types, and play Fight with low types. Low types play Fight (Lemma~\ref{lemma:1}) and their payoff is $U_l=X_{FF}+ pg_h-g_l$. Though low types might be willing to give a non-zero gift in a separating equilibrium, it must distinguish them from the high types. Thus it cannot help them to achieve a higher payoff, and because their concession $g_l$ enters negatively in the payoff function, low types' optimal concession is 0. High types have the incentive to play Trust only in the Peace equilibrium, which can only be sustained by a pair of high types. Both types benefit from the other country playing Trust so all countries have incentive to signal that they are high types if concessions are costless (cheap talk). Thus costless announcements cannot lead to truthful revelation. If concessions lead to a separating equilibrium, they must be costly. \hfill $\blacksquare$
+In accord with the revelation principle, we focus on concessions separating equilibrium in which countries reveal their types truthfully. This allows high types to only play ``Trust'' in period 1 with other high types and to play Fight with low types. Low types play Fight (Lemma~\ref{lemma:1}) and their equilibrium payoff is $U_l=X_{FF}+ pg_h-g_l$.
+
+Though low types might be willing to give a non-zero gift in a separating equilibrium, they will only do this if it distinguishes them from the high types \emph{and} this gives them some advantage. Here, high types only cooperate with other high types, so giving a concession cannot help low types to achieve a higher payoff in the repeated game. Because their concession $g_l$ enters negatively in the payoff function, low types' optimal concession is therefore 0.
+
+High types have the incentive to play Trust only in the Peace equilibrium, which can only be sustained by a pair of high types. Both types benefit from the other country playing Trust so all countries have incentive to signal that they are high types if concessions are costless (cheap talk). Thus costless announcements cannot lead to truthful revelation. If concessions are to lead to a separating equilibrium, they must be costly. \hfill $\blacksquare$
 \\
 \\
 \emph{Proof of Theorem \ref{theorem:2}:}\\
-Under certain conditions, the high types will be given incentives to send costly concessions in order to reveal their type and separate (Lemma~\ref{lemma:3}). In a separating equilibrium constructed here, any-off equilibrium behavior (a concession not equal to the equilibrium concession) will be considered a low type gift.  In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$  is:\\  
+In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g_h$ is a low type gift.  In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$  is:\\  
+\begin{equation*}
+	pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h 
+\end{equation*}
+This expression represents the low types' incentives by truth telling as opposed to posing as a high type and giving the corresponding equilibrium gift. Simplifying this inequality, we see that the high types need give a gift 
 \be
-pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h 
-\ee
-This equation represents the low types' incentives by truth telling as opposed to posing as a high type and giving the corresponding equilibrium gift. Rearranging and simplifying this inequality, in order to separate the high types need give a gift 
-\be
-g_h \geq p(X_{FT}^l-X_{FF}^l). 
+	g_h \geq p(X_{FT}^l-X_{FF}^l). 
+	\label{eq:cse}
 \ee 
-High type separating equilibrium utility is $U_h= pX_{TT}+(1-p)X_{FF} - g_h+pg_h$. Since utility is decreasing in $g_h$, it is optimal for high types to make $g_h$ as small as possible and still have separation, which is when equation (7) holds with equality. Substituting in the definitions of the $X$ variables yields the minimum separating gift to be:\footnote {While not formally addressed in this paper, inference about sizes of concessions when parties are of unequal force can be made. Note that the constraints determining the requisite size of the separating gift depend on the low types' ability to gather war spoils. Thus, a more powerful country would be more able to plunder, and hence has to make a greater concession to convincingly convey its type as being high. }
+in order to separate from the low type.
+
+High type separating equilibrium utility is $U_h= pX_{TT}+(1-p)X_{FF} - g_h+pg_h$. Since utility is decreasing in $g_h$, it is optimal for high types to make $g_h$ as small as possible and still have separation. This occurs when Expression~\ref{eq:cse} holds with equality. Substituting in the definitions of $X_{FT}^l$ and $X_{FF}^l$ yields the minimum separating gift:\footnote {While not formally addressed in this paper, inference about sizes of concessions when parties are of unequal force can be made. Note that the constraints determining the requisite size of the separating gift depend on the low types' ability to gather war spoils. Thus, a more powerful country would be more able to plunder, and hence has to make a greater concession to convincingly convey its type as being high. }
 \be
-g_h^*=p(T+D) 
+	g_h^*=p(T+D) 
+	\label{eq:cse2}
 \ee 
- In order to incentivize high types to send nonzero concessions, the high type IC must not be violated. The payoff from separating must be higher than the payoff from pooling with the low types. 
+ In order to incentivize high types to send nonzero concessions, the high type incentive constraint must not be violated. That is, the payoff from separating must be higher than the payoff from pooling with the low types. 
 \be
 pX_{TT}^h+(1-p)X_{FF}^h - g_h +pg_h \geq X_{FF}^h +pg_h
+\label{eq:cse3}
 \ee
 
-Combining equations (8) and (9), we have the condition for a concessions separating equilibrium to exist:
+Combining Expressions~\ref{eq:cse2} and \ref{eq:cse3}, we have the condition for a concessions separating equilibrium to exist:
 \be
 pX_{TT}^h-pX_{FF}^h - p(X_{FT}^l-X_{FF}^l) \geq 0
 \ee
@@ -482,20 +497,29 @@ In terms of fundamentals, the condition for a concessions separating equilibrium
 \delta_h \geq \frac{W}{T+D}
 \ee
 That is, there is no parameter restriction beyond our definition of what it means for a player to be a high type. \hfill $\blacksquare$\\
-
-The no-concessions separating equilibrium also will exist if equation (6) holds. In the case that both exist, the high types will prefer the concessions separating equilibrium if and only if
-\be
-pX_{TT}^h+(1-p)X_{FF}^h - g_h \geq p(\frac{T}{1- \delta_h}) +(1-p)({-D}+\frac{\delta_h(W-D)}{1- \delta_h} )
-\ee
-This is simplified to preferring the concessions separating equilibrium if and only if
-\be
- (1-p)W-p(T+D)\geq 0
-\ee
-i.e.,
-\be
- W\geq p(W + T+D)
-\ee
 \\
+\emph{Proof of Corollary~\ref{corollary:1}:}\\
+To show that the patience threshold for the \emph{no concessions separating equilibrium} is greater than the patience threshold for the \emph{concessions separating equilibrium}, we start with the assumption
+$$T+D>W.$$
+We can multiply both sides by $(1-p)>0$ and then subtract $p(T+D)$ from both sides to get
+$$(T+D) > (1-p)W +p(T+D).$$
+Since $0<p<1$ and W,T, and D are all positive, both sides of the inequality are positve and so we can divide through by both and multiply both sides by $W$:
+$$\de_h^{nc} = \frac{W}{(1-p)W +p(T+D)} > \frac{W}{T+D} = \de_h^{c} $$
+
+In the case that both types of equilibria exist, i.e. $\de_h \geq \de_h^{nc}$, the high types will prefer the \emph{concessions separating equilibrium} if and only if
+\begin{equation*}
+p\left(\frac{T}{1- \delta_h}\right)+(1-p)\left(\frac{W-D}{1- \delta_h}\right) - g_h \geq p\left(\frac{T}{1- \delta_h}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_h} \right)
+\end{equation*}
+This is simplified to preferring the concessions separating equilibrium if and only if
+
+$$(1-p)W-p(T+D)\geq 0$$
+Rearranging,
+\be
+ \frac{W}{W+T+D}\geq p
+\ee
+i.e. The high types prefer the \emph{concessions separating equilibrium} when $p$ is smaller than $\frac{W}{W+T+D}$. \hfill $\blacksquare$\\
+\\
+{\bf \emph{Mediation}}\\
 \emph{Proof of Theorem \ref{theorem:4}:}\\
 High types choose $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choose $\alpha=0$. Because the low type's IC constraint binds, with $e=1$ the optimal concession can be calculated to be $g^1= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$. The high type's utility when $e=1$ is then $\frac{1}{1-d_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - g^1$.
 
