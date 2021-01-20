@@ -439,6 +439,7 @@ When $0<e<1$ under a mediator, the optimal $g_M$ is the one that chooses the hig
 $$\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}$$
 
 When $e=0$, welfare is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
+\textbf{THE ABOVE EQUATION IS wrong. We should subtract off $(1-p)g^0$ since $p$ of the time you receive a gift} \\
 
 We compare them to find when the welfare under the mediator is larger:
 	\begin{multline*}
@@ -472,6 +473,7 @@ When $0<e<1$ under a mediator, the optimal $g_M$ is the one that chooses the hig
 $$\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)}$$
 
 When $e=1$, welfare is $\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$ \\
+\textbf{THE ABOVE EQUATION IS wrong. We should subtract off $(1-p)g^1$ since $p$ of the time you receive a gift} \\
 
 We compare them to find when the welfare under the mediator is larger:
 	\begin{multline*}
@@ -599,17 +601,22 @@ Parameterization 4: $W0 > W1 > We$ (mediator). Mediator optimally chooses e=0 an
 \end{itemize}
 
 \vskip.2in
-Parameterization 5: $W1 > W0 > We$ (mediator). Mediator optimally chooses $e=0.03$
+Parameterization 5: $We > W1 > W0$. Asymptote at $e = 03759...$ (Was incorrect before I understood the asymptote: $W1 > W0 > We$ (mediator). Mediator optimally chooses $e=0.03$(
 \begin{itemize}
 	\item $T = 6, \ W = 8, \ D = 5, \ p = .5, \ \de_l = .2, \ \de_h = .9$
 \end{itemize}
 
 \vskip.2in
-Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses $e=0.24$. Optimal gift is 50, effective gift is 12, vs. $g1 = .667$ and $g0 = 1$
+Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses $e=0.24$ (0.25 is the asymptote). Optimal gift is 50, effective gift is 12, vs. $g1 = .667$ and $g0 = 1$
 \begin{itemize}
 	\item $T = 1, \ W = 1, \ D = 1, \ p = .5, \ \de_l = .5, \ \de_h = 15/16=0.9375$
 \end{itemize}
 	
+\vskip.2in
+Parameterization 7: $We > W0 > W1$, $42.33 > 4.96 > 2.83$. Mediator optimally chooses $e=0.28$ (0.28571 is the asymptote). Optimal gift is 75, effective gift is 21, vs. $g1 = .428$ and $g0 = .75$
+\begin{itemize}
+	\item $T = 0.5, \ W = 1, \ D = 1, \ p = .5, \ \de_l = .5, \ \de_h = 61/64=0.953125$
+\end{itemize}
 						
 						\vskip.3in
 						Welfare comparisons (always for high type)
@@ -662,8 +669,8 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 \subsubsection{To do and Notes}		
 	\color{ForestGreen} 
 			\begin{itemize}
-					\item Can I do new mediator theorem in the same form as the one that's currently in the paper?
 					\item Need to say clearly that $e=1$ doesn't work in a lot of situations
+					\item Can I do new mediator theorem in the same form as the one that's currently in the paper?
 					\item Mediator with $e=0$ can be better than CSE with $e=0$. Need to say why this is
 						\begin{itemize}
 							\item Two differences: Mediator gets you some value of the gift $pTeg_M$; gift under mediator typically has to be larger--it takes more to disincentivize low type from lying because the payoff is better
@@ -677,17 +684,6 @@ Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses 
 						\begin{itemize}
 							\item Characterizing exactly the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote seems hard. But I have developed an intuitive sufficient condition. See end of Section~\ref{sec:WM1}
 						\end{itemize}
-					\item Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable is strictly smaller than $\de^h$. \textbf{This means that the set of types who can make and sustain peace under the CSE with no material value / CSE with material value and $e=0$ is larger than the set of types who can make and sustain peace under the repeated game.}
-							\begin{itemize}
-								\item This is nice, but I'm not sure it helps with the narrative of the story.
-									\begin{itemize}
-										\item \textbf{Do I want to re-cast the $\de_h$ definitions, changing them throughout the story?}
-											\begin{itemize}
-												\item e.g. With the defn of high type as a country who can sustain the grim trigger equilibrium, high type is always patient enough to sustain $e=0$ CSE / no material value CSE
-												\item Should I compare grim trigger welfare to see which is higher?
-											\end{itemize}
-									\end{itemize}
-							\end{itemize}
 			\end{itemize}
 	
 

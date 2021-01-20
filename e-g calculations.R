@@ -58,24 +58,24 @@ p = .5
 dl = .5
 dh = 61/64
 
-# cutoff for definition of high type
-di = W/(T+D)
+# grim trigger cutoff
+d_gt = W/(T+D)
 # WM asymptotes to +infty when the following is positive (sufficient condition)
-suff = e*p*T - 1 + dh
+# suff = e*p*T - 1 + dh
 # problem is that we need the asymptote for e (I think)
 e_s = p/(p + T - T*dl +W)
 suff = e_s*p*T - 1 + dh
 
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
-W1 = 1/(1-dh)*(p*T*(1+g1) + (1-p)*(W-D*(1+g1))) - g1
+W1 = 1/(1-dh)*(p*T*(1+g1) + (1-p)*(W-D*(1+g1))) - (1-p)*g1
 # e = 1 incentive compatible? Minimum dh for separation is
-dh_min = D*(1-p) + 1 - p*T + (p*(W - T -D))/g1 #If g1<0, this is UPPER BOUND
-rm(dh_min) #get rid of this after checking that it is lower than dh
+dh_min1 = D*(1-p) + 1 - p*T + (p*(W - T -D))/g1 #If g1<0, this is UPPER BOUND
+rm(dh_min1) #get rid of this after checking that it is lower than dh
 
 # e=0
 g0 = p*(T+D)
-W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - g0
+W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - (1-p)*g0
 dh_min0 = W/((1-p)*(T+D)) - p/(1-p)
 rm(dh_min0)
 
@@ -91,5 +91,5 @@ g_max = g[e_max,1]
 eg_max = eg[e_max,1]
 
 # condition for mediator to be better than e = 1
-WM1 = 1/(1-dh)*g_max*p*T*e[min(which(g<=0))] - g_max - 1/(1-dh)*g1*(p*T + p*D - D) - g1
+WM1 = 1/(1-dh)*g_max*p*T*e[min(which(g<=0))] - g_max - 1/(1-dh)*g1*(p*T + p*D - D) - (1-p)g1
 test = We_max - W1
