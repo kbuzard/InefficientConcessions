@@ -58,8 +58,16 @@ p = .5
 dl = .5
 dh = 61/64
 
+## P8: Looking for parameters that make dh_min1 < dh_min0
+T = 1
+W = 1
+D = 1
+p = .5
+dl = .5
+dh = ?61/64
+
 # grim trigger cutoff
-d_gt = W/(T+D)
+dh_min_nc = W/((1-p)*W+p*(T+D)) 
 # WM asymptotes to +infty when the following is positive (sufficient condition)
 # suff = e*p*T - 1 + dh
 # problem is that we need the asymptote for e (I think)
@@ -67,16 +75,17 @@ e_s = p/(p + T - T*dl +W)
 suff = e_s*p*T - 1 + dh
 
 # e=1
-g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D)
+g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D) # must be positive
 W1 = 1/(1-dh)*(p*T*(1+g1) + (1-p)*(W-D*(1+g1))) - (1-p)*g1
 # e = 1 incentive compatible? Minimum dh for separation is
-dh_min1 = D*(1-p) + 1 - p*T + (p*(W - T -D))/g1 #If g1<0, this is UPPER BOUND
+#D*(1-p) + 1 - p*T + (p*(W - T -D))/g1 #This was Ben's calculation, wrong (I think)
+dh_min1 = (p*(W - T -D))/g1 + p*(W-T) + (1-p)*D + 1
 rm(dh_min1) #get rid of this after checking that it is lower than dh
 
 # e=0
 g0 = p*(T+D)
 W0 = 1/(1-dh)*(p*T + (1-p)*(W-D)) - (1-p)*g0
-dh_min0 = W/((1-p)*(T+D)) - p/(1-p)
+dh_min0 = W/(T+D)
 rm(dh_min0)
 
 # 0 < e < 1 with mediator

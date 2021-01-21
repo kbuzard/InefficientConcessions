@@ -104,7 +104,8 @@ It is essential to focus more precisely on the specific actions and environments
 These empirical results have until recently lacked strong theoretical foundations. Mediation is used, but we are only beginning to understand why actors use it. Recently, mediation has begun to be modeled using mechanism design for settings where militarization or the resolve to fight are private information (Bester and Warneryd 2006; Fey and Ramsay 2008, 2010 and 2011; Horner et. al. 2010; Meirowitz et al. 2012, 2015). This paper expands the theoretical literature by modeling the role of mediation when information is asymmetric about parties' abilities to commit to peace. Here, a mediator can remove the incentive to make concessions that are inefficient. 
 
 
-\section{Model} %A DIFFERENT MODEL BUT SAME RESULT AS FR 10; THIS SHOULD BUILD OUR CONFIDENCE IN MODELLING. EMPHASIZE SCENARION (EGYPT USRAEL ETC) THAT ARE BETTER TO MODEL WITH Our MODEL. IT CAN ALSO BE THOUGHT OF AS REDUCED FORM OF A BARGAINING MOEL, BUT IT DOES NOT NEED TO BE! NEED TO GIVE EXAMPLES WHERE Our MODEL IS BETTER THAN BARGAINING- EXAMPLES. WHEN TRUST IS AN ISSUE (PUT THIS IN THE TRUST SECTION)
+\section{Model}
+\label{sec:model} %A DIFFERENT MODEL BUT SAME RESULT AS FR 10; THIS SHOULD BUILD OUR CONFIDENCE IN MODELLING. EMPHASIZE SCENARION (EGYPT USRAEL ETC) THAT ARE BETTER TO MODEL WITH Our MODEL. IT CAN ALSO BE THOUGHT OF AS REDUCED FORM OF A BARGAINING MOEL, BUT IT DOES NOT NEED TO BE! NEED TO GIVE EXAMPLES WHERE Our MODEL IS BETTER THAN BARGAINING- EXAMPLES. WHEN TRUST IS AN ISSUE (PUT THIS IN THE TRUST SECTION)
 %Need to add risk aversion in MAIN TEXT
 
 Countries\footnote{Players will be referred to as countries, though it could also be appropriate to think of players as intra-state actors, as in a civil war. } are of two possible types, high and low. A high type discounts future period payoffs at rate $\delta_h$ and a low type discounts at $\delta_l$ where $\delta_h >\delta_l$ and $\delta_h ,\delta_l$ $\in [0,1].$ Before the start of the game, nature independently determines the types of country 1 and country 2. The type distinction, as explained in detail later, encompasses the country's willingness to cooperate in solving the conflict; that is, throughout the analysis we will define a low type as a player whose only sequentially rational strategy is to remain in conflict in all periods. It is not necessary to think of a type as fixed; it can change as regimes and relations between countries change.\footnote{We can enrich the model to assign a probability (and even different probabilities) of a country's type shifting from high to low or low to high in a given period.}
@@ -236,13 +237,13 @@ One example of such an equilibrium is Israel and Egypt at the Camp David Accords
 \label{sec:IC}
 
 \subsection{Concessions with Material Value}
-We now model concessions to have real future material value that can either help or harm the giver. The interpretation is that the country which receives the concessions can use them to build up their military or to build up their civil society. Using concessions to build military strength hurts the giver of the concessions in war; using the concessions to strengthen civil socity helps the giver in peace. The Golan heights is such an example: if Syria is an ally of Israel, the Golan Heights is a reasonable concession to make, but if Syria later turns out to betray a trust, surrender of the strategic land would be disastrous for Israel. %Another example is ADD more examples
+We now model concessions to have real future material value that can either help or harm the giver. To be clear, in Sections~\ref{sec:model} and \ref{sec:bench}, the gift only benefits the party who receives it in the period in which it is received, that is, Period 0. In this section, we assume that this is an additional value from the gift in each period that the repeated game is played, that is, Period 1 and onward.
 
-We add two elements to the benchmark model in Section 2 in order to incorporate future material value. The first is an additional decision for the negotiating parties. In Period 0, after receiving a concession each country makes a decision about how to allocate the value of the concession between military and civil society. $\alpha_i$ is the portion of the received concession that country $i$ chooses to dedicate to civil society; $(1- \alpha_i$) is the portion country $i$ dedicates to military buildup. This decision is a simple optimization problem for each country. Parameters are common knowledge so the result of this decision is well known should the country's type be known. Concessions are immediately converted into civil society or military gifts and incorporated into payoff functions. Periods 1 to $\infty$ are as before but with the following stage game payoffs:
+The interpretation is that the country which receives the concessions can use them to build up their military or to build up their civil society. Using concessions to build military strength hurts the giver of the concessions in war; using the concessions to strengthen civil socity helps the giver in peace. The Golan heights is such an example: if Syria is an ally of Israel, the Golan Heights is a reasonable concession to make, but if Syria later turns out to betray a trust, surrender of the strategic land would be disastrous for Israel. %Another example is ADD more examples
 
-The second new element is a change to the payoffs. We add a term to each of $T$, $W$, and $D$ that represents the additional benefit or harm flowing from the future material value of the concession. When both countries play trust, they each receive the base benefit $T$ as well as an additional benefit of the concession they \textit{gave} that is scaled by the proportion that was invested in civil socity as well as the base benefit of $T$.
+We add two elements to the benchmark model in Section 2 in order to incorporate future material value. The first is an additional decision for the negotiating parties. In Period 0, after receiving a concession, each country makes a decision about how to allocate the value of the concession between military and civil society. $\alpha_i$ is the portion of the received concession that country $i$ chooses to dedicate to civil society; $(1- \alpha_i$) is the portion country $i$ dedicates to military buildup. This decision is a simple optimization problem for each country. Parameters are common knowledge so the result of this decision is well known should the country's type be known.
 
-If both countries play Fight, Country 1 (symmetric for Country 2) receives an additional benefit term $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. However, it also incurs extra damages $D(1-\alpha_2) g_1$ that are proportional to the size of the concession it \textit{gave} and how much of that concession was invested in the miliary by Country 2. The (Fight,Trust) and (Trust,Fight) payoffs are modified analogously.
+Concessions are immediately converted into civil society or military gifts. They are incorporated into payoff functions starting in Period 1. Periods 1 to $\infty$ are as before but with the modified stage game payoffs shown in Table 2.
 
 \begin{center}
 \captionof{table}{Stage game payoffs when concessions have material value}
@@ -255,14 +256,33 @@ If both countries play Fight, Country 1 (symmetric for Country 2) receives an ad
 \end{tabular}
 \end{center}
 \vskip.1in
+
+This modification to the payoffs is the second change in the model relative to Sections~\ref{sec:model} and \ref{sec:bench}. We add a term to each of $T$, $W$, and $D$ that represents the additional benefit or harm flowing from the future material value of the concession. When both countries play Trust, they each receive the base benefit $T$ as well as an additional benefit of the concession they \textit{gave} that is scaled by the proportion that was invested in civil socity as well as the base benefit of $T$.
+
+If both countries play Fight, Country 1 (symmetric for Country 2) receives an additional benefit term $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. However, it also incurs extra damages $D(1-\alpha_2) g_1$ that are proportional to the size of the concession it \textit{gave} and how much of that concession was invested in the miliary by Country 2. The (Fight,Trust) and (Trust,Fight) payoffs are modified analogously.
+
+Because $\al_i$ enters into the payoffs in a linear fashion, the choice that maximizes welfare is $\alpha=1$ for high types since a concession would only come from another high type in equilibrium, and thus only the ``Peace'' outcome will be played. Conversely, in equilibrium, low types only participate in the ``War'' equilibrium and thus maximize their payoffs by choosing $\alpha=0$. 
+
 \begin{theorem}
+\emph{Concessions Separating Equilibrium (CSE) with Material Value}
+	\begin{enumerate}
+		\item[(a)] Assume $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
+		\item[(b)] In the best concessions separating equilibrium, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
+\end{enumerate}
+	\label{theorem:csemv}
+\end{theorem}
+\emph{Proof:} See Appendix.
+
+\begin{corollary}
 	Assume the high types are not patient enough to separate without concessions but can separate using concessions when concessions have no material value. When concessions instead have future value that the low-type country can use to reduce the future payoffs of its negotiating partner, there are parameters under which the negotiating partners' ability to separate through concessions is destroyed, i.e. peace cannot be achieved when there are two high types.
 	\label{theorem:matval}
-\end{theorem}
+\end{corollary}
 
  \emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
-The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. In order to calculate it, we need to know the size of the minimum separating concession, which is again calculated from the low-type incentive constraint. The minimum separating concession is $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$.\footnote{See proof of Theorem~\ref{theorem:4} below for details.} The minimum patience level required for separation is $\de_h^1 = D(1-p)+1-pT + \frac{p(W-(T+D))}{g^1} = .7\overline{9}.$ Because the specified $\de_h$ is not involved in any of these calculations, we can see that for any $\de_h \in [.5\overline{3},.7\overline{9})$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. \hfill $\blacksquare$ 
+The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. The minimum patience level required for separation is $\de_h^1 = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = 2.4$, with a minimum separating concession of $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. Since discount factors can be no larger than 1, we have shown that under this set of parameters, the concessions separating equilibrium when concessions have material value cannot be sustained.
+
+$\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5\overline{3},1)$\footnote{Recall that we restrict $p<1$ since there is no imperfect information when only one type is possible.} Thus, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. \hfill $\blacksquare$ 
 
 
 \subsection{Material Value of Concession can be Destroyed}
@@ -306,7 +326,7 @@ U_l=X_{FF}+peg_h
 %When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
 % \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
 
-Before turning to our main result for the case where the material value of concessions can be destroyed, we make a slight simplification of the general model here. This is not essential for the results to hold; we make these simplifciations for ease of calculation and demonstration of the results. First, we restrict the functional forms of $T(\cdot),W(\cdot)$ and $D(\cdot)$ so that each is a scalar multiplied by its arguments. This linear functional form implies that equilibrium optimization has high types choosing $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choosing $\alpha=0$. 
+We next turn to our main result for the case where the material value of concessions can be destroyed...
 
 \begin{theorem}
 		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameters under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
@@ -465,7 +485,7 @@ High types have the incentive to play Trust only in the Peace equilibrium, which
 \\
 \\
 \emph{Proof of Theorem \ref{theorem:2}:}\\
-In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g_h$ is a low type gift.  In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$  is:\\  
+In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g_h$ is a low type gift.  In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is:\\  
 \begin{equation*}
 	pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h 
 \end{equation*}
@@ -508,16 +528,73 @@ $$\de_h^{nc} = \frac{W}{(1-p)W +p(T+D)} > \frac{W}{T+D} = \de_h^{c} $$
 
 In the case that both types of equilibria exist, i.e. $\de_h \geq \de_h^{nc}$, the high types will prefer the \emph{concessions separating equilibrium} if and only if
 \begin{equation*}
-p\left(\frac{T}{1- \delta_h}\right)+(1-p)\left(\frac{W-D}{1- \delta_h}\right) - g_h \geq p\left(\frac{T}{1- \delta_h}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_h} \right)
+p\left(\frac{T}{1- \delta_h}\right)+(1-p)\left(\frac{W-D}{1- \delta_h}\right) - (1-p)g_h \geq p\left(\frac{T}{1- \delta_h}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_h} \right)
 \end{equation*}
-This is simplified to preferring the concessions separating equilibrium if and only if
-
-$$(1-p)W-p(T+D)\geq 0$$
+This simplifies to preferring the concessions separating equilibrium if and only if
+$$(1-p)W-p(1-p)(T+D)\geq 0$$
 Rearranging,
 \be
- \frac{W}{W+T+D}\geq p
+ \frac{W}{T+D}\geq p
 \ee
-i.e. The high types prefer the \emph{concessions separating equilibrium} when $p$ is smaller than $\frac{W}{W+T+D}$. \hfill $\blacksquare$\\
+i.e. The high types prefer the \emph{concessions separating equilibrium} when $p$ is smaller than $\frac{W}{T+D}$. \hfill $\blacksquare$\\
+\\
+{\bf \emph{Concessions Separating Equilibrium with Material Value}}\\
+\emph{Proof of Theorem \ref{theorem:csemv}:}\\
+In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g^1$ is a low type gift. In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is: 
+\begin{equation}
+	pg^1 +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g^1+pg^1
+	\label{eq:matval1}
+\end{equation}
+The $\al_i$'s vary depending on the situation. On the left side, the low type does not give a concession but receives a concession if facing a high type ($pg^1$). Then (Fight, Fight) is played, and the payoffs depend on whether this low type is facing a high type or a low type because the implications for future material value are different. With probability $p$, the low type received a gift and invested in the military. With probability $(1-p)$ there were no concessions given by either side. The left side of Expression~\ref{eq:matval1} is then $pg^1 + \frac{1}{1-\de_l}\left[p(W+Wg^1-D) + (1-p)(W-D) \right]$.
+
+On the left side, the low type is giving a gift and also receiving a gift from the high type with probability $p$. With probability $p$, this low type faces a high type who invests the gift in civil society. With probability $(1-p)$, the low type's gift goes to another low type who invests in the military and low type does not receive a gift. So the right hand side of Expression~\ref{eq:matval1} becomes $-g^1 + pg^1 + p\left(T + Tg^1 +W + Wg^1 + \frac{\de_l}{1-\de_l}\left(W + Wg^1-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg^1 \right) \right)$.
+
+Substituting into Expression~\ref{eq:matval1} and simplifying a bit, we have
+%\begin{multline*}
+%	pg_1 + \frac{1}{1-\de_l}\left[p(W+Wg^1-D) + (1-p)(W-D) \right] \geq \\
+%-g_1 + pg_1 + p\left(T + Tg^1 +W + Wg^1 + \frac{\de_l}{1-\de_l}\left(W + Wg^1-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg^1 \right) \right)
+%\end{multline*}
+\begin{equation*}
+	g^1 + p(W+Wg^1-D) \geq p\left(T + Tg^1 +W + Wg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
+\end{equation*}
+%\begin{equation*}
+%	g_1 - pD \geq p\left(T + Tg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
+%\end{equation*}
+\begin{equation*}
+	\left(1-\de_l\right)g^1\left(1 - pT \right) \geq \left(1-\de_l\right)p\left(D +	 T\right) - (1-p) Dg^1
+\end{equation*}
+%\begin{equation*}
+%	\left(1-\de_l\right)g^1\left(1 - pT \right) + (1-p) Dg^1 \geq \left(1-\de_l\right)p\left(D +	 T\right)
+%\end{equation*}
+\begin{equation}
+	g^1 \geq \frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D} = g_h^1
+	\label{eq:matval2}
+\end{equation}
+
+This implies that the high types need give a gift at least as large as $g_h^1$ in order to separate from the low type; that is, if the high types give a gift smaller than $g_h^1$, the low types will have an incentive to mimic the high type and the separating equilibrium will be destroyed.
+
+High type separating equilibrium utility is $U_h= pX_{TT}+(1-p)X_{FF} - g_h+pg_h$. Since utility is decreasing in $g_h$, it is optimal for high types to make $g_h$ as small as possible and still have separation. This occurs when Expression~\ref{eq:matval2} holds with equality. That is, the optimal high type gift in this equilibrium is $g^1 \geq \frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$.\footnote {While not formally addressed in this paper, inference about sizes of concessions when parties are of unequal force can be made. Note that the constraints determining the requisite size of the separating gift depend on the low types' ability to gather war spoils. Thus, a more powerful country would be more able to plunder, and hence has to make a greater concession to convincingly convey its type as being high. }
+
+In order to incentivize high types to send nonzero concessions, the high type incentive constraint must not be violated. That is, the payoff from separating must be higher than the payoff from not giving a gift and pooling with the low types. Note that if the high type pools with the low type, it knows it will be playing Fight and so invests any concession received in military buildup. 
+\begin{multline*}
+	\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - (1-p)g^1 \geq \\
+	\frac{1}{1-\de_h}\left[p(W+Wg^1-D) + (1-p)(W-D) \right] +pg^1
+\label{eq:matval3}
+\end{multline*}
+
+Simplifying, we have
+$$pT(1+g^1) + (1-p)(W-D(1+g^1)) - (1-\de_h)g^1 \geq p(W+Wg^1-D) + (1-p)(W-D)$$
+$$pT(1+g^1) - (1-p)Dg^1 - (1-\de_h)g^1 \geq p(W+Wg^1-D)$$
+$$\de_h g^1 \geq p(W+Wg^1-D) - pT(1+g^1) + (1-p)Dg^1 + g^1$$
+%$$\de_h \geq \frac{p(W+Wg^1-D) - pT(1+g^1) + (1-p)Dg^1 + g^1 }{g^1}$$
+$$\de_h \geq \frac{p(W-D-T) + pg^1 (W-T) + (1-p)Dg^1 + g^1 }{g^1}$$
+$$\de_h \geq \frac{p(W-D-T)}{g^1} + p (W-T) + (1-p)D + 1$$
+
+Substituting the minimum efficient concession from Expression~\ref{eq:matval2}, we have the condition for a concessions separating equilibrium to exist in terms of fundamentals:
+\be
+	\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1
+\ee
+That is, there is no parameter restriction beyond our definition of what it means for a player to be a high type. \hfill $\blacksquare$\\
 \\
 {\bf \emph{Mediation}}\\
 \emph{Proof of Theorem \ref{theorem:4}:}\\
