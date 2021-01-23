@@ -23,6 +23,7 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
+\newtheorem{fact}{Fact}
 \newtheorem{corollary}{Corollary}
 
 \usepackage[pdftex,
@@ -303,10 +304,12 @@ We implement this by allowing countries to choose a scalar $e$ to multiply by th
 \end{tabular}
 \end{center}
 
+We have established the results for the concessions separating equilibrium when no material value is destroyed, i.e. $e=1$, in Section~\ref{sec:IC}. It turns out that we have also established the results for the concessions separating equilibrium when all material value is destroyed, i.e. $e=0$. Notice that if $e=0$, the payoffs in Table 3 are the same as the payoffs in Table 1 and thus the results of Section~\ref{sec:cse} apply.
+
 Before turning to the question of how the possibility of destroying the value of concessions impacts the ability of the parties to achieve peace, we first formally establish the welfare implications.
 
 \begin{lemma}
-	If a separating equilibrium exists when concessions have material value and are efficient (where $e=1$), it is optimal to give efficient concessions in a separating equilibrium if and only if $pT \geq (1-p)D$.
+	If both the \emph{concessions separating equilibrium with efficient concessions} and the \emph{concessions separating equilibrium with inefficient concessions} exist, the \emph{concessions separating equilibrium with efficient gifts} is preferred when both the probability of encountering a high type and the benefit from making peace are sufficiently large.
 	\label{lemma:efficiency}
 \end{lemma}
 \emph{Proof:} See Appendix.
@@ -318,19 +321,27 @@ Before turning to the question of how the possibility of destroying the value of
 %When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
 % \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
 
-The intuition for Lemma~\ref{lemma:efficiency} is that future material value of concession helps you when your negotiating partner turns out to be a high type, and this happens $p$ of the time. On other other hand, the material value of your concession \emph{hurts} you when your negotiating partner turns out to be a low type. The future material of concessions increase the expected utility from a separating equilibrium when both the payoffs from Trust and the probability of a high type are relatively large.
+The intuition for Lemma~\ref{lemma:efficiency} is that future material value of concession helps you when your negotiating partner turns out to be a high type, and this happens $p$ of the time. On other other hand, the material value of your concession \emph{hurts} you when your negotiating partner turns out to be a low type. Similarly, the larger are the benefits from Trust, the larger the welfare gain when the negotiating partner is a high type, and the larger are the damages from Fight, the larger is the welfare loss when the negotiating partner turns out to be a low type.
 
-We next turn to our main result for the case where the material value of concessions can be destroyed...
+Lemma~\ref{lemma:efficiency} implies that the high types will either prefer $e=1$ or $e=0$. As we turn to our result about the incentive capatibility of the \emph{concessions separating equilibria with material value}, we focus on these two cases going forward as the most focal and easiest upon which to coordinate.\footnote{For some parameter values, we cannot rule out that a \emph{concessions separating equilibrium} with $0<e<1$ exists and improves upon high type welfare when high types are patient enough to separate when $e=0$ but not when $e=1$. This is not at all obvious though, especially because increasing $e$ from $0$ can tighten the high type's incentive constraint.} 
+
+\begin{lemma}
+	The \emph{concessions separating equilibrium with efficient concessions} requires countries to be more patient than the \emph{concessions separating equilibrium with inefficient concessions}. 
+	\label{lemma:e-patient}
+\end{lemma}
+\emph{Proof}: See Appendix.
+
+This means that there are parameters under which Peace cannot be achieved in a \emph{concessions separating equilibrium with efficient gifts} but Peace can be achieved in a \emph{concessions separating equilibrium with inefficient gifts}. This is one of the reasons that Theorem~\ref{theorem:4} is true. 
 
 \begin{theorem}
 		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameters under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
 	\label{theorem:4}
 \end{theorem}
-\emph{Proof}: See Appendix.
+\emph{Proof}: We invoke Lemmas~\ref{lemma:efficiency} and \ref{lemma:e-patient}. There are two reasons for which the parties would choose the \emph{concessions separating equilibrium with inefficient gifts}. First, they may be patient enough to separate when gifts are inefficient but not when gifts are efficient (Lemma~\ref{lemma:e-patient}). In this case, the \emph{concessions separating equilibrium with efficient gifts} is not available to them.
 
-Inefficient concessions are optimal under low $p$ (there's a good chance of facing a low type who will use the concession against you) as well as when $\de_l$ is low ($g^*$ is decreasing in the patience of the low type, as a larger concession is required to deter an impatient low-type from being untruthful). 
+However, even if the negotiating parties are patient enough to separate when gifts are efficient, Lemma~\ref{lemma:efficiency} tells us that welfare will be higher with efficient gifts only when the probability of encountering a high type and the benefit from making peace are sufficiently large. Otherwise, welfare is higher under the \emph{concessions separating equilibrium with inefficient gifts} and this equilibrium is thus optimal. \hfill $\blacksquare$\\
 
-This finding of inefficiency is for profoundly different reasons than the literature related to Camerer (1988) or Prendergast and Stole (2001).\footnote{Since our initial setup is essentially identical to Camerer's, the desired inefficiency of  pre-play communication can also be found in our model. With a slight behavioral modification, the reasoning of Prendergast and Stole (2001) can also be had: if a country suffers regret after efficiently giving to a type different than their own, there is a premium for guessing correctly. In Prendergast and Stole the two types are equal except in labeling; in our model, high types and low types are used so there is an incentive for low types to try to pose as high types. Aside from this difference, essentially the same result is found: if countries suffer a ``mismatching'' cost due to giving to the wrong type, they will be hesitant to do so and may offer inefficient concessions.} Instead of being in reaction to a behavioral regret for mismatching or serving as a way to discourage low types for entering the game altogether, here making concessions inefficient is a device to prevent low types from using those concessions against oneself in the future.
+Inefficient concessions are optimal under low $p$ (there's a good chance of facing a low type who will use the concession against you) as well as when the benefits from Peace are low relative to the damages from War. This finding of inefficiency is for profoundly different reasons than the literature related to Camerer (1988) or Prendergast and Stole (2001).\footnote{Since our initial setup is essentially identical to Camerer's, inefficiency of  pre-play communication can also be found in our model. With a slight behavioral modification, the reasoning of Prendergast and Stole (2001) can also be had: if a country suffers regret after efficiently giving to a type different than their own, there is a premium for guessing correctly. In Prendergast and Stole the two types are equal except in labeling; in our model, high types and low types are used so there is an incentive for low types to try to pose as high types. However, putting this difference aside, the inefficiency result can be viewed as similar to that in Prendergast and Stole (2001). That is, if countries suffer a ``mismatching'' cost due to giving to the wrong type, they will be hesitant to do so and may offer inefficient concessions.} Instead of being in reaction to a behavioral regret for mismatching or serving as a way to discourage low types for entering the game altogether, here making concessions inefficient is a device to prevent low types from using those concessions against oneself in the future.
 
 \section{Mediation}
 \label{sec:med}
@@ -497,10 +508,16 @@ High type separating equilibrium utility is $U_h= pX_{TT}+(1-p)X_{FF} - g_h+pg_h
 \ee 
  In order to incentivize high types to send nonzero concessions, the high type incentive constraint must not be violated. That is, the payoff from separating must be higher than the payoff from pooling with the low types. 
 \be
-pX_{TT}^h+(1-p)X_{FF}^h - g_h +pg_h \geq X_{FF}^h +pg_h
-\label{eq:cse3}
+	pX_{TT}^h+(1-p)X_{FF}^h - g_h +pg_h \geq X_{FF}^h +pg_h
+	\label{eq:cse3}
 \ee
 
+
+$$p\frac{T}{1-\de_h}+(1-p)\frac{W-D}{1-\de_h} - g_h \geq \frac{W-D}{1-\de_h}$$
+\begin{multline*}
+	\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - g^1 \geq \\
+	\frac{1}{1-\de_h}\left[p(W+Wg^1-D) + (1-p)(W-D) \right]
+\end{multline*}
 Combining Expressions~\ref{eq:cse2} and \ref{eq:cse3}, we have the condition for a concessions separating equilibrium to exist:
 \be
 pX_{TT}^h-pX_{FF}^h - p(X_{FT}^l-X_{FF}^l) \geq 0
@@ -552,7 +569,7 @@ Substituting into Expression~\ref{eq:matval1} and simplifying a bit, we have
 	g^1 + p(W+Wg^1-D) \geq p\left(T + Tg^1 +W + Wg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
 \end{equation*}
 %\begin{equation*}
-%	g_1 - pD \geq p\left(T + Tg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
+%	g^1 - pD \geq p\left(T + Tg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
 %\end{equation*}
 \begin{equation*}
 	\left(1-\de_l\right)g^1\left(1 - pT \right) \geq \left(1-\de_l\right)p\left(D +	 T\right) - (1-p) Dg^1
@@ -600,14 +617,79 @@ $$\frac{1}{1-\de_h}\left\{pTg^1 - (1-p)Dg^1)\right\}$$
 This is non-negative when $pT \geq (1-p)D$. High type welfare is thus non-decreasing in $e$ when this condition is met.  The largest admissible value of $e$, i.e. $e=1$ thus maximizes welfare when $pT \geq (1-p)D$.\footnote{If $pT = (1-p)D$, $e=1$ is not the unique maximizer, but it is still a maximizer.} \hfill $\blacksquare$\\
 %\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.} 
 \\
-\emph{Proof of Theorem \ref{theorem:4}:}\\
-High types choose $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choose $\alpha=0$. The high type's utility when $e=1$ is
-$$\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - (1-p)g^1 $$
-where $g^1= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$.
+\emph{Proof of Lemma \ref{lemma:e-patient}:}\\
+The proof will be by contradiction. Suppose that the patience threshold for the \emph{concessions separating equilibrium with inefficient gifts} is weakly larger than the patience threshold for the \emph{concessions separating equilibrium with efficient gifts}. Since low types have patience levels below the threshold, we have that 
+\begin{equation}
+	\de^c = \frac{W}{T+D} \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^1> \de_l.
+	\label{eq:cont}
+\end{equation}
+It follows directly that $W > \de_l(T+D)$. Since $\de_l < 1$, it is also true that $\frac{1-p}{1-\de_l p} < 1$. Combining this with the previous fact, we have
+\begin{equation}
+	W > \de_l(T+D) > \frac{\de_l(T+D)(1-p)}{1-\de_l p}.
+	\label{eq:cont2}
+\end{equation}
+We will invoke Expression~\ref{eq:cont2} below. First we go back to Expression~\ref{eq:cont}, simplifying and creating a common denominator for $\de^1$, we have
+\begin{multline*}
+	\frac{W}{T+D} \geq \frac{(W-D-T)\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]}{\left(1-\de_l\right)\left(D +	 T\right)}
+	+ \frac{\left[p(W-T) + (1-p)D + 1\right]\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)} \\
+	= \frac{(W-(D+T))\left(1-\de_l\right) - (W-(D+T))\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
+	+ \frac{p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right) + \left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+\end{multline*}
+Subtract $\frac{W}{T+D}$ from both sides to get
+\begin{multline*}
+	0 \geq \frac{-W(1-\de_l) + W\left(1-\de_l\right)-(D+T)\left(1-\de_l\right) - (W-(D+T))\left(1-\de_l\right)pT}{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
+	+ \frac{(W-(D+T))(1-p) D + p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right) + \left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+\end{multline*}
+Cancelling the first two terms as well as the third and last terms, we have
+\begin{multline*}
+	0 \geq \frac{- (W-(D+T))\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
+	+ \frac{p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+\end{multline*}
+Expanding and cancelling out the terms with $pT$ as well as $(1-p)D\left(D +	 T\right)$, we have
+%\begin{multline*}
+%	0 \geq \frac{-W\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
+%	+ \frac{pW\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+%\end{multline*}
+%Expand even more and then cancel out $(1-p)D\left(D +	 T\right)$ terms
+\begin{equation*}
+	0 \geq \frac{-W\left(1-\de_l\right)pT +W(1-p) D + pW\left(1-\de_l\right)\left(D +	 T\right) }{\left(1-\de_l\right)\left(D +	 T\right)} 
+	- \frac{\de_l (1-p)D\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+\end{equation*}
+Expanding once more and then cancelling out the $W\left(1-\de_l\right)pT$ and $pWD$ terms
+%\begin{equation*}
+%	0 \geq \frac{W(1-p) D + pW(1-\de_l)D}{\left(1-\de_l\right)\left(D +	 T\right)} 
+%	- \frac{\de_l (1-p)D\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+%\end{equation*}
+%Expand everything from the first fraction and cancel out $-pWD$ terms
+\begin{equation*}
+	0 \geq \frac{WD - \de_lpWD}{\left(1-\de_l\right)\left(D +	 T\right)} 
+	- \frac{\de_l (1-p)D\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+\end{equation*}
+Combining with the inequality in Expression~\ref{eq:cont2}, we arrive at
+\begin{equation*}
+	0 \geq \frac{WD(1- \de_lp)}{\left(1-\de_l\right)\left(D +	 T\right)} 
+	- \frac{\de_l (1-p)D\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)} > \frac{\frac{\de_l(T+D)(1-p)}{1-\de_l p}\left[D(1 - \de_lp)\right]}{\left(1-\de_l\right)\left(D +	 T\right)} 
+	- \frac{\de_l (1-p)D\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
+\end{equation*}
+Simplifying, we have
+\begin{equation*}
+	0 > \frac{\de_l(T+D)(1-p)D}{\left(1-\de_l\right)\left(D +	 T\right)} 
+	- \frac{\de_l (1-p)D\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)} = 0
+\end{equation*}
+We have arrived at a contradiction from Expression~\ref{eq:cont} and therefore it must be that 
+\begin{equation}
+	\frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 > \frac{W}{D+T}
+\end{equation}
+ \hfill $\blacksquare$ 
+%\\
+%\emph{Proof of Theorem \ref{theorem:4}:}\\
+%High types choose $\alpha=1$ (because a concession would only come from another high type in equilibrium) and low types choose $\alpha=0$. The high type's utility when $e=1$ is
+%$$\frac{1}{1-\de_h}\left\{pT(1+g^1) + (1-p)(W-D(1+g^1))\right\} - (1-p)g^1 $$
+%where $g^1= \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$.
 
-When $e=0$---that is, the future material value of the concessions is destroyed---we are essentially back in the case of Section~\ref{sec:cse}. High type utility when $e=0$ is $$\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g^0$$ where the minimum separating concession is $g^0=p(T+D)$. The threshold for high types to cooperate is again $\frac{W}{T+D}$. 
+%When $e=0$---that is, the future material value of the concessions is destroyed---we are essentially back in the case of Section~\ref{sec:cse}. High type utility when $e=0$ is $$\frac{1}{1-d_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g^0$$ where the minimum separating concession is $g^0=p(T+D)$. The threshold for high types to cooperate is again $\frac{W}{T+D}$. 
 
-Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession is determined by comparing the utility under each, and either can be larger. Inefficient concessions are made optimal when $p$ is low (there's a good chance of facing a low type who will use the concession against you) as well as when $\de_l$ is low ($g^1$ is decreasing in the patience of the low type, as a larger concession is required to deter an impatient low-type from being untruthful). \hfill $\blacksquare$ 
+%Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession is determined by comparing the utility under each, and either can be larger. Inefficient concessions are made optimal when $p$ is low (there's a good chance of facing a low type who will use the concession against you) as well as when $\de_l$ is low ($g^1$ is decreasing in the patience of the low type, as a larger concession is required to deter an impatient low-type from being untruthful). \hfill $\blacksquare$ 
 
 \subsection{Mediation}
 
