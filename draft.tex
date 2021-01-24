@@ -279,18 +279,18 @@ Because $\al_i$ enters into the payoffs in a linear fashion, the choice that max
 \emph{Concessions Separating Equilibrium (CSE) with Material Value}
 	\begin{enumerate}
 		\item[(a)] Assume $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
-		\item[(b)] In the best concessions separating equilibrium, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
+		\item[(b)] In the best concessions separating equilibrium when gifts have full material value, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
 \end{enumerate}
 	\label{theorem:csemv}
 \end{theorem}
 \emph{Proof:} See Appendix.
 
 \begin{corollary}
-	Assume the high types are not patient enough to separate without concessions but can separate using concessions when concessions have no material value. When concessions instead have future value that the low-type country can use to reduce the future payoffs of its negotiating partner, there are parameters under which the negotiating partners' ability to separate through concessions is destroyed, i.e. peace cannot be achieved when there are two high types.
+	Assume that high types are not patient enough to separate without concessions but that they can separate using concessions when gifts have no material value. If negotiating parties use concessions with future material value that the low-type country can use to reduce the future payoffs of its negotiating partner instead of concessions with no future material value, there are parameters under which the future material value of gifts destroys negotiating partners' ability to separate through concessions, i.e. peace cannot be achieved when there are two high types.
 	\label{theorem:matval}
 \end{corollary}
 
- \emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
+\emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
 The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. The minimum patience level required for separation is $\de_h^1 = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = 2.4$, with a minimum separating concession of $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. Since discount factors can be no larger than 1, we have shown that under this set of parameters, the concessions separating equilibrium when concessions have material value cannot be sustained.
 
@@ -357,18 +357,15 @@ Inefficient concessions are optimal under low $p$ (there's a good chance of faci
 \label{sec:med}
 All results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator. 
 
-Because many conflicts occur in an international arena with no clear enforceable rule of law (Waltz, 2002), much of the literature has focused on self-enforcing mechanisms. If however a credible third party does exist, then results beyond self enforcing agreements can be relevant.  A mediator with such enforcement ability is said to use manipulative mediation, specifically if she ``offered to verify compliance with the agreement''  or ``took responsibility for concessions''  (Bercovitch 1997). We will now introduce a mediator who does the latter.\footnote{Here the parties' actions in the stage game as well as their choices of whether to spend concessions on the civil versus the military sector are assumed to derive from their type, so there is no need for the mediator to enforce these decisions once the type is revealed. Thus, we do not assume that the mediator can do either because it is not necessary.} 
+Because many conflicts occur in an international arena with no clear enforceable rule of law (Waltz 2002), much of the literature has focused on self-enforcing mechanisms. If however a credible third party exists, then results beyond self enforcing agreements can be relevant.  A mediator with such enforcement ability is said to use manipulative mediation, specifically if she ``offered to verify compliance with the agreement''  or ``took responsibility for concessions''  (Bercovitch 1997). We will now introduce a mediator who does the latter.\footnote{Here the parties' actions in the stage game as well as their choices of whether to spend concessions on the civil versus the military sector are assumed to derive from their type, so there is no need for the mediator to enforce these decisions once the type is revealed. Thus, we do not assume that the mediator can do either because it is not necessary.} 
 
 The model setup is as before, but instead of parties being free to choose their concession levels, the mediator solicits type reports and then enforces incentive compatible concessions. The Revelation Principle tells us that it is without loss of generality to restrict attention to direct mechanisms, that is, mechanisms in which countries simply declare their types (Myerson 1979). This mediator will be modeled as a mechanism $M$.
 
-After learning their type, each country chooses to participate in the mechanism or not; that is, whether to send a message that declares its type to be High or Low. By the revelation principle, it is again without loss of generality to consider equilibria in which both countries participate and send truthful reports. Therefore we have a mechanism $M$ that inputs the reports $t_i \in \left\{High,Low\right\}$ for $i \in \left\{1,2\right\}$ and outputs the required concessions $g_i$ and efficiency levels $e_i$ so that $ M:(t_1,t_2)\rightarrow( e_1, g_1; e_2,g_2)$.  The countries are bound to send the mandated concessions.
+After learning their type, each country chooses to participate in the mechanism or not; that is, whether to send a message that declares its type to be High or Low. By the revelation principle, it is again without loss of generality to consider equilibria in which both countries participate and send truthful reports. Therefore we have a mechanism $M$ that inputs the reports $t_i \in \left\{High,Low\right\}$ for $i \in \left\{1,2\right\}$ and outputs the required concessions $g_i$ and efficiency levels $e_i$ so that $ M:(t_1,t_2)\rightarrow( e_1, g_1; e_2,g_2)$. The countries are bound to send the mandated concessions.
 
-In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent to both types since types are private information. Importantly, here the mechanism $M$ can differentiate based on recipient's type. Otherwise, the setup is the same as in Section~\ref{sec:matval} where concessions have future material value.
+In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent to both types since types are private information. Importantly, here the mechanism $M$ can differentiate based on recipient's type. Otherwise, the setup is the same as in Section~\ref{sec:matval} where concessions have future material value that can optionally be destroyed. As usual, truthful self-revelation requires that the individual rationality and incentive compatibility constraint for each type must be satisfied
 
-[both individual rationality and incentive compatibility constraints must be satisfied, leading to truthful self-identification. ]
-
-[Further, it can be shown that restricting attention to symmetric recommendations is without loss of generality, because the optimal arbitration programme is linear.]
-
+\textbf{First result: can't have $e=1$}
 
 low type IC
 $$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
@@ -376,7 +373,7 @@ $$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
 high type IC:
 $$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
 
-The welfare target is again the sum of the high type utilities. Qualitatively, similar results would hold if we also included low types in the analysis with weighting based on $p$. 
+The welfare target is again the sum of the high type utilities. Qualitatively, similar results would hold if weighted high- and low-type welfare by the relevant probabilities. 
 
 \begin{theorem}
 	Assume that concessions have future material value.
