@@ -355,7 +355,7 @@ Inefficient concessions are optimal under low $p$ (there's a good chance of faci
 
 \section{Mediation}
 \label{sec:med}
-All results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator. 
+All the results in this paper thus far have relied on bilateral engagement. We will now consider the involvement of a mediator. 
 
 Because many conflicts occur in an international arena with no clear enforceable rule of law (Waltz 2002), much of the literature has focused on self-enforcing mechanisms. If however a credible third party exists, then results beyond self enforcing agreements can be relevant.  A mediator with such enforcement ability is said to use manipulative mediation, specifically if she ``offered to verify compliance with the agreement''  or ``took responsibility for concessions''  (Bercovitch 1997). We will now introduce a mediator who does the latter.\footnote{Here the parties' actions in the stage game as well as their choices of whether to spend concessions on the civil versus the military sector are assumed to derive from their type, so there is no need for the mediator to enforce these decisions once the type is revealed. Thus, we do not assume that the mediator can do either because it is not necessary.} 
 
@@ -365,10 +365,13 @@ After learning their type, each country chooses to participate in the mechanism 
 
 In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent to both types since types are private information. Importantly, here the mechanism $M$ can differentiate based on recipient's type. Otherwise, the setup is the same as in Section~\ref{sec:matval} where concessions have future material value that can optionally be destroyed. As usual, truthful self-revelation requires that the individual rationality and incentive compatibility constraint for each type must be satisfied
 
-\textbf{First result: can't have $e=1$}
+\begin{lemma}
+	A manipulative mediator cannot facilitate the most efficient concessions---that is, $e=1$. 
+	\label{lemma:med}
+\end{lemma}
+\emph{Proof}: See Appendix.
 
-low type IC
-$$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
+
 
 high type IC:
 $$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
@@ -556,7 +559,7 @@ Rearranging,
 \ee
 i.e. The high types prefer the \emph{concessions separating equilibrium} when $p$ is smaller than $\frac{W}{T+D}$. \hfill $\blacksquare$
 
-\subsection{Concessions Separating Equilibrium with Material Value}
+\subsection{Concessions with Material Value}
 \emph{Proof of Theorem \ref{theorem:csemv}:}\\
 In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g^1$ is a low type gift. In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is: 
 \begin{equation}
@@ -699,7 +702,36 @@ We have arrived at a contradiction from Expression~\ref{eq:cont} and therefore i
 %Whether it is beneficial for high types to settle on the efficient concession or the inefficient concession is determined by comparing the utility under each, and either can be larger. Inefficient concessions are made optimal when $p$ is low (there's a good chance of facing a low type who will use the concession against you) as well as when $\de_l$ is low ($g^1$ is decreasing in the patience of the low type, as a larger concession is required to deter an impatient low-type from being untruthful). \hfill $\blacksquare$ 
 
 \subsection{Mediation}
+\emph{Proof of Lemma \ref{lemma:med}:}\\
+We proceed by showing that the low type's incentive compatibility constraint cannot hold when the mediator specifies fully efficient gifts. The low type's incentive compatibility constraint in the mechanism $M$ is
+$$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
 
+Here was have assumed that the mediator specifies $e=1$, which means that gift giving and receiving cancels out. The left hand side has zero gifts because the low-type player under consideration has truthfully revealed itself to be a low type. The mediator only specifies strictly positive gifts if there are two reports of `High.' Likewise, there are no gifts in the $(1-p)X_{FF}^l$ term on the right because the negotiating partner has made a report of `Low.' This leaves
+		$$X_{FF}^l \geq X_{FT}^l.$$
+		Expanding, we have
+		\[
+			\frac{W-D}{1-\de_l} \geq T + \left(\cdot \right) + W + \left(\cdot \right) + \frac{\de_l}{1-\de_l}\left(W+ \left(\cdot \right) -D - \left(\cdot \right) \right)
+		\]
+There are no gifts on the left hand side and so the payoffs from Table 1 apply. The right hand side has place holders $\left(\cdot\right)$ for the impact of the material value of gifts. On the right hand side, we have only the case where both parties declare themselves to be high types. Both parties are instructed to give efficient gifts. The negotiating partner really \emph{is} a high type and thus invests entirely in civil society because they expect to play the `Peace' equilibrium. The low-type player under consideration knows it will defect and end up in a War equilibrium and so invests entirely in the military. 
+%		\begin{multline}
+%			W-D \geq 
+%			\left(1-\de_l\right) \left[T + \al_2Tg^M + W + \left(1-\al_1\right)Wg_2 \right] \\
+%			+ \de_l \left(W + \left(1-\al_1\right)Wg_2-D - \left(1-\al_2\right)Dg^M\right)
+%			\label{eq:lowICex}
+%		\end{multline}
+		\begin{equation*}
+			W-D \geq 
+			\left(1-\de_l\right) \left[T + Tg^M + W + Wg^M \right] + \de_l \left(W + Wg^M -D \right)
+			\label{eq:med}
+		\end{equation*}
+Cancelling like terms and rearranging, we have
+			\[
+					0 \geq \left(1 - \de_l \right) T + \left(1 - \de_l \right) Tg^M + Wg^M + \left(1 - \de_l \right) D
+			\]
+			Since we assume throughout that gifts must be non-negative, each of $T, W$ and $D$ are positive and $0 \leq \de_l \leq 1$, this inequality can never hold.	
+
+
+\hfill $\blacksquare$\\
 
 \newpage
 \section{Bibliography} %can add search(kaplan), expoeriments (2) and workplace gift exchange papers (the "gift giving as a medium" explanation
