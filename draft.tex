@@ -314,7 +314,7 @@ We have established the results for the concessions separating equilibrium when 
 Before turning to the question of how the possibility of destroying the value of concessions impacts the ability of the parties to achieve peace, we first formally establish the welfare implications.
 
 \begin{lemma}
-	If both the \emph{concessions separating equilibrium with efficient concessions} and the \emph{concessions separating equilibrium with inefficient concessions} exist, the \emph{concessions separating equilibrium with efficient gifts} is preferred when both the probability of encountering a high type and the benefit from making peace are sufficiently large.
+	If the \emph{concessions separating equilibrium with efficient concessions} exists, it is preferred to the \emph{concessions separating equilibrium with inefficient gifts} when both the probability of encountering a high type and the benefit from making peace are sufficiently large.
 	\label{lemma:efficiency}
 \end{lemma}
 \emph{Proof:} See Appendix.
@@ -325,7 +325,6 @@ Before turning to the question of how the possibility of destroying the value of
 %{\bf Theorem 12:}\\  
 %When concessions are inefficient, $M$ can still improve over bilateral negotiation. \\
 % \emph{Proof}: A mechanism works as in proof (6) with the additional liability that high-high concession exchanges are no longer efficient so a mechanism's advantage is not as strong. 
-
 The intuition for Lemma~\ref{lemma:efficiency} is that future material value of concession helps you when your negotiating partner turns out to be a high type, and this happens $p$ of the time. On other other hand, the material value of your concession \emph{hurts} you when your negotiating partner turns out to be a low type. Similarly, the larger are the benefits from Trust, the larger the welfare gain when the negotiating partner is a high type and the larger are the damages from Fight, the larger is the welfare loss when the negotiating partner turns out to be a low type.
 
 Lemma~\ref{lemma:efficiency} implies that the high types will either prefer $e=1$ or $e=0$. As we turn to our result about incentive compatibility when concessions have material value, we focus on these two cases as the most focal and easiest upon which to coordinate.\footnote{For some parameter values, we cannot rule out that a \emph{concessions separating equilibrium} with $0<e<1$ exists and improves upon high type welfare when high types are patient enough to separate when $e=0$ but not when $e=1$. This is not at all obvious though, especially because increasing $e$ from $0$ can tighten the high type's incentive compatibility constraint.} 
@@ -373,15 +372,20 @@ In order to make the mechanism incentive compatible for the low types, some valu
 \begin{theorem}
 \emph{Mediation}
 \begin{enumerate}
-		\item[(a)] The mediation mechanism $M$ is incentive compatible when the specified concession is at least as large as $\frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T -W \right)}$.
-		\item[(b)] In the best concessions separating equilibrium when gifts have full material value, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
+		\item[(a)] The mediation mechanism $M$ is incentive compatible for the low type when the specified concession is greater than or equal to $\frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}$ and $p > e\left(p+\left(1-\de_l\right)T + W\right)$.
+		\item[(b)] The mediation mechanism $M$ is incentive compatible for the high type when
+			\begin{itemize}
+				\item[(i)] $\de_h(T+D)\geq W$ and $e(T-W) >1 -\de_h$;
+				\item[(ii)] $\de_h(T+D)\geq W$, $e(T-W) <1 -\de_h$ and the specified concession is less than or equal to $\frac{\de_h(T+D)-W}{1-\de_h - e\left(T +W \right)}$; or
+				\item [(iii)] $\de_h(T+D)\leq W$, $e(T-W) >1 -\de_h$ and the specified concession is greater than or equal to $\frac{\de_h(T+D)-W}{1-\de_h - e\left(T +W \right)}$.
+			\end{itemize}
+		\item[(c)] The mediation mechanism $M$ is always individually rational for the low type. If $Te > (1-\de_h)(1-e)$, the high type's individual rationality constraint implies an additional restriction that the specified concession is less than or equal to $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}$.
 \end{enumerate}
 	\label{theorem:med}
 \end{theorem}
 \emph{Proof:} See Appendix.
 
-high type IC:
-$$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
+
 
 The welfare target is again the sum of the high type utilities. Qualitatively, similar results would hold if weighted high- and low-type welfare by the relevant probabilities. 
 
@@ -738,7 +742,7 @@ Canceling like terms and rearranging, we have
 			Since we assume throughout that gifts must be non-negative, each of $T, W$ and $D$ are positive and $0 \leq \de_l \leq 1$, this inequality can never hold.	\hfill $\blacksquare$\\
 			\\
 \emph{Proof of Theorem~\ref{theorem:med}:}\\
-For the general form of the low type incentive compatibility constraint, we start from Expression~\ref{eq:med} and add back in the $e$'s that were removed when assuming $e=1$ in the proof of Theorem~\ref{theorem:med}. So we start from
+(a) For the general form of the low type incentive compatibility constraint, we start from Expression~\ref{eq:med} and add back in the $e$'s that were removed when assuming $e=1$ in the proof of Theorem~\ref{theorem:med}. So we start from
 \begin{equation*}
 			W-D \geq 
 			\left(1-\de_l\right) \left[T + Teg_h + W + Weg_h \right] + \de_l \left(W + Weg_h -D \right) + peg_h - pg_h
@@ -751,12 +755,68 @@ Gathering the terms involving $g_h$ on the left hand side:
 \[
 	g_h\left[p\left(1 - e\right) -(1-\de_l)eT -eW \right] \geq \left(T - \de_l T \right) + \left(1 - \de_l \right) D
 \]
-Isolating $g_h$ on the left hand side and gathering terms, we have 
+The right hand side is positive. If the left hand side were negative, we would have a negative upper bound on the size of the gift. Given the requirement that the gift be non-negative, the low type's incentive constraint cannot be satisfied  in this case. Therefore we must assume that $p > e\left(p+\left(1-\de_l\right)T + W\right)$. Using this to isolate $g_h$ on the left hand side and gathering terms, we have 
 \begin{equation}
-	g_h \geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T -W \right)} = g^M
-	\label{ex:med3}
+	g_h \geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T -W \right)}
+	\label{eq:med3}
 \end{equation}
-As before, the optimal gift is the one where Expression~\ref{ex:med3} holds with equality. We call this value $g^M$. We see here that $g^M$ depends on $e$, which is also the choice of the mediator \emph{and} that we must have $\overline{e} = p - e \left( p + T - \de_l T + W \right) > 0$ in order for the optimal concession to be both positive and finite. Both the optimal concession increases toward infinity as $e$ approaches $\frac{p}{p + \left(1-\de_l\right) + W}$, which is the value that makes the denominator of $g^M$ equal to 0.
+If Condition~\ref{eq:med3} is met, the mechanism is incentive compatible for the low type.\\
+(b) We now turn to the high type, whose incentive compatibility constraint is
+$$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
+It is always optimal for the high type to invest in civil society when they truthfully reveal and to invest in the military when they lie about their type. Thus the constraint becomes
+\begin{multline*}
+  \frac{p}{1-\de_h}\left(T + Teg \right) - pg +peg+ \frac{1-p}{1-\de_h}\left(W-D\right) \geq \\
+	p\left(T + W + Weg +eg + \frac{\de_h}{1-\de_h}\left(W + Weg -D\right)\right) + \frac{1-p}{1-\de_h}\left(W-D\right)
+\end{multline*}
+This simplifies to 
+\begin{equation*}
+  \frac{1}{1-\de_h}\left(T + Teg \right) - g \geq T + W + Weg + \frac{\de_h}{1-\de_h}\left(W + Weg -D\right)
+\end{equation*}
+%\begin{equation*}
+%  T + Teg - ( 1-\de_h)g \geq ( 1-\de_h)\left(T + W + Weg\right) + \de_h\left(W + Weg -D\right)
+%\end{equation*}
+\begin{equation*}
+  T + Teg - ( 1-\de_h)g \geq ( 1-\de_h)T + W + Weg - \de_h D
+\end{equation*}
+%\begin{equation*}
+%  Teg - Weg -( 1-\de_h)g \geq -\de_h T + W - \de_h D
+%\end{equation*}
+\begin{equation}
+  g\left(Te - We -( 1-\de_h)\right) \geq W - \de_h (D+T)
+	\label{eq:med4}
+\end{equation}
+We have four cases to consider depending on signs:
+\begin{itemize}
+	\item [(i)] When $\de_h(T+D)\geq W$ and $e(T-W) >1-\de_h$, then we have a lower bound on the size of the gift that is non-positive, i.e. no additional restriction beyond the restrictions needed to satisfy the low type incentive compatibility constraint.
+	\item [(ii)] When $\de_h(T+D)\geq W$ and $e(T-W) <1-\de_h$, Expression~\ref{eq:med4} is a non-negative upper bound on the size of the gift.
+	\item [(iii)] When $\de_h(T+D)\leq W$ and $e(T-W) >1-\de_h$, Expression~\ref{eq:med4} is a non-negative lower bound on the size of the gift, which may be larger or smaller than the bound in Expression~\ref{eq:med3}. This is an additional restriction beyond that for the low type only when the bound is larger than the one in Expression~\ref{eq:med3}.
+	\item [(iv)] When $\de_h(T+D)\leq W$ and $e(T-W) <1-\de_h$, Expression~\ref{eq:med4} is a non-positive upper bound on the size of the gift and therefore there is no incentive compatible mechanism.
+\end{itemize}
+(c): The low type's individual rationality constraint is satisfied trivially: the low type gets the `War' payoff forever outside the mechanism; it also gets the `War' payoff forever \emph{inside} the mechanism while not giving or receiving any concession.
+
+For the high type, we need
+\begin{equation*}
+  \frac{p}{1-\de_h}\left(T + Teg \right) - pg +peg+ \frac{1-p}{1-\de_h}\left(W-D\right) \geq \frac{1}{1-\de_h}\left(W-D\right)
+\end{equation*}
+This simplifies to
+\begin{equation*}
+  \frac{1}{1-\de_h}\left(T + Teg \right) - g +eg \geq \frac{1	}{1-\de_h}\left(W-D\right)
+\end{equation*}
+\begin{equation*}
+  T + Teg - (1-\de_h)(1-e)g \geq W-D
+\end{equation*}
+\begin{equation*}
+  T + Teg - (1-\de_h)(1-e)g \geq W-D
+\end{equation*}
+\begin{equation*}
+  T + D - W \geq \left[Te - (1-\de_h)(1-e)\right]g 
+\end{equation*}
+If $Te < (1-\de_h)(1-e)$, this is a negative lower bound on the size of the concession and thus implies no additional restriction. If $Te = (1-\de_h)(1-e)$, there is again no restriction because $T+D >W$ by assumption. If $Te > (1-\de_h)(1-e)$, the high type's individual rationality constraint requires that $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}>g$.
+
+\hfill $\blacksquare$\\
+
+
+As before, the optimal gift is the one where Expression~\ref{eq:med3} holds with equality [NOT NECESSARILY BECAUSE OF HIGH TYPE IC]. We call this value $g^M$. We see here that $g^M$ depends on $e$, which is also the choice of the mediator \emph{and} that we must have $\overline{e} = p - e \left( p + T - \de_l T + W \right) > 0$ in order for the optimal concession to be both positive and finite. Both the optimal concession increases toward infinity as $e$ approaches $\frac{p}{p + \left(1-\de_l\right) + W}$, which is the value that makes the denominator of $g^M$ equal to 0.
 
 There are now two cases to consider. Depending on parameter values, welfare either increases toward infinity or decreases toward negative infinity as $e \rightarrow \overline{e}$. A sufficient condition In the welfare-maximizing mediation mechanism, the mediator sets $e$ to be as large as is feasible given the resources available to be given as concessions as long as $e < \frac{p}{p + \left(1-\de_l\right) + W}$ 
 					
