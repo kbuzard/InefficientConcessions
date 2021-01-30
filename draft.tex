@@ -286,9 +286,10 @@ Because $\al_i$ enters into the payoffs in a linear fashion, the choice that max
 	\label{theorem:matval}
 \end{corollary}
 
-\emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
+\emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorems~\ref{theorem:1} and ~\ref{theorem:2}, both the \emph{no concessions separating equilibrium} and the \emph{concessions separating equilibrium} are possible when gifts have no material value.separation through concessions is possible.
 
-The patience threshold to separate through concessions is much higher under these parameters when the concessions carry future material value. The minimum patience level required for separation is $\de_h^1 = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = 2.4$, with a minimum separating concession of $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. Since discount factors can be no larger than 1, we have shown that under this set of parameters, the concessions separating equilibrium when concessions have material value cannot be sustained.
+The patience threshold to separate through concessions with efficient gifts () is 
+is much higher under these parameters when the concessions carry future material value. The minimum patience level required for separation is $\de_h^1 = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = 2.4$, with a minimum separating concession of $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. Since discount factors can be no larger than 1, we have shown that under this set of parameters, the concessions separating equilibrium when concessions have material value cannot be sustained.
 
 $\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5\overline{3},1)$.\footnote{Recall that we restrict $p<1$ since there is no imperfect information when only one type is possible.} For this range of $\de_h$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value destroys the opportunity for peace. \hfill $\blacksquare$ 
  
@@ -372,40 +373,35 @@ In order to make the mechanism incentive compatible for the low types, some valu
 \begin{theorem}
 \emph{Mediation}
 \begin{enumerate}
-		\item[(a)] The mediation mechanism $M$ is incentive compatible and individually rational for the low type when the specified concession is greater than or equal to $\frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}$ and $p > e\left(p+\left(1-\de_l\right)T + W\right)$.
+		\item[(a)] The mediation mechanism $M$ is incentive compatible and individually rational for the low type when the specified concession is greater than or equal to $\frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)},$ with the denominator of this expression strictly positive.
 		\item[(b)] The mediation mechanism $M$ is incentive compatible and individually rational for the high type when the specified concession is less than or equal to $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}$.
 \end{enumerate}
 	\label{theorem:med}
 \end{theorem}
 \emph{Proof:} See Appendix.
 
-
-
-The welfare target is again the sum of the high type utilities. Qualitatively, similar results would hold if weighted high- and low-type welfare by the relevant probabilities. 
+Ultimately, mediation is desirable if it can improve welfare or improve the chances for peace. Theorem~\ref{theorem:medwel} shows that the mediation mechanism $M$ can do both.
 
 \begin{theorem}
-	Assume that concessions have future material value.
+	When concessions have future material value, the mediation mechanism $M$ can be used to
 	\begin{enumerate}
-		\item[(a)] If future material value can be destroyed, a mediator can be used to eliminate inefficient concessions and improve welfare.
-		\item[(b)] If future material value cannot be destroyed, a mediator can be used to expand the parameter space over which peace can be achieved.
+		\item[(a)] improve welfare by increasing the efficiency of concessions when only a \emph{concessions separating equilibrium with inefficient gifts} is possible; or
+		\item[(b)] improve welfare despite reducing the efficient of concessions when a \emph{concessions separating equilibrium with efficient gifts} is possible; or
+		\item[(c)] achieve peace when it cannot be achieved either in a \emph{concessions separating equilibrium with efficient gifts} or a \emph{concessions separating equilibrium with inefficient gifts}.
 	\end{enumerate}
-	\label{theorem:5}
+	\label{theorem:medwel}
 \end{theorem}
-\emph{Proof:} (a) Under $M$, the low type incentive compatibility constraint can bind without having high types give a concession to low types. There is no need then to give inefficient concessions: high types will invest in civil society and improve the giver's welfare and low types will never receive the concession. %The equilibrium separating concession $g^{*M}$ will be larger than $g^*$ in this case because the low type who reports truthfully receives a concession with zero probability: 
-%\be
-%g^{*M}= \frac{p(X_{FT}^l-X_{FF}^l)}{1-p}
-%\ee
-High type utility under $M$ is 
-\be
-U_h^M= pX_{TT}+(1-p)X_{FF} = p \left( \frac{T(1+g^{*M})}{1-\de_h} \right) + (1-p) \left(\frac{W-D}{1-\de_h} \right)
-\ee
-because high types exchange concessions of the same value. Welfare, defined as high-type utility, is improved because no transfer is made to the low types and no future damage is caused in the case of such a transfer.\footnote{Low types IR constraint still binds and $U_l=X_{FF}$.}
+\emph{Proof:} See Appendix.
 
-(b) The contraction of the parameter space over which peace could be achieved in Theorem~\ref{theorem:matval} derives from a low type's ability to use concessions to reduce the payoffs of its negotiating partner during a `fight' stage. By ensuring that only high types exchange gifts, the mediator removes this expected cost, thus allowing a wider range of high types to separate through concessions. The threshold for high types to prefer this separating-through-mediation equilibrium to the pooling on no concessions equilibrium, $\de_h^*$, differs from $\de^1_h$ of Theorem~\ref{theorem:matval} in that it does not have the term $D(1-p)$ (thus is smaller) and the separating concession $g^* = \frac{g^1}{1-p}$. Since the concession is in the denominator, this also reduces the value of $\de_h^*$. \hfill $\blacksquare$ 
+To understand part (a), remember that concessions are not exchanged if there is even one report of ``Low.'' Since a concession is only given to the high types and high types invest in civil society, the efficiency of the concession can be increased subject to satisfying the low type's constraints without creating extra damages when matched with a low type. High-type welfare is improved because no transfer is made to the low types and there is no threat of future damage from the concession that is made since it goes only to a high type.
 
-The low type leader can bluff in the bilateral setting but not when a mediator is present. As per Theorem~\ref{theorem:4}, inefficiency is due to the high types giving an inefficient gift in order to separate while still being able to prevent low types from using concessions against the high types. But because the benefits of giving a concession differ between the types (low types get one period of cheating payoff, while high types get future peace), the mediator is able to mandate concessions only between declared high types. This means there is no longer a need for inefficient concessions since concessions will never be used against the giver. Thus, a mediator is able to remove inefficiency in concession giving and bring willing parties to the table to give the gifts necessary to achieve peace. 
+Here, inefficiency can be mitigated because the mediator is able to mandate concessions only between declared high types. The inefficiency is no longer need to prevent low types from using concessions against high types. However, some inefficiency is needed in order to incentivize low types to truthfully reveal their type.
 
-The improvements by the mediator here do not rely on the mediator's private information as in the models of Kydd (2003), Rauchhaus (2006) and Smith and Stam (2003). Therefore the mediator's preferences need not be an important factor in her participation. So long as the costs are small enough to be worth her participation the mediator can effectively enter and assist in solving the conflict.
+Part (b) may be somewhat surprising. Here, a mediator would insert inefficiency when it is not necessary to make peace. This happens when the possibility of the low type using concessions against their negotiating partner and the magnitude of the damages that can be imposed are small enough that efficient gifts are possible but large enough that the full efficiency of the gifts has a large, negative impact on welfare. The mediator removes the possibility of the future damages, but has to require some inefficiency in order to, gain, incentivize low types to truthfully reveal.
+
+(c) When the impacts of future material value are too strong, i.e when the probability of a low type is too high and/or the benefits and damages from investing in military power are too large, the parties cannot make peace on their own even with the possibility of signaling their type through concessions. By ensuring that only high types exchange gifts, the mediator removes this threat of damaging behavior by one's negotiating partner as well as the cost of giving the concession to a low type. This allows types with lower patience levels to separate through the mechanism when those same types cannot separate in the bilateral game with concessions with future material value.
+
+Thus a mediator is able to both improve welfare and bring willing parties to the table to give the concessions necessary to achieve peace. The improvements by the mediator here do not rely on the mediator's private information as in the models of Kydd (2003), Rauchhaus (2006) and Smith and Stam (2003). Therefore the mediator's preferences need not be an important factor in her participation. So long as the costs are small enough to be worth her participation the mediator can effectively enter and assist in solving the conflict.
 
 The value of truth telling by the mediator has been examined in the literature. Kydd (2003) studies bias in mediation and how a mediator can credibly communicate information to the parties. Conversely Horner et al. (2010) rely on the mediator to ``hoard'' information in order to be able to improve on unmediated interaction.\footnote{Horner et al. (2010) take cheap talk communication as their benchmark of unmediated communication, whereas we take the unmediated signaling game as our benchmark.} In our model, a successful mediator relies on the parties trusting her. However, here the mediator had no incentive to lie: lying can only potentially hurt the high types, the only type who the mediator can possibly help.
 
@@ -782,15 +778,28 @@ This simplifies to
   T + D - W \geq \left[Te - (1-\de_h)(1-e)\right]g 
 \end{equation*}
 If $Te < (1-\de_h)(1-e)$, this is a negative lower bound on the size of the concession and thus implies no additional restriction. If $Te = (1-\de_h)(1-e)$, there is again no restriction because $T+D >W$ by assumption. If $Te > (1-\de_h)(1-e)$, the mechanism is both individually rational and incentive compatible for the high type when $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}>g$. \hfill $\blacksquare$\\
+\\
+\emph{Proof of Theorem~\ref{theorem:medwel}:}\\
+An example suffices to prove each part.
+	\begin{enumerate}
+		\item[(a)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = 0.7$ and $\de_l = .3$ and $p = .9$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
+By Theorem~\ref{theorem:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.979$ so that the \emph{concessions separating equilibrium with efficient gifts} is not possible while the \emph{concessions separating equilibrium with inefficient gifts} is possible. 
 
-As before, the optimal gift is the one where Expression~\ref{eq:med3} holds with equality [NOT NECESSARILY BECAUSE OF HIGH TYPE IC]. We call this value $g^M$. We see here that $g^M$ depends on $e$, which is also the choice of the mediator \emph{and} that we must have $\overline{e} = p - e \left( p + T - \de_l T + W \right) > 0$ in order for the optimal concession to be both positive and finite. Both the optimal concession increases toward infinity as $e$ approaches $\frac{p}{p + \left(1-\de_l\right) + W}$, which is the value that makes the denominator of $g^M$ equal to 0.
+Using the mediation mechanism $M$ with $e=0.29$ and $g=12.99$, we satisfy both the low type constraint the $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=9.5890411$ and the high type constraint $g\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=12.987013$. Welfare is 5.0784, compared to 2.82 in the \emph{concessions separating equilibrium with inefficient gifts}.
 
-There are now two cases to consider. Depending on parameter values, welfare either increases toward infinity or decreases toward negative infinity as $e \rightarrow \overline{e}$. A sufficient condition In the welfare-maximizing mediation mechanism, the mediator sets $e$ to be as large as is feasible given the resources available to be given as concessions as long as $e < \frac{p}{p + \left(1-\de_l\right) + W}$ 
-					
-\[
-	\frac{e p T}{1 - \de_h} > 1
-\]
+		\item[(b)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = \frac{13}{16}=0.9375$ and $\de_l = .5$ and $p = .5$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
+
+By Theorem~\ref{theorem:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.75$. Using Lemma~\ref{lemma:e-patient}, we see that both the \emph{concessions separating equilibrium with efficient gifts} and the \emph{concessions separating equilibrium with inefficient gifts} are possible. 
+
+Using the mediation mechanism $M$ with $e=0.18$ and $g=7.7669$, we satisfy both the low type constraint the $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=7.143$ and the high type constraint $g\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=7.7669$. Welfare is 12.82, compared to 7.5 in the \emph{concessions separating equilibrium with inefficient gifts} and 7.67 in the \emph{concessions separating equilibrium with efficient gifts}.
+		\item[(c)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when concessions have no future material value is $\de = \frac{1}{1+1} = 0.5$. Let $\de_h = 0.49$ and $\de_l = 0.25$ and $p = \frac{15}{16} = 0.9375$. 
+
+Because the calculations are the same for the \emph{concessions separating equilibrium} and the \emph{concessions separating equilibrium with inefficient gifts}, we use Theorem~\ref{theorem:2}(a) to find the patience threshold to separate through concessions with inefficient concessions is $0.5$. This combined with Lemma~\ref{lemma:e-patient} shows that neither the \emph{concessions separating equilibrium with efficient gifts} nor the \emph{concessions separating equilibrium with inefficient gifts} is possible. 
+
+Using the mediation mechanism $M$ with $e=0$ and $g=1.6$, we satisfy both the low type constraint $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=1.6$ and there is no high type constraint because $0=Te<(1-\de_h)(1-e)=0.0625$. Welfare is approximately 0.24, compared to 0 outside the mechanism.
+	\end{enumerate}
+	\hfill $\blacksquare$\\
 										
 \newpage
 \section{Bibliography} %can add search(kaplan), expoeriments (2) and workplace gift exchange papers (the "gift giving as a medium" explanation
