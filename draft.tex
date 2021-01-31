@@ -274,12 +274,14 @@ Because $\al_i$ enters into the payoffs in a linear fashion, the choice that max
 \begin{theorem}
 \emph{Concessions Separating Equilibrium (CSE) with Material Value}
 	\begin{enumerate}
-		\item[(a)] Assume $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
+		\item[(a)] Assume $\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D$ is positive and $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
 		\item[(b)] In the best concessions separating equilibrium when gifts have full material value, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
 \end{enumerate}
 	\label{theorem:csemv}
 \end{theorem}
 \emph{Proof:} See Appendix.
+
+The problem with concessions with material value is that when the potential for the low type to invest the concessions in the military can make the high type unwilling to take a chance that it will be matched with a high type because the costs of being matched with a low type are too high.
 
 \begin{corollary}
 	Assume that high types are not patient enough to separate without concessions but that they can separate using concessions when gifts have no material value. If negotiating parties use concessions with future material value that the low-type country can use to reduce the future payoffs of its negotiating partner instead of concessions with no future material value, there are parameters under which the future material value of gifts destroys negotiating partners' ability to separate through concessions, i.e. peace cannot be achieved when there are two high types.
@@ -292,7 +294,13 @@ By Theorems~\ref{theorem:1} and ~\ref{theorem:2}, both the \emph{no concessions 
 
 The patience threshold to separate through concessions with efficient gifts is much higher under these parameters when the concessions carry future material value: by Theorem~\ref{theorem:csemv}(a), this threshold is $0.979$. Thus the \emph{concessions separating equilibrium with efficient gifts} is \emph{not} possible. 
 
-$\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5,.979)$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value destroys the opportunity for peace. \hfill $\blacksquare$ 
+$\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5,.979)$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value can destroy the opportunity for peace. \hfill $\blacksquare$ 
+
+Comparative statics provide intuition for why using concessions with future material value makes it harder to make peace. The patience threshold is decreasing in $T$, that is, the benefit from the additional future value when a high type achieves `Peace' with another high type who used the material value for civil society. Similarly, the threshold is increasing in $D$ because the magnitude of future damages from pairing with a low type increases. Perhaps less obvious is the impact of $W$: here the threshold is again increasing. This is because the high type's own temptation to not give a gift and to use a received concession for military purposes increases in $W$.
+
+When the low type's patience level $\de_l$ increases, the high type's patience threshold decreases because a smaller gift is required to disincentivize the low type from pretending to be a high type. Finally, and perhaps surprisingly, the patience threshold is increasing in $p$. This happens because the size of gift must be increased in order to discourage low types from giving a gift, and this effect outweighs the increased attractiveness to the high type that comes directly from the increased probability of positive impacts from the future material value.\footnote{Comparative statics calculations available from the authors upon request.} 
+
+Thus only an increase in the benefit from `Peace' and an increase in the low type's patience level make it easier to achieve `Peace' when gifts have future material value. Increases in all other parameters make it harder to achieve `Peace.'
  
 \subsection{Material Value of Concession can be Destroyed}
 \label{sec:matval}
@@ -584,8 +592,9 @@ Substituting into Expression~\ref{eq:matval1} and simplifying a bit, we have
 %	g^1 - pD \geq p\left(T + Tg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
 %\end{equation*}
 \begin{equation*}
-	\left(1-\de_l\right)g^1\left(1 - pT \right) \geq \left(1-\de_l\right)p\left(D +	 T\right) - (1-p) Dg^1
+	\left(1-\de_l\right)g^1\left(1 - pT \right) + (1-p) Dg^1\geq \left(1-\de_l\right)p\left(D +	 T\right)
 \end{equation*}
+We have assumed that $\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D > 0$ so we can divide to get
 %\begin{equation*}
 %	\left(1-\de_l\right)g^1\left(1 - pT \right) + (1-p) Dg^1 \geq \left(1-\de_l\right)p\left(D +	 T\right)
 %\end{equation*}
