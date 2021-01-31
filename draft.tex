@@ -57,7 +57,7 @@ When two parties are engaged in conflict and each distrusts the other's ability 
 
 In the course of a military conflict, settlement negotiations often occur simultaneously with continued fighting. If settlement can be achieved, lives are saved and destruction averted. Third-party mediators often participate in such negotiations, but the literature remains divided regarding how and under what conditions mediation can be effective (CHAIN CITE).  This paper sheds new light on the productive role mediators can play by examining their effect on the efficiency of the concessions that combatants can offer. In our context, the efficiency of a concession is determined by how much of the material value of the concession is intact when the recipient receives it. If the party who gives the concession destroys any of its material value, the concession is deemed to be less than fully efficient.
 
-We introduce a two-sided signaling model in which concessions can provide future value to the recipient and/or serve as a signal that provides the recipient with information about the type of player the conceding state is. Using a mechanism design framework, we demonstrate that a mediator can facilitate more efficient concessions by removing uncertainty about the ability of the parties to commit to peace. 
+We introduce a two-sided signaling model in which concessions can provide future value to the recipient and/or serve as a signal that provides the recipient with information about the type of player the conceding state is. Using a mechanism design framework, we demonstrate that a mediator can facilitate more efficient concessions by removing uncertainty about the ability of the parties to commit to peace. Perhaps more importantly, the mediator can also sometimes facilitate peace when the negotiating parties cannot achieve it through bilateral interaction.
 
 Two archetypal situations demonstrate the significance and difficulty of efficient concession-making in war settlement.  The first is the case of disarmament and the second is the concession of control over strategically valuable territory.
 
@@ -283,15 +283,16 @@ Because $\al_i$ enters into the payoffs in a linear fashion, the choice that max
 
 \begin{corollary}
 	Assume that high types are not patient enough to separate without concessions but that they can separate using concessions when gifts have no material value. If negotiating parties use concessions with future material value that the low-type country can use to reduce the future payoffs of its negotiating partner instead of concessions with no future material value, there are parameters under which the future material value of gifts destroys negotiating partners' ability to separate through concessions, i.e. peace cannot be achieved when there are two high types.
-	\label{theorem:matval}
+	\label{corollary:matval}
 \end{corollary}
 
-\emph{Proof}: An example suffices as proof. Let $T = 10$, $W=8$ and $D = 5$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{8}{10+5} = .5\overline{3}$. Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. By Theorems~\ref{theorem:1} and ~\ref{theorem:2}, both the \emph{no concessions separating equilibrium} and the \emph{concessions separating equilibrium} are possible when gifts have no material value.separation through concessions is possible.
+\emph{Proof}: An example suffices as proof. Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{1}{1+1} = .5$. Let $\de_h = 0.7$ and $\de_l = .3$ and $p = .9$.
 
-The patience threshold to separate through concessions with efficient gifts () is 
-is much higher under these parameters when the concessions carry future material value. The minimum patience level required for separation is $\de_h^1 = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = 2.4$, with a minimum separating concession of $g^1 = \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = .\overline{63}$. Since discount factors can be no larger than 1, we have shown that under this set of parameters, the concessions separating equilibrium when concessions have material value cannot be sustained.
+By Theorems~\ref{theorem:1} and ~\ref{theorem:2}, both the \emph{no concessions separating equilibrium} and the \emph{concessions separating equilibrium} are possible when gifts have no material value.
 
-$\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5\overline{3},1)$.\footnote{Recall that we restrict $p<1$ since there is no imperfect information when only one type is possible.} For this range of $\de_h$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value destroys the opportunity for peace. \hfill $\blacksquare$ 
+The patience threshold to separate through concessions with efficient gifts is much higher under these parameters when the concessions carry future material value: by Theorem~\ref{theorem:csemv}(a), this threshold is $0.979$. Thus the \emph{concessions separating equilibrium with efficient gifts} is \emph{not} possible. 
+
+$\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5,.979)$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value destroys the opportunity for peace. \hfill $\blacksquare$ 
  
 \subsection{Material Value of Concession can be Destroyed}
 \label{sec:matval}
@@ -782,13 +783,11 @@ If $Te < (1-\de_h)(1-e)$, this is a negative lower bound on the size of the conc
 \emph{Proof of Theorem~\ref{theorem:medwel}:}\\
 An example suffices to prove each part.
 	\begin{enumerate}
-		\item[(a)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = 0.7$ and $\de_l = .3$ and $p = .9$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
+		\item[(a)] Examine the parameterization in Corollary~\ref{corollary:matval}. $\de_h = 0.7$ and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is the same as when there is no material value, i.e. 0.5. By Corollary~\ref{corollary:matval}, the \emph{concessions separating equilibrium with inefficient gifts} is possible. Corollary~\ref{corollary:matval} also showed that the \emph{concessions separating equilibrium with efficient gifts} is not possible because the relevant patience threshold of $0.979$ is too high. 
 
-By Theorem~\ref{theorem:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.979$ so that the \emph{concessions separating equilibrium with efficient gifts} is not possible while the \emph{concessions separating equilibrium with inefficient gifts} is possible. 
+Using the mediation mechanism $M$ with $e=0.29$ and $g=12.98$, we satisfy both the low type constraint that $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=9.5890411$ and the high type constraint $g\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=12.987013$. Welfare is 5.0768, compared to 2.82 in the \emph{concessions separating equilibrium with inefficient gifts}.
 
-Using the mediation mechanism $M$ with $e=0.29$ and $g=12.99$, we satisfy both the low type constraint the $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=9.5890411$ and the high type constraint $g\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=12.987013$. Welfare is 5.0784, compared to 2.82 in the \emph{concessions separating equilibrium with inefficient gifts}.
-
-		\item[(b)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = \frac{13}{16}=0.9375$ and $\de_l = .5$ and $p = .5$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
+		\item[(b)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = \frac{15}{16}=0.9375$ and $\de_l = .5$ and $p = .5$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
 By Theorem~\ref{theorem:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.75$. Using Lemma~\ref{lemma:e-patient}, we see that both the \emph{concessions separating equilibrium with efficient gifts} and the \emph{concessions separating equilibrium with inefficient gifts} are possible. 
 
