@@ -377,7 +377,7 @@ In Sections~\ref{sec:bench} and \ref{sec:IC}, the same concession must be sent t
 \end{lemma}
 \emph{Proof}: See Appendix.
 
-In order to make the mechanism incentive compatible for the low types, some value of the concessions must be destroyed, i.e. $e<1$. The constraint that determines how efficient concessions can be comes from the low type incentive compatibility constraint. As in the concessions separating equilibria, this shows up in the optimal concession size.
+In order to make the mechanism incentive compatible for the low types, some value of the concessions must be destroyed, i.e. $e<1$. The low type incentive compatibility constraint determines a lower bound on the size of the concession specified by the mechanism; this puts an upper bound on how efficient concessions can be. In some cases, the high type incentive constraint also provides an upper bound on the size of the concession, which puts a lower bound on efficiency.
 
 \begin{theorem}
 \emph{Mediation}
@@ -448,13 +448,11 @@ This paper shows that inefficient concessions may be used to achieve peace when 
 \end{lemma}
 \emph{Proof}: As $D\geq0$ and $W\geq0$ the dominant stage game action for all types is to play Fight. Thus the stage game equilibrium is (Fight, Fight) and in any repeated game, playing the stage game equilibrium in each period is an equilibrium of the entire game. \hfill $\blacksquare$\\
 
-\begin{comment}
-\begin{lemma}
-	From period 1 on, playing fight in all periods is the only sequentially rational strategy for low types regardless of their beliefs of the other country's type and strategy.
-	\label{lemma:2}
-\end{lemma}
-\emph{Proof}: Because $W\geq0$, the dominant stage game action for all types is to play Fight. Playing Trust is only possible in equilibrium where there is punishment for playing Fight. The minimax payoff is $W-D$, and punishing a country by playing it every period is the worst possible punishment, hence it gives the greatest potential for a country to be given incentives to play Trust. Low types, with $\delta_l < \delta^{gt}$ achieve a higher payoff from being punished than they do from cooperation, so they cannot be given incentives to play anything except Fight. \hfill $\blacksquare$\\
-\end{comment}
+%\begin{lemma}
+%	From period 1 on, playing fight in all periods is the only sequentially rational strategy for low types regardless of their beliefs of the other country's type and strategy.
+%	\label{lemma:2}
+%\end{lemma}
+%\emph{Proof}: Because $W\geq0$, the dominant stage game action for all types is to play Fight. Playing Trust is only possible in equilibrium where there is punishment for playing Fight. The minimax payoff is $W-D$, and punishing a country by playing it every period is the worst possible punishment, hence it gives the greatest potential for a country to be given incentives to play Trust. Low types, with $\delta_l < \delta^{gt}$ achieve a higher payoff from being punished than they do from cooperation, so they cannot be given incentives to play anything except Fight. \hfill $\blacksquare$\\
 
 That is, one high type equilibrium strategy is to pool with the low types---who always play ``Fight'' by definition---and always play Fight. If both the low and high type of player $j$ choose the strategy that gives no concessions and always plays fight, then either type of player $i$ is made strictly better off by playing Fight in each period given player $j$'s behavior. Given that the stage-game equilibrium will be (Fight,Fight), there is no incentive to give a concession in period 0 because concessions are costly and signaling one's type can give no benefit in this equilibrium. Types pool by never giving concessions and always playing Fight. 
  %add intro about the 3 types of equilibria. 
@@ -467,27 +465,27 @@ That is, one high type equilibrium strategy is to pool with the low types---who 
  \noindent{\emph{Proof of Theorem \ref{theorem:1}}:\\
 Playing Trust in the first period and thereafter as long as Trust has always been played will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from playing Fight in the first period and then every period thereafter by the one-shot deviation principle. If both countries play Trust in a period, a ``Peace'' equilibrium takes place and both countries continue to play Trust in every period with the grim trigger threat of the ``War'' equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods. A country plays Trust if and only if the following condition is satisfied:
 \begin{equation*}
-  p\left(\frac{T}{1- \delta_i}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_i} \right)\geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)\frac{W-D}{1- \delta_h}
+  p\left(\frac{T}{1- \delta}\right) +(1-p)\left({-D}+\frac{\delta(W-D)}{1- \delta} \right)\geq p \left(T + W + \frac{\de}{1-\de}(W-D)\right) +(1-p)\frac{W-D}{1- \delta}
 \end{equation*}
 Simplifying, we have
 %\be
 %  p\left(\frac{T}{1- \delta_h}\right) \geq p \left(T + W + \frac{\de_h}{1-\de_h}(W-D)\right) +(1-p)W
 %\ee
 \begin{equation*}
-  pT \geq p \left((1-\de_h)(T + W) + \de_h (W-D)\right) + (1-\de_h)(1-p)W
+  pT \geq p \left((1-\de)(T + W) + \de (W-D)\right) + (1-\de)(1-p)W
 \end{equation*}
 \begin{equation*}
-  pT \geq pT -p\de_hT +pW -p\de_h W + p \de_h W -p \de_h D  + W -\de_h W -pW + p\de_hW
+  pT \geq pT -p\de T +pW -p\de W + p \de W -p \de D  + W -\de W -pW + p\de W
 \end{equation*}
 \begin{equation*}
-  p\de_hT +p \de_h D + \de_h W - p\de_hW  \geq W 
+  p\de T +p \de D + \de W - p\de W  \geq W 
 \end{equation*}
 \be
-	\delta_h \geq \frac{W}{(1-p)W + p(T+D)}
+	\delta \geq \frac{W}{(1-p)W + p(T+D)} = \de^{nc}
 	\label{eq:ncse}
 \ee
 
-If the potential advantages of ``Peace'' are large enough to outweigh the risks of encountering a low type in expected utility terms, that is $\de_h \geq \frac{W}{(1-p)W + p(T+D)} = \de_h^{nc}$, a county has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de_h^{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$
+If the potential advantages of ``Peace'' are large enough to outweigh the risks of encountering a low type in expected utility terms, that is $\de_h \geq \de^{nc}$, a county has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de_{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$
 %\noindent{\emph{Proof of Corollary \ref{corollary:1}}:\\
 %High-type welfare under the no-concessions separating equilibrium is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D) \right\} = \frac{1}{1-\de_h}\left\{pT + (1-p)\left[W-D + \de_h(W-D)\right]\right\}$$
 %High-type welfare under the grim trigger repeated game equilibrium is $\frac{1}{1-\de_h}\left\{pT + (1-p)\left[-D + \de_h(W-D) \right]\right\}$
@@ -545,7 +543,7 @@ pX_{TT}^h-pX_{FF}^h - p(X_{FT}^l-X_{FF}^l) \geq 0
 In terms of fundamentals, the condition for a concessions separating equilibrium to exist is:
 \be
 %p_1(\frac{T+D-W}{1-\delta_h}-p_2(T+D)\geq 0. point is the p's arent the same; i might have gotten them backwards. simplified this is:
-\delta_h \geq \frac{W}{T+D}
+\delta_h \geq \frac{W}{T+D} = \de^c
 \ee
 That is, there is no parameter restriction beyond our definition of what it means for a player to be a high type. \hfill $\blacksquare$\\
 \\
@@ -555,9 +553,9 @@ $$T+D>W.$$
 We can multiply both sides by $(1-p)>0$ and then subtract $p(T+D)$ from both sides to get
 $$(T+D) > (1-p)W +p(T+D).$$
 Since $0<p<1$ and W,T, and D are all positive, both sides of the inequality are positive and so we can divide through by both and multiply both sides by $W$:
-$$\de_h^{nc} = \frac{W}{(1-p)W +p(T+D)} > \frac{W}{T+D} = \de_h^{c} $$
+$$\de^{nc} = \frac{W}{(1-p)W +p(T+D)} > \frac{W}{T+D} = \de^{c} $$
 
-In the case that both types of equilibria exist, i.e. $\de_h \geq \de_h^{nc}$, the high types will prefer the \emph{concessions separating equilibrium} if and only if
+In the case that both types of equilibria exist, i.e. $\de_h \geq \de^{nc}$, the high types will prefer the \emph{concessions separating equilibrium} if and only if
 \begin{equation*}
 p\left(\frac{T}{1- \delta_h}\right)+(1-p)\left(\frac{W-D}{1- \delta_h}\right) - (1-p)g_h \geq p\left(\frac{T}{1- \delta_h}\right) +(1-p)\left({-D}+\frac{\delta_h(W-D)}{1- \delta_h} \right)
 \end{equation*}
@@ -571,39 +569,39 @@ i.e. The high types prefer the \emph{concessions separating equilibrium} when $p
 
 \subsection{Concessions with Material Value}
 \emph{Proof of Theorem \ref{theorem:csemv}:}\\
-In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g^1$ is a low type gift. In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is: 
+In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g_h$ is a low type gift. In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is: 
 \begin{equation}
-	pg^1 +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g^1+pg^1
+	pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h
 	\label{eq:matval1}
 \end{equation}
-The $\al_i$'s vary depending on the situation. On the left side, the low type does not give a concession but receives a concession if facing a high type ($pg^1$). Then (Fight, Fight) is played, and the payoffs depend on whether this low type is facing a high type or a low type because the implications for future material value are different. With probability $p$, the low type received a gift and invested in the military. With probability $(1-p)$ there were no concessions given by either side. The left side of Expression~\ref{eq:matval1} is then $pg^1 + \frac{1}{1-\de_l}\left[p(W+Wg^1-D) + (1-p)(W-D) \right]$.
+The $\al_i$'s vary depending on the situation. On the left side, the low type does not give a concession but receives a concession if facing a high type ($pg_h$). Then (Fight, Fight) is played, and the payoffs depend on whether this low type is facing a high type or a low type because the implications for future material value are different. With probability $p$, the low type received a gift and invested in the military. With probability $(1-p)$ there were no concessions given by either side. The left side of Expression~\ref{eq:matval1} is then $pg_h + \frac{1}{1-\de_l}\left[p(W+Wg_h-D) + (1-p)(W-D) \right]$.
 
-On the left side, the low type is giving a gift and also receiving a gift from the high type with probability $p$. With probability $p$, this low type faces a high type who invests the gift in civil society. With probability $(1-p)$, the low type's gift goes to another low type who invests in the military and low type does not receive a gift. So the right hand side of Expression~\ref{eq:matval1} becomes $-g^1 + pg^1 + p\left(T + Tg^1 +W + Wg^1 + \frac{\de_l}{1-\de_l}\left(W + Wg^1-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg^1 \right) \right)$.
+On the left side, the low type is giving a gift and also receiving a gift from the high type with probability $p$. With probability $p$, this low type faces a high type who invests the gift in civil society. With probability $(1-p)$, the low type's gift goes to another low type who invests in the military and low type does not receive a gift. So the right hand side of Expression~\ref{eq:matval1} becomes $-g_h + pg_h + p\left(T + Tg_h +W + Wg_h + \frac{\de_l}{1-\de_l}\left(W + Wg_h-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg_h \right) \right)$.
 
 Substituting into Expression~\ref{eq:matval1} and simplifying a bit, we have
 %\begin{multline*}
-%	pg_1 + \frac{1}{1-\de_l}\left[p(W+Wg^1-D) + (1-p)(W-D) \right] \geq \\
-%-g_1 + pg_1 + p\left(T + Tg^1 +W + Wg^1 + \frac{\de_l}{1-\de_l}\left(W + Wg^1-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg^1 \right) \right)
+%	pg_1 + \frac{1}{1-\de_l}\left[p(W+Wg_h-D) + (1-p)(W-D) \right] \geq \\
+%-g_1 + pg_1 + p\left(T + Tg_h +W + Wg_h + \frac{\de_l}{1-\de_l}\left(W + Wg_h-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg_h \right) \right)
 %\end{multline*}
 \begin{equation*}
-	g^1 + p(W+Wg^1-D) \geq p\left(T + Tg^1 +W + Wg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
+	g_h + p(W+Wg_h-D) \geq p\left(T + Tg_h +W + Wg_h \right) + (1-p)\left( \frac{-Dg_h}{1-\de_l}  \right)
 \end{equation*}
 %\begin{equation*}
-%	g^1 - pD \geq p\left(T + Tg^1 \right) + (1-p)\left( \frac{-Dg^1}{1-\de_l}  \right)
+%	g_h - pD \geq p\left(T + Tg_h \right) + (1-p)\left( \frac{-Dg_h}{1-\de_l}  \right)
 %\end{equation*}
 \begin{equation*}
-	\left(1-\de_l\right)g^1\left(1 - pT \right) + (1-p) Dg^1\geq \left(1-\de_l\right)p\left(D +	 T\right)
+	\left(1-\de_l\right)g_h\left(1 - pT \right) + (1-p) Dg_h\geq \left(1-\de_l\right)p\left(D +	 T\right)
 \end{equation*}
 We have assumed that $\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D > 0$ so we can divide to get
 %\begin{equation*}
-%	\left(1-\de_l\right)g^1\left(1 - pT \right) + (1-p) Dg^1 \geq \left(1-\de_l\right)p\left(D +	 T\right)
+%	\left(1-\de_l\right)g_h\left(1 - pT \right) + (1-p) Dg_h \geq \left(1-\de_l\right)p\left(D +	 T\right)
 %\end{equation*}
 \begin{equation}
-	g^1 \geq \frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D} = g_h^1
+	g_h \geq \frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D} = g^1
 	\label{eq:matval2}
 \end{equation}
 
-This implies that the high types need give a gift at least as large as $g_h^1$ in order to separate from the low type; that is, if the high types give a gift smaller than $g_h^1$, the low types will have an incentive to mimic the high type and the separating equilibrium will be destroyed.
+This implies that the high types need give a gift at least as large as $g^1$ in order to separate from the low type; that is, if the high types give a gift smaller than $g^1$, the low types will have an incentive to mimic the high type and the separating equilibrium will be destroyed.
 
 High type separating equilibrium utility is $U_h= pX_{TT}+(1-p)X_{FF} - g_h+pg_h$. Since utility is decreasing in $g_h$, it is optimal for high types to make $g_h$ as small as possible and still have separation. This occurs when Expression~\ref{eq:matval2} holds with equality. That is, the optimal high type gift in this equilibrium is $g^1 \geq \frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$.\footnote {While not formally addressed in this paper, inference about sizes of concessions when parties are of unequal force can be made. Note that the constraints determining the requisite size of the separating gift depend on the low types' ability to gather war spoils. Thus, a more powerful country would be more able to plunder, and hence has to make a greater concession to convincingly convey its type as being high. }
 
@@ -632,9 +630,9 @@ That is, there is no parameter restriction beyond our definition of what it mean
 \emph{Proof of Lemma~\ref{lemma:efficiency}:}\\
 %The benefit of a gift appears on both sides of the incentive compatibility constraint for both types and thus cancels out in the low type incentive compatibility constraint $(peg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+peg_h )$ and in the high type incentive compatibility constraint: $(pX_{TT}^h+(1-p)X_{FF}^h - g_h +peg_h \geq X_{FF}^h +peg_h)$. Therefore, receiving a gift where $e<1$  does not affect incentives to truth tell about the countries' types.
 The expected separation utility for the high type under the game with material value that can be destroyed is
-$$\frac{1}{1-\de_h}\left\{pT(1+eg^1) + (1-p)(W-D(1+eg^1))\right\} - (1-p)g^1$$
+$$\frac{1}{1-\de_h}\left\{pT(1+eg_h) + (1-p)(W-D(1+eg_h))\right\} - (1-p)g_h$$
 The derivative with respect to $e$ is
-$$\frac{1}{1-\de_h}\left\{pTg^1 - (1-p)Dg^1)\right\}$$
+$$\frac{1}{1-\de_h}\left\{pTg_h - (1-p)Dg_h)\right\}$$
 This is non-negative when $pT \geq (1-p)D$. High type welfare is thus non-decreasing in $e$ when this condition is met.  The largest admissible value of $e$, i.e. $e=1$ thus maximizes welfare when $pT \geq (1-p)D$.\footnote{If $pT = (1-p)D$, $e=1$ is not the unique maximizer, but it is still a maximizer.} \hfill $\blacksquare$\\
 %\footnote{This result does not depend on the benefit so it holds for any monotonic benefit function. It also holds for any monotone cost function.} 
 \\
@@ -757,54 +755,54 @@ Gathering the terms involving $g_h$ on the left hand side:
 \[
 	g_h\left[p\left(1 - e\right) -(1-\de_l)eT -eW \right] \geq \left(T - \de_l T \right) + \left(1 - \de_l \right) D
 \]
-The right hand side is positive. If the left hand side were negative, we would have a negative upper bound on the size of the gift. Given the requirement that the gift be non-negative, the low type's incentive constraint cannot be satisfied  in this case. Therefore we must assume that $p > e\left(p+\left(1-\de_l\right)T + W\right)$. Using this to isolate $g_h$ on the left hand side and gathering terms, we have 
+The right hand side is positive. If the left hand side were negative, we would have a negative upper bound on the size of the gift. Given the requirement that the gift be non-negative, the low type's incentive compatibility constraint cannot be satisfied  in this case. Therefore we must assume that $p > e\left(p+\left(1-\de_l\right)T + W\right)$. Using this to isolate $g_h$ on the left hand side and gathering terms, we have 
 \begin{equation}
-	g_h \geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T -W \right)}
+	g_h \geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T -W \right)} 
 	\label{eq:med3}
 \end{equation}
 If Condition~\ref{eq:med3} is met, the mechanism is incentive compatible for the low type.\\
 (b) We now turn to the high type, whose incentive compatibility constraint is
 \begin{equation}
-	pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h
+	pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h 
 	\label{eq:med4}
 \end{equation}
 It is always optimal for the high type to invest in civil society when they truthfully reveal. When a high type misrepresents itself as a low type, the mechanism specifies that gifts are exchanged only when there are two high types. This means that there will be no concessions when a high type lies. This implies that Expression~\ref{eq:med4} is also the individual rationality constraint since outside the mechanism they get the `War' payoff and exchange no concessions.
 
 Thus the constraint for both incentive compatibility and individual rationality is
 \begin{equation*}
-  \frac{p}{1-\de_h}\left(T + Teg \right) - pg +peg+ \frac{1-p}{1-\de_h}\left(W-D\right) \geq \frac{1}{1-\de_h}\left(W-D\right)
+  \frac{p}{1-\de_h}\left(T + Teg_h \right) - pg_h +peg_h+ \frac{1-p}{1-\de_h}\left(W-D\right) \geq \frac{1}{1-\de_h}\left(W-D\right)
 \end{equation*}
 This simplifies to
 \begin{equation*}
-  \frac{1}{1-\de_h}\left(T + Teg \right) - g +eg \geq \frac{1	}{1-\de_h}\left(W-D\right)
+  \frac{1}{1-\de_h}\left(T + Teg_h \right) - g_h +eg_h \geq \frac{1	}{1-\de_h}\left(W-D\right)
 \end{equation*}
 \begin{equation*}
-  T + Teg - (1-\de_h)(1-e)g \geq W-D
+  T + Teg_h - (1-\de_h)(1-e)g_h \geq W-D
 \end{equation*}
 \begin{equation*}
-  T + Teg - (1-\de_h)(1-e)g \geq W-D
+  T + Teg_h - (1-\de_h)(1-e)g_h \geq W-D
 \end{equation*}
 \begin{equation*}
-  T + D - W \geq \left[Te - (1-\de_h)(1-e)\right]g 
+  T + D - W \geq \left[Te - (1-\de_h)(1-e)\right]g_h 
 \end{equation*}
-If $Te < (1-\de_h)(1-e)$, this is a negative lower bound on the size of the concession and thus implies no additional restriction. If $Te = (1-\de_h)(1-e)$, there is again no restriction because $T+D >W$ by assumption. If $Te > (1-\de_h)(1-e)$, the mechanism is both individually rational and incentive compatible for the high type when $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}>g$. \hfill $\blacksquare$\\
+If $Te < (1-\de_h)(1-e)$, this is a negative lower bound on the size of the concession and thus implies no additional restriction. If $Te = (1-\de_h)(1-e)$, there is again no restriction because $T+D >W$ by assumption. If $Te > (1-\de_h)(1-e)$, the mechanism is both individually rational and incentive compatible for the high type when $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}>g_h$. \hfill $\blacksquare$\\
 \\
 \emph{Proof of Theorem~\ref{theorem:medwel}:}\\
 An example suffices to prove each part.
 	\begin{enumerate}
 		\item[(a)] Examine the parameterization in Corollary~\ref{corollary:matval}. $\de_h = 0.7$ and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is the same as when there is no material value, i.e. 0.5. By Corollary~\ref{corollary:matval}, the \emph{concessions separating equilibrium with inefficient gifts} is possible. Corollary~\ref{corollary:matval} also showed that the \emph{concessions separating equilibrium with efficient gifts} is not possible because the relevant patience threshold of $0.979$ is too high. 
 
-Using the mediation mechanism $M$ with $e=0.29$ and $g=12.98$, we satisfy both the low type constraint that $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=9.5890411$ and the high type constraint $g\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=12.987013$. Welfare is 5.0768, compared to 2.82 in the \emph{concessions separating equilibrium with inefficient gifts}.
+Using the mediation mechanism $M$ with $e=0.29$ and $g_h=12.98$, we satisfy both the low type constraint that $g_h\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=9.5890411$ and the high type constraint $g_h\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=12.987013$. Welfare is 5.0768, compared to 2.82 in the \emph{concessions separating equilibrium with inefficient gifts}.
 		\item[(b)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = \frac{15}{16}=0.9375$ and $\de_l = .5$ and $p = .5$. By Theorem~\ref{theorem:2}, separation through concessions is possible.
 
 By Theorem~\ref{theorem:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.75$. Using Lemma~\ref{lemma:e-patient}, we see that both the \emph{concessions separating equilibrium with efficient gifts} and the \emph{concessions separating equilibrium with inefficient gifts} are possible. 
 
-Using the mediation mechanism $M$ with $e=0.18$ and $g=7.7669$, we satisfy both the low type constraint the $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=7.143$ and the high type constraint $g\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=7.7669$. Welfare is 12.82, compared to 7.5 in the \emph{concessions separating equilibrium with inefficient gifts} and 7.67 in the \emph{concessions separating equilibrium with efficient gifts}.
+Using the mediation mechanism $M$ with $e=0.18$ and $g_h=7.7669$, we satisfy both the low type constraint the $g_h\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=7.143$ and the high type constraint $g_h\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=7.7669$. Welfare is 12.82, compared to 7.5 in the \emph{concessions separating equilibrium with inefficient gifts} and 7.67 in the \emph{concessions separating equilibrium with efficient gifts}.
 		\item[(c)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when concessions have no future material value is $\de = \frac{1}{1+1} = 0.5$. Let $\de_h = 0.49$ and $\de_l = 0.25$ and $p = \frac{15}{16} = 0.9375$. 
 
 Because the calculations are the same for the \emph{concessions separating equilibrium} and the \emph{concessions separating equilibrium with inefficient gifts}, we use Theorem~\ref{theorem:2}(a) to find the patience threshold to separate through concessions with inefficient concessions is $0.5$. This combined with Lemma~\ref{lemma:e-patient} shows that neither the \emph{concessions separating equilibrium with efficient gifts} nor the \emph{concessions separating equilibrium with inefficient gifts} is possible. 
 
-Using the mediation mechanism $M$ with $e=0$ and $g=1.6$, we satisfy both the low type constraint $g\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=1.6$ and there is no high type constraint because $0=Te<(1-\de_h)(1-e)=0.0625$. Welfare is approximately 0.24, compared to 0 outside the mechanism.
+Using the mediation mechanism $M$ with $e=0$ and $g_h=1.6$, we satisfy both the low type constraint $g_h\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=1.6$ and there is no high type constraint because $0=Te<(1-\de_h)(1-e)=0.0625$. Welfare is approximately 0.24, compared to 0 outside the mechanism.
 	\end{enumerate}
 	\hfill $\blacksquare$\\
 										
