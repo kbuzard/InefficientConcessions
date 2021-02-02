@@ -704,6 +704,8 @@ Parameterization 7: $We > W0 > W1$, $42.33 > 4.96 > 2.83$. Mediator optimally ch
 
 \section{Would negotiating parties choose intermediate e in CSD?}
 
+The question is this: if $\de^c < \de_h < \de^1$, would the high types ever want to choose an intermediate value of $e$? The idea is that $0<e<1$ could loosen the incentive constraint from the $e=0$ case.\\
+
 High type's IC with potentially interior $e$
 $$pT(1+eg) + (1-p)(W-D(1+eg)) - (1-\de_h)g \geq p(W+Weg-D) + (1-p)(W-D)$$
 $$pT(1+eg) - (1-p)Deg - (1-\de_h)g \geq p(W+Weg-D)$$
@@ -711,7 +713,41 @@ $$\de_h g \geq p(W+Weg-D) - pT(1+eg) + (1-p)Deg + g$$
 $$\de_h \geq \frac{p(W-D-T) + peg (W-T) + (1-p)Deg + g }{g}$$
 $$\de_h \geq \frac{p(W-D-T)}{g} + p e(W-T) + (1-p)eD + 1$$
 
-I need to add calculations for $g$ from my written notes
+Now, what would $g$ need to be?
+Substituting into Expression eq:matval1 from draft.tex and simplifying, we have
+\begin{multline*}
+	peg + \frac{1}{1-\de_l}\left[p(W+Weg-D) + (1-p)(W-D) \right] \geq \\
+-g + peg + p\left(T + Teg +W + Weg + \frac{\de_l}{1-\de_l}\left(W + Weg-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Deg \right) \right)
+\end{multline*}
+\begin{equation*}
+	-\frac{pD}{1-\de_l} \geq -g + p\left(T + Teg +\frac{\de_l}{1-\de_l}\left(-D \right) \right) + \left( \frac{1-p}{1-\de_l}\left(-Deg \right) \right)
+\end{equation*}
+\begin{equation*}
+	(1-\de_l) g-pD \geq p\left((1-\de_l)(T + Teg) -\de_l D \right) + \left( (1-p)\left(-Deg \right) \right)
+\end{equation*}
+\begin{equation*}
+	(1-\de_l) g\geq p(1-\de_l)(T + Teg+D) + \left( (1-p)\left(-Deg \right) \right)
+\end{equation*}
+\begin{equation*}
+	(1-\de_l) g + (1-p)\left(Deg \right)-p(1-\de_l)Teg\geq p(1-\de_l)(T +D) 
+\end{equation*}
+\begin{equation*}
+	g \left[(1-\de_l)(1-pTe) + (1-p)De \right]\geq p(1-\de_l)(T +D) 
+\end{equation*}
+As long as $(1-\de_l)(1-pTe) + (1-p)De>0$, we have
+\begin{equation*}
+	g \geq \frac{p(1-\de_l)(T +D) }{(1-\de_l)(1-pTe) + (1-p)De}
+\end{equation*}
+Compared to the constraint on the gift when $e=1$, when $e<1$, $-pTe$ makes the denominator larger and $De$ makes the denominator smaller. Not clear what the balance will be.
+\begin{itemize}
+	\item If the constraint gets tighter, you have to increase $g$.
+	\item But remember that if the constraint gets looser, you can choose same $g$ if you want.
+\end{itemize}
+It's therefore not clear that we should just stick $g = \frac{p(1-\de_l)(T +D) }{(1-\de_l)(1-pTe) + (1-p)De}$ into the incentive constraint
+\begin{itemize}
+	\item For a particular example, we can wade through this to find the optimal $e$, but it might also involve letting $g$ get larger
+	\item This is something I never considered in the $e=1$ and $e=0$ cases. I don't think it matters in $e=0$ case (check), but it might in $e=1$ case 
+\end{itemize}
 
 \vskip.5in
 \section{Develop result: mediator increases potential for peace}
