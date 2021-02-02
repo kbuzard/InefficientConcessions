@@ -99,6 +99,7 @@ I investigated these for different types of inefficiencies but did not find anyt
 \end{itemize}
 
 \section{No material value CSE vs. repeated game}
+\subsection{Patience threshold}
 Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember that $g^0 = p(T+D)$
 						\[
 						  \frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)g_0 \geq \frac{1}{1-\de_h} (W-D)
@@ -141,6 +142,41 @@ Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember
 											\end{itemize}
 									\end{itemize}
 							\end{itemize}
+							
+\subsection{Welfare}
+Welfare under no material value CSE is always at least as large as welfare under repeated-game grim trigger
+\[
+  p\frac{T}{1-\de_h} + (1-p)\frac{W-D}{1-\de_h} - p(T+D) \geq p\frac{T}{1-\de_h} + (1-p)\frac{-D}{1-\de_h} + (1-p)\frac{\de_h}{1-\de_h}(W-D)
+\]
+\[
+  (1-p)\frac{W-D}{1-\de_h} - p(T+D) \geq (1-p)\frac{-D}{1-\de_h} + (1-p)\frac{\de_h}{1-\de_h}(W-D)
+\]
+\[
+  (1-p)(W-D) - p(1-\de_h)(T+D) \geq -(1-p)D + (1-p)\de_h(W-D)
+\]
+\[
+  (1-p)W - p(1-\de_h)(T+D) \geq (1-p)\de_h(W-D)
+\]
+\[
+  (1-p)W -(1-p)\de_h(W-D)\geq  p(1-\de_h)(T+D) 
+\]
+\[
+  W-pW - \de_hW+\de_hD +p\de_hW-p\de_hD\geq  pT + pD -p\de_hT - p\de_hD 
+\]
+\[
+  W-pW - \de_hW+\de_hD +p\de_hW \geq  pT + pD -p\de_hT 
+\]
+\[
+  W - \de_hW+\de_hD +p\de_hW \geq  pT + pD + pW -p\de_hT 
+\]
+Because $T +D > W$, we have 
+\[
+  W - \de_hW+\de_hD +p\de_hW \geq  pT + pD + pW -p\de_hT > -p\de_hT 
+\]
+\[
+  (1-\de_h)W +\de_hD +p\de_hW + p\de_hT > 0 
+\]
+Each term on the left is strictly larger than 0, so this statement is always true.
 
 \section{Make mediator work}
 November 29, 2020: In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.
