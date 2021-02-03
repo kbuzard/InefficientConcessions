@@ -408,18 +408,12 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 						\label{eq:g2}
 					\end{equation}
 						\begin{itemize}
-							\item THIS ASSUMES {\color{red} $p - e \left( p + T - \de T + W \right)$ IS POSITIVE}
-								\begin{itemize}
-									\item Note that if we set $e=0$, this is a very simple constraint on $g$
-										\begin{equation}
-											g \geq \frac{\left(1 - \de \right) \left( T + D \right)}{p}
-											\label{eq:g3}
-										\end{equation}
-								\end{itemize}
 							\item $T+D$, $1 - \de $ non-negative by assumption $\Rightarrow$ RHS of Expression~\ref{eq:g1} non-negative
 								\begin{itemize}
-									\item If $\left(p - pe - e \left( T - \de T + W \right) \right)$ is negative, the only way the IC constraint in Expression~\ref{eq:g1} can hold is if $g<0$. AGAIN WITH THE NEGATIVE GIFTS.
+									\item If $\left(p - pe - e \left( T - \de T + W \right) \right)$ is negative, the only way the IC constraint in Expression~\ref{eq:g1} can hold is if $g<0$.
+									\item SO WE MUST ASSUME {\color{red} $p - e \left( p + T - \de T + W \right)$ IS POSITIVE}
 								\end{itemize}
+							\item In the complicated environment of the mechanism, I haven't actually shown that the minimum low type IC gift is optimal
 							\item To compare to the optimal gift size in the other sections:
 								\begin{itemize}
 									\item In Section 3 (Concessions Separating Equilibrium): $p\left(T+D\right)$
@@ -466,9 +460,25 @@ I did a lot of work in Mathematica to try to find out when the welfare under the
 		\end{itemize}
 \end{itemize}
 
+\subsubsection{High type incentive constraint}
+\begin{equation}
+	pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h 
+	%\label{eq:med4}
+\end{equation}
+Turns out to be same as high type individual rationality constraint.\\
+
+If a high type lies, there would be at least one low type, and thus no gifts and they would fight forever. So there's no investment choice for high type who lies.
+\begin{itemize}
+	\item This is all in the paper now.
+\end{itemize}
+
+How to choose the optimal $e$ when both the low type and high type IC bind is still done informally in R.
+
 								
-\subsubsection{Welfare under Mediator vs. e=0}
+\subsubsection{Welfare under Mediator vs. CSE with inefficient gifts}
 \label{sec:WM0}
+I tried to derive a necessary condition relating the IC/IR constraints to this welfare comparison but didn't find anything easily. I think I explored this in Mathematica, but I'd need to look more carefully through the Mathematica files.
+
 Here I'll try to derive a general result for when the welfare under a mediator would be higher than under $e=0$ separating with concessions equilibrium. \\
 
 When $0<e<1$ under a mediator, the optimal $g_M$ is the one that chooses the highest welfare from a menu of $(e,g)$ pairs:
@@ -565,6 +575,9 @@ It turns out that there aren't really separate conditions. If the welfare under 
 										\]
 										\begin{itemize}
 											\item This is a sufficient condition, not necessary. It only looks at the direct impact of the gift; there is another positive term that this ignores
+												\begin{itemize}
+													\item This makes welfare increasing in the gift, holding everything else constant, WHEN GIFT IS SET TO BE MINIMUM LOW-TYPE GIFT. I haven't show that's the optimal thing to do.
+												\end{itemize}
 											\item The welfare impact of the future value $(epT)$, summed over the whole future $\left(\frac{e p T}{1-h}g^M\right)$ has to be greater than the cost of giving the gift ($g^M$). 
 										\end{itemize}
 								\end{itemize}

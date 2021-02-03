@@ -640,9 +640,9 @@ It follows directly that $W > \de_l(T+D)$. Since $\de_l < 1$, it is also true th
 \end{equation}
 We will invoke Expression~\ref{eq:cont2} below. First we go back to Expression~\ref{eq:cont}, simplifying and creating a common denominator for $\de^1$, we have
 \begin{multline*}
-	\frac{W}{T+D} \geq \frac{(W-D-T)\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]}{\left(1-\de_l\right)\left(D +	 T\right)}
-	+ \frac{\left[p(W-T) + (1-p)D + 1\right]\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)} \\
-	= \frac{(W-(D+T))\left(1-\de_l\right) - (W-(D+T))\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
+	\frac{W}{T+D} \geq %\frac{(W-D-T)\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]}{\left(1-\de_l\right)\left(D +	 T\right)}
+	%+ \frac{\left[p(W-T) + (1-p)D + 1\right]\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)} = \\
+	\frac{(W-(D+T))\left(1-\de_l\right) - (W-(D+T))\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
 	+ \frac{p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right) + \left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
 \end{multline*}
 Subtract $\frac{W}{T+D}$ from both sides to get
@@ -650,12 +650,12 @@ Subtract $\frac{W}{T+D}$ from both sides to get
 	0 \geq \frac{-W(1-\de_l) + W\left(1-\de_l\right)-(D+T)\left(1-\de_l\right) - (W-(D+T))\left(1-\de_l\right)pT}{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
 	+ \frac{(W-(D+T))(1-p) D + p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right) + \left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
 \end{multline*}
-Canceling the first two terms as well as the third and last terms, we have
-\begin{multline*}
-	0 \geq \frac{- (W-(D+T))\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
-	+ \frac{p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
-\end{multline*}
-Expanding and canceling out the terms with $pT$ as well as $(1-p)D\left(D +	 T\right)$, we have
+Canceling the first two terms as well as the third and last terms and then 
+%\begin{multline*}
+%	0 \geq \frac{- (W-(D+T))\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
+%	+ \frac{p(W-T)\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 %T\right)}
+%\end{multline*}
+expanding and canceling out the terms with $pT$ as well as $(1-p)D\left(D +	 T\right)$, we have
 %\begin{multline*}
 %	0 \geq \frac{-W\left(1-\de_l\right)pT +(W-(D+T))(1-p) D }{\left(1-\de_l\right)\left(D +	 T\right)} \\ 
 %	+ \frac{pW\left(1-\de_l\right)\left(D +	 T\right) + (1-p)D\left(1-\de_l\right)\left(D +	 T\right)}{\left(1-\de_l\right)\left(D +	 T\right)}
