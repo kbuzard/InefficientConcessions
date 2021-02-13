@@ -487,28 +487,9 @@ $$\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_
 When $e=0$, welfare is $$\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
 \textbf{THE ABOVE EQUATION IS wrong. We should subtract off $(1-p)g^0$ since $p$ of the time you receive a gift} \\
 
-We compare them to find when the welfare under the mediator is larger:
-	\begin{multline*}
-		\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq \\
-		\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$$
-	\end{multline*}							
-Eliminating common terms:
-	\begin{equation*}
-		\frac{1}{1-\de_h}\left\{pTeg_M \right\} - \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq - p(T+D)
-	\end{equation*}	
-Rearranging:
-	\begin{equation*}
-		\frac{1}{1-\de_h}\left\{pTe - 1 \right\} \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} \geq - p(T+D)
-	\end{equation*}	
-
-Rearranging:
-\begin{equation*}
-		\frac{pTeg_M}{1-\de_h} \geq \frac{\left(1 - \de_l \right) \left( T + D \right)}{p - e \left( p + T - \de_l T + W \right)} - p(T+D)
-	\end{equation*}	
-This is what I implement in Mathematica Notebook ``We greater than W0.nb''
+Ultimately I gave up on this because Mathematica couldn't solve the expressions with welfare under the mediator -- I believe this is because of the asymptote.
 \begin{itemize}
-	\item So far, I've been able to find an instance that satisfies this equation: e = 11/64, $\de_h = 15/16$, $\de_l = 0.5$, $p = 0.5$, T = 1, W = 1, D = 1
-	\item This is ``Parameterization 6'' above and in R file ``e-g calculations.R''
+	\item Instead, I looked for a sufficient condition to make welfare increase to the left of the asymptote (i.e. when the gift is positive).
 \end{itemize}
 			
 \subsubsection{Welfare under Mediator vs. e=1}
