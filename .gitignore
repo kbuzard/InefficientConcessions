@@ -1,3 +1,6 @@
+## Mathematica notebooks
+*.nb
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

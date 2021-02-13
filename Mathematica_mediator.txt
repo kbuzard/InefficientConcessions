@@ -1,20 +1,8 @@
-Note that I save this file from C:\Users\krist\Documents\Wolfram Mathematica\We greater than W0.nb as .txt in C:\Users\krist\Github\InefficientConcessions to put it under version control
-Full version of the welfare inequality that says welfare under the mediator is better than welfare under an e=0 concessions separating equilibrium (with material value, of course)
+Note that I put this file in the Github repo (adjusting .gitignore so it isn't tracked) and save it as a .txt in order to track it.
+WM>W0: Inequality that says welfare under the mediator is better than welfare under an e=0 cse with material value
 Max gift under e<1 is often infinite in R; I avoid it with code in R. Here, I add p-f (p+T-l T+W)>0 to avoid it
 FindInstance[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(1-p)*(W-D))/(1-h)>=(p*T+(1-p)*(W-D))/(1-h)-p (T+D )&& p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D},NonNegativeReals]
 Out[20]= {{f->11/64,h->15/16,l->1/2,p->1/2,T->1,W->1,D->1}}
-This just checks the simpler version of the inequality where I eliminated like terms from both sides by hand
-FindInstance[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))>=-p (T+D )&& p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D},NonNegativeReals]
-Out[25]= {{f->11/64,h->15/16,l->1/2,p->1/2,T->1,W->1,D->1}}
-Verify that restriction on denominator of g_M holds
-In[16]:= p-f (p+T-l T+W)/. {{f->11/64,h->15/16,l->1/2,p->1/2,T->1,W->1,D->1}}
-Out[16]= {5/32}
-Now try using FullSimplify--not as a wrapper for Reduce--but on its own
-In[36]:= FullSimplify[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))>=-p (T+D ), p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&0<=f<=1&&W>0&&D+T>W]
-Out[36]= p+((-1+l) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=h p
-Notice that D is eliminated in the FullSimplify expression. So all restrictions involving D have to be removed (including T>W-D). I also needed to add the non-negativity constraint on gM back in.
-In[37]:= Reduce[p>=((-1+l) (-1+h+f p T))/((-1+h) ((-1+f) p+f (T-l T+W)))&& p>f (p+T-l T+W)&& 0<p<1&&0<l<h<1&&0<=f<=1&&T>0&&W>0,{f,h,l,p,T,W}]
-Out[37]= (f==0&&0<h<1&&0<l<h&&Sqrt[1-l]<=p<1&&T>0&&W>0)||(0<f<1&&((1-Sqrt[1-f]<h<f&&(-f+h)/(-1+h)<l<h&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(h==f&&0<l<h&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(f<h<1&&((0<l<=f&&Sqrt[(-1+h+l-h l)/(-1+f)]<p<1&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(f<l<h&&((Sqrt[(-1+h+l-h l)/(-1+f)]<p<Sqrt[(-1+l)/(-1+f)]&&(((-1+h+l-h l+p^2-f p^2-h p^2+f h p^2)/(-f h p+f h l p)<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))||(Sqrt[(-1+l)/(-1+f)]<=p<1&&((0<T<(1-h)/(f p)&&0<W<=(1-h-l+h l-p^2+f p^2+h p^2-f h p^2-f h p T+f h l p T)/(-f p+f h p))||((1-h)/(f p)<=T<(-p+f p)/(-f+f l)&&0<W<(p-f p-f T+f l T)/f)))))))))
 Can I get conditions that make WM > 0? How about at f=0?
 In[1]:= FindInstance[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(1-p)*(W-D))/(1-h)>=0&& p>f (p+T-l T+W) &&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D},NonNegativeReals]
 Out[1]= {{f->0,h->3/4,l->1/2,p->1/2,T->1,W->1,D->1}}
@@ -22,10 +10,7 @@ In[3]:= FullSimplify[(((f p T)/(1-h))-1)* (T+D)*(-l+1)/(p-f (p+T-l T+W))+ (p*T+(
 Out[3]= D p+p T+W+((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=D+p W
 In[5]:= Reduce[D p+p T+W+((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W))>=D+p W&& p>f (p+T-l T+W)&& 0<p<1&&0<l<h<1&&0<=f<=1&&T>0&&W>0&&D+T>W,{f,h,l,p,T,W,D}]
 Out[5]= $Aborted
-How about at f=0?
-In[11]:= Reduce[D p+p T+W+((-1+l) (D+T) (-1+h))/((-1) p)>=D+p W&&  0<p<1&&0<l<h<1&&T>0&&D>0&&W>0&&D+T>W,{D,h,l,p,T,W}]
-Out[11]= D>0&&0<h<1&&0<l<h&&((1-h-l+h l<p<=Sqrt[1-h-l+h l]&&T>(-D+D h+D l-D h l)/(1-h-l+h l-p)&&(-D+D h+D l-D h l-D p+D p^2-T+h T+l T-h l T+p^2 T)/(-p+p^2)<=W<D+T)||(Sqrt[1-h-l+h l]<p<1&&(((-D+D h+D l-D h l)/(1-h-l+h l-p)<T<(-D+D h+D l-D h l-D p+D p^2)/(1-h-l+h l-p^2)&&(-D+D h+D l-D h l-D p+D p^2-T+h T+l T-h l T+p^2 T)/(-p+p^2)<=W<D+T)||(T==(-D+D h+D l-D h l-D p+D p^2)/(1-h-l+h l-p^2)&&(-D+D h+D l-D h l-D p+D p^2-T+h T+l T-h l T+p^2 T)/(-p+p^2)<W<D+T)||(T>(-D+D h+D l-D h l-D p+D p^2)/(1-h-l+h l-p^2)&&0<W<D+T))))
-This solves, but is overly complicated
+This will solve if I set f=0, but output is overly complicated
 When does WM increase in "f" to the left of the asymptote (i.e. p>f (p+T-l T+W))
 In[12]:= D[D p+p T+W+((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W))-D-p W,f]
 Out[12]= -(((-1+l) (D+T) (-1+h+f p T) (p+T-l T+W))/((-1+f) p+f (T-l T+W))^2)+((-1+l) p T (D+T))/((-1+f) p+f (T-l T+W))
@@ -35,3 +20,175 @@ If -1+(f p T)/(1-h)>0, it's increasing for sure
 (f p T)/(1-h)>1
 f p T>1 - h
 What this means (and it's a sufficient condition; it's not necessary because of the second additive term) is that the welfare impact of the future value impact (fpT), summed over the whole future  ((f p T)/(1-h)g^M) has to be greater than the cost of giving the gift (g^M). 
+This just shows that all the terms outside the fraction don't matter since they don't involve "f"
+In[1]:= D[((-1+l) (D+T) (-1+h+f p T))/((-1+f) p+f (T-l T+W)),f]
+Out[1]= -(((-1+l) (D+T) (-1+h+f p T) (p+T-l T+W))/((-1+f) p+f (T-l T+W))^2)+((-1+l) p T (D+T))/((-1+f) p+f (T-l T+W))
+WM > W1 inequality
+Variable definitions: "f" (for efficiency) since "e" is reserved. "h" is $\delta_h$, "l" for $\delta_l$
+Need restriction on range of "f"
+In[27]:= FindInstance[(-1 + h + f*p*T)/(p - f*(p + T - l*T +W)) >= p*((p*T - D + p*D - 1 + h)/((1 - l)*(1 - p*T) + (1 - p)*D)) && D > 0 && 0 < p < 1 && T > 0 && 0 < l < h <1 && f <= 1 && W > 0 && T > - D + W, {h, T, D, p, f, l, W},NonNegativeReals]
+Out[27]= {{h->61/64,T->1/2,D->1,p->1/2,f->0,l->1/2,W->1}}
+In[28]:= Reduce[(-1 + h + f*p*T)/(p - f*(p + T - l*T +W)) >= p*((p*T - D + p*D - 1 + h)/((1 - l)*(1 - p*T) + (1 - p)*D)) && D > 0 && 0 < p < 1 && T > 0 && 0 < l < h <1 && f <= 1 && W > 0 && T > - D + W, {h, T, D, p, f, l, W},NonNegativeReals]
+Out[28]= $Aborted
+This just tries to simplify the equation from above 
+In[45]:= Simplify[((1 - l)*(1 - p*T) + (1 - p)*D)*(-1 + h + f*p*T) >= (p - f*(p + T - l*T +W))*p*(p*T - D + p*D - 1 + h) && D > 0 && 0 < p < 1 && T > 0 && 0 < l < h <1 && f <= 1 && W > 0 && T > - D + W]
+Out[45]= (-1+h+f p T) (D-D p+(-1+l) (-1+p T))>=p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))&&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W
+In[47]:= FindInstance[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))>=p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))&&D>0&&0<p<1&&T>0&&0<l<h<1&&f<=1&&W>0&&D+T>W,{f,h,l,p,T,W,D}]
+Out[47]= {{f->1,h->3/4,l->1/2,p->1/2,T->1,W->1,D->1}}
+It appears there isn't any more simplifying to be done on the full equation
+In[5]:= FullSimplify[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))>=p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))&&(1-l)*(1-p*T)+(1-p)*D>0,D>0&&0<p<1&&T>0&&0<l<h<1&&0<=f<=1&&W>0&&D+T>W]
+Out[5]= (-1+h+f p T) (D-D p+(-1+l) (-1+p T))>=p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))&&1+D+l p T>l+p (D+T)
+There's also a constraint to make sure that e=1 is IC, but it's so complicated I decided not to implement it here (yet?).
+Try solving with equality instead of inequality
+In[7]:= FullSimplify[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))==p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))&&(1-l)*(1-p*T)+(1-p)*D>0,D>0&&0<p<1&&T>0&&0<l<h<1&&0<=f<=1&&W>0&&D+T>W]
+Out[7]= (-1+h+f p T) (D-D p+(-1+l) (-1+p T))==p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))&&1+D+l p T>l+p (D+T)
+A list of all the restrictions: 
+						D > 0			T > 0			W > 0	T > - D + W
+						0 < p < 1		0 < l < h <1	 f <= 1
+						p>f (p+T-l T+W)
+Comparative statics for welfare under mediator to be larger than welfare under efficient gifts
+In[61]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),p]
+Out[61]= -((1-f) p (-1+h+D (-1+p)+p T))+(-D+(-1+l) T) (-1+h+f p T)+f T (D-D p+(-1+l) (-1+p T))-p (D+T) (p-f (p+T-l T+W))-(-1+h+D (-1+p)+p T) (p-f (p+T-l T+W))
+In[62]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),f]
+Out[62]= p T (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (-p-T+l T-W)
+In[63]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),l]
+Out[63]= -f p T (-1+h+D (-1+p)+p T)+(-1+p T) (-1+h+f p T)
+In[64]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),h]
+Out[64]= D-D p+(-1+l) (-1+p T)-p (p-f (p+T-l T+W))
+In[65]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),W]
+Out[65]= f p (-1+h+D (-1+p)+p T)
+In[66]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),T]
+Out[66]= f (1-l) p (-1+h+D (-1+p)+p T)+(-1+l) p (-1+h+f p T)+f p (D-D p+(-1+l) (-1+p T))-p^2 (p-f (p+T-l T+W))
+In[67]:= D[(-1+h+f p T) (D-D p+(-1+l) (-1+p T))-p (-1+h+D (-1+p)+p T) (p-f (p+T-l T+W)),D]
+(1-p) (-1+h+f p T)-(-1+p) p (p-f (p+T-l T+W))
+In[70]:= Solve[(1-p) (-1+h+f p T)-(-1+p) p (p-f (p+T-l T+W))==0,p]
+Out[70]= {{p->1},{p->(f l T-f W+Sqrt[-4 (1-f) (-1+h)+(f l T-f W)^2])/(2 (-1+f))},{p->(-f l T+f W+Sqrt[-4 (1-f) (-1+h)+(f l T-f W)^2])/(2 (1-f))}}
+Maximize WM by choice of "f": doesn't work because welfare asymptotes
+I learned about this asymptote by plotting welfare as a function of "f"
+In[62]:= WM = (-f + (f*p*T)/(1-h))*(-l+1)*(T+D)/((p - f*(p + T - l*T + W)))+(p*T+(1-p)*(W-D))/(1-h)
+Out[62]= (p T+(1-p) (-D+W))/(1-h)+((1-l) (D+T) (-f+(f p T)/(1-h)))/(p-f (p+T-l T+W))
+Test some parameterizations
+P6
+In[68]:= WMf ={WM/. {{h->61/64,T->1/2,D->1,p->1/2,l->1/2,W->1}}}
+Out[68]= {{16/3+(16 (-(3/64)+f/4))/(1/2-(7 f)/4)}}
+Asymptotes at whatever value of "f" makes the denominator 0
+In[74]:= Plot[WMf,{f,-.1,1}]
+Out[74]= 
+In[48]:= {16/3+(16 (-(3/64)+f/4))/(1/2-(7 f)/4)}/. {{f->.2856}}
+Out[48]= {{1967.33}}
+Welfare is asymptoting somewhere between 0.28 and 0.29
+This would be why I can't get a max for "f" -- it doesn't exist
+In[1]:= {p - f*(p + T - l*T + W)>0}/. {{h->61/64,T->1/2,D->1,p->1/2,l->1/2,W->1}}
+Out[1]= {{1/2-(7 f)/4>0}}
+This is the value of the asymptote
+In[3]:= N[2/7]
+Out[3]= 0.285714
+P5. Like P6, but asymptote is 0.25
+In[6]:= Plot[WM/. {{h->15/16,T->1,D->1,p->1/2,l->1/2,W->1}},{f,-.1,1.1}]
+
+Out[6]= 
+Which side is positive? LEFT
+In[39]:= {p -f*(p + T - l*T + W)}/. {{h->15/16,T->1,D->1,p->1/2,l->1/2,W->1,f->1/100}}
+Out[39]= {{12/25}}
+P2 -- like P5 and P6
+In[4]:= Plot[WM/. {{h->7/10,T->7,D->5,p->9/10,l->3/10,W->8}},{f,-.1,.3}]
+Out[4]= 
+P4, Mediator is never any good (negative WM for non-negative gift)
+In[3]:= Plot[WM/. {{h->9/10,T->7,D->5,p->3/10,l->4/10,W->8}},{f,-.1,.3}]
+Out[3]= 
+In[26]:= {p ==f*(p + T - l*T + W)}/. {{h->9/10,T->7,D->5,p->3/10,l->4/10,W->5}}
+Out[26]= {{3/10==(19 f)/2}}
+Below is the asymptote, but welfare goes to - infinity to the left and + infinity to the right (different from last two cases)
+In[27]:= N[6/190]
+Out[27]= 0.0315789
+Which side is positive?
+In[35]:= {p -f*(p + T - l*T + W)}/. {{h->9/10,T->7,D->5,p->3/10,l->4/10,W->5,f->1/50}}
+Out[35]= {{11/100}}
+Denominator is still positive to the left of the asymptote; something else turns welfare negative
+P3 -- like P4
+In[5]:= Plot[WM/. {{h->6/10,T->7,D->5,p->5/10,l->1/4,W->8}},{f,-.1,.3}]
+Out[5]= 
+P1 -- like P3 and P4
+In[3]:= Plot[WM/. {{h->6/10,T->10,D->5,p->2/10,l->3/10,W->8}},{f,-.1,.3}]
+Out[3]= 
+Which side is positive?
+In[38]:= {p -f*(p + T - l*T + W)}/. {{h->6/10,T->10,D->5,p->2/10,l->3/10,W->8,f->1/100}}
+Out[38]= {{6/125}}
+Denominator is still positive to the left of the asymptote; something else turns welfare negative
+Lower bound on "f" comes from high type IC restriction
+I had been calculating the optimal gift to be the one that is just large enough to satisfy the low type IC
+I don't know how to choose the e/g tradeoff optimally here. I've just been picking g to be the minimum that satisfies low type
+Throughout I talk about IC, but IC and IR are identical for both high and low types in this model
+Can I simplify the expression for when there are both upper and lower bounds? No.
+In[24]:= Reduce[g*(p-f(p+T-l*T+W))>=((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f>(1-h)(1-f)&&g(T*f-(1-h)(1-f))<=(T+D-W) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<=f<1&&g>0,{f,T, D, p, l,h, W,g}]
+Out[24]= $Aborted
+In[25]:= FindInstance[g*(p-f(p+T-l*T+W))>=((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f>(1-h)(1-f)&&g(T*f-(1-h)(1-f))<=(T+D-W) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<=f<1&&g>0,{f,T, D, p, l,h, W,g}]
+Out[25]= $Aborted
+No numerical result when both IC constraints are left as inequalities. Make one bind.
+First low type binds
+In[26]:= FindInstance[g*(p-f(p+T-l*T+W))==((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f>(1-h)(1-f)&&g(T*f-(1-h)(1-f))<=(T+D-W) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<=f<1&&g>0,{f,T, D, p, l,h, W,g}]
+Out[26]= {{f->1/16,T->8,D->1,p->1/2,l->1/4,h->1/2,W->1,g->216}}
+No results when I make high type bind
+In[27]:= FindInstance[g*(p-f(p+T-l*T+W))>=((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f>(1-h)(1-f)&&g(T*f-(1-h)(1-f))==(T+D-W) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<=f<1&&g>0,{f,T, D, p, l,h, W,g}]
+Out[27]= $Aborted
+It will run if I take out high type constraint (f=0)
+In[28]:= FindInstance[g*(p-f(p+T-l*T+W))>=((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f<(1-h)(1-f) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<=f<1&&g>0,{f,T, D, p, l,h, W,g}]
+Out[28]= {{f->0,T->3/16,D->5/16,p->1/2,l->1/4,h->1/2,W->1,g->1}}
+It will also run if I make f >0:
+In[29]:= FindInstance[g*(p-f(p+T-l*T+W))>=((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f<(1-h)(1-f) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<f<1&&g>0,{f,T, D, p, l,h, W,g}]
+Out[29]= {{f->5/128,T->3/16,D->5/16,p->1/2,l->1/4,h->1/2,W->1,g->1}}
+Welfare under the mediator when gift is set to satisfy low type IC with equality
+In[32]:= WM = ((-1 + h + f*p*T)*(-l+1)*(T+D))/((p - f*(p + T - l*T + W))*(1-h))+(p*T+(1-p)*(W-D))/(1-h)
+Out[32]= (p T+(1-p) (-D+W))/(1-h)+((1-l) (D+T) (-1+h+f p T))/((1-h) (p-f (p+T-l T+W)))
+In[33]:= WM /.{{f->5/128,T->3/16,D->5/16,p->1/2,l->1/4,h->1/2,W->1}}
+Out[33]= {601/28568}
+Can I find an instance where \de_h is smaller than CSE f=0 threshold? Not if T*f<(1-h)(1-f) 
+In[36]:= FindInstance[g*(p-f(p+T-l*T+W))>=((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f<(1-h)(1-f) &&h<W/(T+D)&&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<f<1&&g>0&&W<T+D&&f*p*T>1-h,{f,T, D, p, l,h, W,g}]
+Out[36]= {}
+Switch inequality so that T*f > (1-h)(1-f)
+In[2]:= FindInstance[g*(p-f(p+T-l*T+W))==((1-l)(T+D))&&p>f(p+T-l*T+W)&&T*f>(1-h)(1-f) &&g(T*f-(1-h)(1-f))==(T+D-W) &&D > 0 && 0 < p < 1 && T > 0 && 0 < l <h<1&&W > 0 &&0<f<1&&g>0&&W<T+D,{f,T, D, p, l,h, W,g}]
+Out[2]= {{f->1031/16384,T->8,D->1700/247,p->1/2,l->1/4,h->1/2,W->1,g->98304/247}}
+Comparative statics on high type IC with e=1
+threshold increases in p
+In[2]:= D[(p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1,p]
+Out[2]= -D-T+W+((-D+(-1+l) T) (-D-T+W))/((1-l) (D+T))
+In[3]:= FullSimplify[-D-T+W+((-D+(-1+l) T) (-D-T+W))/((1-l) (D+T))]
+Out[3]= -((D l (D+T-W))/((-1+l) (D+T)))
+threshold decreases in l
+In[4]:= D[(p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1,l]
+Out[4]= ((-1+p T) (-D-T+W))/((1-l) (D+T))+((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l)^2 (D+T))
+In[9]:= FullSimplify[((-1+p T) (-D-T+W))/((1-l) (D+T))+((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l)^2 (D+T))]
+Out[9]= (D (-1+p) (D+T-W))/((-1+l)^2 (D+T))
+threshold is constant in h
+In[5]:= D[(p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1,h]
+Out[5]= 0
+threshold increases in w
+In[6]:= D[(p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1,W]
+Out[6]= p+(D-D p+(-1+l) (-1+p T))/((1-l) (D+T))
+threshold decreases in T
+In[7]:= D[(p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1,T]
+Out[7]= -p-(D-D p+(-1+l) (-1+p T))/((1-l) (D+T))+((-1+l) p (-D-T+W))/((1-l) (D+T))-((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l) (D+T)^2)
+In[10]:= Simplify[-p-(D-D p+(-1+l) (-1+p T))/((1-l) (D+T))+((-1+l) p (-D-T+W))/((1-l) (D+T))-((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l) (D+T)^2)]
+Out[10]= ((1+D-l-D l p) W)/((-1+l) (D+T)^2)
+threshold in D seems complicated
+In[8]:= D[(p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1,D]
+Out[8]= 1-p-(D-D p+(-1+l) (-1+p T))/((1-l) (D+T))+((1-p) (-D-T+W))/((1-l) (D+T))-((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l) (D+T)^2)
+In[11]:= FullSimplify[1-p-(D-D p+(-1+l) (-1+p T))/((1-l) (D+T))+((1-p) (-D-T+W))/((1-l) (D+T))-((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l) (D+T)^2)]
+Out[11]= (-l (-1+p) (D+T)^2+W-T W+l (-1+p T) W)/((-1+l) (D+T)^2)
+I think this indicates that the threshold is decreasing in D
+In[14]:= FullSimplify[1-p-(D-D p+(-1+l) (-1+p T))/((1-l) (D+T))+((1-p) (-D-T+W))/((1-l) (D+T))-((D-D p+(-1+l) (-1+p T)) (-D-T+W))/((1-l) (D+T)^2)>0&&D > 0 && 0 < p < 1 && T > 0 && 0 < l <1&&W > 0 &&W<T+D,{T, D, p, l,W}]
+Out[14]= False
+threshold decreases in l
+In[15]:= D[((1-l)(D+T)p)/(D-D p+(-1+l) (-1+p T)),l]
+Out[15]= -(((1-l) p (D+T) (-1+p T))/(D-D p+(-1+l) (-1+p T))^2)-(p (D+T))/(D-D p+(-1+l) (-1+p T))
+In[16]:= Simplify[-(((1-l) p (D+T) (-1+p T))/(D-D p+(-1+l) (-1+p T))^2)-(p (D+T))/(D-D p+(-1+l) (-1+p T))]
+Out[16]= (D (-1+p) p (D+T))/(D (-1+p)-(-1+l) (-1+p T))^2
+Would parties choose 0<f<1 in bilateral CSE with material value?
+In[1]:= (p(W-D-T)) (D-D p+(-1+l) (-1+p T))/((1-l)(D+T)p)+p(W-T)+(1-p)D+1/.{T->1,D->1,p->9/10,l->1/3,h->7/10,W->1}
+Out[1]= 39/40
+In[3]:= (p(W-D-T)) (D-D *p*f+(-1+l) (-1+p *T*f))/((1-l)(D+T)p)+p*f(W-T)+(1-p)f*D+1/.{T->1,D->1,p->9/10,l->1/3,h->7/10,W->1}
+Out[3]= 1-3/4 (1-2/3 (-1+(9 f)/10)-(9 f)/10)+f/10
+In[5]:= Reduce[1-3/4 (1-2/3 (-1+(9 f)/10)-(9 f)/10)+f/10==7/10,{f}]
+Out[5]= f==38/49
+In[6]:= Plot[1-3/4 (1-2/3 (-1+(9 f)/10)-(9 f)/10)+f/10,{f,-.1,1}]
+Out[6]= 
