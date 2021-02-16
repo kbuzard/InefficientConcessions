@@ -565,7 +565,7 @@ It turns out that there aren't really separate conditions. If the welfare under 
 \end{itemize}
 
 \subsubsection{Check with some parameterizations}								
-								Parameterization that is in the paper now:
+Parameterization that was in the previou version of the paper:
 									\begin{itemize}
 										\item Let $T = 10$, $W=8$ and $D = 5$
 										\item Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. 
@@ -588,80 +588,19 @@ It turns out that there aren't really separate conditions. If the welfare under 
 										To keep $e \geq 0$, we need $g \geq 525$ (this is REALLY big compared to $W$ for instance). It's also huge compared to the optimal gifts when $e=0$ of 3 and when $e=1$ of $0.\overline{63}$.
 									\end{itemize}
 								
-							\vskip.2in	
-							Now let's try the same parameterization with $p=0.9$.
-									\begin{itemize}
-										\item Maximum $e$ from Expression~\ref{eq:g5}:
-											\[
-											  0.9 - \frac{\left(1 - 0.3 \right) \left( 10 + 5 \right)}{g} \geq e \left( 0.9 + 10 - 0.3\cdot 10 + 8 \right)
-											\]
-											\[
-											  0.9 - \frac{0.7 \left( 15 \right)}{g} \geq e \left( 11.9 \right)
-											\]
-											\[
-											  \frac{0.9}{11.9} - \frac{0.7 \left( 15 \right)}{11.9g} \geq e 
-											\]
-											\[
-											  0.07563 - \frac{8.8235}{g} \geq e 
-											\]
-										To keep $e \geq 0$, we need $g \geq 116.66$. This is still nearly an order of magnitude larger than $W$, and both the optimal gifts when $e=0$ of 13.5 and when $e=1$ of $\frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D} = \frac{0.9(0.7)(15)}{0.7 \cdot (1-0.9)+(.1)5} = \frac{0.63\cdot15}{0.7 \cdot 0.1+.5} = 16.58$.
-									\end{itemize}
-							
-\vskip.3in
-``Parameterization 2'': goal was to make welfare higher under mediator; $We > W0$ and $e=1$ is not incentive compatible
-\begin{itemize}
-	\item \color{orange} T = 7, W = 8, D = 5, p = .9, $\de_l = .3$, $\de_h = .6$
-	\item Maximum $e$ from Expression~\ref{eq:g5}
-	  $$0.9 - \frac{\left(1 - 0.3 \right) \left( 7 + 5 \right)}{g} \geq e \left( 0.9 + 7 - 0.3 \cdot 7 + 8 \right)$$
-		$$0.9 - \frac{8.4}{g} \geq e \left(18 \right)$$
-		$$0.05 - \frac{0.466}{g} \geq e $$
-	\item The highest welfare comes from $e=.06$, which implies $g = 116.67$ (see e-g calculations.R)
-\end{itemize}
-		
-\vskip.2in
-Parameterization 3: $W1 > W0$ and $g1 > g0$. Welfare under mediator is never positive. 
-\begin{itemize}
-	\item $T = 7, \ W = 8, \ D = 5, \ p = .5, \ \de_l = .25, \ \de_h = .6$
-\end{itemize}
-
-\vskip.2in
-Parameterization 4: $W0 > W1 > We$ (mediator). Mediator optimally chooses e=0 anyway
-\begin{itemize}
-	\item $T = 7, \ W = 8, \ D = 5, \ p = .3, \ \de_l = .4, \ \de_h = .9$
-\end{itemize}
-
-\vskip.2in
-Parameterization 5: $We > W1 > W0$. Asymptote at $e = 03759...$ (Was incorrect before I understood the asymptote: $W1 > W0 > We$ (mediator). Mediator optimally chooses $e=0.03$(
-\begin{itemize}
-	\item $T = 6, \ W = 8, \ D = 5, \ p = .5, \ \de_l = .2, \ \de_h = .9$
-\end{itemize}
-
-\vskip.2in
-Parameterization 6: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses $e=0.24$ (0.25 is the asymptote). Optimal gift is 50, effective gift is 12, vs. $g1 = .667$ and $g0 = 1$
+\vskip.2in	
+In the version sent to the JCR, I used three parameterizations; the calculations are done in ``e-g calculations.R'' Here, for instance, is Parameterization 2: $We > W1 > W0$, $54 > 7.33 > 7$. Mediator optimally chooses $e=0.24$ (0.25 is the asymptote). Optimal gift is 50, effective gift is 12, vs. $g1 = .667$ and $g0 = 1$
 \begin{itemize}
 	\item $T = 1, \ W = 1, \ D = 1, \ p = .5, \ \de_l = .5, \ \de_h = 15/16=0.9375$
 \end{itemize}
 	
-\vskip.2in
-Parameterization 7: $We > W0 > W1$, $42.33 > 4.96 > 2.83$. Mediator optimally chooses $e=0.28$ (0.28571 is the asymptote). Optimal gift is 75, effective gift is 21, vs. $g1 = .428$ and $g0 = .75$
-\begin{itemize}
-	\item $T = 0.5, \ W = 1, \ D = 1, \ p = .5, \ \de_l = .5, \ \de_h = 61/64=0.953125$
-\end{itemize}
 						
 						\vskip.3in
-						Welfare comparisons (always for high type)
+Welfare comparisons (always for high type)
 							\begin{itemize}
-								\item When $e=1$ (``W1''): $\frac{1}{1-\de_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - \frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
-									\begin{itemize}
-										\item \color{red} Parameterization in the paper: welfare is 7.18; gift is 0.63
-										\item \color{orange} Parameterization 2: $g^1$ is negative, creates negative upper bound for $\de_h$. Separating with concessions equilibrium can't be sustained.
-									\end{itemize}
-								\item When $e=0$ (``W0''): $\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - p(T+D)$
-									\begin{itemize}
-										\item \color{red} Parameterization in the paper: welfare is 8; gift is 3
-										\item \color{orange} Parameterization 2: welfare is 5.7; gift is 10.8
-									\end{itemize}
-								\item When $0<e<1$ under a mediator (``WM''): $\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - g_M$
+								\item When $e=1$ (``W1''): $\frac{1}{1-\de_h}\left\{pT(1+g^*) + (1-p)(W-D(1+g^*))\right\} - (1-p)\frac{p(1-d_l)(D+T)}{(1-d_l)(1-pT)+(1-p)D}$
+								\item When $e=0$ (``W0''): $\frac{1}{1-\de_h}\left\{pT + (1-p)(W-D)\right\} - (1-p)(T+D)$
+								\item When $0<e<1$ under a mediator (``WM''): $\frac{1}{1-\de_h}\left\{pT(1+eg_M) + (1-p)(W-D)\right\} - (1-e)g_M$
 									\begin{itemize}
 										\item Optimal $g_M$: Expression~\ref{eq:g2} creates a menu of $(e,g)$ pairs that satisfy the constraint:
 											\[
@@ -669,38 +608,15 @@ Parameterization 7: $We > W0 > W1$, $42.33 > 4.96 > 2.83$. Mediator optimally ch
 											\]
 										\item We're assuming $p - e \left( p + T - \de T + W \right) > 0$ (assuming gifts must be non-negative)
 										\item Also $pg - \left(1 - \de \right) \left( T + D \right) \geq 0$ ($e$ version; this is WEAKER than the condition on $e$)
-										\item \color{red} For the parameterization in the paper, welfare is negative for $e=0$ and $e=0.01$, the only values of $e$ that lead to non-negative gifts; gifts range from 52.5 to 218.75	
-										\item \color{orange} Parameterization 2: welfare is 10.083 at optimal gift-efficiency $e=0.06$, $g = 116.67$, $eg = 7$
-											\begin{itemize}
-												\item Compared to $e=0$, welfare (gross of gift) goes up from 16.5 to 126.75. The entire difference is due to the positive effect of the material value of the gift (the full term is $\frac{1}{1-\de_h}pTeg$). The effective gift is $7$, which is much larger than the 1 in $\frac{1}{1-\de_h}pT\cdot 1$ that is there in both terms.
-												\item The increase in the size (cost) of the gift from 10.8 to 116.67 is smaller than the increase in gross-of-gift welfare
-											\end{itemize}
+										
 									\end{itemize}
+								\item It's going to be very hard to find WM as intermediate. It has to be a case where it asymptotes to $-\infty$ and choosing $e=0$ is optimal anyway.
 							\end{itemize}
 
-			\vskip.2in
-			There are six cases of welfare ordering: \\
-			\vskip.1in
-				\begin{tabular}{ l c c }
-					\un{Ordering}       & \un{$WM < 0$} & \un{$WM > 0$} \\
-					$WM > W1 > W0$ &  & P6 \\
-					$WM > W0 > W1$ &  & P2 (W1 not IC) \\
-					$W1 > WM > W0$ &  &  \\
-					$W1 > W0 > WM$ & P3 & P5 \\
-					$W0 > W1 > WM$ & P1 (paper) & P4 \\
-					$W0 > WM > W1$ &    &
-				\end{tabular}
-				P5 result is wrong: $WM \Rightarrow \infty$.
-					\begin{itemize}
-						\item It's going to be very hard to find WM as intermediate. It has to be a case where it asymptotes to $-\infty$ and choosing $e=0$ is optimal anyway.
-						\item It would be nice to show that it's possible to want to pick $e=0$ under mediator 
-					\end{itemize}
 							
 \subsubsection{To do and Notes}		
 	\color{ForestGreen} 
 			\begin{itemize}
-					\item Need to say clearly that $e=1$ doesn't work in a lot of situations
-					\item Can I do new mediator theorem in the same form as the one that's currently in the paper?
 					\item Mediator with $e=0$ can be better than CSE with $e=0$. Need to say why this is
 						\begin{itemize}
 							\item Two differences: Mediator gets you some value of the gift $pTeg_M$; gift under mediator typically has to be larger--it takes more to disincentivize low type from lying because the payoff is better

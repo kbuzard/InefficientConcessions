@@ -1,11 +1,13 @@
-#P1: WM > W0, e=1 not possible (Corollary 2, Theorem 6(a))
+# These are the parameterizations and calculations for the version of the paper
+# submitted to the JCR
+
+# P1: WM > W0, e=1 not possible (Corollary 2, Theorem 6(a))
 T = 1
 W = 1
 D = 1
 p = .9
 dl = .3
 dh = .7
-## Note: reducing dl from 0.3 to 0.4 makes the mediator even more attractive
 
 ## P2: make mediator better than e=0 or e=1: We > W1 > W0 (Theorem 6(b))
 T = 1
@@ -26,11 +28,13 @@ dh = .49
 # no concessions cutoff (only matters when no material value)
 # dh_min_nc = W/((1-p)*W+p*(T+D)) 
 
-# the asymptote for e
+# asymptote for e
 e_s = p/(p + T - T*dl +W)
 # WM asymptotes to +infty when this is positive (sufficient condition)
 suff = e_s*p*T - 1 + dh
-suff = e*p*T - 1 + dh #when e can't reach the asymptote
+# when e can't reach the asymptote, use this to calculate for another value of e
+e =
+suff = e*p*T - 1 + dh
 
 # e=1
 g1 = (p*(1-dl)*(D+T))/((1-dl)*(1-p*T)+(1-p)*D) # must be positive
@@ -48,22 +52,17 @@ rm(dh_min0)
 
 # 0 < e < 1 with mediator
 e = seq(0, 1, 0.01)
-# if we set gift to satisfy low type IC with equality
+# set gift to satisfy low type IC with equality (not necessarily optimal)
 g = data.frame((1-dl)*(T+D)/(p - e*(p + T - dl*T +W)))
-# if we set gift to satisfy low type IC with equality
+# Does high type IC/IR hold? If this is negative, no additional restriction on g:
+HTir = data.frame(T*e - (1-dh)*(1-e))
+# If HTir is positive, we need g <= g_HTir 
 g_HTir = data.frame((T+D-W)/(T*e - (1-dh)*(1-e))) #see below for when this binds
 # High type welfare when gift set so that low type IC binds
 We = 1/(1-dh)*(p*T*(1+e*g) + (1-p)*(W-D)) - (1-e)*g
 We_max = max(We[which(g[is.finite(g$X.1...dl.....T...D...p...e....p...T...dl...T...W..),1]>=0),1])
 e_max = e[which.max(We[which(g>=0),1])]
 g_max = g[e_max,1]
-# effective gift
-eg = e*g
-eg_max = eg[e_max,1]
-
-# Does high type IC/IR hold? If the following is negative:
-HTir = data.frame(T*e - (1-dh)*(1-e))
-# If HTir is positive, we need g <= g_HTir 
 
 # Calculate welfare under mediator for any e/g:
 e_calc = .29
