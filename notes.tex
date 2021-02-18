@@ -122,9 +122,6 @@ Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember
 						\[
 							\de_h \geq \frac{W}{(T+D)(1-p)} - \frac{p}{1-p}
 						\]
-							\begin{itemize}
-								\item For P6 this is zero, for P1 and P2 it's negative, and it's positive for the rest
-							\end{itemize}
 						The following shows that this is strictly smaller than $\de^h$. \textbf{This means that the set of types who can make and sustain peace under the CSE with no material value / CSE with material value and $e=0$ is larger than the set of types who can make and sustain peace under the repeated game.}
 							\begin{itemize}
 								\item $T+D>W$
@@ -133,14 +130,6 @@ Minimum $\de$ for $e=0$ CSE / no material value case to be sustainable. Remember
 								\item $W-p(T+D)<W-pW$
 								\item $\frac{W-p(T+D)}{T+D}<\frac{W-pW}{T+D} = \frac{(1-p)W}{T+D}$
 								\item $\frac{W-p(T+D)}{(1-p)(T+D)} = \frac{W}{(1-p)(T+D)} - \frac{p(T+D)}{(1-p)(T+D)} = \frac{W}{(1-p)(T+D)} - \frac{p}{1-p}< \frac{W}{T+D}$. Q.E.D.
-								\item This is nice, but I'm not sure it helps with the narrative of the story.
-									\begin{itemize}
-										\item \textbf{Do I want to re-cast the $\de_h$ definitions, changing them throughout the story?}
-											\begin{itemize}
-												\item e.g. With the defn of high type as a country who can sustain the grim trigger equilibrium, high type is always patient enough to sustain $e=0$ CSE / no material value CSE
-												\item Should I compare grim trigger welfare to see which is higher?
-											\end{itemize}
-									\end{itemize}
 							\end{itemize}
 							
 \subsection{Welfare}
@@ -177,6 +166,9 @@ Because $T +D > W$, we have
   (1-\de_h)W +\de_hD +p\de_hW + p\de_hT > 0 
 \]
 Each term on the left is strictly larger than 0, so this statement is always true.
+\begin{itemize}
+	\item The above calculations are not quite right: the LHS subtracts off the full value of the gift, but I forgot to include that you also receive the gift $p$ of the time. So the LHS is strictly larger than what I have here, which means this result is even a bit stronger.
+\end{itemize}
 
 \section{Make mediator work}
 November 29, 2020: In making revisions in April 2020 to respond to the EJPE referee reports, I discovered the IC constraint does not hold for the low type in Section 5: Mediation. Here I will see what adjustments might make the mediator work.
@@ -188,11 +180,14 @@ November 29, 2020: In making revisions in April 2020 to respond to the EJPE refe
 \subsection{Mediation: Basic Details and Overview}
 \begin{itemize}
 	\item If the mediator gets two `high' reports, both countries are instructed to exchange gifts and play `Trust'
-	\item If the mediator gets one or zero `high' reports, there is no gift and they both play `Fight'
+		\begin{itemize}
+			\item If the mediator gets one or zero `high' reports, there is no gift and they both play `Fight'
+		\end{itemize}
+	\item I show the constraints for both types in Section \ref{sec:const}.
+	\item I detail the choices of all types in regards to investments in civil society in Section \ref{sec:civ}.
+	\item I show in Section \ref{sec:e1} that the low type's IC constraint cannot hold if $e=1$.
+	\item Section \ref{sec:eless} develops the model with $0<e<1$.
 \end{itemize}
-I show the constraints for both types in Section \ref{sec:const}.\\
-I detail the choices of all types in regards to investments in civil society in Section \ref{sec:civ}.\\
-I show in Section \ref{sec:e1} that the low type's IC constraint cannot hold if $e=1$.\\
 
 
 \subsection{IC constraints for Mediation}
@@ -201,7 +196,7 @@ I show in Section \ref{sec:e1} that the low type's IC constraint cannot hold if 
 	\item High type IC:
 		$$pX_{TT}^h+(1-p)X_{FF}^h - pg_h +peg_h \geq X_{FF}^h $$
 			\begin{itemize}
-				\item Relative to Section 4.2, $-g_h$ there becomes $-pg_h$ here (again, only give gift if matched with high type). Also $+peg_h$ in Section 4.2 disappears on RHS.
+				\item Relative to Section 4.2 in the draft, $-g_h$ there becomes $-pg_h$ here (again, only give gift if matched with high type). Also $+peg_h$ in Section 4.2 disappears on RHS.
 			\end{itemize}
 	\item Low type IC:
 		$$X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-pg_h+peg_h $$
@@ -214,13 +209,11 @@ I show in Section \ref{sec:e1} that the low type's IC constraint cannot hold if 
 
 \subsection{Civil society investment choices}
 \label{sec:civ}
-In a concessions separating equilibrium or in the mechanism, the high type always has the incentive to invest all of the gift in civil socity
+In the mechanism, the high type has the incentive to invest all of the gift in civil society if it reports truthfully. A high country doesn't make any investment when it reports as a low type because no gift will be specified.
 	\begin{itemize}
 		\item If there is an exchange of gifts (whether in the mechanism or a truthfully revealed separating equilibrium), you know you're both receiving from and giving to a high type
-		\item \textbf{I should check this in all the scenarios to make sure we don't invoke it when it's not right}
 			\begin{itemize}
-				\item \textbf{I also want to know whether it depends on the linear form}
-				\item \textbf{Make more explicit in the text}
+				\item \textbf{I want to know whether it depends on the linear form, but that is beyond the scope of the paper at this point}
 			\end{itemize}
 	\end{itemize}
 $\al_i$ is the proportion of the gift that country $i$ receives that it invests in civil society.
@@ -310,10 +303,7 @@ We've already assumed $e=1$ here as given in Lemma 2 for a concessions separatin
 			\[
 					0 \geq \left(1 - \de^l \right) T + \left(1 - \de^l \right) Tg_M + Wg_M + \left(1 - \de^l \right) D
 			\]
-			Assuming $g_M > 0$, this inequality can never hold since each of $T,W,D\geq0$ and $0 \leq \left(1 - \de^l \right) \leq 1$	
-			\begin{itemize}
-				\item What would it mean to have negative gifts?
-			\end{itemize}					
+			Assuming $g_M > 0$, this inequality can never hold since each of $T,W,D\geq0$ and $0 \leq \left(1 - \de^l \right) \leq 1$			
 		\end{itemize}
 
 
@@ -376,17 +366,17 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 
 \subsubsection{Is it possible to pick e and g to satisfy low-type IC?}
 
-\textbf{NOW, it's time to explore this equation and see if it's even possible to pick a gift high enough and an $e$ low enough to satisfy the low type's incentive constraint}. Continuing on from Equation~\ref{eq:examine} and simplifying so that $g_M = g$ and $\de^l = \de$,
+Here I explore Expression~\ref{eq:examine} to see when it's possible to pick a gift high enough and an $e$ low enough to satisfy the low type's incentive constraint. Continuing on from Expression~\ref{eq:examine}:
 \[
 	pg_M\left(1 - e\right) \geq \left(T - \de_l T \right) \left(1 + eg_M\right) + Weg_M + \left(1 - \de_l \right) D
 \]
 	\begin{itemize}
 		\item Distributing AGAIN
 			\[
-				pg	\left(1 - e\right) \geq T + Teg - \de T - \de T eg + Weg + \left(1 - \de \right) D
+				pg	\left(1 - e\right) \geq T + Teg - \de_l T - \de_l T eg + Weg + \left(1 - \de_l \right) D
 			\]
 			\[
-				pg	\left(1 - e\right) \geq \left(1 - \de \right) T + \left(1 - \de \right) D + Teg - \de T eg + Weg
+				pg	\left(1 - e\right) \geq \left(1 - \de_l \right) T + \left(1 - \de_l \right) D + Teg - \de_l T eg + Weg
 			\]
 			\begin{equation}
 				pg_M - pg_Me \geq \left(1 - \de_l \right) \left( T + D \right) + eg_M \left( T - \de_l T + W \right)
@@ -396,7 +386,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 	\end{itemize}		
 			
 \subsubsection{Solve for g}			
-			First solve for $g$ starting from Expression~\ref{eq:split}:
+			First solve for $g$ starting from Expression~\ref{eq:split}, simplifying so that $g_M = g$ and $\de_l = \de$:
 					$$pg - pge \geq \left(1 - \de \right) \left( T + D \right) + eg \left( T - \de T + W \right)$$
 					$$pg - pge - eg \left( T - \de T + W \right)\geq \left(1 - \de \right) \left( T + D \right)$$
 					\begin{equation}
@@ -411,7 +401,7 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 							\item $T+D$, $1 - \de $ non-negative by assumption $\Rightarrow$ RHS of Expression~\ref{eq:g1} non-negative
 								\begin{itemize}
 									\item If $\left(p - pe - e \left( T - \de T + W \right) \right)$ is negative, the only way the IC constraint in Expression~\ref{eq:g1} can hold is if $g<0$.
-									\item SO WE MUST ASSUME {\color{red} $p - e \left( p + T - \de T + W \right)$ IS POSITIVE}
+									\item SO WE MUST ASSUME $p - e \left( p + T - \de T + W \right)$ IS POSITIVE
 								\end{itemize}
 							\item In the complicated environment of the mechanism, I haven't actually shown that the minimum low type IC gift is optimal
 							\item To compare to the optimal gift size in the other sections:
@@ -428,7 +418,6 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 										\[
 											(1-\de)pT > (1-p)D
 										\]
-										\color{red} BIG NEW NOTE: This condition only true if denominator above is positive
 								\end{itemize}
 						\end{itemize}
 				
@@ -440,11 +429,11 @@ Leaving the two gift terms on the end intact, I simplify in the same way as in S
 						\label{eq:g5}
 					\end{equation}
 						\begin{itemize}
-							\item {\color{red} $g \left( p + T - \de T + W \right)$ is non-negative as long as $g$ is positive}: $p, 1-\de, T$ and $W$ are all assumed non-negative and $T+D > W$ so that $T$ is strictly positive. It can only possibly be zero if $p=0$ and $\de = 1$.
+							\item $p, 1-\de, T$ and $W$ are all assumed non-negative and $T+D > W$ so that $T$ is strictly positive. Since we also assume that gifts are always non-negative, $g \left( p + T - \de T + W \right)$ is non-negative
 								\begin{itemize}
-									\item For the IC constraint to hold then (with non-negative gifts), we must at least have {\color{red} $pg - \left(1 - \de \right) \left( T + D \right)$ non-negative, which requires $g$ to be set according to Expression~\ref{eq:g3}}. This only works if $e$ is set to zero; otherwise we need to look back at Expression~\ref{eq:g2}. This is just a weak condition that, if violated, means the IC constraint does not hold.
+									\item For the IC constraint to hold then (with non-negative gifts), we must at least have $pg - \left(1 - \de \right) \left( T + D \right)$ non-negative.
 								\end{itemize}
-							\item If {\color{red} $g \left( p + T - \de T + W \right)$ is positive}, we can divide through to get
+							\item If $g \left( p + T - \de T + W \right)$ is non-zero, we can divide through to get
 								$$\frac{pg - \left(1 - \de \right) \left( T + D \right)}{g \left( p + T - \de T + W \right)} \geq e$$
 						\end{itemize}
 						
@@ -452,10 +441,9 @@ I did a lot of work in Mathematica to try to find out when the welfare under the
 \begin{itemize}
 	\item In the midst of this, I realized that, at the optimal $e$ (probably the largest one that satisfies the equation immediately above), both the gift and welfare $\rightarrow \infty$
 		\begin{itemize}
-			\item So we don't get a finite size of the gift or welfare value at the optimum
-			\item In practice, there will be some upper bound on the size of the gift (even, say, total national wealth)
+			\item So we don't get a finite size of the gift or welfare value at the optimum with the low type IC constraint alone
 				\begin{itemize}
-					\item Interestingly, $g*e$ (the effective gift) appears to be a line for a given set of parameters $W,T,D,\de_h,\de_l,p$
+					\item Interestingly, $g\cdot e$ (the effective gift) appears to be a line for a given set of parameters $W,T,D,\de_h,\de_l,p$
 				\end{itemize}
 		\end{itemize}
 \end{itemize}
@@ -469,15 +457,14 @@ Turns out to be same as high type individual rationality constraint.\\
 
 If a high type lies, there would be at least one low type, and thus no gifts and they would fight forever. So there's no investment choice for high type who lies.
 \begin{itemize}
-	\item This is all in the paper now.
+	\item How to choose the optimal $e$ when both the low type and high type IC bind is still done informally in R.
 \end{itemize}
 
-How to choose the optimal $e$ when both the low type and high type IC bind is still done informally in R.
 
 								
 \subsubsection{Welfare under Mediator vs. CSE with inefficient gifts}
 \label{sec:WM0}
-I tried to derive a necessary condition relating the IC/IR constraints to this welfare comparison but didn't find anything easily. I think I explored this in Mathematica, but I'd need to look more carefully through the Mathematica files.
+I tried to derive a necessary condition relating the IC/IR constraints to this welfare comparison but didn't find anything easily. I did this informally in Mathematica, but I don't think I kept the notes.
 
 Here I'll try to derive a general result for when the welfare under a mediator would be higher than under $e=0$ separating with concessions equilibrium. \\
 
@@ -545,12 +532,12 @@ I've used Mathematica to find a parameterization under which this is true.
 		\[
 		  \de_h \geq D + 1 - p(T+D) + \frac{p(W-(T+D))}{g^1}
 		\]
-It turns out that there aren't really separate conditions. If the welfare under the mediator asymptotes to positive infinity to the left of the asymptote (i.e. where the gift is positive), then the mediator is better than any CSE.
+It turns out that there aren't really separate conditions for when the mediator is better in welfare terms than CSE with either efficient or inefficient gifts. If the welfare under the mediator asymptotes to positive infinity to the left of the asymptote (i.e. where the gift is positive), then the mediator is better than any CSE.
 					\item I've given up on deriving an analytical expression for when the mediator enhances welfare (see Mathematica programs for more detail)
 					\item Characterizing exactly the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote seems hard. But I have developed an intuitive sufficient condition
 								\begin{itemize}
 									\item First, note that it is not possible to have the $e$ asymptote be negative (in which case mediator can't ever work). The asymptote is at $e=\frac{p}{p + T(1-\de_l) +W}$. Everything is positive, and numerator strictly smaller than denominator, so $0 < e < 1$
-									\item Both examining the IC constraint directly and taking a derivative in Mathematica program `We greater than W0.txt' give the following condition for when welfare under the mediator increases as $e$ increases; this is the case when the mediator is better than CSE $e=0$ or CSE $e=1$:
+									\item Both examining the IC constraint directly and taking a derivative in Mathematica give the following condition for when welfare under the mediator increases as $e$ increases; this is the case when the mediator is better than CSE $e=0$ or CSE $e=1$:
 										\[
 											\frac{e p T}{1 - \de_h} > 1
 										\]
@@ -565,7 +552,7 @@ It turns out that there aren't really separate conditions. If the welfare under 
 \end{itemize}
 
 \subsubsection{Check with some parameterizations}								
-Parameterization that was in the previou version of the paper:
+Parameterization that was in the previous version of the paper:
 									\begin{itemize}
 										\item Let $T = 10$, $W=8$ and $D = 5$
 										\item Let $\de_h = .6$ and $\de_l = .3$. Assume $p = .2$. 
@@ -614,32 +601,20 @@ Welfare comparisons (always for high type)
 							\end{itemize}
 
 							
-\subsubsection{To do and Notes}		
-	\color{ForestGreen} 
-			\begin{itemize}
-					\item Mediator with $e=0$ can be better than CSE with $e=0$. Need to say why this is
-						\begin{itemize}
-							\item Two differences: Mediator gets you some value of the gift $pTeg_M$; gift under mediator typically has to be larger--it takes more to disincentivize low type from lying because the payoff is better
-						\end{itemize}
-					\item If you can sustain $e=1$ with no mediator, mediator can still be better
-						\begin{itemize}
-							\item Again, if mediator is good, it's REALLY good.
-							\item The benefit of $eg_M$ is muted versus $g^1$, but there is no harm from $g_M$ while there is harm from $g^1$. Cost of gift will always be larger under mediator because it goes to infinity at the optimal $e$
-						\end{itemize}
-					\item Sufficient condition for where welfare goes to positive $\infty$ to the left of the $e$ asymptote
-						\begin{itemize}
-							\item Characterizing exactly the region where Welfare goes to positive $\infty$ to the left of the $e$ asymptote seems hard. But I have developed an intuitive sufficient condition. See end of Section~\ref{sec:WM1}
-						\end{itemize}
-			\end{itemize}
-	
+\subsubsection{Notes}		
 
-\vskip.2in
-\color{Black}Notes:
 \begin{itemize}
 	\item I'm ignoring the following question for the JCR submission: When $g^1$ turns negative, is that exactly when $e=1$ can't be sustained? It's not about $g^1$, but the $\de_h^1$ condition.
 		\begin{itemize}
 			\item When $g^1$ is negative, the constraint on $\de_h^1$ (see proof of Thm 3) becomes an upper bound. If it's negative, it means that no $\de_h$ exists to make separating possible.
 			\item I need a formal result to see clearly what is going on here
+		\end{itemize}
+	\item I'm leaving the following out since we're already over the word limit and it's the least interesting of the results
+		\begin{itemize}			
+			\item Mediator with $e=0$ can be better than CSE with $e=0$. Need to say why this is
+						\begin{itemize}
+							\item Two differences: Mediator gets you some value of the gift $pTeg_M$; gift under mediator typically has to be larger--it takes more to disincentivize low type from lying because the payoff is better
+						\end{itemize}
 		\end{itemize}
 \end{itemize}
 			
@@ -652,7 +627,8 @@ Welfare comparisons (always for high type)
 
 The question is this: if $\de^c < \de_h < \de^1$, would the high types ever want to choose an intermediate value of $e$? The idea is that $0<e<1$ could loosen the incentive constraint from the $e=0$ case.\\
 
-High type's IC with potentially interior $e$
+High type's IC with potentially interior $e$ \\
+\textbf{AGAIN, I don't have the gift right: you also receive the gift $p$ of the time; so everything below is off}
 $$pT(1+eg) + (1-p)(W-D(1+eg)) - (1-\de_h)g \geq p(W+Weg-D) + (1-p)(W-D)$$
 $$pT(1+eg) - (1-p)Deg - (1-\de_h)g \geq p(W+Weg-D)$$
 $$\de_h g \geq p(W+Weg-D) - pT(1+eg) + (1-p)Deg + g$$
@@ -697,7 +673,7 @@ It's therefore not clear that we should just stick $g = \frac{p(1-\de_l)(T +D) }
 
 \vskip.5in
 \section{Develop result: mediator increases potential for peace}
-\un{June 6, 2017}
+\un{June 6, 2017; deprecated since this mechanism isn't IC for the low type}
 
 \begin{itemize}
 	\item i.e. want to show mediator makes (Trust, Trust) an equilibrium over a larger parameter space than without mediator
@@ -993,9 +969,9 @@ Let's case this out.
 		\begin{itemize}
 			\item he has a paper about concessions being used against you; he also gave me the reference for another one but I've forgotten it
 		\end{itemize}
+\end{itemize}
 
-\vskip.3in
-Notes from CPEG, Oct. 25, 2019 presentation:
+\section{Notes from CPEG, Oct. 25, 2019}
 \begin{itemize}
 	\item Arnaud
 		\begin{itemize}
@@ -1008,12 +984,5 @@ Notes from CPEG, Oct. 25, 2019 presentation:
 		\end{itemize}
 \end{itemize}
 
-\newpage
-\section{Review 1 from EJPE (Email from Toke Aidt, August 19, 2018)}
 
-While clearly these are interesting issues, I have difficulties reading this paper. Everything is presented in a very unclear manner. Game-theoretical concepts are invoked, but typically not correctly. For instance, an equilibrium is a strategy profile (one strategy for each type of each player). Hence it does not make sense to say, as the authors do in Theorem 1 on page 10, that something is an equilibrium strategy for one type without also specifying what others do. As another example, on page 18, the authors say that “The revelation principle is used to attain truthful self-identification.” But in reality, the revelation principle is just an argument for why it is without loss of generality to restrict attention to direct mechanisms. The truthfulness of messages is guaranteed by requiring the mechanism to be incentive compatible, something the authors do not address. \\
-
-Another thing. It is not considered a good idea to introduce new assumptions, which have not been mentioned before, in the proof of a proposition, as happens in the alleged proof of Theorem 4 on page 27.
-
-\end{itemize}
 \end{document}
