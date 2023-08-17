@@ -121,37 +121,37 @@ In period 0, countries 1 and 2 simultaneously give costly concessions $g_i$ $\in
 
 Beginning in period 1, countries engage in an infinitely repeated Prisoner's Dilemma once per period with stage game payoffs in Table 1 below.\footnote{For a game-theoretic analysis of the repeated Prisoner's Dilemma with uncertainty over discount factors, focused on studying players' belief structures, see Maor and Solan (2015).  Our model differs in that it adds an initial period, before the repeated Prisoner's Dilemma begins, in which players make costly concessions to each other.  We will see that these concessions enable signaling between the players that render the analysis of their beliefs much simpler than in Maor and Solan (2015).} While not a good representation of all-out war or even a zero-sum short term war, the Prisoner's Dilemma is appropriate to represent a limited, continued conflict. In cases appropriately modeled by a Prisoner's Dilemma, it would be better for both parties to exit the protracted conflict, but no party has the unilateral incentive to do so. The critical results of this paper do not depend on a prisoner's dilemma structure; they require only that a better result can be achieved through trust or credible commitment. Thus, a stag hunt or other game structures are also possible. The Prisoner's Dilemma is used because of its wide exposure in the literature.\footnote{This payoff matrix does not distinguish between civil and interstate conflict, though in practice the effects on the payoffs might indeed have a different structure in the different cases.} 
 
-The countries' stage game actions will be referred to as ``Trust'' and ``Fight'' as represented in Table 1, where Country 1 is the row player and Country 2 is the column player.
+The countries' stage game actions will be referred to as ``Trust'' and ``Distrust'' as represented in Table 1, where Country 1 is the row player and Country 2 is the column player.
 
 \begin{center}
 \captionof{table}{Stage game payoffs}
 \begin{tabular}{|l|c|c|}
-  \hline      & Trust & Fight \\ \hline
+  \hline      & Trust & Distrust \\ \hline
 	 Trust& $T$, $T$& $-D$, $T+W$ \\ \hline
-	Fight & $T+W$, $-D$& $W-D$, $W-D$ \\ \hline
+	Distrust & $T+W$, $-D$& $W-D$, $W-D$ \\ \hline
 \end{tabular}
 \end{center}
 
-Here $T>0$ represents the benefit from a country's negotiating partner playing Trust. $D>0$ represents the damages incurred when a country's negotiating partner plays Fight, while $W>0$ is the additional benefit a country receives when it plays Fight itself. We will refer to the stage-game Nash Equilibrium of (Fight, Fight) as ``War.'' We will refer to (Trust,Trust) as ``Peace.'' In line with the assumption that the countries play a Prisoner's Dilemma in the stage game, we assume $T>W-D$. Note that this ensures that the joint payoffs from ``Peace'' are the highest among all the stage-game action profiles. 
+Here $T>0$ represents the benefit from a country's negotiating partner playing Trust. $D>0$ represents the damages incurred when a country's negotiating partner plays Distrust, while $W>0$ is the additional benefit a country receives when it plays Distrust itself. We will refer to the stage-game Nash Equilibrium of (Distrust, Distrust) as ``War.'' We will refer to (Trust,Trust) as ``Peace.'' In line with the assumption that the countries play a Prisoner's Dilemma in the stage game, we assume $T>W-D$. Note that this ensures that the joint payoffs from ``Peace'' are the highest among all the stage-game action profiles. 
 
 Payoffs for a country are the sum the stage game payoffs, discounted by $\delta_i$. For example, if both parties play ``Trust'' in every period, the payoff for a player $i$ is $\sum_{t=1}^\infty \de_i^{t-1} T = \frac{T}{1-\de_i}.$
 
-We will use grim trigger punishments throughout: that is, (Fight, Fight) will be played forever if Fight is played by any party in any round. Because we use grim trigger punishments, there are only 4 interesting paths of play after concessions are given:
+We will use grim trigger punishments throughout: that is, (Distrust, Distrust) will be played forever if Distrust is played by any party in any round. Because we use grim trigger punishments, there are only 4 interesting paths of play after concessions are given:
 1) Both countries play Trust always; 
-2) Both play Fight always; 
-3) Country 1 plays Fight in round 1 while country 2 plays Trust, which is followed by both countries playing Fight from round 2 onwards; and 
-4) Country 2 plays Fight in round 1 while country 1 plays Trust, which is followed by both countries playing Fight from round 2 onwards.
+2) Both play Distrust always; 
+3) Country 1 plays Distrust in round 1 while country 2 plays Trust, which is followed by both countries playing Distrust from round 2 onwards; and 
+4) Country 2 plays Distrust in round 1 while country 1 plays Trust, which is followed by both countries playing Distrust from round 2 onwards.
 
-Equilibrium payoffs beginning from round 1 are now easily described by noting only the collective first round behavior.\footnote{If a parameter of the model changes after period 0, the equilibrium may be disrupted. Although it is beyond the scope of this paper, one could model this by adding a probability of equilibrium disruption followed by a new round of concessions that would essentially re-start the game--albeit with altered parameters.} Let $X_{ij}$ represent the sum of discounted payoffs for country $i$ where subscripts represent first round strategies of that country. If both countries play T in round 1, the corresponding payoff to country $i$ is represented as $ X_{TT}^i=\frac {T}{1- \delta_i}$. Likewise $X_{TF}^i=({-D}+\frac{\delta_i(W-D)}{1- \delta_i} )$, $ X_{FF}^i=\frac{W-D}{1- \delta_i}$, and  $X_{FT}^i=T+W +\frac{\delta_i(W-D)}{1- \delta_i}$. $X_{FT}^h$, for example, represents payoffs for the high type of country 1 when country 1 fights and country 2 trusts in the first period. Note that because types have different discount factors, the payoffs differ by type.
+Equilibrium payoffs beginning from round 1 are now easily described by noting only the collective first round behavior.\footnote{If a parameter of the model changes after period 0, the equilibrium may be disrupted. Although it is beyond the scope of this paper, one could model this by adding a probability of equilibrium disruption followed by a new round of concessions that would essentially re-start the game--albeit with altered parameters.} Let $X_{ij}$ represent the sum of discounted payoffs for country $i$ where subscripts represent first round strategies of that country. If both countries play T in round 1, the corresponding payoff to country $i$ is represented as $ X_{TT}^i=\frac {T}{1- \delta_i}$. Likewise $X_{TF}^i=({-D}+\frac{\delta_i(W-D)}{1- \delta_i} )$, $ X_{FF}^i=\frac{W-D}{1- \delta_i}$, and  $X_{FT}^i=T+W +\frac{\delta_i(W-D)}{1- \delta_i}$. $X_{FT}^h$, for example, represents payoffs for the high type of country 1 when country 1 plays Distrust and country 2 plays Trust in the first period. Note that because types have different discount factors, the payoffs differ by type.
 
 Parameters are common knowledge with the exception of $\delta_i$, which is country $i$'s private information. We take achieving peace, or more broadly, achieving the provision of public goods, as the normative goal with respect to advancing social welfare. Only high types are capable of making peace/providing public goods, and thus we will take the measure of social welfare to be the sum of the participating high types’ utilities.
 
 \section{Analysis of Benchmark Cases}
 \label{sec:bench}
-When countries are faced with uncertainty about each other's motives, they can proceed in several ways, including giving concessions in order to signal their ability to make peace. We will examine three types of equilibria.\footnote{If the discount factor is high enough, there are many types of equilibria. Consider for instance oscillating every other period between (Trust,Trust) and (Fight,Fight) with a grim trigger ``War'' threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed and thus 	are not attractive.} The Appendix provides a thorough analysis of the various equilibria as well as most proofs. 
+When countries are faced with uncertainty about each other's motives, they can proceed in several ways, including giving concessions in order to signal their ability to make peace. We will examine three types of equilibria.\footnote{If the discount factor is high enough, there are many types of equilibria. Consider for instance oscillating every other period between (Trust,Trust) and (Distrust,Distrust) with a grim trigger ``War'' threat. In this paper, we are not interested in these equilibria because they are not as realistic for applications to conflict scenarios. These are also always payoff dominated by at least one of the other equilibria discussed and thus 	are not attractive.} The Appendix provides a thorough analysis of the various equilibria as well as most proofs. 
 
 \subsection{Pooling equilibrium}
-In the \emph{pooling equilibrium}, neither negotiating party gives concessions in period 0, then both parties play Fight in every period beginning with period 1. Countries do nothing to bridge the credibility gap, and thus do not cooperate. This \emph{pooling equilibrium} is likely to happen when countries are in long-set patterns of distrust. Active fighting is not necessary; remaining outside of a state of peace/cooperation is all that is required.  See the Appendix for a formal characterization of this type of equilibrium. 
+In the \emph{pooling equilibrium}, neither negotiating party gives concessions in period 0, then both parties play Distrust in every period beginning with period 1. Countries do nothing to bridge the credibility gap, and thus do not cooperate. This \emph{pooling equilibrium} is likely to happen when countries are in long-set patterns of distrust. Active fighting is not necessary; remaining outside of a state of peace/cooperation is all that is required.  See the Appendix for a formal characterization of this type of equilibrium. 
 
 %Cyprus' civil war is a good example of the pooling equilibrium where neither side is taking actions to move things forward. While both sides posture that they want peace, and while there has been some lessening of tensions, very few concrete actions have been taken that move the sides toward settlement. This conflict is a stalemate. 
 
@@ -163,11 +163,11 @@ Without a third party, there is little hope of overcoming mistrust. These long l
 
 \subsection{No-Concessions Separating Equilibrium}
 \label{sec:ncse}
-The other two equilibria on which we focus are separating equilibria in which low types and high types have different strategies. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained with no concessions and a grim trigger punishment threat. We call this a \emph{no-concessions separating equilibrium}. In this equilibrium, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Fight. So long as there are two high types as revealed by their period 1 play, both countries play Trust in all following periods. Otherwise, both countries play Fight in all following periods. 
+The other two equilibria on which we focus are separating equilibria in which low types and high types have different strategies. If $\delta_i$ is high enough for both countries, the ``Peace'' outcome can be sustained with no concessions and a grim trigger punishment threat. We call this a \emph{no-concessions separating equilibrium}. In this equilibrium, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Distrust. So long as there are two high types as revealed by their period 1 play, both countries play Trust in all following periods. Otherwise, both countries play Distrust in all following periods. 
 
 \begin{theorem}
 \emph{No Concessions Separating Equilibrium}\\
-	Assume $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}=\de^{nc}$. A subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give no concessions in period 0 and play Trust unless the other country defects to Fight.
+	Assume $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}=\de^{nc}$. A subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Distrust and the high types give no concessions in period 0 and play Trust unless the other country defects to Distrust.
 	\label{theorem:1}
 \end{theorem}
 \emph{Proof}: See Appendix.
@@ -182,7 +182,7 @@ In this equilibrium, two mutually distrustful countries \emph{behave} as if they
 \label{sec:cse}
 The other separating equilibrium of interest involves distrustful countries using concessions as a way of building trust. We call this the \emph{concessions separating equilibrium}. In this equilibrium, the cost of giving a concession can be worth the investment if the other country also cooperates. It is also not as risky as the \emph{no-concession separating equilibrium}. In this equilibrium, concessions are given before more substantive actions and thus remove the possibility of playing one of the cheating corners of the Prisoner's Dilemma. Concessions are a costly signal that the other country is serious about cooperating and can be used to avoid continual distrust. That is, high types make use of concessions to identify themselves as trustworthy partners in hopes of establishing peace.
 
-In the \emph{concessions separating equilibrium}, low types do not give concessions because the concession level is set as the smallest amount that will deter the impatient type from mimicking the patient type. In contrast, high types always give a concession in period 0. Thus, the patience level of both countries is fully revealed in equilibrium. If both countries receive concessions, they know the other is a high type and both play Trust in subsequent periods. Otherwise, if even one player does not receive a concession, there is at least one low type so both countries play Fight in subsequent periods. The signaling value of concessions in period 0 means that, starting from period 1 in the Trust/Fight game, both countries play the same strategy in a separating equilibrium, that is both play Trust if there were two high signals and otherwise both play Fight.
+In the \emph{concessions separating equilibrium}, low types do not give concessions because the concession level is set as the smallest amount that will deter the impatient type from mimicking the patient type. In contrast, high types always give a concession in period 0. Thus, the patience level of both countries is fully revealed in equilibrium. If both countries receive concessions, they know the other is a high type and both play Trust in subsequent periods. Otherwise, if even one player does not receive a concession, there is at least one low type so both countries play Distrust in subsequent periods. The signaling value of concessions in period 0 means that, starting from period 1 in the Trust/Distrust game, both countries play the same strategy in a separating equilibrium, that is both play Trust if there were two high signals and otherwise both play Distrust.
 
 Details of the analysis are in the Appendix. We begin by characterizing the concession (or \emph{gift}) giving behavior of the low type. We then present the patience threshold and gift giving behavior of the high type.
 
@@ -197,7 +197,7 @@ Low types don't give gifts in this separating equilibrium because the gift would
 \begin{theorem}
 \emph{Concessions Separating Equilibrium (CSE)}
 	\begin{enumerate}
-		\item[(a)] Assume $\delta_h \geq \frac{W}{T+D} = \de^{c}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
+		\item[(a)] Assume $\delta_h \geq \frac{W}{T+D} = \de^{c}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Distrust and the high types give a concession in period 0 and play Trust unless the other country defects to Distrust.
 		\item[(b)] In the best concessions separating equilibrium, high types give a concession of $p(T + D)$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
 \end{enumerate}
 	\label{theorem:2}
@@ -237,10 +237,10 @@ Concessions are immediately converted into civil society or military gifts and a
 \begin{center}
 \captionof{table}{Stage game payoffs when concessions have material value}
 \begin{tabular}{|l|c|c|}
-  \hline      & Trust & Fight \\ \hline
+  \hline      & Trust & Distrust \\ \hline
 	 Trust& \small$T+T\alpha_2 g_1$, & \small$-[D+D(1-\alpha_2) g_1],$ \\
   & \small$T+T\alpha_1 g_2$ & \small$[T+T\alpha_1 g_2] + [W+W(1-\alpha_2) g_1] $\\ \hline
-	Fight & \small$[T+T\alpha_2 g_1]+[W+W(1-\alpha_1) g_2],$& \small$[W+W(1-\alpha_1) g_2]-[D+D(1-\alpha_2) g_1],$ \\
+	Distrust & \small$[T+T\alpha_2 g_1]+[W+W(1-\alpha_1) g_2],$& \small$[W+W(1-\alpha_1) g_2]-[D+D(1-\alpha_2) g_1],$ \\
 	 & \small$-[D+D(1-\alpha_1) g_2] $ & \small$[W+W(1-\alpha_2) g_1]-[D+D(1-\alpha_1) g_2]$ \\ \hline
 \end{tabular}
 \end{center}
@@ -248,7 +248,7 @@ Concessions are immediately converted into civil society or military gifts and a
 
 This modification to the payoffs is the second change in the model relative to Sections~\ref{sec:model} and \ref{sec:bench}. We add a term to each of $T$, $W$, and $D$ that represents the additional benefit or harm flowing from the future material value of the concession. When both countries play Trust, they each receive the base benefit $T$ as well as an additional benefit of the concession they \textit{gave} that is scaled by the proportion that was invested in civil society as well as the base benefit of $T$.
 
-For example, if both countries play Fight, Country 1 receives not only the immediate value of the concession and then $W-D$ in each period. Its welfare now has two additional terms. First, an additional benefit term in each period of the repeated game $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. Second, Country 1 also incurs extra damages $D(1-\alpha_2) g_1$ in each period of the repeated game that are proportional to the size of the concession it \textit{gave} and how much of that concession was invested in the military by Country 2. The other payoffs are modified analogously.\footnote{The results are qualitatively unchanged if the gifts are not scaled by the variables that represent the impacts of cooperation and non-cooperation, or if they are scaled by these variables but with a proportion other than 1 or many plausible non-linear functions of $T$, $W$ and $D$. The results are a bit simpler if there is no scaling, but we believe it is more realistic to assume that the future benefits and costs of the gifts are proportional to the direct benefits and costs of cooperation/non-cooperation. For instance, a county who could impose more damage without the future value of the concessions is likely to be able to better leverage a concession than a country who can impose less damage.}
+For example, if both countries play Distrust, Country 1 receives not only the immediate value of the concession and then $W-D$ in each period. Its welfare now has two additional terms. First, an additional benefit term in each period of the repeated game $W(1-\alpha_1) g_2$, which accounts for the value of the received concession as well as how much Country 1 invested in the military. Second, Country 1 also incurs extra damages $D(1-\alpha_2) g_1$ in each period of the repeated game that are proportional to the size of the concession it \textit{gave} and how much of that concession was invested in the military by Country 2. The other payoffs are modified analogously.\footnote{The results are qualitatively unchanged if the gifts are not scaled by the variables that represent the impacts of cooperation and non-cooperation, or if they are scaled by these variables but with a proportion other than 1 or many plausible non-linear functions of $T$, $W$ and $D$. The results are a bit simpler if there is no scaling, but we believe it is more realistic to assume that the future benefits and costs of the gifts are proportional to the direct benefits and costs of cooperation/non-cooperation. For instance, a county who could impose more damage without the future value of the concessions is likely to be able to better leverage a concession than a country who can impose less damage.}
 
 Because $\al_i$ enters into the payoffs in a linear fashion, the choice that maximizes welfare in equilibrium is $\alpha=1$ for high types since a concession would only come from another high type in equilibrium, and thus only the ``Peace'' outcome will be played. Conversely, in equilibrium, low types only participate in the ``War'' equilibrium and thus maximize their payoffs by choosing $\alpha=0$. 
 
@@ -257,7 +257,7 @@ We turn next to characterizing a concessions separating equilibrium in this envi
 \begin{theorem}
 \emph{Concessions Separating Equilibrium (CSE) with Material Value}
 	\begin{enumerate}
-		\item[(a)] Assume $\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D$ is positive and $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Fight and the high types give a concession in period 0 and play Trust unless the other country defects to Fight.
+		\item[(a)] Assume $\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D$ is positive and $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Distrust and the high types give a concession in period 0 and play Trust unless the other country defects to Distrust.
 		\item[(b)] In the best concessions separating equilibrium when gifts have full material value, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
 \end{enumerate}
 	\label{theorem:csemv}
@@ -279,7 +279,7 @@ The patience threshold to separate through concessions with future material valu
 
 $\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5,.979)$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value can destroy the opportunity for peace. \hfill $\blacksquare$ 
 
-The comparative statics for the patience threshold $\de^c = \frac{W}{T+D}$ are straightforward for the \emph{concession separating equilibrium} when there's no material value. The threshold increases and cooperation becomes less likely when $W$ increases; the threshold decreases when either $T$ or $D$ increase. These relationships hold with a small caveat for the \emph{concession separating equilibrium} when there \emph{is} material value when the patience threshold becomes $\de^{1} = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1$.\footnote{The caveat is that, if both $T$ and $W$ become sufficiently large, the patience threshold will increase in $D$.} The patience threshold increases in $W$ because it makes the benefit from playing Fight larger. The patience threshold decreases in $T$ and $D$, but for different reasons. $T$ is straightforward: a larger $T$ is a larger benefit from playing Trust. In contrast, a larger $D$ is a bigger cost of the negotiating partner playing Fight. These relationships are not fundamentally changed by the presence of future material value because the future material value is proportional to the fundamental values of $W$, $T$, and $D$.
+The comparative statics for the patience threshold $\de^c = \frac{W}{T+D}$ are straightforward for the \emph{concession separating equilibrium} when there's no material value. The threshold increases and cooperation becomes less likely when $W$ increases; the threshold decreases when either $T$ or $D$ increase. These relationships hold with a small caveat for the \emph{concession separating equilibrium} when there \emph{is} material value when the patience threshold becomes $\de^{1} = \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1$.\footnote{The caveat is that, if both $T$ and $W$ become sufficiently large, the patience threshold will increase in $D$.} The patience threshold increases in $W$ because it makes the benefit from playing Distrust larger. The patience threshold decreases in $T$ and $D$, but for different reasons. $T$ is straightforward: a larger $T$ is a larger benefit from playing Trust. In contrast, a larger $D$ is a bigger cost of the negotiating partner playing Distrust. These relationships are not fundamentally changed by the presence of future material value because the future material value is proportional to the fundamental values of $W$, $T$, and $D$.
 
 There are, however, two variables that do not affect the patience threshold in the no material value case that \textit{do} affect the threshold when there is future material value: $\de_l$ and $p$. When the low type's patience level $\de_l$ increases, the high type's patience threshold increases; this is because a more patient low type requires a larger gift in order not to mimic the high type. In the case of no material value, the low type's discount factor doesn't enter into the gift, and therefore it doesn't influence how much patience is required for cooperation.
 
@@ -295,10 +295,10 @@ We implement this assumption by allowing countries to choose a scalar $e \in[0,1
 \begin{center}
 \captionof{table}{Stage game payoffs when concessions have material value that can be destroyed}
 \begin{tabular}{|l|c|c|}
-  \hline      & Trust & Fight \\ \hline
+  \hline      & Trust & Distrust \\ \hline
 	 Trust& \small$T+T\alpha_2 e g_1$, & \small$-[D+D(1-\alpha_2) eg_1],$ \\
   & \small$T+T\alpha_1 eg_2$ & \small$[T+T\alpha_1 eg_2] + [W+W(1-\alpha_2) eg_1] $\\ \hline
-	Fight & \small$[T+T\alpha_2 eg_1]+[W+W(1-\alpha_1) eg_2],$& \small$[W+W(1-\alpha_1) eg_2]-[D+D(1-\alpha_2) eg_1],$ \\
+	Distrust & \small$[T+T\alpha_2 eg_1]+[W+W(1-\alpha_1) eg_2],$& \small$[W+W(1-\alpha_1) eg_2]-[D+D(1-\alpha_2) eg_1],$ \\
 	 & \small$-[D+D(1-\alpha_1) eg_2] $ & \small$[W+W(1-\alpha_2) eg_1]-[D+D(1-\alpha_1) eg_2]$ \\ \hline
 \end{tabular}
 \end{center}
@@ -313,7 +313,7 @@ Before turning to the question of how the possibility of destroying the value of
 \end{lemma}
 \emph{Proof:} See Appendix.
 
-The intuition for Lemma~\ref{lemma:efficiency} is that future material value of concession helps you when your negotiating partner turns out to be a high type, and this happens $p$ of the time. On the other hand, the material value of your concession \emph{hurts} you when your negotiating partner turns out to be a low type. Similarly, the larger are the benefits from Trust, the larger the welfare gain when the negotiating partner is a high type and the larger are the damages from Fight, the larger is the welfare loss when the negotiating partner turns out to be a low type.
+The intuition for Lemma~\ref{lemma:efficiency} is that future material value of concession helps you when your negotiating partner turns out to be a high type, and this happens $p$ of the time. On the other hand, the material value of your concession \emph{hurts} you when your negotiating partner turns out to be a low type. Similarly, the larger are the benefits from Trust, the larger the welfare gain when the negotiating partner is a high type and the larger are the damages from Distrust, the larger is the welfare loss when the negotiating partner turns out to be a low type.
 
 Lemma~\ref{lemma:efficiency} implies that the high types will either prefer $e=1$ or $e=0$. As we turn to our result about incentive compatibility when concessions have material value, we focus on these two cases as the most focal and easiest upon which to coordinate.\footnote{For some parameter values, we cannot rule out that a \emph{concessions separating equilibrium with $0<e<1$} exists and improves upon high type welfare when high types are patient enough to separate when $e=0$ but not when $e=1$.} %This is not at all obvious because increasing $e$ from $0$ can tighten the high type's incentive compatibility constraint.} 
 
@@ -419,19 +419,19 @@ This paper shows that inefficient concessions may be used to achieve peace or co
 
 \subsection{Pooling equilibrium}
 \begin{lemma}
-	From period 1 on, playing (Fight,Fight) in all periods is a subgame perfect Nash equilibrium of the continuation game for both types regardless of beliefs.
+	From period 1 on, playing (Distrust,Distrust) in all periods is a subgame perfect Nash equilibrium of the continuation game for both types regardless of beliefs.
 	\label{lemma:1}
 \end{lemma}
-\emph{Proof}: As $D>0$ and $W>0$ the dominant stage game action for all types is to play Fight. Thus the stage game equilibrium is (Fight, Fight) and in any repeated game, playing the stage game equilibrium in each period is an equilibrium of the entire game. \hfill $\blacksquare$\\
+\emph{Proof}: As $D>0$ and $W>0$ the dominant stage game action for all types is to play Distrust. Thus the stage game equilibrium is (Distrust, Distrust) and in any repeated game, playing the stage game equilibrium in each period is an equilibrium of the entire game. \hfill $\blacksquare$\\
 
-That is, one high type equilibrium strategy is to pool with the low types---by always playing ``Fight'' by definition---and always play Fight. If both the low and high type of player $j$ choose the strategy that gives no concessions and always plays fight, then either type of player $i$ is made strictly better off by playing Fight in each period given player $j$'s behavior. Given that the stage-game equilibrium will be (Fight,Fight), there is no incentive to give a concession in period 0 because concessions are costly and signaling one's type can give no benefit in this equilibrium. Types pool by never giving concessions and always playing Fight. 
+That is, one high type equilibrium strategy is to pool with the low types---by always playing ``Distrust'' by definition---and always play Distrust. If both the low and high type of player $j$ choose the strategy that gives no concessions and always plays Distrust, then either type of player $i$ is made strictly better off by playing Distrust in each period given player $j$'s behavior. Given that the stage-game equilibrium will be (Distrust,Distrust), there is no incentive to give a concession in period 0 because concessions are costly and signaling one's type can give no benefit in this equilibrium. Types pool by never giving concessions and always playing Distrust. 
  
 \subsection{No-Concessions Separating Equilibrium}
  
  We examine the conditions for a separating equilibrium held in place by a grim trigger.
  
  \noindent{\emph{Proof of Theorem \ref{theorem:1}}:\\
-Playing Trust in the first period and thereafter as long as Trust has always been played will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from playing Fight in the first period and then every period thereafter by the one-shot deviation principle. If both countries play Trust in a period, a ``Peace'' equilibrium takes place and both countries continue to play Trust in every period with the grim trigger threat of the ``War'' equilibrium. Low types play Fight in the first period, so a high type that observed Fight being played would respond by playing Fight in period 2 and in all future periods. A country plays Trust if and only if the following condition is satisfied:
+Playing Trust in the first period and thereafter as long as Trust has always been played will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from playing Distrust in the first period and then every period thereafter by the one-shot deviation principle. If both countries play Trust in a period, a ``Peace'' equilibrium takes place and both countries continue to play Trust in every period with the grim trigger threat of the ``War'' equilibrium. Low types play Distrust in the first period, so a high type that observed Distrust being played would respond by playing Distrust in period 2 and in all future periods. A country plays Trust if and only if the following condition is satisfied:
 \begin{equation*}
   p\left(\frac{T}{1- \delta}\right) +(1-p)\left({-D}+\frac{\delta(W-D)}{1- \delta} \right)\geq p \left(T + W + \frac{\de}{1-\de}(W-D)\right) +(1-p)\frac{W-D}{1- \delta}
 \end{equation*}
@@ -453,7 +453,7 @@ Simplifying, we have
 	\label{eq:ncse}
 \ee
 
-If the potential advantages of ``Peace'' are large enough to outweigh the risks of encountering a low type in expected utility terms, that is $\de_h \geq \de^{nc}$, a county has the incentive to play Trust in the first round rather than Fight. Any player with $\de < \de^{nc}$ has the incentive---by this same inequality---to play Fight in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$
+If the potential advantages of ``Peace'' are large enough to outweigh the risks of encountering a low type in expected utility terms, that is $\de_h \geq \de^{nc}$, a county has the incentive to play Trust in the first round rather than Distrust. Any player with $\de < \de^{nc}$ has the incentive---by this same inequality---to play Distrust in each period even if the other country plays Trust. Thus we call these countries low types for purposes of this equilibrium. \hfill $\blacksquare$
 
 \subsection{Concessions Separating Equilibrium}
 
@@ -463,7 +463,7 @@ Below are the details of the \emph{concessions separating equilibrium} analysis.
 \\
 \\
 \emph{Proof of Lemma~\ref{lemma:3}:}\\
-In accord with the Revelation Principle (Myerson 1979), we focus without loss of generality on concessions separating equilibrium in which countries reveal their types truthfully. This allows high types to only play ``Trust'' in period 1 with other high types and to play Fight with low types. Low types play Fight (Lemma~\ref{lemma:1}) and their equilibrium payoff is $U_l=X_{FF}+ pg_h-g_l$.
+In accord with the Revelation Principle (Myerson 1979), we focus without loss of generality on concessions separating equilibrium in which countries reveal their types truthfully. This allows high types to only play ``Trust'' in period 1 with other high types and to play Distrust with low types. Low types play Distrust (Lemma~\ref{lemma:1}) and their equilibrium payoff is $U_l=X_{FF}+ pg_h-g_l$.
 
 Though low types might be willing to give a non-zero gift in a separating equilibrium, they will only do this if it gives them some advantage. Here, high types only cooperate with other high types, so giving a concession cannot help low types to achieve a higher payoff in the repeated game. Because their concession $g_l$ enters negatively in the payoff function, low types' optimal concession is therefore 0.
 
@@ -528,7 +528,7 @@ In the separating equilibrium constructed here, players will believe that any co
 	pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h
 	\label{eq:matval1}
 \end{equation}
-On the left side, the low type does not give a concession but receives a concession if facing a high type ($pg_h$). Then (Fight, Fight) is played, and the payoffs depend on whether this low type is facing a high type or a low type because the implications for future material value are different. With probability $p$, the low type received a gift and invested in the military. With probability $(1-p)$ there were no concessions given by either side. The left side of Expression~\ref{eq:matval1} is then $pg_h + \frac{1}{1-\de_l}\left[p(W+Wg_h-D) + (1-p)(W-D) \right]$.
+On the left side, the low type does not give a concession but receives a concession if facing a high type ($pg_h$). Then (Distrust, Distrust) is played, and the payoffs depend on whether this low type is facing a high type or a low type because the implications for future material value are different. With probability $p$, the low type received a gift and invested in the military. With probability $(1-p)$ there were no concessions given by either side. The left side of Expression~\ref{eq:matval1} is then $pg_h + \frac{1}{1-\de_l}\left[p(W+Wg_h-D) + (1-p)(W-D) \right]$.
 
 On the right side, the low type is giving a gift and also receiving a gift from the high type with probability $p$. With probability $p$, this low type faces a high type who invests the gift in civil society. With probability $(1-p)$, the low type's gift goes to another low type who invests in the military and the low type does not receive a gift. So the right hand side of Expression~\ref{eq:matval1} becomes $-g_h + pg_h + p\left(T + Tg_h +W + Wg_h + \frac{\de_l}{1-\de_l}\left(W + Wg_h-D \right) \right) + (1-p)\left( \frac{1}{1-\de_l}\left(W-D-Dg_h \right) \right)$.
 
@@ -559,7 +559,7 @@ This implies that the high types need give a gift at least as large as $g^1$ in 
 
 High type separating equilibrium utility is $U_h= pX_{TT}+(1-p)X_{FF} - g_h+pg_h$. Since utility is decreasing in $g_h$, it is optimal for high types to make $g_h$ as small as possible and still have separation. This occurs when Expression~\ref{eq:matval2} holds with equality. That is, the optimal high type gift in this equilibrium is $g^1 = \frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$.
 
-In order to incentivize high types to send nonzero concessions, the high type incentive compatibility constraint must not be violated. That is, the payoff from separating must be higher than the payoff from not giving a gift and pooling with the low types. Note that if the high type pools with the low type, it knows it will be playing Fight and so invests any concession received in military buildup. 
+In order to incentivize high types to send nonzero concessions, the high type incentive compatibility constraint must not be violated. That is, the payoff from separating must be higher than the payoff from not giving a gift and pooling with the low types. Note that if the high type pools with the low type, it knows it will be playing Distrust and so invests any concession received in military buildup. 
 \begin{equation*}
 	p\frac{T+Tg^1}{1-\de_h} + (1-p)\frac{W-D-Dg^1}{1-\de_h} - (1-p)g^1 \geq 
 	p\frac{W+Wg^1-D}{1-\de_h} + (1-p)\frac{W-D}{1-\de_h} +pg^1
@@ -599,11 +599,11 @@ $$\frac{\partial g^1}{\partial T} = \frac{\left(\left(1-\de_l\right)\left(1 - pT
 $$= \frac{\left[(1-\de_l)p\right] \left\{\left(1-\de_l\right)\left(1 - pT + pD + pT\right) + (1-p) D\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}$$
 $$= \frac{\left[(1-\de_l)p\right] \left\{\left(1-\de_l\right)\left(1 + pD \right) + (1-p) D\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}.$$ Every term in the numerator is positive, and the denominator is a squared term so it is positive. Therefore we have $\frac{\partial g^1}{\partial T} > 0$.
 
-Damages from negotiating partner playing Fight: $$\frac{\partial g^1}{\partial D} = \frac{\left(\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right)(1-\de_l)p - \left(1-\de_l\right)p\left(D + T\right)(1 -p)}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}$$
+Damages from negotiating partner playing Distrust: $$\frac{\partial g^1}{\partial D} = \frac{\left(\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right)(1-\de_l)p - \left(1-\de_l\right)p\left(D + T\right)(1 -p)}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}$$
 $$= \frac{(1-\de_l)p\left\{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D - \left(D + T\right)(1 -p)\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}$$
 $$= \frac{(1-\de_l)p\left\{\left(1-\de_l\right)\left(1 - pT \right) - T(1 -p)\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}$$
 $$= \frac{(1-\de_l)p\left\{1-\de_l -pT + \de_l p T - T +pT\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}$$
-$$= \frac{(1-\de_l)p\left\{1-\de_l + \de_l p T - T\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}.$$ Because both the denominator and $(1-\de_l)p$ are strictly positive, the sign of this derivative matches the sign of $1-\de_l + \de_l p T - T$. It is positive when $\frac{1-\de_l}{1-\de_l p} > T$ and negative otherwise. So, when the benefit from the partner playing trust is sufficiently mall, the gift size will increase in $D$, but otherwise the gift size will decrease in the damages from the negotiating partner playing Fight.
+$$= \frac{(1-\de_l)p\left\{1-\de_l + \de_l p T - T\right\}}{\left[\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D\right]^2}.$$ Because both the denominator and $(1-\de_l)p$ are strictly positive, the sign of this derivative matches the sign of $1-\de_l + \de_l p T - T$. It is positive when $\frac{1-\de_l}{1-\de_l p} > T$ and negative otherwise. So, when the benefit from the partner playing trust is sufficiently mall, the gift size will increase in $D$, but otherwise the gift size will decrease in the damages from the negotiating partner playing Distrust.
 
 
 We now turn to the patience threshold that defines the high type. In the {concessions separating equilibrium} with no material value, we have $\frac{W}{T+D} = \de^{c}$, which increases in $W$ and decreases in $T$ and $D$. Notice it is not a function of $\delta_l$ or $p$.
@@ -626,7 +626,7 @@ $$\frac{\partial \delta^1}{\partial T} = \frac{-p \cdot g^1 + p(T+D-W) \frac{\pa
 $$= \frac{p}{(g^1)^2}\left\{-(1-\de_l)W - (1- \de_l P)WD -2TD(1-\de_l)p \right\} < 0.$$
 The result holds because $p$ and $g^1$ are positive, while each additive term in the curly braces is negative.
 
-The result is more nuanced for $D$, the cost of the negotiating partner playing Fight. 
+The result is more nuanced for $D$, the cost of the negotiating partner playing Distrust. 
 $$\frac{\partial \delta^1}{\partial D} = \frac{-p \cdot g^1 + p(T+D-W) \frac{\partial g^1}{\partial D}}{(g^1)^2}+ (1-p).$$
 If $T < \frac{1-\de_l}{1-\de_l p}$ so that $\frac{\partial g^1}{\partial D} > 0$, this expression will always be negative. As $T$ grows so that $\frac{\partial g^1}{\partial D} < 0$, the derivative remains negative as long as $T < \frac{1-\de_l+ \de_lD(1-p)}{1-\de_l}$. When T grows even larger, the derivative remains negative as long as $W < \frac{(1-p)\de_l(T+D)^2}{T -1 + \de_l - \de_l p T}$.
 
