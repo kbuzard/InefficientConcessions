@@ -21,6 +21,7 @@
   \doublespacing
 
 \newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
 \newtheorem{lemma}{Lemma}
 \newtheorem{fact}{Fact}
 \newtheorem{corollary}{Corollary}
@@ -164,11 +165,11 @@ Without a third party, there is little hope of overcoming mistrust. These long l
 \label{sec:ncse}
 The other two equilibria on which we focus are separating equilibria in which low types and high types have different strategies. If $\delta_i$ is high enough for both countries, the Cooperation outcome can be sustained with no concessions and a grim trigger punishment threat. We call this a \emph{no-concessions separating equilibrium}. In this equilibrium, no concessions are given by either type in period 0. In period 1, high types play Trust while low types play Distrust. So long as there are two high types as revealed by their period 1 play, both countries play Trust in all following periods. Otherwise, both countries play Distrust in all following periods. 
 
-\begin{theorem}
+\begin{proposition}
 \emph{No Concessions Separating Equilibrium}\\
 	Assume $\delta_h \geq \frac{W}{(1-p)W + p(T+D)}=\de^{nc}$. A subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Distrust and the high types give no concessions in period 0 and play Trust unless the other country defects to Distrust.
-	\label{theorem:1}
-\end{theorem}
+	\label{proposition:1}
+\end{proposition}
 \emph{Proof}: See Appendix.
 \\
 Here, as in each further iteration of the model, we define a high type as a country who has a discount factor at or above the threshold for cooperation. That is, high types prefer to play the Cooperation equilibrium, i.e. $\delta_h \geq \delta^{nc}$. Any country with $\delta_l < \delta^{nc}$ is a low type for the purposes of the \emph{no concessions separating equilibrium}. This means that two high types---and only two high types---can sustain the Cooperation outcome.\footnote{Note that, because we define high and low types relative to each type of equilibrium, a country with a given discount factor can be a high type in some equilibria and a low type in others.}
@@ -193,14 +194,14 @@ Details of the analysis are in the Appendix. We begin by characterizing the conc
 
 Low types don't give gifts in this separating equilibrium because the gift would fail to serve any purpose: the low type will be identified through the separating behavior of the high types and there is thus nothing to gain.\footnote{The transmission of information about each country's type is, by definition, essential for the existence of a \emph{concessions separating equilibrium}. Thus, there cannot exist a \emph{concessions semi-separating equilibrium} where the low type gives a concession with strictly positive probability; the concessions would not transmit the information required to build trust. If no information is transmitted, then the high type has no incentive itself to give a concession. Therefore, there cannot be a semi-separating equilibrium with the low type mixing between strictly positive and zero concessions and the players separating in the repeated game as in the \emph{no-concessions separating equilibrium}.}
 
-\begin{theorem}
+\begin{proposition}
 \emph{Concessions Separating Equilibrium (CSE)}
 	\begin{enumerate}
 		\item[(a)] Assume $\delta_h \geq \frac{W}{T+D} = \de^{c}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Distrust and the high types give a concession in period 0 and play Trust unless the other country defects to Distrust.
 		\item[(b)] In the best \emph{concessions separating equilibrium}, high types give a concession of $p(T + D)$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
 \end{enumerate}
-	\label{theorem:2}
-\end{theorem}
+	\label{proposition:2}
+\end{proposition}
 \emph{Proof:} See Appendix.
 
 This `best' \emph{concessions separating equilibrium}, where `best' is from the standpoint of high-type welfare, is justified by appeal to the Intuitive Criterion equilibrium refinement, in which out of equilibrium beliefs put zero weight on types that can never gain from deviating.
@@ -253,14 +254,14 @@ Because $\al_i$ enters into the payoffs in a linear fashion, the choice that max
 
 We turn next to characterizing a \emph{concessions separating equilibrium} in this environment with future material value.
 
-\begin{theorem}
+\begin{proposition}
 \emph{Concessions Separating Equilibrium (CSE) with Material Value}
 	\begin{enumerate}
 		\item[(a)] Assume $\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D$ is positive and $\de_h \geq \frac{p(W-D-T)}{\frac{\left(1-\de_l\right)p\left(D +	 T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}} + p (W-T) + (1-p)D + 1 = \de^{1}$. Then a subgame perfect Nash equilibrium exists in which low types give no concessions in period 0 and always play Distrust and the high types give a concession in period 0 and play Trust unless the other country defects to Distrust.
 		\item[(b)] In the best \emph{concessions separating equilibrium} when gifts have full material value, high types give a concession of $\frac{\left(1-\de_l\right)p\left(D + T\right)}{\left(1-\de_l\right)\left(1 - pT \right) + (1-p) D}$, which is the smallest concession necessary to separate. Equilibria with higher concessions yield strictly lower payoffs.
 \end{enumerate}
-	\label{theorem:csemv}
-\end{theorem}
+	\label{proposition:csemv}
+\end{proposition}
 \emph{Proof:} See Appendix.
 
 The problem with concessions with material value is that the potential for the low type to invest the concessions in the military makes more patient types less willing to take a chance that it will be matched with a high type when the costs of being matched with a low type are too high.
@@ -272,9 +273,9 @@ The problem with concessions with material value is that the potential for the l
 
 \emph{Proof}: An example suffices as proof. Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate when concessions do not have future material value is $\de = \frac{1}{1+1} = 0.5$. Let $\de_h = 0.7$ and $\de_l = 0.3$ and $p = 0.9$.
 
-By Theorems~\ref{theorem:1} and ~\ref{theorem:2}, both the \emph{no-concessions separating equilibrium} and the \emph{concessions separating equilibrium} are possible when gifts have no material value.
+By Propositions~\ref{proposition:1} and ~\ref{proposition:2}, both the \emph{no-concessions separating equilibrium} and the \emph{concessions separating equilibrium} are possible when gifts have no material value.
 
-The patience threshold to separate through concessions with future material value is much higher under these parameters when the concessions carry future material value: by Theorem~\ref{theorem:csemv}(a), this threshold is $0.979$. Thus the \emph{concessions separating equilibrium with efficient gifts} is \emph{not} possible. 
+The patience threshold to separate through concessions with future material value is much higher under these parameters when the concessions carry future material value: by Proposition~\ref{proposition:csemv}(a), this threshold is $0.979$. Thus the \emph{concessions separating equilibrium with efficient gifts} is \emph{not} possible. 
 
 $\de_h$ is not involved in any of these calculations, so we can see that for any $\de_h \in [.5,.979)$, separating through concessions is possible when concessions have no material value but is not possible when they do have future material value. That is, future material value can destroy the opportunity for cooperation. \hfill $\blacksquare$ 
 
@@ -322,12 +323,12 @@ Lemma~\ref{lemma:efficiency} implies that the high types will either prefer $e=1
 \end{lemma}
 \emph{Proof}: See Appendix.
 
-This means that there are parameters under which Cooperation cannot be achieved in a \emph{concessions separating equilibrium with efficient gifts} but Cooperation can be achieved in a \emph{concessions separating equilibrium with inefficient gifts}. This is part of the substance of Theorem~\ref{theorem:4}. 
+This means that there are parameters under which Cooperation cannot be achieved in a \emph{concessions separating equilibrium with efficient gifts} but Cooperation can be achieved in a \emph{concessions separating equilibrium with inefficient gifts}. This is part of the substance of Proposition~\ref{proposition:4}. 
 
-\begin{theorem}
+\begin{proposition}
 		Assume the high types are not patient enough to separate without concessions and that concessions have material value that can be destroyed. There are parameters under which the optimal equilibrium is a separating equilibrium in which concessions are inefficient.
-	\label{theorem:4}
-\end{theorem}
+	\label{proposition:4}
+\end{proposition}
 \emph{Proof}: We invoke Lemmas~\ref{lemma:efficiency} and \ref{lemma:e-patient} as two different reasons for which the parties would choose the \emph{concessions separating equilibrium with inefficient gifts}. First, they may be patient enough to separate when gifts are inefficient but not when gifts are efficient (Lemma~\ref{lemma:e-patient}). In this case, the \emph{concessions separating equilibrium with efficient gifts} is not available to them.
 
 However, even if the negotiating parties are patient enough to separate when gifts are efficient, Lemma~\ref{lemma:efficiency} tells us that welfare will be higher with efficient gifts only when the probability of encountering a high type and the benefit from Cooperation are sufficiently large. Otherwise, welfare is higher under the \emph{concessions separating equilibrium with inefficient gifts} and this equilibrium is thus optimal. \hfill $\blacksquare$\\
@@ -354,31 +355,31 @@ We find that, to prevent the low type from being tempted to misrepresent its typ
 \end{lemma}
 \emph{Proof}: See Appendix.
 
-The range of efficiency that allows a mediator to make mechanism $M$ incentive compatible and individually rational for both types is given in Theorem~\ref{theorem:med}.
+The range of efficiency that allows a mediator to make mechanism $M$ incentive compatible and individually rational for both types is given in Proposition~\ref{proposition:med}.
 
-\begin{theorem}
+\begin{proposition}
 \emph{Mediation}
 \begin{enumerate}
 		\item[(a)] A mediator using mechanism $M$ must ensure that $M$ is incentive compatible and individually rational for the low type. This happens when the specified concession is greater than or equal to $\frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)},$ with the denominator of this expression strictly positive.
 		\item[(b)] A mediator using mechanism $M$ must ensure that $M$ is incentive compatible and individually rational for the high type. This happens when either $Te < (1-\de_h)(1-e)$ or the specified concession is less than or equal to $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}$.
 \end{enumerate}
-	\label{theorem:med}
-\end{theorem}
+	\label{proposition:med}
+\end{proposition}
 \emph{Proof:} See Appendix.
 
 In part (a), we see that the low type incentive compatibility constraint determines a lower bound on the size of the concession specified by the mechanism. This puts an upper bound on how efficient concessions can be. In part (b), we see that the high type incentive constraint also provides an upper bound on the size of the concession in some cases.
 
-Ultimately, mediation is desirable if it can improve welfare or improve the chances for cooperation. Theorem~\ref{theorem:medwel} shows that a mediator who implements mechanism $M$ can do both.
+Ultimately, mediation is desirable if it can improve welfare or improve the chances for cooperation. Proposition~\ref{proposition:medwel} shows that a mediator who implements mechanism $M$ can do both.
 
-\begin{theorem}
+\begin{proposition}
 	When concessions have future material value, a mediator can use mechanism $M$ to
 	\begin{enumerate}
 		\item[(a)] improve welfare by increasing the efficiency of concessions when a \emph{concessions separating equilibrium with efficient gifts} is not possible; or
 		\item[(b)] improve welfare despite reducing the efficiency of concessions when a \emph{concessions separating equilibrium with efficient gifts} is possible; or
 		\item[(c)] achieve cooperation when it cannot be achieved either in a \emph{concessions separating equilibrium with efficient gifts} or a \emph{concessions separating equilibrium with inefficient gifts}.
 	\end{enumerate}
-	\label{theorem:medwel}
-\end{theorem}
+	\label{proposition:medwel}
+\end{proposition}
 \emph{Proof:} See Appendix.
 
 To understand part (a), remember that concessions are not exchanged in the mechanism if there is even one report of ``Low.'' Since a concession is only given to the high types and high types invest in civil society and public goods, the efficiency of the concession can be increased without creating extra damages when matched with a low type; this is of course subject to satisfying the low type's constraints. High-type welfare is improved because no transfer is made to the low types and there is no threat of future damage from the concessions since they only go to a high type.
@@ -391,7 +392,7 @@ Part (c) is relevant when the impacts of future material value are too strong, i
 
 Thus a mediator is able to both improve welfare and bring willing parties to the table to give the concessions necessary to achieve the cooperative outcome. The improvements by the mediator here do not rely on the mediator's private information as in the models of Kydd (2003), Rauchhaus (2006) and Smith and Stam (2003). Therefore the mediator's preferences need not be an important factor in her participation. So long as the costs are small enough to be worth her participation the mediator can effectively enter and assist in solving the conflict.
 
-One might worry about the requirement that the mediator be willing and able to ensure that the specified concessions are delivered. While it is by no means guaranteed that a mediator who will play this role exists for every conflict, it is not difficult to believe that such a mediator exists for many conflicts. We do not require a formal international enforcement mechanism, but rather that the mediator has, and is willing to use, sufficient leverage to punish a deviating party. Common examples of such punishments are financial or trade sanctions, or the withdrawal of aid or military support. Further, the mechanism can work if the mediator is either (1) only able to incentivize some portion of the concessions or (2) enforces the concessions with some probability less than 1. This would tighten the low type's incentive constraint and loosen the high type's incentive constraint, creating a different level of optimal efficiency of the concessions.\footnote{To see this, in the incentive constraints in the proof of Theorem~\ref{theorem:med}, replace $g_h$ with $q \cdot g_h$, where $q$ represents the proportion of the concession that can be enforced or the probability with which the full concession is enforced.} 
+One might worry about the requirement that the mediator be willing and able to ensure that the specified concessions are delivered. While it is by no means guaranteed that a mediator who will play this role exists for every conflict, it is not difficult to believe that such a mediator exists for many conflicts. We do not require a formal international enforcement mechanism, but rather that the mediator has, and is willing to use, sufficient leverage to punish a deviating party. Common examples of such punishments are financial or trade sanctions, or the withdrawal of aid or military support. Further, the mechanism can work if the mediator is either (1) only able to incentivize some portion of the concessions or (2) enforces the concessions with some probability less than 1. This would tighten the low type's incentive constraint and loosen the high type's incentive constraint, creating a different level of optimal efficiency of the concessions.\footnote{To see this, in the incentive constraints in the proof of Proposition~\ref{proposition:med}, replace $g_h$ with $q \cdot g_h$, where $q$ represents the proportion of the concession that can be enforced or the probability with which the full concession is enforced.} 
 
 The value of truth telling by the mediator has been examined in the literature. Kydd (2003) studies bias in mediation and how a mediator can credibly communicate information to the parties. Conversely Horner et al. (2010) rely on the mediator to ``hoard'' information in order to be able to improve on unmediated interaction.\footnote{Horner et al. (2010) take cheap talk communication as their benchmark of unmediated communication, whereas we take the unmediated signaling game as our benchmark.} In our model, a successful mediator relies on the parties trusting her. However, here the mediator has no incentive to lie: lying can only potentially hurt the high types, the only type who the mediator can possibly help.
 
@@ -429,7 +430,7 @@ That is, one high type equilibrium strategy is to pool with the low types---by a
  
  We examine the conditions for a separating equilibrium held in place by a grim trigger.
  
- \noindent{\emph{Proof of Theorem \ref{theorem:1}}:\\
+ \noindent{\emph{Proof of Proposition \ref{proposition:1}}:\\
 Playing Trust in the first period and thereafter as long as Trust has always been played will be incentive compatible for high types if the expected payoffs from this strategy are greater than the payoffs from playing Distrust in the first period and then every period thereafter by the one-shot deviation principle. If both countries play Trust in a period, a Cooperation equilibrium takes place and both countries continue to play Trust in every period with the grim trigger threat of Distrust. Low types play Distrust in the first period, so a high type that observed Distrust being played would respond by playing Distrust in period 2 and in all future periods. A country plays Trust if and only if the following condition is satisfied:
 \begin{equation*}
   p\left(\frac{T}{1- \delta}\right) +(1-p)\left({-D}+\frac{\delta(W-D)}{1- \delta} \right)\geq p \left(T + W + \frac{\de}{1-\de}(W-D)\right) +(1-p)\frac{W-D}{1- \delta}
@@ -469,7 +470,7 @@ Though low types might be willing to give a non-zero gift in a separating equili
 High types have the incentive to play Trust only in the Cooperation equilibrium, which can only be sustained by a pair of high types. Both types benefit from the other country playing Trust so all countries have incentive to signal that they are high types if concessions are costless (cheap talk). Thus costless announcements cannot lead to truthful revelation. If concessions are to lead to a separating equilibrium, they must be costly. \hfill $\blacksquare$
 \\
 \\
-\emph{Proof of Theorem \ref{theorem:2}:}\\
+\emph{Proof of Proposition \ref{proposition:2}:}\\
 In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g_h$ is a low type gift.  In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is:\\  
 \begin{equation*}
 	pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h 
@@ -521,7 +522,7 @@ i.e. The high types prefer the \emph{concessions separating equilibrium} when $p
 
 \subsection{Concessions with Material Value}
 \label{ap:mat_val}
-\emph{Proof of Theorem \ref{theorem:csemv}:}\\
+\emph{Proof of Proposition \ref{proposition:csemv}:}\\
 In the separating equilibrium constructed here, players will believe that any concession not equal to the equilibrium concession of the high type $g_h$ is a low type gift. In this case, the binding incentive compatibility constraint is the low type IC constraint, which when simplified to allow $g_l=0$ following Lemma~\ref{lemma:3} is: 
 \begin{equation}
 	pg_h +X_{FF}^l \geq pX_{FT}^l+(1-p)X_{FF}^l-g_h+pg_h
@@ -738,7 +739,7 @@ Canceling like terms and rearranging, we have
 			\]
 			Since we assume throughout that gifts must be non-negative, each of $T, W$ and $D$ are positive and $0 \leq \de_l \leq 1$, this inequality can never hold.	\hfill $\blacksquare$\\
 			\\
-\emph{Proof of Theorem~\ref{theorem:med}:}\\
+\emph{Proof of Proposition~\ref{proposition:med}:}\\
 (a) The low type's individual rationality constraint is satisfied trivially: the low type gets the No Cooperation payoff forever outside the mechanism; it also gets the No Cooperation payoff forever \emph{inside} the mechanism while not giving or receiving any concession.
 
 For the general form of the low type incentive compatibility constraint, we start from Expression~\ref{eq:med} and add back in the $e$'s that were removed when assuming $e=1$ in the proof of Lemma \ref{lemma:med}. So we start from
@@ -786,20 +787,20 @@ This simplifies to
 \end{equation*}
 If $Te < (1-\de_h)(1-e)$, this is a negative lower bound on the size of the concession and thus implies no additional restriction. If $Te = (1-\de_h)(1-e)$, there is again no restriction because $T+D >W$ by assumption. If $Te > (1-\de_h)(1-e)$, the mechanism is both individually rational and incentive compatible for the high type when $\frac{ T + D - W}{Te - (1-\de_h)(1-e)}>g_h$. \hfill $\blacksquare$\\
 \\
-\emph{Proof of Theorem~\ref{theorem:medwel}:}\\
+\emph{Proof of Proposition~\ref{proposition:medwel}:}\\
 An example suffices to prove each part.
 	\begin{enumerate}
 		\item[(a)] Examine the parameterization in Corollary~\ref{corollary:matval}. $\de_h = 0.7$ and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is the same as when there is no material value, i.e. 0.5. By Corollary~\ref{corollary:matval}, the \emph{concessions separating equilibrium with inefficient gifts} is possible. Corollary~\ref{corollary:matval} also showed that the \emph{concessions separating equilibrium with efficient gifts} is not possible because the relevant patience threshold of $0.979$ is too high. 
 
 Using the mediation mechanism $M$ with $e=0.29$ and $g_h=12.98$, we satisfy both the low type constraint that $g_h\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=9.5890411$ and the high type constraint $g_h\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=12.987013$. Welfare is 5.0768, compared to 2.82 in the \emph{concessions separating equilibrium with inefficient gifts}.
-		\item[(b)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = \frac{15}{16}=0.9375$ and $\de_l = .5$ and $p = .5$. By Theorem~\ref{theorem:2}, the \emph{concessions separating equilibrium with efficient gifts} is possible.
+		\item[(b)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when the future material value of concessions is destroyed is $\de = \frac{1}{1+1} = .5$. Let $\de_h = \frac{15}{16}=0.9375$ and $\de_l = .5$ and $p = .5$. By Proposition~\ref{proposition:2}, the \emph{concessions separating equilibrium with efficient gifts} is possible.
 
-By Theorem~\ref{theorem:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.75$. Using Lemma~\ref{lemma:e-patient}, we see that both the \emph{concessions separating equilibrium with efficient gifts} and the \emph{concessions separating equilibrium with inefficient gifts} are possible. 
+By Proposition~\ref{proposition:csemv}(a), the patience threshold to separate through concessions with efficient concessions is $0.75$. Using Lemma~\ref{lemma:e-patient}, we see that both the \emph{concessions separating equilibrium with efficient gifts} and the \emph{concessions separating equilibrium with inefficient gifts} are possible. 
 
 Using the mediation mechanism $M$ with $e=0.18$ and $g_h=7.7669$, we satisfy both the low type constraint the $g_h\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=7.143$ and the high type constraint $g_h\leq \frac{ T + D - W}{Te - (1-\de_h)(1-e)}=7.7669$. Welfare is 12.82, compared to 7.5 in the \emph{concessions separating equilibrium with inefficient gifts} and 7.67 in the \emph{concessions separating equilibrium with inefficient gifts}.
 		\item[(c)] Let $T = 1$, $W=1$ and $D = 1$. The assumption that $T > W - D$ is satisfied, and the threshold for high types to separate through concessions when concessions have no future material value is $\de = \frac{1}{1+1} = 0.5$. Let $\de_h = 0.49$ and $\de_l = 0.25$ and $p = \frac{15}{16} = 0.9375$. 
 
-We use Theorem~\ref{theorem:2}(a) to find that the patience threshold to separate through concessions with inefficient concessions is $0.5$. This combined with Lemma~\ref{lemma:e-patient} shows that neither the \emph{concessions separating equilibrium with efficient gifts} nor the \emph{concessions separating equilibrium with inefficient gifts} is possible. 
+We use Proposition~\ref{proposition:2}(a) to find that the patience threshold to separate through concessions with inefficient concessions is $0.5$. This combined with Lemma~\ref{lemma:e-patient} shows that neither the \emph{concessions separating equilibrium with efficient gifts} nor the \emph{concessions separating equilibrium with inefficient gifts} is possible. 
 
 Using the mediation mechanism $M$ with $e=0$ and $g_h=1.6$, we satisfy both the low type constraint $g_h\geq \frac{\left(1 - \de_l \right)\left(T +D \right)}{p - e\left(p +(1-\de_l)T +W \right)}=1.6$ and there is no high type constraint because $0=Te<(1-\de_h)(1-e)=0.0625$. Welfare is approximately 0.24, compared to 0 outside the mechanism.
 	\end{enumerate}
